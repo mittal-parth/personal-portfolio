@@ -1,9 +1,9 @@
 import styles from "../style";
-import { discount, robot } from "../assets";
 import LetsConnect from "./LetsConnect";
 import Lottie from "react-lottie";
 import animationData from "../lotties/person-coding.json";
 
+// lottie config
 const defaultOptions = {
   loop: true,
   autoplay: true,
@@ -49,11 +49,6 @@ const Hero = () => {
         <div className="relative z-index-[5] h-[90%] w-[85%]">
           <Lottie options={defaultOptions} />
         </div>
-        {/* <img
-          src={robot}
-          alt="billing"
-          className="w-[100%] h-[100%] relative z-index-[5]"
-        /> */}
         <div className="absolute z-[1] w-[50%] h-[50%] rounded-full bottom-40 white__gradient"></div>
       </div>
 
