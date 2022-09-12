@@ -1,4 +1,4 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star, nitk  } from "../assets";
 
 export const navLinks = [
   {
@@ -27,27 +27,15 @@ export const navLinks = [
   },
 ];
 
-export const features = [
+export const educationList = [
   {
-    id: "feature-1",
-    icon: star,
-    title: "Rewards",
-    content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
-  },
-  {
-    id: "feature-2",
-    icon: shield,
-    title: "100% Secured",
-    content:
-      "We take proactive steps make sure your information and transactions are secure.",
-  },
-  {
-    id: "feature-3",
-    icon: send,
-    title: "Balance Transfer",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+    id: "education-1",
+    icon: nitk,
+    title: "National Institute of Technology Karnataka, Surathkal",
+    degree: "Bachelor of Technology",
+    duration: "December 2020 - May 2024",
+    content1: "Major: Electronics and Communication Engineering",
+    content2: "Minor: Information Technology"
   },
 ];
 
