@@ -4,6 +4,8 @@ import { bill } from "../assets";
 import Lottie from "react-lottie";
 import animationData from "../lotties/quiz-mode-teal-dark.json";
 
+// TODO: Add heading 'Education'
+
 // lottie config
 const defaultOptions = {
   loop: true,
@@ -46,8 +48,8 @@ const FeatureCard = ({ icon, title, degree, duration, content1, content2, index 
 
 const Education = () => {
   return (
-    <section id="education" className={layout.section}>
-      <div className={layout.sectionInfo}>
+    <section id="education" className={layout.sectionReverse}>
+      <div className={layout.sectionImgReverse}>
         <div className="w-[80%] h-[80%] relative z-[5]">
           <Lottie options={defaultOptions} />
         </div>
@@ -58,7 +60,7 @@ const Education = () => {
         {/* gradient end */}
       </div>
 
-      <div className={`${layout.sectionImg} flex-col`}>
+      <div className={`${layout.sectionInfo} flex-col`}>
         {educationList.map((feature, index) => (
           <FeatureCard key={feature.id} index={index} {...feature} />
         ))}
