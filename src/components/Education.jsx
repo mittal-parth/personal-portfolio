@@ -16,7 +16,15 @@ const defaultOptions = {
   },
 };
 
-const FeatureCard = ({ icon, title, degree, duration, content1, content2, index }) => (
+const FeatureCard = ({
+  icon,
+  title,
+  degree,
+  duration,
+  content1,
+  content2,
+  index,
+}) => (
   <div
     className={`flex flex-row p-6 rounded-[20px]
 	${index === educationList.length - 1 ? "mb-0" : "mb-6"} feature-card`}
@@ -48,22 +56,25 @@ const FeatureCard = ({ icon, title, degree, duration, content1, content2, index 
 
 const Education = () => {
   return (
-    <section id="education" className={layout.sectionReverse}>
-      <div className={layout.sectionImgReverse}>
-        <div className="w-[80%] h-[80%] relative z-[5]">
-          <Lottie options={defaultOptions} />
+    <section id="education">
+      <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">Education</h1>
+      <div className={layout.sectionReverse}>
+        <div className={layout.sectionImgReverse}>
+          <div className="w-[80%] h-[80%] relative z-[5]">
+            <Lottie options={defaultOptions} />
+          </div>
+
+          {/* gradient start */}
+          <div className="absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient" />
+          <div className="absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full pink__gradient" />
+          {/* gradient end */}
         </div>
 
-        {/* gradient start */}
-        <div className="absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient" />
-        <div className="absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full pink__gradient" />
-        {/* gradient end */}
-      </div>
-
-      <div className={`${layout.sectionInfo} flex-col`}>
-        {educationList.map((feature, index) => (
-          <FeatureCard key={feature.id} index={index} {...feature} />
-        ))}
+        <div className={`${layout.sectionInfo} flex-col`}>
+          {educationList.map((feature, index) => (
+            <FeatureCard key={feature.id} index={index} {...feature} />
+          ))}
+        </div>
       </div>
     </section>
   );
