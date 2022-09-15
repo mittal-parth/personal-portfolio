@@ -34,9 +34,9 @@ const App = () => {
           <Projects />
           <OpenSource />
           <ExtraCurricular />
-          <Footer />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

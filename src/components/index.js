@@ -9,6 +9,7 @@ import OpenSource from "./OpenSource";
 import ExtraCurricular from "./ExtraCurricular";
 import Footer from "./Footer";
 import Experience from "./Experience";
+import Button from "./Button";
 
 export {
     Navbar,
@@ -19,5 +20,6 @@ export {
     OpenSource,
     ExtraCurricular,
     Footer,
-    Experience
+    Experience,
+    Button
 };
