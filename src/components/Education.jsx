@@ -1,6 +1,5 @@
 import styles, { layout } from "../style";
 import { educationList } from "../constants";
-import { bill } from "../assets";
 import Lottie from "react-lottie";
 import animationData from "../lotties/quiz-mode-teal-dark.json";
 
