@@ -34,6 +34,7 @@ import iris from "./iris.png";
 import genesis from "./genesis.jpg";
 import todo from "./todo.jpg";
 import graphql from "./graphql.png";
+import portfolio from "./portfolio.jpg";
 
 export {
   airbnb,
@@ -71,5 +72,6 @@ export {
   ecell,
   genesis,
   todo,
-  graphql
+  graphql,
+  portfolio
 };

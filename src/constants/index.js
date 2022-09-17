@@ -23,7 +23,8 @@ import {
   ecell,
   genesis,
   todo,
-  graphql
+  graphql,
+  portfolio
 } from "../assets";
 
 import {
@@ -149,6 +150,29 @@ export const projects = [
   },
   {
     id: "project-3",
+    title: "Portfolio",
+    github: "https://github.com/mittal-parth/personal-portfolio",
+    link: "https://parthmittal.netlify.app/",
+    image: portfolio,
+    content:
+      "Personal portfolio website with React and Tailwind CSS.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiReact,
+      },
+      {
+        id: "icon-2",
+        icon: SiTailwindcss,
+      },
+      {
+        id: "icon-3",
+        icon: AiFillHtml5,
+      },
+    ],
+  },
+  {
+    id: "project-4",
     title: "Bank Landing Page",
     github: "https://github.com/mittal-parth/bank-landing-page-react",
     link: "https://bank-landing-page-parth.netlify.app/",
@@ -171,7 +195,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-4",
+    id: "project-5",
     title: "Freadom",
     github: "https://github.com/mittal-parth/Freadom",
     link: "",
@@ -194,7 +218,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-5",
+    id: "project-6",
     title: "GraphQL API",
     github: "https://github.com/mittal-parth/GSDC-NITK-CRUD-API",
     link: "",
@@ -213,7 +237,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-6",
+    id: "project-7",
     title: "To-Do App 2.0",
     github: "https://github.com/mittal-parth/To-Do-App-2.0",
     link: "",
