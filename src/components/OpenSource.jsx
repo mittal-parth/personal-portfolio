@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { openSourceContributions } from "../constants";
 import { DiGitMerge, DiGitPullRequest } from "react-icons/di";
 import { VscIssues } from "react-icons/vsc";
@@ -66,6 +66,31 @@ export const Contribution = (props) => {
 };
 
 const OpenSource = () => {
+  const [contributions, setContributions] = useState([]);
+  const [filterContribution, setFilterContribution] = useState([]);
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  useEffect(() => {
+      setContributions(openSourceContributions);
+      setFilterContribution(openSourceContributions);
+  }, []);
+
+  const handleContributionFilter = (item) => {
+    setActiveFilter(item);
+
+    setTimeout(() => {
+      if (item === "All") {
+        setFilterContribution(contributions);
+      } else {
+        setFilterContribution(
+          contributions.filter((contribution) =>
+            contribution.organisation == item
+          )
+        );
+      }
+    }, 500);
+  };
+
   return (
     <section id="openSource">
       <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
@@ -73,8 +98,24 @@ const OpenSource = () => {
       </h1>
 
       <div className="container px-6 py-5 mx-auto mb-8">
+        <div class="flex items-center justify-center">
+          <div class="flex items-center p-1 border border-blue-gradient dark:border-teal-400 rounded-xl">
+            {["PublicLab", "Zulip", "All"].map((item, index) => (
+              <button
+                key={index}
+                onClick={() => handleContributionFilter(item)}
+                className={`px-2 py-2 text-sm font-medium text-white md:py-3 rounded-xl md:px-6 capitalize transition-colors duration-300 focus:outline-none hover:bg-teal-400 font-poppins ${
+                  activeFilter === item ? "bg-teal-400" : ""
+                }`}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 justify-center gap-8 mt-8 md:mt-16 md:grid-cols-3 sm:grid-cols-2">
-          {openSourceContributions.map((contribution, index) => (
+          {filterContribution.map((contribution, index) => (
             <Contribution
               key={contribution.id}
               index={index}
