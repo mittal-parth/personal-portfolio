@@ -26,7 +26,7 @@ const Footer = () => (
 
       <hr className="my-6 border-gray-200 dark:border-gray-700" />
 
-      <div className="flex flex-col items-center sm:flex-row sm:justify-center">
+      <div className="flex flex-row justify-center items-center">
         {/* {socialMedia.map((social, index) => (
           <img
             key={social.id}
@@ -41,7 +41,7 @@ const Footer = () => (
         ))} */}
 
         {socialMedia.map((social, index) => (
-          <a href={social.link} key={social.id} className="text-white mr-5 text-[25px]">
+          <a href={social.link} key={social.id} index={index} className="text-white mr-5 text-[25px] hover:text-teal-200">
             {React.createElement(social.icon)}
           </a>
         ))}
