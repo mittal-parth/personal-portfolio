@@ -24,6 +24,10 @@ import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
 import nitk from "./nitk.png";
+import cluboard from "./cluboard.png";
+import cash_flow from "./cash_flow.jpg";
+import freadom from "./freadom.jpg";
+import bank from "./bank.jpg";
 
 export {
   airbnb,
@@ -52,4 +56,8 @@ export {
   people02,
   people03,
   nitk,
+  cluboard,
+  cash_flow,
+  freadom,
+  bank
 };
