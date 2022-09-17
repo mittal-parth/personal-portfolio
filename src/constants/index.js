@@ -21,7 +21,9 @@ import {
   gdsc,
   iris,
   ecell,
-  genesis
+  genesis,
+  todo,
+  graphql
 } from "../assets";
 
 import {
@@ -31,6 +33,7 @@ import {
   AiFillMail,
   AiOutlineTwitter,
   AiFillHtml5,
+  AiOutlineGoogle,
 } from "react-icons/ai";
 
 import {
@@ -40,7 +43,8 @@ import {
   SiBootstrap,
   SiReact,
   SiMaterialui,
-  SiTailwindcss
+  SiTailwindcss,
+  SiGraphql,
 } from "react-icons/si";
 
 import { DiCss3 } from "react-icons/di";
@@ -67,7 +71,7 @@ export const navLinks = [
     title: "Extra Curricular",
   },
   {
-    id: "Contact Me",
+    id: "contactMe",
     title: "Contact Me",
   },
 ];
@@ -99,19 +103,19 @@ export const projects = [
         icon: SiDjango,
       },
       {
-        id: "icon-3",
+        id: "icon-2",
         icon: AiFillHtml5,
       },
       {
-        id: "icon-4",
+        id: "icon-3",
         icon: DiCss3,
       },
       {
-        id: "icon-5",
+        id: "icon-4",
         icon: SiJavascript,
       },
       {
-        id: "icon-6",
+        id: "icon-5",
         icon: SiBootstrap,
       },
     ],
@@ -145,29 +149,6 @@ export const projects = [
   },
   {
     id: "project-3",
-    title: "Freadom",
-    github: "https://github.com/mittal-parth/Freadom",
-    link: "",
-    image: freadom,
-    content:
-      "A simple tool to scrape articles. Works even on websites that dont allow users to read the content without logging in.",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiDjango,
-      },
-      {
-        id: "icon-3",
-        icon: AiFillHtml5,
-      },
-      {
-        id: "icon-4",
-        icon: DiCss3,
-      }
-    ],
-  },
-  {
-    id: "project-4",
     title: "Bank Landing Page",
     github: "https://github.com/mittal-parth/bank-landing-page-react",
     link: "https://bank-landing-page-parth.netlify.app/",
@@ -180,6 +161,29 @@ export const projects = [
         icon: SiReact,
       },
       {
+        id: "icon-4",
+        icon: SiMaterialui,
+      },
+      {
+        id: "icon-5",
+        icon: SiTailwindcss,
+      },
+    ],
+  },
+  {
+    id: "project-4",
+    title: "Freadom",
+    github: "https://github.com/mittal-parth/Freadom",
+    link: "",
+    image: freadom,
+    content:
+      "A simple tool to scrape articles. Works even on websites that dont allow users to read the content without logging in.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiDjango,
+      },
+      {
         id: "icon-2",
         icon: AiFillHtml5,
       },
@@ -187,11 +191,72 @@ export const projects = [
         id: "icon-3",
         icon: DiCss3,
       },
+    ],
+  },
+  {
+    id: "project-5",
+    title: "GraphQL API",
+    github: "https://github.com/mittal-parth/GSDC-NITK-CRUD-API",
+    link: "",
+    image: graphql,
+    content:
+      "A Django based CRUD API using GraphQL to manage employees in an organization.",
+    stack: [
       {
-        id: "icon-4",
-        icon: SiMaterialui,
+        id: "icon-1",
+        icon: SiGraphql,
+      },
+      {
+        id: "icon-2",
+        icon: SiDjango,
       },
     ],
+  },
+  {
+    id: "project-6",
+    title: "To-Do App 2.0",
+    github: "https://github.com/mittal-parth/To-Do-App-2.0",
+    link: "",
+    image: todo,
+    content:
+      "A Progressive Web Application with Google OAuth, media and speech to text features.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiDjango,
+      },
+
+      {
+        id: "icon-2",
+        icon: AiOutlineGoogle,
+      },
+      {
+        id: "icon-3",
+        icon: AiFillHtml5,
+      },
+      {
+        id: "icon-4",
+        icon: DiCss3,
+      },
+    ],
+  },
+];
+
+export const stats = [
+  {
+    id: "stats-1",
+    title: "Organisations",
+    value: "2+",
+  },
+  {
+    id: "stats-2",
+    title: "Issues Opened",
+    value: "6+",
+  },
+  {
+    id: "stats-3",
+    title: "Pull Requests",
+    value: "6+",
   },
 ];
 
@@ -203,7 +268,7 @@ export const extraCurricular = [
     content: [
       {
         text: "Co-designed and developed the official website of Incident, NITK with 15K+ visitors",
-        link: "https://incident.nitk.ac.in/"
+        link: "https://incident.nitk.ac.in/",
       },
     ],
     logo: gdsc,
@@ -215,11 +280,11 @@ export const extraCurricular = [
     content: [
       {
         text: "Qualified for the nationals of Indian Hip Hop Dance Championship",
-        link: ""
+        link: "",
       },
       {
         text: "Won 7 inter-college solo dance competitions",
-        link: ""
+        link: "",
       },
     ],
     logo: genesis,
@@ -231,8 +296,8 @@ export const extraCurricular = [
     content: [
       {
         text: "Mentored 150+ students in a month-long Web Development and Ruby on Rails Bootcamp",
-        link: "https://github.com/IRIS-NITK/IRIS-RoR-Bootcamp-2021"
-      }
+        link: "https://github.com/IRIS-NITK/IRIS-RoR-Bootcamp-2021",
+      },
     ],
     logo: iris,
   },
@@ -243,16 +308,15 @@ export const extraCurricular = [
     content: [
       {
         text: "Organised the season 3 of the E-Cell NITK Podcast",
-        link: "https://www.youtube.com/watch?v=uA-Yrk6bVDc"
+        link: "https://www.youtube.com/watch?v=uA-Yrk6bVDc",
       },
       {
         text: "Member of the Sponsorship and E-Talks team for E-Summit'22",
-        link: ""
+        link: "",
       },
     ],
     logo: ecell,
   },
-
 ];
 
 export const socialMedia = [

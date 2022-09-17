@@ -32,6 +32,8 @@ import bank from "./bank.jpg";
 import gdsc from "./gdsc.png";
 import iris from "./iris.png";
 import genesis from "./genesis.jpg";
+import todo from "./todo.jpg";
+import graphql from "./graphql.png";
 
 export {
   airbnb,
@@ -67,5 +69,7 @@ export {
   gdsc,
   iris,
   ecell,
-  genesis
+  genesis,
+  todo,
+  graphql
 };

@@ -37,7 +37,7 @@ const Project = (props) => {
         </div>
       </div>
 
-      <p className="mt-5 text-gray-500 dark:text-gray-300 group-hover:text-gray-300 font-poppins">
+      <p className="mt-8 text-gray-500 dark:text-gray-300 group-hover:text-gray-300 font-poppins">
         {props.content}
       </p>
 
