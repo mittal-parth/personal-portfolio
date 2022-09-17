@@ -3,7 +3,7 @@ import Button from "./Button";
 import { socialMedia } from "../constants";
 
 const Footer = () => (
-  <footer className="bg-white dark:bg-gray-900">
+  <footer className="bg-white dark:bg-gray-900" id="contactMe">
     <div className="container px-6 py-8 mx-auto">
       <div className="text-center">
         <p
