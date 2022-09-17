@@ -35,6 +35,9 @@ import genesis from "./genesis.jpg";
 import todo from "./todo.jpg";
 import graphql from "./graphql.png";
 import portfolio from "./portfolio.jpg";
+import zulip from "./zulip.jpg";
+import publiclab from "./publiclab.png";
+
 
 export {
   airbnb,
@@ -73,5 +76,7 @@ export {
   genesis,
   todo,
   graphql,
-  portfolio
+  portfolio,
+  publiclab,
+  zulip
 };
