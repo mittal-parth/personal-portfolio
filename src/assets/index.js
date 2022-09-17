@@ -27,7 +27,11 @@ import nitk from "./nitk.png";
 import cluboard from "./cluboard.png";
 import cash_flow from "./cash_flow.jpg";
 import freadom from "./freadom.jpg";
+import ecell from "./ecell.png";
 import bank from "./bank.jpg";
+import gdsc from "./gdsc.png";
+import iris from "./iris.png";
+import genesis from "./genesis.jpg";
 
 export {
   airbnb,
@@ -59,5 +63,9 @@ export {
   cluboard,
   cash_flow,
   freadom,
-  bank
+  bank,
+  gdsc,
+  iris,
+  ecell,
+  genesis
 };

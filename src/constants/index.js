@@ -17,7 +17,11 @@ import {
   cluboard,
   cash_flow,
   freadom,
-  bank
+  bank,
+  gdsc,
+  iris,
+  ecell,
+  genesis
 } from "../assets";
 
 import {
@@ -189,6 +193,66 @@ export const projects = [
       },
     ],
   },
+];
+
+export const extraCurricular = [
+  {
+    organisation: "Google Developer Student Club, NITK",
+    title: "Executive Member",
+    duration: "December 2021 - Present",
+    content: [
+      {
+        text: "Co-designed and developed the official website of Incident, NITK with 15K+ visitors",
+        link: "https://incident.nitk.ac.in/"
+      },
+    ],
+    logo: gdsc,
+  },
+  {
+    organisation: "Genesis, NITK",
+    title: "Executive Member",
+    duration: "Sep 2021 - Present",
+    content: [
+      {
+        text: "Qualified for the nationals of Indian Hip Hop Dance Championship",
+        link: ""
+      },
+      {
+        text: "Won 7 inter-college solo dance competitions",
+        link: ""
+      },
+    ],
+    logo: genesis,
+  },
+  {
+    organisation: "IRIS, NITK",
+    title: "Tutor",
+    duration: "Jan 2022 - Jan 2022",
+    content: [
+      {
+        text: "Mentored 150+ students in a month-long Web Development and Ruby on Rails Bootcamp",
+        link: "https://github.com/IRIS-NITK/IRIS-RoR-Bootcamp-2021"
+      }
+    ],
+    logo: iris,
+  },
+  {
+    organisation: "E-Cell, NITK",
+    title: "Executive Member",
+    duration: "Sep 2021 - Apr 2022",
+    content: [
+      {
+        text: "Organised the season 3 of the E-Cell NITK Podcast",
+        link: "https://www.youtube.com/watch?v=uA-Yrk6bVDc"
+      },
+      {
+        text: "Member of the Sponsorship and E-Talks team for E-Summit'22",
+        link: ""
+      },
+    ],
+    logo: ecell,
+  },
+
 ];
 
 export const socialMedia = [
