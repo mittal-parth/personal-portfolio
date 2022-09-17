@@ -42,12 +42,22 @@ const Project = (props) => {
       </p>
 
       <div className="flex mt-4 -mx-2">
-        <a href={props.github}  target="_blank">
-          <AiFillGithub size="2rem" className="text-white mr-1"></AiFillGithub>
-        </a>
+        {props.github ? (
+          <a href={props.github} target="_blank">
+            <AiFillGithub
+              size="2rem"
+              className="text-white mr-1 hover:text-teal-200"
+            ></AiFillGithub>
+          </a>
+        ) : (
+          ""
+        )}
         {props.link ? (
           <a href={props.link} target="_blank">
-            <BsLink45Deg size="2rem" className="text-white"></BsLink45Deg>
+            <BsLink45Deg
+              size="2rem"
+              className="text-white hover:text-teal-200"
+            ></BsLink45Deg>
           </a>
         ) : (
           ""
@@ -64,7 +74,7 @@ const Projects = () => {
         Projects
       </h1>
 
-      <div className="container px-6 py-10 mx-auto">
+      <div className="container px-6 py-10 mx-auto mb-8">
         <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
           {projects.map((project, index) => (
             <Project key={project.id} index={index} {...project} />
