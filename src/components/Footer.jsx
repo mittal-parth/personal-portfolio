@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../style";
 import Button from "./Button";
 import { socialMedia } from "../constants";
 
@@ -41,7 +40,7 @@ const Footer = () => (
         ))} */}
 
         {socialMedia.map((social, index) => (
-          <a href={social.link} key={social.id} index={index} className="text-white mr-5 text-[25px] hover:text-teal-200">
+          <a href={social.link} target="_blank" key={social.id} index={index} className="text-white mr-5 text-[25px] hover:text-teal-200">
             {React.createElement(social.icon)}
           </a>
         ))}

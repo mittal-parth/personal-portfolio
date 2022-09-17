@@ -42,11 +42,11 @@ const Project = (props) => {
       </p>
 
       <div className="flex mt-4 -mx-2">
-        <a href={props.github}>
+        <a href={props.github}  target="_blank">
           <AiFillGithub size="2rem" className="text-white mr-1"></AiFillGithub>
         </a>
         {props.link ? (
-          <a href={props.link}>
+          <a href={props.link} target="_blank">
             <BsLink45Deg size="2rem" className="text-white"></BsLink45Deg>
           </a>
         ) : (
