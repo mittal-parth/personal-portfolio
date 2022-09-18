@@ -4,7 +4,7 @@ import {
   Navbar,
   Hero,
   Education,
-  Skills,
+  SkillsAndExperience,
   ExtraCurricular,
   Footer,
   OpenSource,
@@ -29,8 +29,8 @@ const App = () => {
 
       <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX} `}>
         <div className={`${styles.boxWidth}`}>
+          <SkillsAndExperience />
           <Education />
-          <Skills />
           <Projects />
           <OpenSource />
           <ExtraCurricular />

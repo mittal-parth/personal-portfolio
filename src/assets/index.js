@@ -37,7 +37,7 @@ import graphql from "./graphql.png";
 import portfolio from "./portfolio.jpg";
 import zulip from "./zulip.jpg";
 import publiclab from "./publiclab.png";
-
+import cdc from "./cdc.png";
 
 export {
   airbnb,
@@ -78,5 +78,6 @@ export {
   graphql,
   portfolio,
   publiclab,
-  zulip
+  zulip,
+  cdc
 };

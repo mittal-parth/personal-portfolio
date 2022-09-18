@@ -1,18 +1,8 @@
 import {
-  people01,
-  people02,
-  people03,
-  facebook,
-  instagram,
-  linkedin,
-  twitter,
   airbnb,
   binance,
   coinbase,
   dropbox,
-  send,
-  shield,
-  star,
   nitk,
   cluboard,
   cash_flow,
@@ -26,7 +16,8 @@ import {
   graphql,
   portfolio,
   publiclab,
-  zulip
+  zulip,
+  cdc,
 } from "../assets";
 
 import {
@@ -37,6 +28,7 @@ import {
   AiOutlineTwitter,
   AiFillHtml5,
   AiOutlineGoogle,
+  AiOutlineGitlab,
 } from "react-icons/ai";
 
 import {
@@ -48,18 +40,30 @@ import {
   SiMaterialui,
   SiTailwindcss,
   SiGraphql,
+  SiPython,
+  SiCplusplus,
+  SiC,
+  SiRubyonrails,
+  SiJquery,
+  SiVisualstudiocode,
+  SiPostman,
+  SiGit,
+  SiMysql,
+  SiSolidity,
+  SiNetlify,
+  SiChartdotjs,
 } from "react-icons/si";
 
-import { DiCss3 } from "react-icons/di";
+import { DiCss3, DiRuby } from "react-icons/di";
 
 export const navLinks = [
   {
-    id: "education",
-    title: "Education",
-  },
-  {
     id: "skills",
     title: "Skills & Experience",
+  },
+  {
+    id: "education",
+    title: "Education",
   },
   {
     id: "projects",
@@ -91,6 +95,195 @@ export const educationList = [
   },
 ];
 
+export const skills = [
+  {
+    title: "Programming Languages",
+    items: [
+      {
+        id: "pl-1",
+        icon: SiCplusplus,
+        name: "C++",
+      },
+      {
+        id: "pl-2",
+        icon: SiPython,
+        name: "Python",
+      },
+      {
+        id: "pl-3",
+        icon: DiRuby,
+        name: "Ruby",
+      },
+      {
+        id: "pl-4",
+        icon: SiC,
+        name: "C",
+      },
+      {
+        id: "pl-5",
+        icon: AiFillHtml5,
+        name: "HTML",
+      },
+      {
+        id: "pl-6",
+        icon: DiCss3,
+        name: "CSS",
+      },
+      {
+        id: "pl-7",
+        icon: SiJavascript,
+        name: "JavaScript",
+      },
+      {
+        id: "pl-8",
+        icon: SiSolidity,
+        name: "Solidity",
+      },
+    ],
+  },
+  {
+    title: "Frameworks/Libraries",
+    items: [
+      {
+        id: "f-1",
+        icon: SiDjango,
+        name: "Django",
+      },
+      {
+        id: "f-2",
+        icon: SiRubyonrails,
+        name: "Ruby on Rails",
+      },
+      {
+        id: "f-3",
+        icon: SiReact,
+        name: "ReactJS",
+      },
+      {
+        id: "f-4",
+        icon: SiBootstrap,
+        name: "Bootstrap",
+      },
+      {
+        id: "f-5",
+        icon: SiTailwindcss,
+        name: "Tailwind CSS",
+      },
+      {
+        id: "f-6",
+        icon: SiJquery,
+        name: "jQuery",
+      },
+      {
+        id: "f-7",
+        icon: SiGraphql,
+        name: "GraphQL",
+      },
+    ],
+  },
+  {
+    title: "Tools",
+    items: [
+      {
+        id: "t-1",
+        icon: SiMysql,
+        name: "MySQL",
+      },
+      {
+        id: "t-2",
+        icon: SiPostman,
+        name: "Postman",
+      },
+      {
+        id: "t-3",
+        icon: SiVisualstudiocode,
+        name: "VS Code",
+      },
+      {
+        id: "t-4",
+        icon: SiGit,
+        name: "Git",
+      },
+      {
+        id: "t-5",
+        icon: AiFillGithub,
+        name: "GitHub",
+      },
+      {
+        id: "t-6",
+        icon: AiOutlineGitlab,
+        name: "Gitlab",
+      },
+      {
+        id: "t-7",
+        icon: SiNetlify,
+        name: "Netlify",
+      },
+    ],
+  },
+];
+
+export const experiences = [
+  {
+    organisation: "IRIS, NITK",
+    logo: iris,
+    link: "https://iris.nitk.ac.in/about_us",
+    positions: [
+      {
+        title: "Web Manager",
+        duration: "Apr 2022 - Present",
+        content: [
+          {
+            text: "Managing a team of 6 student developers while also overlooking multiple modules.",
+            link: "",
+          },
+        ],
+      },
+      {
+        title: "Web Developer",
+        duration: "Nov 2021 - Apr 2022",
+        content: [
+          {
+            text: "Added Conditional Fields support to the Forms Module.",
+            link: "",
+          },
+        ],
+      },
+      {
+        title: "Web Developer Intern",
+        duration: "Jun 2021 - Oct 2021",
+        content: [
+          {
+            text: "Developed a multi-role approval flow system to facilitate data collection and display on the Institute's Department Websites.",
+            link: "",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    organisation: "Career Development Centre, NITK",
+    logo: cdc,
+    link: "https://cdc.nitk.ac.in/",
+    positions: [
+      {
+        title: "Lead Developer",
+        duration: "May 2022 - July 2022",
+        content: [
+          {
+            text: "Led a team of 3 developers and developed various parts of the official public website using Ruby on Rails.",
+            link: "",
+          },
+          {
+            text: "Setup an admin interface for dynamic content management by different stakeholders.",
+            link: "",
+          },
+        ],
+      },
+    ],
+  },
+];
+
 export const openSourceContributions = [
   {
     id: "os-1",
@@ -99,12 +292,13 @@ export const openSourceContributions = [
     repo: "plots2",
     type: "pull-request",
     status: "merged",
-    title: "Move _wiki to old table look, common template for email and settings digest only",
+    title:
+      "Move _wiki to old table look, common template for email and settings digest only",
     link: "https://github.com/publiclab/plots2/pull/10731",
     number: "#10731",
     date: "Feb 24 2022",
     linesAdded: "101",
-    linesDeleted: "48"
+    linesDeleted: "48",
   },
   {
     id: "os-2",
@@ -118,7 +312,7 @@ export const openSourceContributions = [
     number: "#10681",
     date: "Feb 9 2022",
     linesAdded: "86",
-    linesDeleted: "106"
+    linesDeleted: "106",
   },
   {
     id: "os-3",
@@ -132,7 +326,7 @@ export const openSourceContributions = [
     number: "#11114",
     date: "May 4 2022",
     linesAdded: "1",
-    linesDeleted: "1"
+    linesDeleted: "1",
   },
   {
     id: "os-4",
@@ -146,7 +340,7 @@ export const openSourceContributions = [
     number: "#10634",
     date: "Feb 24 2022",
     linesAdded: "64",
-    linesDeleted: "8"
+    linesDeleted: "8",
   },
   {
     id: "os-5",
@@ -160,7 +354,7 @@ export const openSourceContributions = [
     number: "#11120",
     date: "May 6 2022",
     linesAdded: "",
-    linesDeleted: ""
+    linesDeleted: "",
   },
   {
     id: "os-6",
@@ -174,7 +368,7 @@ export const openSourceContributions = [
     number: "#11115",
     date: "May 4 2022",
     linesAdded: "",
-    linesDeleted: ""
+    linesDeleted: "",
   },
   {
     id: "os-7",
@@ -188,7 +382,7 @@ export const openSourceContributions = [
     number: "#10986",
     date: "Apr 8 2022",
     linesAdded: "",
-    linesDeleted: ""
+    linesDeleted: "",
   },
   {
     id: "os-8",
@@ -202,7 +396,7 @@ export const openSourceContributions = [
     number: "#10985",
     date: "Apr 8 2022",
     linesAdded: "",
-    linesDeleted: ""
+    linesDeleted: "",
   },
   {
     id: "os-9",
@@ -216,7 +410,7 @@ export const openSourceContributions = [
     number: "#10797",
     date: "Mar 18 2022",
     linesAdded: "",
-    linesDeleted: ""
+    linesDeleted: "",
   },
   {
     id: "os-10",
@@ -230,7 +424,7 @@ export const openSourceContributions = [
     number: "#10755",
     date: "Mar 4 2022",
     linesAdded: "",
-    linesDeleted: ""
+    linesDeleted: "",
   },
   {
     id: "os-11",
@@ -244,7 +438,7 @@ export const openSourceContributions = [
     number: "#20206",
     date: "Dec 30 2021",
     linesAdded: "31",
-    linesDeleted: "1"
+    linesDeleted: "1",
   },
   {
     id: "os-12",
@@ -258,7 +452,7 @@ export const openSourceContributions = [
     number: "#20206",
     date: "Dec 30 2021",
     linesAdded: "31",
-    linesDeleted: "1"
+    linesDeleted: "1",
   },
   {
     id: "os-13",
@@ -272,7 +466,7 @@ export const openSourceContributions = [
     number: "#19689",
     date: "Sep 9 2021",
     linesAdded: "1",
-    linesDeleted: "1"
+    linesDeleted: "1",
   },
   {
     id: "os-14",
@@ -286,9 +480,9 @@ export const openSourceContributions = [
     number: "#19760",
     date: "Feb 10 2022",
     linesAdded: "9",
-    linesDeleted: "8"
+    linesDeleted: "8",
   },
-]
+];
 
 export const projects = [
   {
@@ -319,6 +513,10 @@ export const projects = [
       {
         id: "icon-5",
         icon: SiBootstrap,
+      },
+      {
+        id: "icon-6",
+        icon: SiChartdotjs,
       },
     ],
   },
@@ -355,8 +553,7 @@ export const projects = [
     github: "https://github.com/mittal-parth/personal-portfolio",
     link: "https://parthmittal.netlify.app/",
     image: portfolio,
-    content:
-      "Personal portfolio website with React and Tailwind CSS.",
+    content: "Personal portfolio website with React and Tailwind CSS.",
     stack: [
       {
         id: "icon-1",
