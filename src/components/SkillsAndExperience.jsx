@@ -17,7 +17,7 @@ const SkillCard = (props) => {
   return (
     <div className="my-4 border-l border-gray-200 dark:border-gray-700 mx-4">
 
-      <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 left-0.1 border dark:border-gray-900 dark:bg-gray-700"></div>
+      <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 md:left-[5.125rem] left-[2.625rem] border dark:border-gray-900 dark:bg-gray-700"></div>
       <div className="flex flex-row items-center mb-6 ml-6">
         <h4 className="font-poppins font-semibold text-[20px] text-gradient leading-[32px]">
           {props.title}
