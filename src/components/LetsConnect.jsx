@@ -1,11 +1,11 @@
 import styles from "../style";
 import { arrowUp } from "../assets";
 
-// TODO : Hyperlink it to Linkedin
 const LetsConnect = () => {
   return (
     <div
       className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}
+      onClick={() => window.open("https://www.linkedin.com/in/mittal-parth")}
     >
       <div
         className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] rounded-full`}
