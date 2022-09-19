@@ -1,6 +1,7 @@
 import React from "react";
 import { experiences, skills } from "../constants";
 import { layout } from "../style";
+import { motion } from "framer-motion";
 
 export const SkillIcon = ({ icon, name }) => {
   return (
@@ -15,8 +16,11 @@ export const SkillIcon = ({ icon, name }) => {
 
 const SkillCard = (props) => {
   return (
-    <div className="my-4 border-l border-gray-200 dark:border-gray-700 mx-4">
-
+    <motion.div
+      whileInView={{ y: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.5 }}
+      className="my-4 border-l border-gray-200 dark:border-gray-700 mx-4"
+    >
       <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 md:left-[5.125rem] left-[2.625rem] border dark:border-gray-900 dark:bg-gray-700"></div>
       <div className="flex flex-row items-center mb-6 ml-6">
         <h4 className="font-poppins font-semibold text-[20px] text-gradient leading-[32px]">
@@ -24,13 +28,13 @@ const SkillCard = (props) => {
         </h4>
       </div>
       <div className="grid grid-cols-3 gap-8 ml-8">
-          {props.items.map((item, index) => (
-            <SkillIcon key={item.id} index={index} {...item} />
-          ))}
+        {props.items.map((item, index) => (
+          <SkillIcon key={item.id} index={index} {...item} />
+        ))}
       </div>
-    </div>
-  )
-}
+    </motion.div>
+  );
+};
 
 const Content = ({ text, link }) => {
   return (
@@ -54,7 +58,10 @@ const Content = ({ text, link }) => {
 
 const ExperienceCard = (props) => {
   return (
-    <div>
+    <motion.div
+      whileInView={{ y: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex flex-row items-center mb-4">
         <img
           src={props.logo}
@@ -86,7 +93,7 @@ const ExperienceCard = (props) => {
           </li>
         ))}
       </ol>
-    </div>
+    </motion.div>
   );
 };
 
@@ -97,20 +104,19 @@ const SkillsAndExperience = () => {
         Skills & Experience
       </h1>
       <div className={layout.section}>
-
         {/* Skills */}
-        <div className={`ml-2 mb-6 ${layout.sectionInfo}`}>
+        <motion.div className={`ml-2 mb-6 ${layout.sectionInfo}`}>
           {skills.map((skill, index) => (
-            <SkillCard index={index} {...skill}/>
+            <SkillCard index={index} {...skill} />
           ))}
-        </div>
+        </motion.div>
 
         {/* Experience */}
-        <div className="flex flex-1 items-center justify-start flex-col">
+        <motion.div className="flex flex-1 items-center justify-start flex-col">
           {experiences.map((exp, index) => (
             <ExperienceCard index={index} {...exp} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

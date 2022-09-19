@@ -1,7 +1,8 @@
 import React from "react";
-import styles, { layout } from "../style";
+import styles from "../style";
 import { extraCurricular } from "../constants";
 import { BsLink45Deg } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const Content = ({ text, link }) => {
   return (
@@ -25,7 +26,11 @@ const Content = ({ text, link }) => {
 
 const ExtraCurricularCard = (props) => {
   return (
-    <div className="flex flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card">
+    <motion.div
+      className="flex flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card"
+      whileInView={{ y: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex flex-row">
         <img
           src={props.logo}
@@ -50,7 +55,7 @@ const ExtraCurricularCard = (props) => {
           return <Content {...info} />;
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -2,10 +2,15 @@ import React from "react";
 import { projects } from "../constants";
 import { AiFillGithub } from "react-icons/ai";
 import { BsLink45Deg } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const Project = (props) => {
   return (
-    <div className="px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card">
+    <motion.div
+      className="px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card"
+      whileInView={{ y: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex flex-col sm:-mx-4 sm:flex-row">
         <img
           className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
@@ -63,7 +68,7 @@ const Project = (props) => {
           ""
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -2,10 +2,15 @@ import React, { useState, useEffect } from "react";
 import { openSourceContributions } from "../constants";
 import { DiGitMerge, DiGitPullRequest } from "react-icons/di";
 import { VscIssues } from "react-icons/vsc";
+import { motion } from "framer-motion";
 
-export const Contribution = (props) => {
+const Contribution = (props) => {
   return (
-    <div className="flex flex-col justify-between px-6 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 transition-colors duration-300 transform border hover:border-transparent dark:border-gray-700 dark:hover:border-transparent">
+    <motion.div
+      className="flex flex-col justify-between px-6 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 transition-colors duration-300 transform border hover:border-transparent dark:border-gray-700 dark:hover:border-transparent"
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex flex-row">
         <img
           src={props.logo}
@@ -61,7 +66,7 @@ export const Contribution = (props) => {
           ""
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -71,8 +76,8 @@ const OpenSource = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
   useEffect(() => {
-      setContributions(openSourceContributions);
-      setFilterContribution(openSourceContributions);
+    setContributions(openSourceContributions);
+    setFilterContribution(openSourceContributions);
   }, []);
 
   const handleContributionFilter = (item) => {
@@ -83,8 +88,8 @@ const OpenSource = () => {
         setFilterContribution(contributions);
       } else {
         setFilterContribution(
-          contributions.filter((contribution) =>
-            contribution.organisation == item
+          contributions.filter(
+            (contribution) => contribution.organisation == item
           )
         );
       }
