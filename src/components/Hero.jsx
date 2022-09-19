@@ -2,6 +2,7 @@ import styles from "../style";
 import LetsConnect from "./LetsConnect";
 import Lottie from "react-lottie";
 import animationData from "../lotties/person-coding.json";
+import { motion } from "framer-motion";
 
 // lottie config
 const defaultOptions = {
@@ -15,9 +16,11 @@ const defaultOptions = {
 
 const Hero = () => {
   return (
-    <section
+    <motion.section
       id="home"
       className={`flex md:flex-row flex-col ${styles.paddingY}`}
+      whileInView={{ y: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 0.5 }}
     >
       <div
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
@@ -38,8 +41,8 @@ const Hero = () => {
           <span className="text-gradient">Parth Mittal </span>
         </h1>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          Student web-developer from India who is either busy improving his craft or
-          pondering over the next big idea.
+          Student web-developer from India who is either busy improving his
+          craft or pondering over the next big idea.
         </p>
       </div>
 
@@ -55,7 +58,7 @@ const Hero = () => {
       <div className={`ss:hidden ${styles.flexCenter}`}>
         <LetsConnect />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -2,8 +2,7 @@ import styles, { layout } from "../style";
 import { educationList } from "../constants";
 import Lottie from "react-lottie";
 import animationData from "../lotties/quiz-mode-teal-dark.json";
-
-// TODO: Add heading 'Education'
+import { motion } from "framer-motion";
 
 // lottie config
 const defaultOptions = {
@@ -56,8 +55,14 @@ const FeatureCard = ({
 const Education = () => {
   return (
     <section id="education">
-      <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">Education</h1>
-      <div className={layout.sectionReverse}>
+      <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
+        Education
+      </h1>
+      <motion.div
+        className={layout.sectionReverse}
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
+      >
         <div className={layout.sectionImgReverse}>
           <div className="w-[80%] h-[80%] relative z-[5]">
             <Lottie options={defaultOptions} />
@@ -74,7 +79,7 @@ const Education = () => {
             <FeatureCard key={feature.id} index={index} {...feature} />
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
