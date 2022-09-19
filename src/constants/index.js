@@ -52,6 +52,7 @@ import {
   SiSolidity,
   SiNetlify,
   SiChartdotjs,
+  SiVite,
 } from "react-icons/si";
 
 import { DiCss3, DiRuby } from "react-icons/di";
@@ -218,6 +219,11 @@ export const skills = [
         id: "t-7",
         icon: SiNetlify,
         name: "Netlify",
+      },
+      {
+        id: "t-8",
+        icon: SiVite,
+        name: "ViteJS",
       },
     ],
   },
