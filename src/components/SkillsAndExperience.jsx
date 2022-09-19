@@ -17,9 +17,9 @@ export const SkillIcon = ({ icon, name }) => {
 const SkillCard = (props) => {
   return (
     <motion.div
-      whileInView={{ y: [-100, 0], opacity: [0, 1] }}
+      whileInView={{ y: [-20, 0], opacity: [0, 1] }}
       transition={{ duration: 0.5 }}
-      className="my-4 border-l border-gray-200 dark:border-gray-700 mx-4"
+      className="mt-4 mb-6 border-l border-gray-200 dark:border-gray-700 mx-4"
     >
       <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 md:left-[5.125rem] left-[2.625rem] border dark:border-gray-900 dark:bg-gray-700"></div>
       <div className="flex flex-row items-center mb-6 ml-6">
@@ -59,10 +59,10 @@ const Content = ({ text, link }) => {
 const ExperienceCard = (props) => {
   return (
     <motion.div
-      whileInView={{ y: [-100, 0], opacity: [0, 1] }}
-      transition={{ duration: 0.5 }}
+    whileInView={{ y: [-20, 0], opacity: [0, 1] }}
+    transition={{ duration: 0.5 }}
     >
-      <div className="flex flex-row items-center mb-4">
+      <div className="flex flex-row items-center mb-6">
         <img
           src={props.logo}
           alt={props.organisation}
@@ -103,7 +103,11 @@ const SkillsAndExperience = () => {
       <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
         Skills & Experience
       </h1>
-      <div className={layout.section}>
+      <div
+        className={layout.section}
+        // whileInView={{ y: [-20, 0], opacity: [0, 1] }}
+        // transition={{ duration: 0.5 }}
+      >
         {/* Skills */}
         <motion.div className={`ml-2 mb-6 ${layout.sectionInfo}`}>
           {skills.map((skill, index) => (
