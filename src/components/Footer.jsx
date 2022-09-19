@@ -5,7 +5,7 @@ import { profilePic } from "../assets";
 import { layout } from "../style";
 
 const Footer = () => (
-  <footer id="card-deal" className="bg-gray-900">
+  <footer id="contactMe" className="bg-gray-900">
     <div className={layout.sectionReverse}>
       <div className={`px-6 ${layout.sectionInfo} md:ml-16`}>
         <h2 className="text-xl font-bold text-gray-800 font-poppins dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
