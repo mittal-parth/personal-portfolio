@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { close, logo, menu } from "../assets";
+import { close, parthmittal, menu } from "../assets";
 import { navLinks } from "../constants";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full py-6 flex justify-between items-center navbar">
+    <nav className="w-full  flex justify-between items-center navbar">
       {/* Logo */}
-      <img src={logo} alt="hoobank" className="w-[124px] h-[32px]" />
+      <img src={parthmittal} alt="Parth Mittal" className="w-[80px] h-[80px]" />
 
       {/* List of links */}
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
