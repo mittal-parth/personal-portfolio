@@ -8,7 +8,6 @@ import Projects from "./Projects";
 import OpenSource from "./OpenSource";
 import ExtraCurricular from "./ExtraCurricular";
 import Footer from "./Footer";
-import Experience from "./Experience";
 import Button from "./Button";
 import Stats from "./Stats";
 
@@ -21,7 +20,6 @@ export {
     OpenSource,
     ExtraCurricular,
     Footer,
-    Experience,
     Button,
     Stats
 };
