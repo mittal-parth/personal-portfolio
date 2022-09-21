@@ -79,7 +79,7 @@ const Projects = () => {
         Projects
       </h1>
 
-      <div className="container px-6 py-10 mx-auto mb-8">
+      <div className="container px-2 py-10 mx-auto mb-8">
         <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
           {projects.map((project, index) => (
             <Project key={project.id} index={index} {...project} />

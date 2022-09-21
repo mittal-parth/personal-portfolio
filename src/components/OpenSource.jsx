@@ -102,7 +102,7 @@ const OpenSource = () => {
         Open Source Contributions
       </h1>
 
-      <div className="container px-6 py-5 mx-auto mb-8">
+      <div className="container px-2 py-5 mx-auto mb-8">
         <div class="flex items-center justify-center">
           <div class="flex items-center p-1 border border-blue-gradient dark:border-teal-400 rounded-xl">
             {["PublicLab", "Zulip", "All"].map((item, index) => (
