@@ -8,7 +8,7 @@ const Project = (props) => {
   return (
     <motion.div
       className="px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card"
-      whileInView={{ y: [-100, 0], opacity: [0, 1] }}
+      whileInView={{ y: [-40, 0], opacity: [0, 1] }}
       transition={{ duration: 0.5 }}
     >
       <div className="flex flex-col sm:-mx-4 sm:flex-row">
@@ -79,7 +79,7 @@ const Projects = () => {
         Projects
       </h1>
 
-      <div className="container px-6 py-10 mx-auto mb-8">
+      <div className="container px-2 py-10 mx-auto mb-8">
         <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
           {projects.map((project, index) => (
             <Project key={project.id} index={index} {...project} />
