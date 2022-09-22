@@ -18,10 +18,10 @@ const SkillCard = (props) => {
   return (
     <motion.div
       whileInView={{ y: [-20, 0], opacity: [0, 1] }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
       className="mt-4 mb-6 border-l border-gray-200 dark:border-gray-700 mx-4"
     >
-      <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 md:left-[5.125rem] left-[2.625rem] border dark:border-gray-900 dark:bg-gray-700"></div>
+      <div className="relative w-3 h-3 bg-gray-200 rounded-full top-5 right-[6.2px] border dark:border-gray-900 dark:bg-gray-700"></div>
       <div className="flex flex-row items-center mb-6 ml-6">
         <h4 className="font-poppins font-semibold text-[20px] text-gradient leading-[32px]">
           {props.title}
@@ -60,7 +60,7 @@ const ExperienceCard = (props) => {
   return (
     <motion.div
     whileInView={{ y: [-20, 0], opacity: [0, 1] }}
-    transition={{ duration: 0.5 }}
+    transition={{ duration: 1 }}
     >
       <div className="flex flex-row items-center mb-6">
         <img

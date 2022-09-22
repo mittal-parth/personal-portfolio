@@ -19,8 +19,8 @@ const Hero = () => {
     <motion.section
       id="home"
       className={`flex md:flex-row flex-col ${styles.paddingY}`}
-      whileInView={{ y: [-100, 0], opacity: [0, 1] }}
-      transition={{ duration: 0.5 }}
+      whileInView={{ y: [-70, 0], opacity: [0, 1] }}
+      transition={{ duration: 1 }}
     >
       <div
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
