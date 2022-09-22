@@ -3,6 +3,7 @@ import Button from "./Button";
 import { socialMedia } from "../constants";
 import { profilePic } from "../assets";
 import { layout } from "../style";
+import { resumeLink } from "../constants";
 
 const Footer = () => (
   <footer id="contactMe" className="bg-gray-900">
@@ -31,7 +32,12 @@ const Footer = () => (
           ))}
         </div>
         {/* styles is a prop */}
-        <Button styles="mt-10" text="Resume" />
+        <a href={resumeLink} target="_blank">
+          <Button
+            styles="mt-10"
+            text="Resume"
+          />
+        </a>
       </div>
 
       <div className={layout.sectionImgReverseEnd}>

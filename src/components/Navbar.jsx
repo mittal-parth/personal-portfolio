@@ -8,7 +8,13 @@ const Navbar = () => {
   return (
     <nav className="w-full  flex justify-between items-center navbar">
       {/* Logo */}
-      <img src={parthmittal} alt="Parth Mittal" className="w-[80px] h-[80px]" />
+      <a href="#home">
+        <img
+          src={parthmittal}
+          alt="Parth Mittal"
+          className="w-[80px] h-[80px]"
+        />
+      </a>
 
       {/* List of links */}
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
