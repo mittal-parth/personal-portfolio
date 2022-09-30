@@ -15,7 +15,7 @@ const Footer = () => (
         <p
           className={`font-poppins font-normal text-dimWhite text-[16px] leading-[30.8px] max-w-[470px] mt-5`}
         >
-          Upcoming MTS Intern @ Oracle India | Web Manager @ IRIS, NITK |
+        Web Manager @ IRIS, NITK |
           Executive Member at GDSC, NITK
         </p>
         <div className="flex flex-row mt-4">
