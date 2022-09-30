@@ -6,9 +6,9 @@
 
 ## Table of Contents
 
-1. [Tech Stack](https://github.com/mittal-parth/personal-portfolioo/edit/contributing/readme.md#tech-stack)
-2. [Installation Guide](https://github.com/mittal-parth/personal-portfolio/edit/contributing/readme.md#installation-guide)
-3. [References & Inspirations](https://github.com/mittal-parth/personal-portfolioo/edit/contributing/readme.md#references--inspirations)
+1. [Tech Stack](https://github.com/mittal-parth/personal-portfolioo/blob/main/readme.md#tech-stack)
+2. [Installation Guide](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#installation-guide) 
+3. [References & Inspirations](https://github.com/mittal-parth/personal-portfolioo/blob/main/readme.md#references--inspirations)
 <br>
 
 ## Tech Stack
