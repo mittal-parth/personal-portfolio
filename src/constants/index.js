@@ -795,3 +795,10 @@ export const clients = [
     logo: dropbox,
   },
 ];
+
+export const aboutMe = [
+  {
+    name: "Parth",
+    lastName: "Mittal"
+  }
+];

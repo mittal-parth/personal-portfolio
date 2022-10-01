@@ -3,6 +3,7 @@ import LetsConnect from "./LetsConnect";
 import Lottie from "react-lottie";
 import animationData from "../lotties/person-coding.json";
 import { motion } from "framer-motion";
+import { aboutMe } from "../constants";
 
 // lottie config
 const defaultOptions = {
@@ -38,7 +39,7 @@ const Hero = () => {
         </div>
 
         <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[80px] leading-[80px] w-full">
-          <span className="text-gradient">Parth Mittal </span>
+          <span className="text-gradient">{aboutMe[0].name} {aboutMe[0].lastName}</span>
         </h1>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
           Student web-developer from India who is either busy improving his
