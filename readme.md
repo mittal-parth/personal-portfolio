@@ -93,6 +93,8 @@ our community aspires to be a respectful place both during online and in-person 
 
 <br/>
 
+#### If you found this repo helpful in anyway, considering giving it a star - it would mean the world to me! 🌟
+
 ## References & Inspirations 👏
 - [JavaScript Mastery](https://youtu.be/_oO4Qi5aVZs)
 - [Developerfolio](https://developerfolio.js.org/)
