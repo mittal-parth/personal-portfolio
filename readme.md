@@ -9,22 +9,23 @@
 1. [Tech Stack](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#tech-stack)
 2. [Installation Guide](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#installation-guide) 
 3. [References & Inspirations](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#references--inspirations)
+4. [Illustrations](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#illustrations)
 <br>
 
 ## Tech Stack
 
-<ul>
 <li>Frameworks</li>
     <ul>
-        <li>ReactJS</li>
-        <li>Tailwind CSS</li>
+        <li><a href="https://reactjs.org/" target="_blank">ReactJS</a></li>
+        <li><a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a></li>
     </ul>
 <li>Libraries/Tools</li>
     <ul>
-        <li>ViteJS</li>
-        <li>React Icons</li>
-        <li>Framer</li>
-        <li>React Lottie</li>
+        <li><a href="https://vitejs.dev/" target="_blank">ViteJS</a></li>
+        <li><a href="https://react-icons.github.io/react-icons" target="_blank">React Icons</a></li>
+        <li><a href="https://www.framer.com/" target="_blank">Framer</a></li>
+        <li><a href="https://www.npmjs.com/package/react-lottie" target="_blank">React Lottie</a></li>
+        <li><a href="https://merakiui.com/components/" target="_blank">Meraki UI</a></li>
     </ul>
 </ul>
 <br/>
@@ -50,3 +51,7 @@
 - [JavaScript Mastery](https://youtu.be/_oO4Qi5aVZs)
 - [Developerfolio](https://developerfolio.js.org/)
 - [MasterPortfolio](https://github.com/ashutosh1919/masterPortfolio)
+
+## Illustrations
+- [Coding Lottie](https://lottiefiles.com/90189-coding) by Yamesh Sai Balaji
+- [Quiz Mode Lottie](https://lottiefiles.com/92377-quiz-mode) by SenecaDan
