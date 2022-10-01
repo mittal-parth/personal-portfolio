@@ -7,9 +7,10 @@
 ## Table of Contents
 
 1. [Tech Stack](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#tech-stack)
-2. [Installation Guide](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#installation-guide) 
-3. [References & Inspirations](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#references--inspirations)
-4. [Illustrations](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#illustrations)
+2. [Contributing](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#contributing)
+3. [Installation Guide](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#installation-guide) 
+4. [References & Inspirations](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#references--inspirations)
+5. [Illustrations](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#illustrations)
 <br>
 
 ## Tech Stack
@@ -29,6 +30,13 @@
     </ul>
 </ul>
 <br/>
+
+## Contributing
+
+### Code Of Conduct
+
+Please read and abide by our [Code of Conduct](https://github.com/mittal-parth/personal-portfolio/blob/main/CODE_OF_CONDUCT.md); 
+our community aspires to be a respectful place both during online and in-person interactions.
 
 ## Installation Guide 
 
