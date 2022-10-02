@@ -3,18 +3,8 @@ import Button from "./Button";
 import { socialMedia } from "../constants";
 import { profilePic } from "../assets";
 import { layout } from "../style";
-import { resumeLink } from "../constants";
-import { repoLink } from "../constants";
-import {
-  AiFillGithub,
-  AiFillInstagram,
-  AiFillLinkedin,
-  AiFillMail,
-  AiOutlineTwitter,
-  AiFillHtml5,
-  AiOutlineGoogle,
-  AiOutlineGitlab,
-} from "react-icons/ai";
+import { resumeLink, repoLink } from "../constants";
+import { AiFillGithub } from "react-icons/ai";
 
 const Footer = () => (
   <footer id="contactMe" className="bg-gray-900">
@@ -43,7 +33,7 @@ const Footer = () => (
           ))}
         </div>
 
-        <div className="grid-cols-2">
+        <div className="grid grid-cols-2">
           {/* styles is a prop */}
           <a href={resumeLink} target="_blank">
             <Button
