@@ -4,6 +4,7 @@ import { socialMedia } from "../constants";
 import { profilePic } from "../assets";
 import { layout } from "../style";
 import { resumeLink } from "../constants";
+import { repoLink } from "../constants";
 
 const Footer = () => (
   <footer id="contactMe" className="bg-gray-900">
@@ -31,13 +32,22 @@ const Footer = () => (
             </a>
           ))}
         </div>
-        {/* styles is a prop */}
-        <a href={resumeLink} target="_blank">
-          <Button
-            styles="mt-10"
+
+        <div className="grid-cols-2">
+          {/* styles is a prop */}
+          <a href={resumeLink} target="_blank">
+            <Button
+            styles="mt-10 mr-3"
             text="Resume"
-          />
-        </a>
+            />
+          </a>
+          <a href={repoLink} target="_blank">
+            <Button
+              styles="mt-10"
+              text="Star this repo"
+            />
+          </a>
+        </div>
       </div>
 
       <div className={layout.sectionImgReverseEnd}>
