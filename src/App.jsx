@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 import styles from "./style";
 import {
   Navbar,
@@ -28,7 +30,12 @@ const App = () => {
   }else{
     return (
       // A div to wrap the entire application
-      <div className="bg-primary w-full overflow-hidden">
+    <div className="bg-primary w-full overflow-hidden">
+      <motion.section
+        initial={{ x: -100, opacity: 0.25 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
             <Navbar />
@@ -51,7 +58,9 @@ const App = () => {
           </div>
         </div>
         <Footer />
-      </div>
+      </motion.section>
+    </div>
+
     );
   }
 };
