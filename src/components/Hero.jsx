@@ -2,7 +2,6 @@ import styles from "../style";
 import LetsConnect from "./LetsConnect";
 import Lottie from "react-lottie";
 import animationData from "../lotties/person-coding.json";
-import { motion } from "framer-motion";
 
 // lottie config
 const defaultOptions = {
@@ -16,11 +15,9 @@ const defaultOptions = {
 
 const Hero = () => {
   return (
-    <motion.section
+    <section
       id="home"
       className={`flex md:flex-row flex-col ${styles.paddingY}`}
-      whileInView={{ y: [-70, 0], opacity: [0, 1] }}
-      transition={{ duration: 1 }}
     >
       <div
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
@@ -58,7 +55,7 @@ const Hero = () => {
       <div className={`ss:hidden ${styles.flexCenter}`}>
         <LetsConnect />
       </div>
-    </motion.section>
+    </section>
   );
 };
 

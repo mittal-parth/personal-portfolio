@@ -10,6 +10,8 @@ import ExtraCurricular from "./ExtraCurricular";
 import Footer from "./Footer";
 import Button from "./Button";
 import Stats from "./Stats";
+import Loading from "./Loading";
+
 
 export {
     Navbar,
@@ -21,5 +23,6 @@ export {
     ExtraCurricular,
     Footer,
     Button,
-    Stats
+    Stats,
+    Loading
 };
