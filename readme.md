@@ -11,8 +11,9 @@
 3. [Use as a theme](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#use-as-a-theme)
 4. [Contributing](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#contributing)
 5. [Installation Guide](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#installation-guide)
-6. [References & Inspirations](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#references--inspirations)
-7. [Illustrations](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#illustrations)
+6. [Sample Git Workflow](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#sample-git-workflow)
+7. [References & Inspirations](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#references--inspirations)
+8. [Illustrations](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#illustrations)
    <br>
 
 ## Tech Stack 🧰
@@ -76,8 +77,9 @@ You can use [Netlify](https://docs.netlify.com/) to deploy your site. Follow the
 
 We welcome contributions in the form of pull requests, issues and documentation. Feel free to help us in any way! ❤️
 
-Please read and abide by our [Code of Conduct](https://github.com/mittal-parth/personal-portfolio/blob/main/CODE_OF_CONDUCT.md);
+- Please read and abide by our [Code of Conduct](https://github.com/mittal-parth/personal-portfolio/blob/main/CODE_OF_CONDUCT.md);
 our community aspires to be a respectful place both during online and in-person interactions.
+- Please follow the [installation guide](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#installation-guide) and the [sample git workflow](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#sample-git-workflow) to contribute.
 
 ## Installation Guide 🧑‍💻
 
@@ -97,6 +99,18 @@ our community aspires to be a respectful place both during online and in-person 
 - `npm run dev`
 
 <br/>
+
+## Sample Git Workflow
+
+- Follow the [installation guide](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#installation-guide) to install the software
+- Create a new feature branch with `git checkout -b <name-of-your-feature-branch>`
+- Make changes and commit them in the feature branch.
+- Once done developing, switch back to the main branch with `git checkout main` ; pull the latest version of the repo with `git pull https://github.com/mittal-parth/personal-portfolio.git main`
+- Switch back to the feature branch with `git checkout <name-of-your-feature-branch>`. Apply the new changes on top of the latest version of the repo with `git rebase main`
+- [Resolve merge conflicts](https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/) (if any)
+- Push your feature branch upto your remote repo with `git push origin <name-of-your-feature-branch>`
+- [Submit a Pull Request](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#making-a-pull-request) to the main branch.
+- After any questions or changes have been resolved, your contribution would be merged in!
 
 #### If you found this repo helpful in anyway, considering giving it a star - it would mean the world to me! 🌟
 
