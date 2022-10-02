@@ -5,6 +5,16 @@ import { profilePic } from "../assets";
 import { layout } from "../style";
 import { resumeLink } from "../constants";
 import { repoLink } from "../constants";
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiFillMail,
+  AiOutlineTwitter,
+  AiFillHtml5,
+  AiOutlineGoogle,
+  AiOutlineGitlab,
+} from "react-icons/ai";
 
 const Footer = () => (
   <footer id="contactMe" className="bg-gray-900">
@@ -39,12 +49,14 @@ const Footer = () => (
             <Button
             styles="mt-10 mr-3"
             text="Resume"
+            icon="AiFillGithub"
             />
           </a>
           <a href={repoLink} target="_blank">
             <Button
-              styles="mt-10"
-              text="Star this repo"
+              styles="mt-10 inline-flex items-center justify-center"
+              text="Star"
+              icon={AiFillGithub}
             />
           </a>
         </div>
