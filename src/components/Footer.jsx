@@ -7,9 +7,7 @@ import { resumeLink } from "../constants";
 
 const Footer = () => (
 	<footer id="contactMe" className="bg-gray-900">
-		<div
-			className={`${layout.sectionReverse} sm:pl-6 md:pl-0 lg:pl-0 xl:pl-0 2xl:pl-0`}
-		>
+		<div className={`${layout.sectionReverse} sm:pl-6 md:pl-0 lg:pl-0 xl:pl-0 2xl:pl-0`}>
 			<div className={`px-6 ${layout.sectionInfo} md:ml-16`}>
 				<h2 className="text-xl font-bold text-gray-800 font-poppins dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
 					Parth Mittal
