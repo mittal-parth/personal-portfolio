@@ -796,9 +796,7 @@ export const clients = [
   },
 ];
 
-export const aboutMe = [
-  {
-    name: "Parth",
-    lastName: "Mittal"
-  }
-];
+export const aboutMe = {
+    name: "Parth Mittal"
+}
+

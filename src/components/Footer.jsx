@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "./Button";
-import { socialMedia } from "../constants";
-import { aboutMe } from "../constants";
+import { socialMedia, aboutMe } from "../constants";
 import { profilePic } from "../assets";
 import { layout } from "../style";
 import { resumeLink } from "../constants";
@@ -11,7 +10,7 @@ const Footer = () => (
     <div className={layout.sectionReverse}>
       <div className={`px-6 ${layout.sectionInfo} md:ml-16`}>
         <h2 className="text-xl font-bold text-gray-800 font-poppins dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-          {aboutMe[0].name} {aboutMe[0].lastName}
+          {aboutMe.name}
         </h2>
         <p
           className={`font-poppins font-normal text-dimWhite text-[16px] leading-[30.8px] max-w-[470px] mt-5`}
