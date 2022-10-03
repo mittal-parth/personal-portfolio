@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./Button";
-import { socialMedia } from "../constants";
+import { socialMedia, aboutMe } from "../constants";
 import { profilePic } from "../assets";
 import { layout } from "../style";
 import { resumeLink, repoLink } from "../constants";
@@ -13,7 +13,7 @@ const Footer = () => (
     >
       <div className={` ${layout.sectionInfo}`}>
         <h2 className="text-xl font-bold text-gray-800 font-poppins dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-          Parth Mittal
+          {aboutMe.name}
         </h2>
         <p
           className={`font-poppins font-normal text-dimWhite text-[16px] leading-[30.8px] max-w-[470px] mt-5`}
