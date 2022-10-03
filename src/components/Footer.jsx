@@ -7,11 +7,11 @@ import { resumeLink, repoLink } from "../constants";
 import { AiFillGithub } from "react-icons/ai";
 
 const Footer = () => (
-  <footer id="contactMe" className="bg-gray-900">
+  <footer id="contactMe" className="bg-gray-900 sm:px-16 px-6">
     <div
-      className={`${layout.sectionReverse} sm:pl-6 md:pl-0 lg:pl-0 xl:pl-0 2xl:pl-0`}
+      className={`${layout.sectionReverse} xl:max-w-[1280px] w-full mx-auto gap-y-4 `}
     >
-      <div className={`px-6 ${layout.sectionInfo} md:ml-16`}>
+      <div className={` ${layout.sectionInfo}`}>
         <h2 className="text-xl font-bold text-gray-800 font-poppins dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
           Parth Mittal
         </h2>
@@ -49,11 +49,11 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className={layout.sectionImgReverseEnd}>
+      <div className="md:ml-auto mt-10 md:mt-0">
         <img
           src={profilePic}
           alt="Parth Mittal"
-          className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full md:mr-16"
+          className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full"
         />
       </div>
     </div>
