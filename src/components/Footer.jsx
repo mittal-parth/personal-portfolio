@@ -39,15 +39,15 @@ const Footer = () => (
         </a>
       </div>
 
-			<div className={layout.sectionImgReverseEnd}>
-				<img
-					src={profilePic}
-					alt="Parth Mittal"
-					className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full md:mr-16"
-				/>
-			</div>
-		</div>
-	</footer>
+      <div className={layout.sectionImgReverseEnd}>
+        <img
+          src={profilePic}
+          alt="Parth Mittal"
+          className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full md:mr-16"
+        />
+      </div>
+    </div>
+  </footer>
 );
 
 export default Footer;
