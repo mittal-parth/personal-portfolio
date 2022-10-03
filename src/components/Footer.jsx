@@ -33,10 +33,20 @@ const Footer = () => (
             </a>
           ))}
         </div>
-        {/* styles is a prop */}
-        <a href={resumeLink} target="_blank">
-          <Button styles="mt-10" text="Resume" />
-        </a>
+
+        <div className="grid grid-cols-2">
+          {/* styles is a prop */}
+          <a href={resumeLink} target="_blank">
+            <Button styles="mt-10 mr-3" text="Resume" icon="AiFillGithub" />
+          </a>
+          <a href={repoLink} target="_blank">
+            <Button
+              styles="mt-10 inline-flex items-center justify-center"
+              text="Star"
+              icon={AiFillGithub}
+            />
+          </a>
+        </div>
       </div>
 
       <div className={layout.sectionImgReverseEnd}>
