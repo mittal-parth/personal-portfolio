@@ -2,7 +2,6 @@ import styles from "../style";
 import LetsConnect from "./LetsConnect";
 import Lottie from "react-lottie";
 import animationData from "../lotties/person-coding.json";
-import { motion } from "framer-motion";
 import { aboutMe } from "../constants";
 
 
