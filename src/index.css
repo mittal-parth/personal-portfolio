@@ -12,10 +12,34 @@
     #11101d 91.61%
   );
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+  --scrollbar-primary: #00040f;
+  --scrollbar-secondary: lightblue;
 }
 
 * {
   scroll-behavior: smooth;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-secondary) var(--scrollbar-primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-primary);
+  border-radius: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-secondary);
+  border-radius: 14px;
+  border: 3px solid var(--scrollbar-primary);
 }
 
 .text-gradient {
