@@ -18,7 +18,7 @@ const Footer = () => (
         <p
           className={`font-poppins font-normal text-dimWhite text-[16px] leading-[30.8px] max-w-[470px] mt-5`}
         >
-          Web Manager @ IRIS, NITK | Executive Member at GDSC, NITK
+          {aboutMe.tagLine}
         </p>
         <div className="flex flex-row mt-4">
           {socialMedia.map((social, index) => (
