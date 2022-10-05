@@ -32,7 +32,6 @@ const Project = (props) => {
                   key={tech.id}
                   index={index}
                   className="text-dimWhite mr-5 text-[20px] hover:text-teal-200 tooltip"
-                  too
                 >
                   {React.createElement(tech.icon)}
                   <span class="tooltiptext">{tech.name}</span>
