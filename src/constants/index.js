@@ -684,7 +684,7 @@ export const projects = [
       {
         id: "icon-2",
         icon: AiOutlineGoogle,
-        name: "Google"
+        name: "Google OAuth"
       },
       {
         id: "icon-3",
