@@ -825,6 +825,7 @@ export const clients = [
 ];
 
 export const aboutMe = {
-    name: "Parth Mittal"
+    name: "Parth Mittal",
+    tagLine: "Web Manager @ IRIS, NITK | Executive Member at GDSC, NITK"
 }
 
