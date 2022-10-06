@@ -28,14 +28,14 @@ const Project = (props) => {
           <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
             <div className="flex sm:flex-row">
               {props.stack.map((tech, index) => (
-                <span
+                <div
                   key={tech.id}
                   index={index}
-                  className="text-dimWhite mr-5 text-[20px] hover:text-teal-200"
-                  title="less go"
+                  className="text-dimWhite mr-5 text-[20px] hover:text-teal-200 tooltip"
                 >
                   {React.createElement(tech.icon)}
-                </span>
+                  <span class="tooltiptext">{tech.name}</span>
+                </div>
               ))}
             </div>
           </p>

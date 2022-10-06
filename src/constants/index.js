@@ -508,26 +508,32 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiDjango,
+        name: "Django"
       },
       {
         id: "icon-2",
         icon: AiFillHtml5,
+        name: "HTML"
       },
       {
         id: "icon-3",
         icon: DiCss3,
+        name: "CSS"
       },
       {
         id: "icon-4",
         icon: SiJavascript,
+        name: "JavaScript"
       },
       {
         id: "icon-5",
         icon: SiBootstrap,
+        name: "Bootstrap"
       },
       {
         id: "icon-6",
         icon: SiChartdotjs,
+        name: "Chart.js"
       },
     ],
   },
@@ -543,18 +549,22 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiReact,
+        name: "React"
       },
       {
         id: "icon-2",
         icon: AiFillHtml5,
+        name: "HTML"
       },
       {
         id: "icon-3",
         icon: DiCss3,
+        name: "CSS"
       },
       {
         id: "icon-4",
         icon: SiMaterialui,
+        name: "Material UI"
       },
     ],
   },
@@ -569,14 +579,17 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiReact,
+        name: "React"
       },
       {
         id: "icon-2",
         icon: SiTailwindcss,
+        name: "Tailwind CSS"
       },
       {
         id: "icon-3",
         icon: AiFillHtml5,
+        name: "HTML"
       },
     ],
   },
@@ -592,14 +605,17 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiReact,
+        name: "React"
       },
       {
         id: "icon-4",
         icon: SiMaterialui,
+        name: "Material UI"
       },
       {
         id: "icon-5",
         icon: SiTailwindcss,
+        name: "Tailwind CSS"
       },
     ],
   },
@@ -615,14 +631,17 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiDjango,
+        name: "Django"
       },
       {
         id: "icon-2",
         icon: AiFillHtml5,
+        name: "HTML"
       },
       {
         id: "icon-3",
         icon: DiCss3,
+        name: "CSS"
       },
     ],
   },
@@ -638,10 +657,12 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiGraphql,
+        name: "GraphQL"
       },
       {
         id: "icon-2",
         icon: SiDjango,
+        name: "Django"
       },
     ],
   },
@@ -657,19 +678,23 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiDjango,
+        name: "Django"
       },
 
       {
         id: "icon-2",
         icon: AiOutlineGoogle,
+        name: "Google OAuth"
       },
       {
         id: "icon-3",
         icon: AiFillHtml5,
+        name: "HTML"
       },
       {
         id: "icon-4",
         icon: DiCss3,
+        name: "CSS"
       },
     ],
   },
