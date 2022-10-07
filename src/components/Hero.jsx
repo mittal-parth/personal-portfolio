@@ -40,8 +40,7 @@ const Hero = () => {
           <span className="text-gradient">{aboutMe.name}</span>
         </h1>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          Student web-developer from India who is either busy improving his
-          craft or pondering over the next big idea.
+          {aboutMe.intro}
         </p>
       </div>
 
