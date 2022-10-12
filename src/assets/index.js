@@ -39,6 +39,9 @@ import portfolio from "./portfolio.jpg";
 import zulip from "./zulip.jpg";
 import publiclab from "./publiclab.png";
 import cdc from "./cdc.png";
+import img1 from './img1.jpg'
+import img2 from './img2.jpg'
+import img3 from './img3.jpg'
 
 export {
   airbnb,
@@ -81,5 +84,8 @@ export {
   zulip,
   cdc,
   parthmittal,
-  profilePic
+  profilePic,
+  img1,
+  img2,
+  img3
 };

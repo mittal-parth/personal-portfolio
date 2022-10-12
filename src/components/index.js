@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import Button from "./Button";
 import Stats from "./Stats";
 import Loading from "./Loading";
+import BlogPosts from "./BlogPosts";
 
 
 export {
@@ -24,5 +25,6 @@ export {
     Footer,
     Button,
     Stats,
-    Loading
+    Loading,
+    BlogPosts,
 };
