@@ -705,97 +705,66 @@ export const projects = [
 
 export const blogPosts = [
   {
-    id: "project-1",
+    id: "post-1",
     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    github: "https://github.com/mittal-parth/Cluboard",
-    link: "",
+    link: "https://github.com/mittal-parth/personal-portfolio",
+    date: new Date().toLocaleDateString(),
     image: img1,
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nemo sunt eum voluptatum iusto ipsam. Aliquam commodi numquam omnis at...",
-    stack: [
+    tags: [
       {
-        id: "icon-1",
-        icon: SiDjango,
-        name: "Django"
-      },
-      {
-        id: "icon-2",
-        icon: AiFillHtml5,
+        id: "tag-1",
         name: "HTML"
       },
       {
-        id: "icon-3",
-        icon: DiCss3,
+        id: "tag-2",
         name: "CSS"
       },
       {
-        id: "icon-4",
-        icon: SiJavascript,
+        id: "tag-3",
         name: "JavaScript"
       },
-      {
-        id: "icon-5",
-        icon: SiBootstrap,
-        name: "Bootstrap"
-      },
-      {
-        id: "icon-6",
-        icon: SiChartdotjs,
-        name: "Chart.js"
-      },
     ],
   },
   {
-    id: "project-2",
+    id: "post-2",
     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    github: "https://github.com/mittal-parth/Cash-Flow-Minmiser",
-    link: "https://minimise-cash-flow.netlify.app/",
+    link: "https://github.com/mittal-parth/personal-portfolio",
+    date: new Date().toLocaleDateString(),
     image: img2,
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nemo sunt eum voluptatum iusto ipsam. Aliquam commodi numquam omnis at...",
-    stack: [
+    tags: [
       {
-        id: "icon-1",
-        icon: SiReact,
-        name: "React"
-      },
-      {
-        id: "icon-2",
-        icon: AiFillHtml5,
+        id: "tag-1",
         name: "HTML"
       },
       {
-        id: "icon-3",
-        icon: DiCss3,
+        id: "tag-2",
         name: "CSS"
       },
       {
-        id: "icon-4",
-        icon: SiMaterialui,
-        name: "Material UI"
+        id: "tag-3",
+        name: "JavaScript"
       },
     ],
   },
+
   {
-    id: "project-3",
+    id: "post-3",
     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    github: "https://github.com/mittal-parth/personal-portfolio",
-    link: "https://parthmittal.netlify.app/",
+    link: "https://github.com/mittal-parth/personal-portfolio",
+    date: new Date().toLocaleDateString(),
     image: img3,
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nemo sunt eum voluptatum iusto ipsam. Aliquam commodi numquam omnis at...",
-    stack: [
+    tags: [
       {
-        id: "icon-1",
-        icon: SiReact,
-        name: "React"
-      },
-      {
-        id: "icon-2",
-        icon: SiTailwindcss,
-        name: "Tailwind CSS"
-      },
-      {
-        id: "icon-3",
-        icon: AiFillHtml5,
+        id: "tag-1",
         name: "HTML"
+      },
+      {
+        id: "tag-2",
+        name: "CSS"
+      },
+      {
+        id: "tag-3",
+        name: "JavaScript"
       },
     ],
   },

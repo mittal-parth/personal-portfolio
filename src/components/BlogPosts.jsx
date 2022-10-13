@@ -15,7 +15,7 @@ const BlogPost = (props) => {
       transition={{ duration: 1 }}
     >
       <img
-        className="flex-shrink-0 object-cover w-full h-24"
+        className="flex-shrink-0 object-cover w-full h-40"
         src={props.image}
         alt=""
       />
@@ -23,21 +23,20 @@ const BlogPost = (props) => {
         <div className="flex flex-col">
           <div>
             <p className="font-poppins font-normal text-dimWhite mb-3">
-              2022-10-12T12:46:11.340Z
+              {props.date}
             </p>
             <h1 className="text-xl font-semibold font-poppins text-gray-700 capitalize md:text-2xl group-hover:text-white text-gradient">
               {props.title}
             </h1>
-            <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+            <p className="mt-5 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
               <div className="flex sm:flex-row">
-                {props.stack.map((tech, index) => (
+                {props.tags.map((tag, index) => (
                   <div
-                    key={tech.id}
+                    key={tag.id}
                     index={index}
-                    className="text-dimWhite mr-5 text-[20px] hover:text-teal-200 tooltip"
+                    className="text-dimWhite mr-5 text-sm hover:text-teal-200 p-1.5 ring-1 ring-dimWhite hover:ring-teal-200 rounded"
                   >
-                    {React.createElement(tech.icon)}
-                    <span class="tooltiptext">{tech.name}</span>
+                    <span>{tag.name}</span>
                   </div>
                 ))}
               </div>
@@ -45,36 +44,10 @@ const BlogPost = (props) => {
           </div>
         </div>
 
-        <p className="mt-8 text-gray-500 dark:text-gray-300 group-hover:text-gray-300 font-poppins">
-          {props.content}
-        </p>
-
-        <div className="flex justify-between mt-4 -mx-2">
-          <div className="flex">
-            {props.github ? (
-              <a href={props.github} target="_blank">
-                <AiFillGithub
-                  size="2rem"
-                  className="text-white mr-1 hover:text-teal-200"
-                ></AiFillGithub>
-              </a>
-            ) : (
-              ""
-            )}
-            {props.link ? (
-              <a href={props.link} target="_blank">
-                <BsLink45Deg
-                  size="2rem"
-                  className="text-white hover:text-teal-200"
-                ></BsLink45Deg>
-              </a>
-            ) : (
-              ""
-            )}
-          </div>
-          <div>
+        <div className="mt-8">
+          <a href={props.link} target="_blank">
             <Button styles="" text="Read more &rarr;" icon="AiFillGithub" />
-          </div>
+          </a>
         </div>
       </div>
     </motion.div>
