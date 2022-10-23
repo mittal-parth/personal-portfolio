@@ -706,10 +706,10 @@ export const projects = [
 export const blogPosts = [
   {
     id: "post-1",
-    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Seven Things About Javascript You Have To Experience It Yourself.",
     link: "https://github.com/mittal-parth/personal-portfolio",
     date: new Date().toLocaleDateString(),
-    image: img1,
+    image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80",
     tags: [
       {
         id: "tag-1",
@@ -727,44 +727,44 @@ export const blogPosts = [
   },
   {
     id: "post-2",
-    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "What You Know About Javascript And What You Don't Know About Javascript.",
     link: "https://github.com/mittal-parth/personal-portfolio",
     date: new Date().toLocaleDateString(),
-    image: img2,
+    image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     tags: [
       {
         id: "tag-1",
-        name: "HTML"
+        name: "Lorem ipsum dolor"
       },
       {
         id: "tag-2",
-        name: "CSS"
+        name: "Lorem ipsum dolor"
       },
       {
         id: "tag-3",
-        name: "JavaScript"
+        name: "Lorem ipsum dolor"
       },
     ],
   },
 
   {
     id: "post-3",
-    title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "The Latest Trend In Javascript.",
     link: "https://github.com/mittal-parth/personal-portfolio",
     date: new Date().toLocaleDateString(),
-    image: img3,
+    image: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     tags: [
       {
         id: "tag-1",
-        name: "HTML"
+        name: "HTML Test Hypertext Markup Language"
       },
       {
         id: "tag-2",
-        name: "CSS"
+        name: "CSS Test Stylesheet"
       },
       {
         id: "tag-3",
-        name: "JavaScript"
+        name: "JavaScript Test Script"
       },
     ],
   },

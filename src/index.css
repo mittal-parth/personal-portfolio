@@ -199,3 +199,13 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+.blog-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 32px;     /* fallback */
+  max-height: 64px;      /* fallback */
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
