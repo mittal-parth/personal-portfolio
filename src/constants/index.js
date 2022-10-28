@@ -17,10 +17,7 @@ import {
   portfolio,
   publiclab,
   zulip,
-  cdc,
-  img1,
-  img2,
-  img3,
+  cdc
 } from "../assets";
 
 import {
@@ -706,65 +703,64 @@ export const projects = [
 export const blogPosts = [
   {
     id: "post-1",
-    title: "Seven Things About Javascript You Have To Experience It Yourself.",
-    link: "https://github.com/mittal-parth/personal-portfolio",
-    date: new Date().toLocaleDateString(),
-    image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80",
+    title: "Blog Post 01 - Title",
+    link: "#",
+    date: new Date().toLocaleDateString(), // Can be edited to any string format
+    image: "https://via.placeholder.com/600/92c952",
     tags: [
       {
         id: "tag-1",
-        name: "HTML"
+        name: "tag 01"
       },
       {
         id: "tag-2",
-        name: "CSS"
+        name: "tag 03"
       },
       {
         id: "tag-3",
-        name: "JavaScript"
+        name: "tag 03"
       },
     ],
   },
   {
     id: "post-2",
-    title: "What You Know About Javascript And What You Don't Know About Javascript.",
-    link: "https://github.com/mittal-parth/personal-portfolio",
+    title: "Blog Post 02 - Title",
+    link: "#",
     date: new Date().toLocaleDateString(),
-    image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    image: "https://via.placeholder.com/600/d32776",
     tags: [
       {
         id: "tag-1",
-        name: "Lorem ipsum dolor"
+        name: "tag 01"
       },
       {
         id: "tag-2",
-        name: "Lorem ipsum dolor"
+        name: "tag 03"
       },
       {
         id: "tag-3",
-        name: "Lorem ipsum dolor"
+        name: "tag 03"
       },
     ],
   },
-
   {
     id: "post-3",
-    title: "The Latest Trend In Javascript.",
-    link: "https://github.com/mittal-parth/personal-portfolio",
+    title: "Blog Post 03 - Title",
+    link: "#",
     date: new Date().toLocaleDateString(),
-    image: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    image: "https://via.placeholder.com/600/771796",
     tags: [
       {
         id: "tag-1",
-        name: "HTML Test Hypertext Markup Language"
+        name: "tag 01"
       },
       {
         id: "tag-2",
-        name: "CSS Test Stylesheet"
+        name: "tag 03"
       },
       {
         id: "tag-3",
-        name: "JavaScript Test Script"
+        name: "tag 03"
       },
     ],
   },
