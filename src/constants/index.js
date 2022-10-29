@@ -17,7 +17,7 @@ import {
   portfolio,
   publiclab,
   zulip,
-  cdc,
+  cdc
 } from "../assets";
 
 import {
@@ -695,6 +695,72 @@ export const projects = [
         id: "icon-4",
         icon: DiCss3,
         name: "CSS"
+      },
+    ],
+  },
+];
+
+export const blogPosts = [
+  {
+    id: "post-1",
+    title: "Blog Post 01 - Title",
+    link: "#",
+    date: new Date().toLocaleDateString(), // Can be edited to any string format
+    image: "https://via.placeholder.com/600/92c952",
+    tags: [
+      {
+        id: "tag-1",
+        name: "tag 01"
+      },
+      {
+        id: "tag-2",
+        name: "tag 03"
+      },
+      {
+        id: "tag-3",
+        name: "tag 03"
+      },
+    ],
+  },
+  {
+    id: "post-2",
+    title: "Blog Post 02 - Title",
+    link: "#",
+    date: new Date().toLocaleDateString(),
+    image: "https://via.placeholder.com/600/d32776",
+    tags: [
+      {
+        id: "tag-1",
+        name: "tag 01"
+      },
+      {
+        id: "tag-2",
+        name: "tag 03"
+      },
+      {
+        id: "tag-3",
+        name: "tag 03"
+      },
+    ],
+  },
+  {
+    id: "post-3",
+    title: "Blog Post 03 - Title",
+    link: "#",
+    date: new Date().toLocaleDateString(),
+    image: "https://via.placeholder.com/600/771796",
+    tags: [
+      {
+        id: "tag-1",
+        name: "tag 01"
+      },
+      {
+        id: "tag-2",
+        name: "tag 03"
+      },
+      {
+        id: "tag-3",
+        name: "tag 03"
       },
     ],
   },
