@@ -1,7 +1,5 @@
 import React from "react";
 import { blogPosts } from "../constants";
-import { AiFillGithub } from "react-icons/ai";
-import { BsLink45Deg } from "react-icons/bs";
 import { motion } from "framer-motion";
 import Button from "./Button";
 
@@ -48,7 +46,7 @@ const BlogPost = (props) => {
 
         <div className="mt-8">
           <a href={props.link} target="_blank">
-            <Button styles="" text="Read more &rarr;" icon="AiFillGithub" />
+            <Button text="Read more &rarr;" />
           </a>
         </div>
       </div>
