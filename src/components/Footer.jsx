@@ -57,6 +57,11 @@ const Footer = () => (
         />
       </div>
     </div>
+    <div className="mx-auto font-poppins font-normal text-dimWhite text-[20px] leading-[30.8px] max-w-[700px] my-1 ">
+      <p>
+        <i>Made with 💙 by Parth Mittal & the Open Source Community</i>
+      </p>
+    </div>
   </footer>
 );
 
