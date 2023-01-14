@@ -1,15 +1,17 @@
 import React from "react";
 import Button from "./Button";
-import { socialMedia } from "../constants";
+import { socialMedia, aboutMe } from "../constants";
 import { profilePic } from "../assets";
 import { layout } from "../style";
 import { resumeLink, repoLink, aboutMe } from "../constants";
 import { AiFillGithub } from "react-icons/ai";
 
 const Footer = () => (
-  <footer id="contactMe" className="bg-gray-900">
-    <div className={layout.sectionReverse}>
-      <div className={`px-6 ${layout.sectionInfo} md:ml-16`}>
+  <footer id="contactMe" className="bg-gray-900 sm:px-16 px-6">
+    <div
+      className={`${layout.sectionReverse} xl:max-w-[1280px] w-full mx-auto gap-y-4 `}
+    >
+      <div className={` ${layout.sectionInfo}`}>
         <h2 className="text-xl font-bold text-gray-800 font-poppins dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
           {aboutMe.name}
         </h2>
@@ -35,11 +37,7 @@ const Footer = () => (
         <div className="grid grid-cols-2">
           {/* styles is a prop */}
           <a href={resumeLink} target="_blank">
-            <Button
-            styles="mt-10 mr-3"
-            text="Resume"
-            icon="AiFillGithub"
-            />
+            <Button styles="mt-10 mr-3" text="Resume" icon="AiFillGithub" />
           </a>
           <a href={repoLink} target="_blank">
             <Button
@@ -51,11 +49,11 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className={layout.sectionImgReverseEnd}>
+      <div className="md:ml-auto mt-10 md:mt-0">
         <img
           src={profilePic}
           alt="Parth Mittal"
-          className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full md:mr-16"
+          className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full"
         />
       </div>
     </div>

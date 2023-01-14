@@ -684,30 +684,36 @@ export const projects = [
         id: "icon-1",
         icon: SiDjango,
         name: "Django"
+        name: "Django"
       },
       {
         id: "icon-2",
         icon: AiFillHtml5,
+        name: "HTML"
         name: "HTML"
       },
       {
         id: "icon-3",
         icon: DiCss3,
         name: "CSS"
+        name: "CSS"
       },
       {
         id: "icon-4",
         icon: SiJavascript,
+        name: "JavaScript"
         name: "JavaScript"
       },
       {
         id: "icon-5",
         icon: SiBootstrap,
         name: "Bootstrap"
+        name: "Bootstrap"
       },
       {
         id: "icon-6",
         icon: SiChartdotjs,
+        name: "Chart.js"
         name: "Chart.js"
       },
     ],
@@ -725,20 +731,24 @@ export const projects = [
         id: "icon-1",
         icon: SiReact,
         name: "React"
+        name: "React"
       },
       {
         id: "icon-2",
         icon: AiFillHtml5,
+        name: "HTML"
         name: "HTML"
       },
       {
         id: "icon-3",
         icon: DiCss3,
         name: "CSS"
+        name: "CSS"
       },
       {
         id: "icon-4",
         icon: SiMaterialui,
+        name: "Material UI"
         name: "Material UI"
       },
     ],
@@ -755,15 +765,18 @@ export const projects = [
         id: "icon-1",
         icon: SiReact,
         name: "React"
+        name: "React"
       },
       {
         id: "icon-2",
         icon: SiTailwindcss,
         name: "Tailwind CSS"
+        name: "Tailwind CSS"
       },
       {
         id: "icon-3",
         icon: AiFillHtml5,
+        name: "HTML"
         name: "HTML"
       },
     ],
@@ -781,15 +794,18 @@ export const projects = [
         id: "icon-1",
         icon: SiReact,
         name: "React"
+        name: "React"
       },
       {
         id: "icon-4",
         icon: SiMaterialui,
         name: "Material UI"
+        name: "Material UI"
       },
       {
         id: "icon-5",
         icon: SiTailwindcss,
+        name: "Tailwind CSS"
         name: "Tailwind CSS"
       },
     ],
@@ -807,15 +823,18 @@ export const projects = [
         id: "icon-1",
         icon: SiDjango,
         name: "Django"
+        name: "Django"
       },
       {
         id: "icon-2",
         icon: AiFillHtml5,
         name: "HTML"
+        name: "HTML"
       },
       {
         id: "icon-3",
         icon: DiCss3,
+        name: "CSS"
         name: "CSS"
       },
     ],
@@ -833,10 +852,12 @@ export const projects = [
         id: "icon-1",
         icon: SiGraphql,
         name: "GraphQL"
+        name: "GraphQL"
       },
       {
         id: "icon-2",
         icon: SiDjango,
+        name: "Django"
         name: "Django"
       },
     ],

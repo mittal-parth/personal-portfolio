@@ -11,6 +11,7 @@ import {
   Footer,
   OpenSource,
   Projects,
+  BlogPosts,
   Loading
 } from "./components";
 
@@ -53,6 +54,7 @@ const App = () => {
             <SkillsAndExperience />
             <Education />
             <Projects />
+            <BlogPosts enabled={false} />
             <OpenSource />
             <ExtraCurricular />
           </div>
