@@ -3,7 +3,7 @@ import Button from "./Button";
 import { socialMedia, aboutMe } from "../constants";
 import { profilePic } from "../assets";
 import { layout } from "../style";
-import { resumeLink, repoLink, aboutMe } from "../constants";
+import { resumeLink, repoLink } from "../constants";
 import { AiFillGithub } from "react-icons/ai";
 
 const Footer = () => (
