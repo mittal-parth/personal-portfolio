@@ -12,12 +12,15 @@ import {
   iris,
   ecell,
   genesis,
-  todo,
   graphql,
   portfolio,
   publiclab,
   zulip,
   cdc,
+  chargeswap,
+  placeicon,
+  recruitment,
+  huntly
 } from "../assets";
 
 import {
@@ -53,9 +56,27 @@ import {
   SiNetlify,
   SiChartdotjs,
   SiVite,
+  SiArduino,
+  SiWeb3Dotjs,
+  SiIpfs,
+  SiDotnet,
+  SiTwilio,
+  SiFlutter,
+  SiReplit,
+  SiFlask,
+  SiFigma,
+  SiGooglemaps
 } from "react-icons/si";
 
-import { DiCss3, DiRuby } from "react-icons/di";
+import {
+  FaHardHat
+} from "react-icons/fa";
+
+import {
+  IoIosNotificationsOutline
+} from "react-icons/io";
+
+import { DiCss3, DiMsqlServer, DiRuby } from "react-icons/di";
 
 export const resumeLink = "https://drive.google.com/file/d/1wkPu9i_e2uAdHmbqe0hEM9BfBheJfxkT/view?usp=sharing";
 export const repoLink = "https://github.com/mittal-parth/personal-portfolio";
@@ -241,7 +262,7 @@ export const experiences = [
     link: "https://iris.nitk.ac.in/about_us",
     positions: [
       {
-        title: "Web Manager",
+        title: "Web Lead",
         duration: "Apr 2022 - Present",
         content: [
           {
@@ -498,6 +519,160 @@ export const openSourceContributions = [
 export const projects = [
   {
     id: "project-1",
+    title: "ChargeSwap",
+    github: "https://github.com/CommanderAstern/ChargeSwap",
+    link: "https://devfolio.co/projects/chargeswap-3527",
+    image: chargeswap,
+    content:
+      "A Blockchain-based EV-Battery swapping solution - winning project at ETHIndia'22, the world's largest Ethereum Hackathon",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiReact,
+        name: "React"
+      },
+      {
+        id: "icon-2",
+        icon: SiTailwindcss,
+        name: "TailwindCSS"
+      },
+      {
+        id: "icon-3",
+        icon: SiWeb3Dotjs,
+        name: "Web3.js"
+      },
+      {
+        id: "icon-4",
+        icon: SiSolidity,
+        name: "Solidity"
+      },
+      {
+        id: "icon-5",
+        icon: FaHardHat,
+        name: "HardHat"
+      },
+      {
+        id: "icon-6",
+        icon: SiIpfs,
+        name: "IPFS"
+      },
+      {
+        id: "icon-7",
+        icon: SiArduino,
+        name: "Arduino"
+      },
+      {
+        id: "icon-8",
+        icon: IoIosNotificationsOutline,
+        name: "Push Protocol"
+      },
+    ],
+  },
+  {
+    id: "project-2",
+    title: "Samsotech Table Management System",
+    github: "",
+    link: "https://www.linkedin.com/posts/mittal-parth_technologysolutions-softwaredevelopment-technology-activity-6994915645066809344-WnMY?utm_source=share&utm_medium=member_desktop",
+    image: placeicon,
+    content:
+      "Restaurant, Place, Table and realtime Reservation Management with Multi-Tenant Architecture, RBAC, SMS and Email integration for Samsotech International",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiDotnet,
+        name: "Dot Net Core MVC 6"
+      },
+      {
+        id: "icon-2",
+        icon: SiBootstrap,
+        name: "Bootstrap"
+      },
+      {
+        id: "icon-3",
+        icon: DiMsqlServer,
+        name: "MS Sql Server"
+      },
+      {
+        id: "icon-4",
+        icon: SiJquery,
+        name: "jQuery"
+      },
+      {
+        id: "icon-5",
+        icon: SiTwilio,
+        name: "Twillio"
+      },
+    ],
+  },
+  {
+    id: "project-3",
+    title: "Non-Teaching Recruitment Portal, NITK",
+    github: "",
+    link: "http://recruitment.nitk.ac.in/",
+    image: recruitment,
+    content:
+      "The official recruitment portal for non-teaching staff with an admin panel, email notifications and payment integration.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiRubyonrails,
+        name: "Ruby on Rails"
+      },
+      {
+        id: "icon-2",
+        icon: SiTailwindcss,
+        name: "TailwindCSS"
+      },
+      {
+        id: "icon-3",
+        icon: SiJquery,
+        name: "jQuery"
+      },
+    ],
+  },
+  {
+    id: "project-4",
+    title: "Huntly",
+    github: "",
+    link: "https://devfolio.co/projects/huntly-b5a9",
+    image: huntly,
+    content:
+      "A cross-platform mobile application that brings people closer to the physical environment and forms meaningful connections by organising real-world Treasure Hunts for free and winning rewards. The app uses machine learning to match users and form teams of like-minded people.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiDjango,
+        name: "Django Rest Framework"
+      },
+      {
+        id: "icon-2",
+        icon: SiFlutter,
+        name: "Flutter"
+      },
+      {
+        id: "icon-3",
+        icon: SiReplit,
+        name: "Replit"
+      },
+      {
+        id: "icon-3",
+        icon: SiFlask,
+        name: "Flask"
+      },
+      {
+        id: "icon-4",
+        icon: SiFigma,
+        name: "Figma"
+      },
+      {
+        id: "icon-4",
+        icon: SiGooglemaps,
+        name: "Google Maps API"
+      },
+    ],
+  },
+  {
+    id: "project-5",
     title: "Cluboard",
     github: "https://github.com/mittal-parth/Cluboard",
     link: "",
@@ -508,31 +683,37 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiDjango,
+        name: "Django"
       },
       {
         id: "icon-2",
         icon: AiFillHtml5,
+        name: "HTML"
       },
       {
         id: "icon-3",
         icon: DiCss3,
+        name: "CSS"
       },
       {
         id: "icon-4",
         icon: SiJavascript,
+        name: "JavaScript"
       },
       {
         id: "icon-5",
         icon: SiBootstrap,
+        name: "Bootstrap"
       },
       {
         id: "icon-6",
         icon: SiChartdotjs,
+        name: "Chart.js"
       },
     ],
   },
   {
-    id: "project-2",
+    id: "project-6",
     title: "Cash Flow Minimiser",
     github: "https://github.com/mittal-parth/Cash-Flow-Minmiser",
     link: "https://minimise-cash-flow.netlify.app/",
@@ -543,23 +724,27 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiReact,
+        name: "React"
       },
       {
         id: "icon-2",
         icon: AiFillHtml5,
+        name: "HTML"
       },
       {
         id: "icon-3",
         icon: DiCss3,
+        name: "CSS"
       },
       {
         id: "icon-4",
         icon: SiMaterialui,
+        name: "Material UI"
       },
     ],
   },
   {
-    id: "project-3",
+    id: "project-7",
     title: "Portfolio",
     github: "https://github.com/mittal-parth/personal-portfolio",
     link: "https://parthmittal.netlify.app/",
@@ -569,19 +754,22 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiReact,
+        name: "React"
       },
       {
         id: "icon-2",
         icon: SiTailwindcss,
+        name: "Tailwind CSS"
       },
       {
         id: "icon-3",
         icon: AiFillHtml5,
+        name: "HTML"
       },
     ],
   },
   {
-    id: "project-4",
+    id: "project-8",
     title: "Bank Landing Page",
     github: "https://github.com/mittal-parth/bank-landing-page-react",
     link: "https://bank-landing-page-parth.netlify.app/",
@@ -592,19 +780,22 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiReact,
+        name: "React"
       },
       {
         id: "icon-4",
         icon: SiMaterialui,
+        name: "Material UI"
       },
       {
         id: "icon-5",
         icon: SiTailwindcss,
+        name: "Tailwind CSS"
       },
     ],
   },
   {
-    id: "project-5",
+    id: "project-9",
     title: "Freadom",
     github: "https://github.com/mittal-parth/Freadom",
     link: "",
@@ -615,19 +806,22 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiDjango,
+        name: "Django"
       },
       {
         id: "icon-2",
         icon: AiFillHtml5,
+        name: "HTML"
       },
       {
         id: "icon-3",
         icon: DiCss3,
+        name: "CSS"
       },
     ],
   },
   {
-    id: "project-6",
+    id: "project-10",
     title: "GraphQL API",
     github: "https://github.com/mittal-parth/GSDC-NITK-CRUD-API",
     link: "",
@@ -638,38 +832,78 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiGraphql,
+        name: "GraphQL"
       },
       {
         id: "icon-2",
         icon: SiDjango,
+        name: "Django"
+      },
+    ],
+  },
+];
+
+export const blogPosts = [
+  {
+    id: "post-1",
+    title: "Blog Post 01 - Title",
+    link: "#",
+    date: new Date().toLocaleDateString(), // Can be edited to any string format
+    image: "https://via.placeholder.com/600/92c952",
+    tags: [
+      {
+        id: "tag-1",
+        name: "tag 01"
+      },
+      {
+        id: "tag-2",
+        name: "tag 03"
+      },
+      {
+        id: "tag-3",
+        name: "tag 03"
       },
     ],
   },
   {
-    id: "project-7",
-    title: "To-Do App 2.0",
-    github: "https://github.com/mittal-parth/To-Do-App-2.0",
-    link: "",
-    image: todo,
-    content:
-      "A Progressive Web Application with Google OAuth, media and speech to text features.",
-    stack: [
+    id: "post-2",
+    title: "Blog Post 02 - Title",
+    link: "#",
+    date: new Date().toLocaleDateString(),
+    image: "https://via.placeholder.com/600/d32776",
+    tags: [
       {
-        id: "icon-1",
-        icon: SiDjango,
-      },
-
-      {
-        id: "icon-2",
-        icon: AiOutlineGoogle,
+        id: "tag-1",
+        name: "tag 01"
       },
       {
-        id: "icon-3",
-        icon: AiFillHtml5,
+        id: "tag-2",
+        name: "tag 03"
       },
       {
-        id: "icon-4",
-        icon: DiCss3,
+        id: "tag-3",
+        name: "tag 03"
+      },
+    ],
+  },
+  {
+    id: "post-3",
+    title: "Blog Post 03 - Title",
+    link: "#",
+    date: new Date().toLocaleDateString(),
+    image: "https://via.placeholder.com/600/771796",
+    tags: [
+      {
+        id: "tag-1",
+        name: "tag 01"
+      },
+      {
+        id: "tag-2",
+        name: "tag 03"
+      },
+      {
+        id: "tag-3",
+        name: "tag 03"
       },
     ],
   },
@@ -798,3 +1032,10 @@ export const clients = [
     logo: dropbox,
   },
 ];
+
+export const aboutMe = {
+    name: "Parth Mittal",
+    tagLine: "ETHIndia'22 Winner | Web Lead @ IRIS, NITK | Executive Member at GDSC, NITK",
+    intro: "Student web-developer from India who is either busy improving his craft or pondering over the next big idea."
+}
+
