@@ -39,6 +39,10 @@ import portfolio from "./portfolio.jpg";
 import zulip from "./zulip.jpg";
 import publiclab from "./publiclab.png";
 import cdc from "./cdc.png";
+import chargeswap from "./chargeswap.png";
+import placeicon from "./place-icon.svg";
+import recruitment from "./recruitment.png";
+import huntly from "./huntly.png";
 
 export {
   airbnb,
@@ -81,5 +85,9 @@ export {
   zulip,
   cdc,
   parthmittal,
-  profilePic
+  profilePic,
+  chargeswap,
+  placeicon,
+  recruitment,
+  huntly
 };

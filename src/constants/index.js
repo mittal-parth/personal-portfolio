@@ -12,12 +12,15 @@ import {
   iris,
   ecell,
   genesis,
-  todo,
   graphql,
   portfolio,
   publiclab,
   zulip,
-  cdc
+  cdc,
+  chargeswap,
+  placeicon,
+  recruitment,
+  huntly
 } from "../assets";
 
 import {
@@ -53,9 +56,27 @@ import {
   SiNetlify,
   SiChartdotjs,
   SiVite,
+  SiArduino,
+  SiWeb3Dotjs,
+  SiIpfs,
+  SiDotnet,
+  SiTwilio,
+  SiFlutter,
+  SiReplit,
+  SiFlask,
+  SiFigma,
+  SiGooglemaps
 } from "react-icons/si";
 
-import { DiCss3, DiRuby } from "react-icons/di";
+import {
+  FaHardHat
+} from "react-icons/fa";
+
+import {
+  IoIosNotificationsOutline
+} from "react-icons/io";
+
+import { DiCss3, DiMsqlServer, DiRuby } from "react-icons/di";
 
 export const resumeLink = "https://drive.google.com/file/d/1wkPu9i_e2uAdHmbqe0hEM9BfBheJfxkT/view?usp=sharing";
 export const repoLink = "https://github.com/mittal-parth/personal-portfolio";
@@ -498,6 +519,160 @@ export const openSourceContributions = [
 export const projects = [
   {
     id: "project-1",
+    title: "ChargeSwap",
+    github: "https://github.com/CommanderAstern/ChargeSwap",
+    link: "https://devfolio.co/projects/chargeswap-3527",
+    image: chargeswap,
+    content:
+      "A Blockchain-based EV-Battery swapping solution - winning project at ETHIndia'22, the world's largest Ethereum Hackathon",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiReact,
+        name: "React"
+      },
+      {
+        id: "icon-2",
+        icon: SiTailwindcss,
+        name: "TailwindCSS"
+      },
+      {
+        id: "icon-3",
+        icon: SiWeb3Dotjs,
+        name: "Web3.js"
+      },
+      {
+        id: "icon-4",
+        icon: SiSolidity,
+        name: "Solidity"
+      },
+      {
+        id: "icon-5",
+        icon: FaHardHat,
+        name: "HardHat"
+      },
+      {
+        id: "icon-6",
+        icon: SiIpfs,
+        name: "IPFS"
+      },
+      {
+        id: "icon-7",
+        icon: SiArduino,
+        name: "Arduino"
+      },
+      {
+        id: "icon-8",
+        icon: IoIosNotificationsOutline,
+        name: "Push Protocol"
+      },
+    ],
+  },
+  {
+    id: "project-2",
+    title: "Samsotech Table Management System",
+    github: "",
+    link: "https://www.linkedin.com/posts/mittal-parth_technologysolutions-softwaredevelopment-technology-activity-6994915645066809344-WnMY?utm_source=share&utm_medium=member_desktop",
+    image: placeicon,
+    content:
+      "Restaurant, Place, Table and realtime Reservation Management with Multi-Tenant Architecture, RBAC, SMS and Email integration for Samsotech International",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiDotnet,
+        name: "Dot Net Core MVC 6"
+      },
+      {
+        id: "icon-2",
+        icon: SiBootstrap,
+        name: "Bootstrap"
+      },
+      {
+        id: "icon-3",
+        icon: DiMsqlServer,
+        name: "MS Sql Server"
+      },
+      {
+        id: "icon-4",
+        icon: SiJquery,
+        name: "jQuery"
+      },
+      {
+        id: "icon-5",
+        icon: SiTwilio,
+        name: "Twillio"
+      },
+    ],
+  },
+  {
+    id: "project-3",
+    title: "Non-Teaching Recruitment Portal, NITK",
+    github: "",
+    link: "http://recruitment.nitk.ac.in/",
+    image: recruitment,
+    content:
+      "The official recruitment portal for non-teaching staff with an admin panel, email notifications and payment integration.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiRubyonrails,
+        name: "Ruby on Rails"
+      },
+      {
+        id: "icon-2",
+        icon: SiTailwindcss,
+        name: "TailwindCSS"
+      },
+      {
+        id: "icon-3",
+        icon: SiJquery,
+        name: "jQuery"
+      },
+    ],
+  },
+  {
+    id: "project-4",
+    title: "Huntly",
+    github: "",
+    link: "https://devfolio.co/projects/huntly-b5a9",
+    image: huntly,
+    content:
+      "A cross-platform mobile application that brings people closer to the physical environment and forms meaningful connections by organising real-world Treasure Hunts for free and winning rewards. The app uses machine learning to match users and form teams of like-minded people.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiDjango,
+        name: "Django Rest Framework"
+      },
+      {
+        id: "icon-2",
+        icon: SiFlutter,
+        name: "Flutter"
+      },
+      {
+        id: "icon-3",
+        icon: SiReplit,
+        name: "Replit"
+      },
+      {
+        id: "icon-3",
+        icon: SiFlask,
+        name: "Flask"
+      },
+      {
+        id: "icon-4",
+        icon: SiFigma,
+        name: "Figma"
+      },
+      {
+        id: "icon-4",
+        icon: SiGooglemaps,
+        name: "Google Maps API"
+      },
+    ],
+  },
+  {
+    id: "project-5",
     title: "Cluboard",
     github: "https://github.com/mittal-parth/Cluboard",
     link: "",
@@ -538,7 +713,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-2",
+    id: "project-6",
     title: "Cash Flow Minimiser",
     github: "https://github.com/mittal-parth/Cash-Flow-Minmiser",
     link: "https://minimise-cash-flow.netlify.app/",
@@ -569,7 +744,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-3",
+    id: "project-7",
     title: "Portfolio",
     github: "https://github.com/mittal-parth/personal-portfolio",
     link: "https://parthmittal.netlify.app/",
@@ -594,7 +769,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-4",
+    id: "project-8",
     title: "Bank Landing Page",
     github: "https://github.com/mittal-parth/bank-landing-page-react",
     link: "https://bank-landing-page-parth.netlify.app/",
@@ -620,7 +795,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-5",
+    id: "project-9",
     title: "Freadom",
     github: "https://github.com/mittal-parth/Freadom",
     link: "",
@@ -646,7 +821,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-6",
+    id: "project-10",
     title: "GraphQL API",
     github: "https://github.com/mittal-parth/GSDC-NITK-CRUD-API",
     link: "",
@@ -663,38 +838,6 @@ export const projects = [
         id: "icon-2",
         icon: SiDjango,
         name: "Django"
-      },
-    ],
-  },
-  {
-    id: "project-7",
-    title: "To-Do App 2.0",
-    github: "https://github.com/mittal-parth/To-Do-App-2.0",
-    link: "",
-    image: todo,
-    content:
-      "A Progressive Web Application with Google OAuth, media and speech to text features.",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiDjango,
-        name: "Django"
-      },
-
-      {
-        id: "icon-2",
-        icon: AiOutlineGoogle,
-        name: "Google OAuth"
-      },
-      {
-        id: "icon-3",
-        icon: AiFillHtml5,
-        name: "HTML"
-      },
-      {
-        id: "icon-4",
-        icon: DiCss3,
-        name: "CSS"
       },
     ],
   },
