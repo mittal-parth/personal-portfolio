@@ -262,7 +262,7 @@ export const experiences = [
     link: "https://iris.nitk.ac.in/about_us",
     positions: [
       {
-        title: "Web Manager",
+        title: "Web Lead",
         duration: "Apr 2022 - Present",
         content: [
           {
@@ -1035,7 +1035,6 @@ export const clients = [
 
 export const aboutMe = {
     name: "Parth Mittal",
-    tagLine: "Web Manager @ IRIS, NITK | Executive Member at GDSC, NITK",
+    tagLine: "ETHIndia'22 Winner | Web Lead @ IRIS, NITK | Executive Member at GDSC, NITK",
     intro: "Student web-developer from India who is either busy improving his craft or pondering over the next big idea."
 }
-

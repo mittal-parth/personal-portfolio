@@ -18,7 +18,7 @@ const Footer = () => (
         <p
           className={`font-poppins font-normal text-dimWhite text-[16px] leading-[30.8px] max-w-[470px] mt-5`}
         >
-          {aboutMe.tagLine}
+        {aboutMe.tagLine}
         </p>
         <div className="flex flex-row mt-4">
           {socialMedia.map((social, index) => (
@@ -56,6 +56,11 @@ const Footer = () => (
           className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full"
         />
       </div>
+    </div>
+    <div className="text-center font-poppins font-normal text-dimWhite text-xs sm:text-sm pb-4">
+      <p>
+        Made with 💙 by Parth Mittal & the Open Source Community
+      </p>
     </div>
   </footer>
 );
