@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 // lottie config
 const defaultOptions = {
   loop: true,
-  autoplay: true,
+  play: true,
   animationData: animationData,
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice",
