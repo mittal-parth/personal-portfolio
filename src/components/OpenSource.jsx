@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { openSourceContributions } from "../constants";
 import { DiGitMerge, DiGitPullRequest } from "react-icons/di";
 import { VscIssues } from "react-icons/vsc";
 import { motion } from "framer-motion";
+import { fetchContributions } from '../constants/contributions'
+import { AiFillApi } from "react-icons/ai";
 
 const Contribution = (props) => {
   return (
@@ -70,14 +71,57 @@ const Contribution = (props) => {
   );
 };
 
+const LoadFailure = () => {
+  return (
+    <section id="openSource">
+      <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
+        Open Source Contributions
+      </h1>
+
+      <motion.div
+        className="px-12 py-8 my-8 transition-colors duration-300 transform rounded-xl group dark:border-gray-700 dark:hover:border-transparent feature-card"
+        whileInView={{ y: [-40, 0], opacity: [0, 1] }}
+        transition={{ duration: 1 }}
+      >
+        <div className="flex flex-col sm:-mx-4 sm:flex-row">
+          <AiFillApi
+            size="2rem"
+            className="text-white mr-1 hover:text-teal-200"
+          />
+
+          <div className="mt-4 sm:mx-4 sm:mt-0">
+            <h1 className="text-xl font-semibold font-poppins text-gray-700 md:text-2xl group-hover:text-white text-gradient">
+              Something went wrong loading this section.
+            </h1>
+            <p className="font-poppins font-normal text-dimWhite mt-3">
+              Please wait a few minutes and try reloading the page.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  )
+}
+
 const OpenSource = () => {
   const [contributions, setContributions] = useState([]);
   const [filterContribution, setFilterContribution] = useState([]);
   const [activeFilter, setActiveFilter] = useState("All");
+  const [failPlaceholder, setFailPlaceholder] = useState(false)
 
   useEffect(() => {
-    setContributions(openSourceContributions);
-    setFilterContribution(openSourceContributions);
+    const fetchData = async () => {
+      const response = await fetchContributions('mittal-parth')
+      const data = response?.slice(0, 12)
+
+      if (!data) setFailPlaceholder(true)
+
+      setContributions(data);
+      setFilterContribution(data);
+    }
+
+    fetchData()
+      .catch(console.error)
   }, []);
 
   const handleContributionFilter = (item) => {
@@ -89,14 +133,16 @@ const OpenSource = () => {
       } else {
         setFilterContribution(
           contributions.filter(
-            (contribution) => contribution.organisation == item
+            (contribution) => contribution.organization == item
           )
         );
       }
     }, 500);
   };
 
-  return (
+  return failPlaceholder ? (
+    <LoadFailure />
+  ) : (
     <section id="openSource">
       <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
         Open Source Contributions

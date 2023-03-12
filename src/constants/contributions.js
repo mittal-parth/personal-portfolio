@@ -1,60 +1,75 @@
 const openSourceContributions = []
-const options = {
-  method: 'GET',
-  // headers: {
-  //   Authorization: 'Bearer <your-token>',
-  // }
-};
+let options = {}
+
+if (import.meta.env.VITE_GH_TOKEN) {
+  options = {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${import.meta.env.VITE_GH_TOKEN}`,
+    }
+  }
+} else {
+  options = {
+    method: 'GET',
+  }
+}
 
 export async function fetchContributions(username) {
-  const response = await fetch(`https://api.github.com/search/issues?q=author:${username}`, options)
-  const data = await response.json()
+  const pullsResponse = await fetch(`https://api.github.com/search/issues?q=is:pr+author:${username}`, options)
+  const issuesResponse = await fetch(`https://api.github.com/search/issues?q=is:issue+author:${username}`, options)
 
-  data.items.forEach((item) => {
-    const {organization, repo, logoUrl} = parseOriginFromUrl(item.url)
+  if (pullsResponse.status !== 200 || issuesResponse.status !== 200) {
+    return null
+  }
 
-    if (item.node_id.startsWith('I')) {
-      createContribution({
-        id: item.id,
-        organization: organization,
-        logo: logoUrl,
-        repo: repo,
-        type: 'issue',
-        status: item.closed_at ? 'closed' : 'open',
-        title: item.title,
-        link: item.html_url,
-        number: `#${item.number}`,
-        date: item.created_at,
-      })
-    } else {
-      createContribution({
-        id: item.id,
-        organization: organization,
-        logo: logoUrl,
-        repo: repo,
-        type: 'pull-request',
-        status: item.pull_request.merged_at ?
+  const pulls = await pullsResponse.json()
+  const issues = await issuesResponse.json()
+
+  pulls.items.forEach((pr) => {
+    const {organization, repo, logoUrl} = parseOriginFromUrl(pr.url)
+
+    createContribution({
+      id: pr.id,
+      organization: organization,
+      logo: logoUrl,
+      repo: repo,
+      type: 'pull-request',
+      status: pr.pull_request.merged_at ?
+        (
+          'merged'
+        ) : (
+          pr.closed_at ?
           (
-            'merged'
+            'closed'
           ) : (
-            item.closed_at ?
-            (
-              'closed'
-            ) : (
-              'open'
-            )
-          ),
-        title: item.title,
-        link: item.html_url,
-        number: `#${item.number}`,
-        date: item.created_at,
-      })
-    }
+            'open'
+          )
+        ),
+      title: pr.title,
+      link: pr.html_url,
+      number: `#${pr.number}`,
+      date: pr.created_at,
+    })
   })
 
-  return {
-    openSourceContributions
-  }
+  issues.items.forEach((issue) => {
+    const {organization, repo, logoUrl} = parseOriginFromUrl(issue.url)
+
+    createContribution({
+      id: issue.id,
+      organization: organization,
+      logo: logoUrl,
+      repo: repo,
+      type: 'issue',
+      status: issue.closed_at ? 'closed' : 'open',
+      title: issue.title,
+      link: issue.html_url,
+      number: `#${issue.number}`,
+      date: issue.created_at,
+    })
+  })
+
+  return Object.values(openSourceContributions)
 }
 
 function createContribution({ id, organization, logo, repo, type, status, title, link, number, date }) {
