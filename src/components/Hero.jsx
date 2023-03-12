@@ -1,6 +1,6 @@
 import styles from "../style";
 import LetsConnect from "./LetsConnect";
-import Lottie from "react-lottie";
+import Lottie from "react-lottie-player";
 import animationData from "../lotties/person-coding.json";
 import { aboutMe } from "../constants";
 
@@ -8,7 +8,7 @@ import { aboutMe } from "../constants";
 // lottie config
 const defaultOptions = {
   loop: true,
-  autoplay: true,
+  play: true,
   animationData: animationData,
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice",
@@ -48,7 +48,7 @@ const Hero = () => {
         className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
       >
         <div className="relative z-index-[5] h-[90%] w-[85%]">
-          <Lottie options={defaultOptions} />
+          <Lottie {...defaultOptions} />
         </div>
         <div className="absolute z-[1] w-[50%] h-[50%] rounded-full bottom-40 white__gradient"></div>
       </div>

@@ -27,7 +27,7 @@ const App = () => {
       <div className="bg-primary w-full overflow-hidden">
         <Loading/>
       </div>
-    ) 
+    )
   }else{
     return (
       // A div to wrap the entire application

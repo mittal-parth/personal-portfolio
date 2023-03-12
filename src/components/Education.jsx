@@ -1,13 +1,13 @@
 import styles, { layout } from "../style";
 import { educationList } from "../constants";
-import Lottie from "react-lottie";
+import Lottie from "react-lottie-player";
 import animationData from "../lotties/quiz-mode-teal-dark.json";
 import { motion } from "framer-motion";
 
 // lottie config
 const defaultOptions = {
   loop: true,
-  autoplay: true,
+  play: true,
   animationData: animationData,
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice",
@@ -65,7 +65,7 @@ const Education = () => {
       >
         <div className={layout.sectionImgReverse}>
           <div className="w-[80%] h-[80%] relative z-[5]">
-            <Lottie options={defaultOptions} />
+            <Lottie {...defaultOptions} />
           </div>
 
           {/* gradient start */}
