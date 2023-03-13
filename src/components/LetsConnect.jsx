@@ -3,7 +3,9 @@ import { arrowUp } from "../assets";
 import { callToAction } from "../constants";
 
 const LetsConnect = () => {
-  return (pr} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}
+  return (
+    <div
+      className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}
       onClick={() => window.open(callToAction)}
     >
       <div
