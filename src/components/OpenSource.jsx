@@ -4,6 +4,7 @@ import { VscIssues } from "react-icons/vsc";
 import { motion } from "framer-motion";
 import { fetchContributions } from '../constants/contributions'
 import { AiFillApi } from "react-icons/ai";
+import { aboutMe } from '../constants';
 
 const Contribution = (props) => {
   return (
@@ -111,8 +112,7 @@ const OpenSource = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetchContributions('mittal-parth')
-      const data = response?.slice(0, 12)
+      const data = await fetchContributions(aboutMe.username)
 
       if (!data) setFailPlaceholder(true)
 

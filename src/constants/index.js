@@ -1035,6 +1035,7 @@ export const clients = [
 
 export const aboutMe = {
     name: "Parth Mittal",
+    username: "mittal-parth",
     tagLine: "ETHIndia'22 Winner | Web Lead @ IRIS, NITK | Executive Member at GDSC, NITK",
     intro: "Student web-developer from India who is either busy improving his craft or pondering over the next big idea."
 }
