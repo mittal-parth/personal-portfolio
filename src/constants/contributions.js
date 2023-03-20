@@ -26,6 +26,10 @@ export async function fetchContributions(username) {
   const issues = await issuesResponse.json()
 
   pulls.items.forEach((pr) => {
+    if (pr.author_association === "OWNER") {
+      return
+    }
+
     const {organization, repo, logoUrl} = parseOriginFromUrl(pr.url)
 
     createContribution({
@@ -53,6 +57,10 @@ export async function fetchContributions(username) {
   })
 
   issues.items.forEach((issue) => {
+    if (issue.author_association === "OWNER") {
+      return
+    }
+
     const {organization, repo, logoUrl} = parseOriginFromUrl(issue.url)
 
     createContribution({
