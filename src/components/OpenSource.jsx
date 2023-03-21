@@ -16,7 +16,7 @@ const Contribution = (props) => {
       <div className="flex flex-row">
         <img
           src={props.logo}
-          alt={props.organisation}
+          alt={props.organization}
           className="w-[30px] h-[30px] rounded-full mt-2"
         />
         <div className="flex flex-col ml-4">
@@ -28,7 +28,7 @@ const Contribution = (props) => {
             {props.title}
           </a>
           <p className="font-poppins italic font-normal text-[14px] text-dimWhite my-1">
-            {props.organisation}/{props.repo}
+            {props.organization}/{props.repo}
           </p>
         </div>
       </div>
@@ -110,6 +110,11 @@ const OpenSource = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [failPlaceholder, setFailPlaceholder] = useState(false)
 
+  const organizations = Array.from(
+    // Set will automatically dedupe repeated organization names
+    new Set(contributions.map((c) => c.organization)).add("All")
+  );
+
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchContributions(aboutMe.username)
@@ -133,7 +138,7 @@ const OpenSource = () => {
       } else {
         setFilterContribution(
           contributions.filter(
-            (contribution) => contribution.organization == item
+            (contribution) => contribution.organization === item
           )
         );
       }
@@ -151,7 +156,7 @@ const OpenSource = () => {
       <div className="container px-2 py-5 mx-auto mb-8">
         <div class="flex items-center justify-center">
           <div class="flex items-center p-1 border border-blue-gradient dark:border-teal-400 rounded-xl">
-            {["PublicLab", "Zulip", "All"].map((item, index) => (
+            {organizations.map((item, index) => (
               <button
                 key={index}
                 onClick={() => handleContributionFilter(item)}
@@ -168,7 +173,8 @@ const OpenSource = () => {
         <div className="grid grid-cols-1 justify-center gap-8 mt-8 md:mt-16 md:grid-cols-3 sm:grid-cols-2">
           {filterContribution.map((contribution, index) => (
             <Contribution
-              key={contribution.id}
+              // using the id + index helps to eliminate 'key' conflicts
+              key={contribution.id + index}
               index={index}
               {...contribution}
             />
