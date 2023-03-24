@@ -1,3 +1,5 @@
+import { ignore } from './ignore.json'
+
 const openSourceContributions = []
 let options = {}
 
@@ -26,11 +28,12 @@ export async function fetchContributions(username) {
   const issues = await issuesResponse.json()
 
   pulls.items.forEach((pr) => {
-    if (pr.author_association === "OWNER") {
+    const {organization, repo, logoUrl} = parseOriginFromUrl(pr.url)
+    const isIgnored =  ignore.find((item) => (item.toLowerCase() === organization.toLowerCase()))
+
+    if (pr.author_association === "OWNER" || isIgnored) {
       return
     }
-
-    const {organization, repo, logoUrl} = parseOriginFromUrl(pr.url)
 
     createContribution({
       id: pr.id,
@@ -57,11 +60,12 @@ export async function fetchContributions(username) {
   })
 
   issues.items.forEach((issue) => {
-    if (issue.author_association === "OWNER") {
-      return
-    }
-
     const {organization, repo, logoUrl} = parseOriginFromUrl(issue.url)
+    const isIgnored =  ignore.find((item) => (item.toLowerCase() === organization.toLowerCase()))
+
+    if (issue.author_association === "OWNER" || isIgnored) {
+      return;
+    }
 
     createContribution({
       id: issue.id,
