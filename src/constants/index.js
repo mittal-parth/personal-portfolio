@@ -257,10 +257,37 @@ export const skills = [
 
 export const experiences = [
   {
+    organisation: "Oracle, India",
+    logo: iris,
+    link: "https://www.oracle.com/in/",
+    positions: [
+      {
+        title: "Member of Technical Staff Intern",
+        duration: "May 2023 - Jul 2023",
+        content: [
+          {
+            text: "Working as part of the Exa-CC team on Oracle Database as a service.",
+            link: "",
+          },
+        ],
+      },
+    ],
+  },
+  {
     organisation: "IRIS, NITK",
     logo: iris,
     link: "https://iris.nitk.ac.in/about_us",
     positions: [
+      {
+        title: "Tech Lead",
+        duration: "Apr 2023 - Present",
+        content: [
+          {
+            text: "Leading a team of 40+ students driving a digital transformation at NITK.",
+            link: "",
+          },
+        ],
+      },
       {
         title: "Web Lead",
         duration: "Apr 2022 - Present",
@@ -1035,6 +1062,6 @@ export const clients = [
 
 export const aboutMe = {
     name: "Parth Mittal",
-    tagLine: "ETHIndia'22 Winner | Web Lead @ IRIS, NITK | Executive Member at GDSC, NITK",
+    tagLine: "MTS Intern @ Oracle | ETHIndia'22 Winner | 8x Hackathon Winner | Tech Lead @ IRIS, NITK | Co-Chair at GDSC, NITK",
     intro: "Student web-developer from India who is either busy improving his craft or pondering over the next big idea."
 }
