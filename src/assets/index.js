@@ -5,7 +5,7 @@ import card from "./card.png";
 import coinbase from "./coinbase.png";
 import dropbox from "./dropbox.png";
 import parthmittal from "./parth.svg";
-import profilePic from "./profile-pic.png";
+import profilePic from "./profile-pic.jpg";
 import quotes from "./quotes.svg";
 import robot from "./robot.png";
 import send from "./Send.svg";
@@ -43,6 +43,7 @@ import chargeswap from "./chargeswap.png";
 import placeicon from "./place-icon.svg";
 import recruitment from "./recruitment.png";
 import huntly from "./huntly.png";
+import oracle from "./oracle.jpg";
 
 export {
   airbnb,
@@ -89,5 +90,6 @@ export {
   chargeswap,
   placeicon,
   recruitment,
-  huntly
+  huntly,
+  oracle
 };

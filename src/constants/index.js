@@ -20,7 +20,8 @@ import {
   chargeswap,
   placeicon,
   recruitment,
-  huntly
+  huntly,
+  oracle
 } from "../assets";
 
 import {
@@ -258,7 +259,7 @@ export const skills = [
 export const experiences = [
   {
     organisation: "Oracle, India",
-    logo: iris,
+    logo: oracle,
     link: "https://www.oracle.com/in/",
     positions: [
       {
@@ -266,7 +267,7 @@ export const experiences = [
         duration: "May 2023 - Jul 2023",
         content: [
           {
-            text: "Working as part of the Exa-CC team on Oracle Database as a service.",
+            text: "Working as part of the Exa-CC team building Oracle Database as a service.",
             link: "",
           },
         ],
@@ -957,7 +958,7 @@ export const stats = [
 export const extraCurricular = [
   {
     organisation: "Google Developer Student Club, NITK",
-    title: "Executive Member",
+    title: "Co-Chair",
     duration: "December 2021 - Present",
     content: [
       {
@@ -969,7 +970,7 @@ export const extraCurricular = [
   },
   {
     organisation: "Genesis, NITK",
-    title: "Executive Member",
+    title: "Competitions Head",
     duration: "Sep 2021 - Present",
     content: [
       {
@@ -1062,6 +1063,6 @@ export const clients = [
 
 export const aboutMe = {
     name: "Parth Mittal",
-    tagLine: "MTS Intern @ Oracle | ETHIndia'22 Winner | 8x Hackathon Winner | Tech Lead @ IRIS, NITK | Co-Chair at GDSC, NITK",
+    tagLine: "MTS Intern @Oracle | ETHIndia'22 Winner | 8x Hackathon Winner | Tech Lead @IRIS, NITK | Co-Chair @GDSC, NITK",
     intro: "Student web-developer from India who is either busy improving his craft or pondering over the next big idea."
 }
