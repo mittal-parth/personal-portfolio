@@ -60,7 +60,7 @@ const Education = () => {
       </h1>
       <motion.div
         className={layout.sectionReverse}
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        whileInView={{ x: [-60, 0], opacity: [0, 1] }}
         transition={{ duration: 1 }}
       >
         <div className={layout.sectionImgReverse}>
