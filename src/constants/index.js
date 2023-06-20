@@ -21,7 +21,9 @@ import {
   placeicon,
   recruitment,
   huntly,
-  oracle
+  oracle,
+  comicify_ai,
+  greentrust
 } from "../assets";
 
 import {
@@ -41,7 +43,6 @@ import {
   SiJavascript,
   SiBootstrap,
   SiReact,
-  SiMaterialui,
   SiTailwindcss,
   SiGraphql,
   SiPython,
@@ -66,7 +67,10 @@ import {
   SiReplit,
   SiFlask,
   SiFigma,
-  SiGooglemaps
+  SiGooglemaps,
+  SiOpenai,
+  SiGooglecloud,
+  SiNextdotjs
 } from "react-icons/si";
 
 import {
@@ -77,7 +81,7 @@ import {
   IoIosNotificationsOutline
 } from "react-icons/io";
 
-import { DiCss3, DiMsqlServer, DiRuby } from "react-icons/di";
+import { DiCss3, DiJava, DiMsqlServer, DiRuby } from "react-icons/di";
 
 export const resumeLink = "https://drive.google.com/file/d/1wkPu9i_e2uAdHmbqe0hEM9BfBheJfxkT/view?usp=sharing";
 export const repoLink = "https://github.com/mittal-parth/personal-portfolio";
@@ -167,6 +171,11 @@ export const skills = [
         icon: SiSolidity,
         name: "Solidity",
       },
+      {
+        id: "pl-9",
+        icon: DiJava,
+        name: "Java",
+      },
     ],
   },
   {
@@ -206,6 +215,11 @@ export const skills = [
         id: "f-7",
         icon: SiGraphql,
         name: "GraphQL",
+      },
+      {
+        id: "f-8",
+        icon: SiDotnet,
+        name: ".NET",
       },
     ],
   },
@@ -547,6 +561,83 @@ export const openSourceContributions = [
 export const projects = [
   {
     id: "project-1",
+    title: "Comicify.ai",
+    github: "https://github.com/ayush4345/Comicify.ai",
+    link: "https://comicify-ai.vercel.app/",
+    image: comicify_ai,
+    content:
+      "Convert any academic/news/boring text into cool comic strips using GPT-3.5 and Stable Diffusion!",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiReact,
+        name: "React"
+      },
+      {
+        id: "icon-2",
+        icon: SiTailwindcss,
+        name: "TailwindCSS"
+      },
+      {
+        id: "icon-3",
+        icon: SiOpenai,
+        name: "OpenAI"
+      },
+      {
+        id: "icon-4",
+        icon: SiGooglecloud,
+        name: "Google Cloud Platform"
+      },
+      {
+        id: "icon-5",
+        icon: SiFlask,
+        name: "Flask"
+      },
+    ],
+  },
+  {
+    id: "project-2",
+    title: "GreenTrust",
+    github: "https://github.com/mittal-parth/GreenTrust",
+    link: "https://green-trust-fantom.netlify.app/",
+    image: greentrust,
+    content:
+      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiReact,
+        name: "React"
+      },
+      {
+        id: "icon-2",
+        icon: SiTailwindcss,
+        name: "TailwindCSS"
+      },
+      {
+        id: "icon-3",
+        icon: SiNextdotjs,
+        name: "Next.js"
+      },
+      {
+        id: "icon-4",
+        icon: SiIpfs,
+        name: "IPFS"
+      },
+      {
+        id: "icon-5",
+        icon: SiSolidity,
+        name: "Solidity"
+      },
+      {
+        id: "icon-6",
+        icon: IoIosNotificationsOutline,
+        name: "Push Protocol"
+      },
+    ],
+  },
+  {
+    id: "project-3",
     title: "ChargeSwap",
     github: "https://github.com/CommanderAstern/ChargeSwap",
     link: "https://devfolio.co/projects/chargeswap-3527",
@@ -597,7 +688,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-2",
+    id: "project-4",
     title: "Samsotech Table Management System",
     github: "",
     link: "https://www.linkedin.com/posts/mittal-parth_technologysolutions-softwaredevelopment-technology-activity-6994915645066809344-WnMY?utm_source=share&utm_medium=member_desktop",
@@ -633,7 +724,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-3",
+    id: "project-5",
     title: "Non-Teaching Recruitment Portal, NITK",
     github: "",
     link: "http://recruitment.nitk.ac.in/",
@@ -659,7 +750,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-4",
+    id: "project-6",
     title: "Huntly",
     github: "",
     link: "https://devfolio.co/projects/huntly-b5a9",
@@ -700,7 +791,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-5",
+    id: "project-7",
     title: "Cluboard",
     github: "https://github.com/mittal-parth/Cluboard",
     link: "",
@@ -741,7 +832,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-6",
+    id: "project-8",
     title: "Cash Flow Minimiser",
     github: "https://github.com/mittal-parth/Cash-Flow-Minmiser",
     link: "https://minimise-cash-flow.netlify.app/",
@@ -763,16 +854,11 @@ export const projects = [
         id: "icon-3",
         icon: DiCss3,
         name: "CSS"
-      },
-      {
-        id: "icon-4",
-        icon: SiMaterialui,
-        name: "Material UI"
-      },
+      }
     ],
   },
   {
-    id: "project-7",
+    id: "project-9",
     title: "Portfolio",
     github: "https://github.com/mittal-parth/personal-portfolio",
     link: "https://parthmittal.netlify.app/",
@@ -797,7 +883,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-8",
+    id: "project-10",
     title: "Bank Landing Page",
     github: "https://github.com/mittal-parth/bank-landing-page-react",
     link: "https://bank-landing-page-parth.netlify.app/",
@@ -811,64 +897,12 @@ export const projects = [
         name: "React"
       },
       {
-        id: "icon-4",
-        icon: SiMaterialui,
-        name: "Material UI"
-      },
-      {
         id: "icon-5",
         icon: SiTailwindcss,
         name: "Tailwind CSS"
       },
     ],
-  },
-  {
-    id: "project-9",
-    title: "Freadom",
-    github: "https://github.com/mittal-parth/Freadom",
-    link: "",
-    image: freadom,
-    content:
-      "A simple tool to scrape articles. Works even on websites that dont allow users to read the content without logging in.",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiDjango,
-        name: "Django"
-      },
-      {
-        id: "icon-2",
-        icon: AiFillHtml5,
-        name: "HTML"
-      },
-      {
-        id: "icon-3",
-        icon: DiCss3,
-        name: "CSS"
-      },
-    ],
-  },
-  {
-    id: "project-10",
-    title: "GraphQL API",
-    github: "https://github.com/mittal-parth/GSDC-NITK-CRUD-API",
-    link: "",
-    image: graphql,
-    content:
-      "A Django based CRUD API using GraphQL to manage employees in an organization.",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiGraphql,
-        name: "GraphQL"
-      },
-      {
-        id: "icon-2",
-        icon: SiDjango,
-        name: "Django"
-      },
-    ],
-  },
+  }
 ];
 
 export const blogPosts = [
@@ -1039,25 +1073,6 @@ export const socialMedia = [
     id: "social-media-5",
     icon: AiFillInstagram,
     link: "https://www.instagram.com/mittalparth_",
-  },
-];
-
-export const clients = [
-  {
-    id: "client-1",
-    logo: airbnb,
-  },
-  {
-    id: "client-2",
-    logo: binance,
-  },
-  {
-    id: "client-3",
-    logo: coinbase,
-  },
-  {
-    id: "client-4",
-    logo: dropbox,
   },
 ];
 
