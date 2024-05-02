@@ -1,9 +1,3 @@
-import airbnb from "./airbnb.png";
-import bill from "./bill.png";
-import binance from "./binance.png";
-import card from "./card.png";
-import coinbase from "./coinbase.png";
-import dropbox from "./dropbox.png";
 import parthmittal from "./parth.svg";
 import profilePic from "./profile-pic.jpg";
 import quotes from "./quotes.svg";
@@ -46,14 +40,10 @@ import huntly from "./huntly.png";
 import oracle from "./oracle.jpg";
 import comicify_ai from "./comicify-ai.png";
 import greentrust from "./green_trust.png";
+import averlon from "./averlon.jpg";
+import devfolio from "./devfolio.png";
 
 export {
-  airbnb,
-  bill,
-  binance,
-  card,
-  coinbase,
-  dropbox,
   quotes,
   robot,
   send,
@@ -95,5 +85,7 @@ export {
   huntly,
   oracle,
   comicify_ai,
-  greentrust
+  greentrust,
+  averlon,
+  devfolio
 };
