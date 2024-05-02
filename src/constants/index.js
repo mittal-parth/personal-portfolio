@@ -1,8 +1,4 @@
 import {
-  airbnb,
-  binance,
-  coinbase,
-  dropbox,
   nitk,
   cluboard,
   cash_flow,
@@ -23,7 +19,9 @@ import {
   huntly,
   oracle,
   comicify_ai,
-  greentrust
+  greentrust,
+  averlon,
+  devfolio
 } from "../assets";
 
 import {
@@ -70,20 +68,26 @@ import {
   SiGooglemaps,
   SiOpenai,
   SiGooglecloud,
-  SiNextdotjs
+  SiNextdotjs,
+  SiMicrosoftazure
 } from "react-icons/si";
 
 import {
-  FaHardHat
+  FaHardHat,
+  FaRust
 } from "react-icons/fa";
 
 import {
   IoIosNotificationsOutline
 } from "react-icons/io";
 
+import {
+  FaGolang
+} from "react-icons/fa6";
+
 import { DiCss3, DiJava, DiMsqlServer, DiRuby } from "react-icons/di";
 
-export const resumeLink = "https://drive.google.com/file/d/1wkPu9i_e2uAdHmbqe0hEM9BfBheJfxkT/view?usp=sharing";
+export const resumeLink = "https://drive.google.com/file/d/1dp9zYqgvYBNga49JDnm5lizsT1rWQRCa/view?usp=sharing";
 export const repoLink = "https://github.com/mittal-parth/personal-portfolio";
 
 export const callToAction = "https://www.linkedin.com/in/mittal-parth";
@@ -133,8 +137,8 @@ export const skills = [
     items: [
       {
         id: "pl-1",
-        icon: SiCplusplus,
-        name: "C++",
+        icon: DiRuby,
+        name: "Ruby",
       },
       {
         id: "pl-2",
@@ -143,39 +147,49 @@ export const skills = [
       },
       {
         id: "pl-3",
-        icon: DiRuby,
-        name: "Ruby",
+        icon: SiCplusplus,
+        name: "C++",
       },
       {
         id: "pl-4",
+        icon: FaGolang,
+        name: "Go",
+      },
+      {
+        id: "pl-5",
+        icon: FaRust,
+        name: "Rust",
+      },
+      {
+        id: "pl-6",
+        icon: DiJava,
+        name: "Java",
+      },
+      {
+        id: "pl-7",
         icon: SiC,
         name: "C",
       },
       {
-        id: "pl-5",
+        id: "pl-8",
         icon: AiFillHtml5,
         name: "HTML",
       },
       {
-        id: "pl-6",
+        id: "pl-9",
         icon: DiCss3,
         name: "CSS",
       },
       {
-        id: "pl-7",
+        id: "pl-10",
         icon: SiJavascript,
         name: "JavaScript",
       },
       {
-        id: "pl-8",
+        id: "pl-11",
         icon: SiSolidity,
         name: "Solidity",
-      },
-      {
-        id: "pl-9",
-        icon: DiJava,
-        name: "Java",
-      },
+      }
     ],
   },
   {
@@ -228,41 +242,46 @@ export const skills = [
     items: [
       {
         id: "t-1",
+        icon: SiMicrosoftazure,
+        name: "Azure",
+      },
+      {
+        id: "t-2",
         icon: SiMysql,
         name: "MySQL",
       },
       {
-        id: "t-2",
+        id: "t-3",
         icon: SiPostman,
         name: "Postman",
       },
       {
-        id: "t-3",
+        id: "t-4",
         icon: SiVisualstudiocode,
         name: "VS Code",
       },
       {
-        id: "t-4",
+        id: "t-5",
         icon: SiGit,
         name: "Git",
       },
       {
-        id: "t-5",
+        id: "t-6",
         icon: AiFillGithub,
         name: "GitHub",
       },
       {
-        id: "t-6",
+        id: "t-7",
         icon: AiOutlineGitlab,
         name: "Gitlab",
       },
       {
-        id: "t-7",
+        id: "t-8",
         icon: SiNetlify,
         name: "Netlify",
       },
       {
-        id: "t-8",
+        id: "t-9",
         icon: SiVite,
         name: "ViteJS",
       },
@@ -281,9 +300,34 @@ export const experiences = [
         duration: "May 2023 - Jul 2023",
         content: [
           {
-            text: "Working as part of the Exa-CC team building Oracle Database as a service.",
+            text: "Worked with the Exadata Cloud@Customer team in the Database Unit.",
             link: "",
           },
+          {
+            text: "Wrote APIs in Java to help gracefully migrate a running ExaC@C infrastructure to a new region in the case of a region failure",
+            link: ""
+          }
+        ],
+      },
+    ],
+  },
+  {
+    organisation: "Averlon",
+    logo: averlon,
+    link: "https://averlon.ai/",
+    positions: [
+      {
+        title: "Software Developer Intern",
+        duration: "Sept 2023 - Feb 2024",
+        content: [
+          {
+            text: "Added support for the discoverability of Microsoft Azure assets utilising Go and Gremlin.",
+            link: ""
+          },
+          {
+            text: "Extended support for Azure for reachability analysis of assets for cloud security posture management.",
+            link: ""
+          }
         ],
       },
     ],
@@ -295,10 +339,14 @@ export const experiences = [
     positions: [
       {
         title: "Tech Lead",
-        duration: "Apr 2023 - Present",
+        duration: "Apr 2023 - Apr 2024",
         content: [
           {
-            text: "Leading a team of 40+ students driving a digital transformation at NITK.",
+            text: "Led a team of 40+ students in digitizing administrative, academic and alumni-related work.",
+            link: "",
+          },
+          {
+            text: "Managed all phases of Software Development Life Cycle (SDLC) for 15+ modules.",
             link: "",
           },
         ],
@@ -334,28 +382,7 @@ export const experiences = [
         ],
       },
     ],
-  },
-  {
-    organisation: "Career Development Centre, NITK",
-    logo: cdc,
-    link: "https://cdc.nitk.ac.in/",
-    positions: [
-      {
-        title: "Lead Developer",
-        duration: "May 2022 - July 2022",
-        content: [
-          {
-            text: "Led a team of 3 developers and developed various parts of the official public website using Ruby on Rails.",
-            link: "",
-          },
-          {
-            text: "Setup an admin interface for dynamic content management by different stakeholders.",
-            link: "",
-          },
-        ],
-      },
-    ],
-  },
+  }
 ];
 
 export const openSourceContributions = [
@@ -751,6 +778,32 @@ export const projects = [
   },
   {
     id: "project-6",
+    title: "Career Development Centre, NITK Website",
+    github: "",
+    link: "http://cdc.nitk.ac.in/",
+    image: cdc,
+    content:
+      "The official website of CDC, NITK with a custom built CMS.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiRubyonrails,
+        name: "Ruby on Rails"
+      },
+      {
+        id: "icon-2",
+        icon: SiBootstrap,
+        name: "Bootstrap"
+      },
+      {
+        id: "icon-3",
+        icon: SiJavascript,
+        name: "JavaScript"
+      },
+    ],
+  },
+  {
+    id: "project-7",
     title: "Huntly",
     github: "",
     link: "https://devfolio.co/projects/huntly-b5a9",
@@ -774,24 +827,24 @@ export const projects = [
         name: "Replit"
       },
       {
-        id: "icon-3",
+        id: "icon-4",
         icon: SiFlask,
         name: "Flask"
       },
       {
-        id: "icon-4",
+        id: "icon-5",
         icon: SiFigma,
         name: "Figma"
       },
       {
-        id: "icon-4",
+        id: "icon-6",
         icon: SiGooglemaps,
         name: "Google Maps API"
       },
     ],
   },
   {
-    id: "project-7",
+    id: "project-8",
     title: "Cluboard",
     github: "https://github.com/mittal-parth/Cluboard",
     link: "",
@@ -832,7 +885,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-8",
+    id: "project-9",
     title: "Cash Flow Minimiser",
     github: "https://github.com/mittal-parth/Cash-Flow-Minmiser",
     link: "https://minimise-cash-flow.netlify.app/",
@@ -858,7 +911,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-9",
+    id: "project-10",
     title: "Portfolio",
     github: "https://github.com/mittal-parth/personal-portfolio",
     link: "https://parthmittal.netlify.app/",
@@ -883,7 +936,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-10",
+    id: "project-11",
     title: "Bank Landing Page",
     github: "https://github.com/mittal-parth/bank-landing-page-react",
     link: "https://bank-landing-page-parth.netlify.app/",
@@ -991,10 +1044,30 @@ export const stats = [
 
 export const extraCurricular = [
   {
+    organisation: "Devfolio",
+    title: "UniDAO Lead",
+    duration: "December 2021 - Present",
+    content: [
+      {
+        text: "Selected among 5 students across the country to lead the initiative and grow the culture of Blockchain and Ethereum, powered by Devfolio.",
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7097977924686942209/",
+      },
+      {
+        text: "Led a cohort of 37 selected students over 6 weeks to learn and build in the Ethereum ecosystem.",
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7095310520282480641/",
+      },
+    ],
+    logo: devfolio,
+  },
+  {
     organisation: "Google Developer Student Club, NITK",
     title: "Co-Chair",
     duration: "December 2021 - Present",
     content: [
+      {
+        text: "Started HackClub to promote and spread the culture of Hackathons in the college. 20+ hackathons particiaptions, 15+ wins over the year.",
+        link: "",
+      },
       {
         text: "Co-designed and developed the official website of Incident, NITK with 15K+ visitors",
         link: "https://incident.nitk.ac.in/",
@@ -1078,6 +1151,6 @@ export const socialMedia = [
 
 export const aboutMe = {
     name: "Parth Mittal",
-    tagLine: "MTS Intern @Oracle | ETHIndia'22 Winner | 8x Hackathon Winner | Tech Lead @IRIS, NITK | Co-Chair @GDSC, NITK",
-    intro: "Student web-developer from India who is either busy improving his craft or pondering over the next big idea."
+    tagLine: "Upcoming MTS @Oracle | ex-SDE Intern @Averlon | ex-Tech Lead @IRIS,NITK | ETHIndia'22 Winner | NITK'24",
+    intro: "Software Developer from India who is either busy improving his craft or pondering over the next big idea."
 }
