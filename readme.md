@@ -6,14 +6,14 @@
 
 ## Table of Contents 📁
 
-1. [Tech Stack](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#tech-stack)
-2. [Implemented Sections](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#implemented-sections)
-3. [Use as a theme](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#use-as-a-theme)
-4. [Contributing](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#contributing)
-5. [Installation Guide](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#installation-guide)
-6. [Sample Git Workflow](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#sample-git-workflow)
-7. [References & Inspirations](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#references--inspirations)
-8. [Illustrations](https://github.com/mittal-parth/personal-portfolio/blob/main/readme.md#illustrations)
+1. [Tech Stack](#tech-stack-)
+2. [Implemented Sections](#implemented-sections-%EF%B8%8F)
+3. [Use as a theme](#using-as-a-theme-)
+4. [Contributing](#contributing-)
+5. [Installation Guide](#installation-guide-)
+6. [Sample Git Workflow](#sample-git-workflow)
+7. [References & Inspirations](#references--inspirations-)
+8. [Illustrations](#illustrations-%EF%B8%8F)
    <br>
 
 ## Tech Stack 🧰
@@ -39,7 +39,8 @@
 - Skills & Experience
 - Education
 - Projects
-- Open Source
+- Blogs
+- Open Source Contributions
 - Extra Curricular
 - Contact Me
 
