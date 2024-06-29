@@ -2,13 +2,11 @@ import {
   nitk,
   cluboard,
   cash_flow,
-  freadom,
   bank,
   gdsc,
   iris,
   ecell,
   genesis,
-  graphql,
   portfolio,
   publiclab,
   zulip,
@@ -21,7 +19,8 @@ import {
   comicify_ai,
   greentrust,
   averlon,
-  devfolio
+  devfolio,
+  pba
 } from "../assets";
 
 import {
@@ -128,6 +127,14 @@ export const educationList = [
     duration: "December 2020 - May 2024",
     content1: "Major: Electronics and Communication Engineering",
     content2: "Minor: Information Technology",
+  },
+  {
+    id: "education-2",
+    icon: pba,
+    title: "Polkadot Blockchain Academy",
+    degree: "",
+    duration: "May 2024 - June 2024",
+    content1: "Graduated with a distinction in the fifth cohort of the Polkadot Blockchain Academy at the National University of Singapore.",
   },
 ];
 
