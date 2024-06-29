@@ -42,6 +42,7 @@ import comicify_ai from "./comicify-ai.png";
 import greentrust from "./green_trust.png";
 import averlon from "./averlon.jpg";
 import devfolio from "./devfolio.png";
+import pba from "./pba_logo.jpeg";
 
 export {
   quotes,
@@ -87,5 +88,6 @@ export {
   comicify_ai,
   greentrust,
   averlon,
-  devfolio
+  devfolio,
+  pba
 };
