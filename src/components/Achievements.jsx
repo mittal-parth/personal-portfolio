@@ -4,6 +4,7 @@ import { achievements } from "../constants";
 import { AiFillGithub } from "react-icons/ai";
 import { FaYoutube } from "react-icons/fa";
 import { TiNews } from "react-icons/ti";
+import styles from "../style";
 
 const Achievements = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -39,43 +40,50 @@ const Achievements = () => {
 
   return (
     <section
-      className="bg-primary overflow-hidden text-white mt-5 md:mt-10"
+      className="bg-primary overflow-hidden text-white mt-5 md:mt-10 relative"
       id="achievements"
     >
-      <div>
-        <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
-          Achievements
-        </h1>
-      </div>
-      <div className="relative my-20">
-        <div
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{
-            transform: `translateX(-${
-              (currentIndex / achievements.length) * 100
-            }%)`,
-            width: `${achievements.length * 100}%`,
-          }}
-        >
-          {achievements.map((achievement, index) => (
-            <AchievementCard key={index} {...achievement} />
-          ))}
+      <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
+        <div className={`${styles.boxWidth}`}>
+          <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
+            Achievements
+          </h1>
         </div>
-        <div className="flex justify-end mb-4">
-          <button
-            onClick={handlePrev}
-            disabled={currentIndex === 0}
-            className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2"
-          >
-            &lt;
-          </button>
-          <button
-            onClick={handleNext}
-            disabled={isNextDisabled}
-            className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2"
-          >
-            &gt;
-          </button>
+      </div>
+      <div className="absolute z-[0] w-[60%] h-[60%] -left-[50%] rounded-full blue__gradient bottom-40" />
+      <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
+        <div className={`${styles.boxWidth} overflow-hidden`}>
+          <div className="my-20">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{
+                transform: `translateX(-${
+                  (currentIndex / achievements.length) * 100
+                }%)`,
+                width: `${achievements.length * 100}%`,
+              }}
+            >
+              {achievements.map((achievement, index) => (
+                <AchievementCard key={index} {...achievement} />
+              ))}
+            </div>
+            <div className="flex justify-end mb-4">
+              <button
+                onClick={handlePrev}
+                disabled={currentIndex === 0}
+                className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2"
+              >
+                &lt;
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={isNextDisabled}
+                className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2"
+              >
+                &gt;
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -92,12 +100,27 @@ const AchievementCard = (props) => {
       />
 
       <div className="flex flex-col justify-end mt-4 mb-1">
-        <p className="font-poppins font-normal text-lg text-white leading-[24px] mb-2">
+        <p className="font-poppins font-normal text-xl text-white leading-[24px] mb-2">
           {props.event}
         </p>
-        <p className="font-poppins italic font-normal text-base text-gradient mb-1">
+        <p className="font-poppins italic font-normal text-lg text-gradient mb-3">
           {props.position}
         </p>
+        {props.content1 && (
+          <p className="font-poppins font-normal text-dimWhite text-sm mb-1">
+            🚀 {props.content1}
+          </p>
+        )}
+        {props.content2 && (
+          <p className="font-poppins font-normal text-dimWhite text-sm mb-1">
+            ⚡ {props.content2}
+          </p>
+        )}
+        {props.content3 && (
+          <p className="font-poppins font-normal text-dimWhite text-sm mb-4">
+            🔥 {props.content3}
+          </p>
+        )}
       </div>
 
       <div className="flex flex-row mb-2">
