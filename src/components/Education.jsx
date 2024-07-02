@@ -42,12 +42,12 @@ const FeatureCard = ({
       <p className="font-poppins font-normal text-dimWhite text-[14px] leading-[30px] mb-1">
         {duration}
       </p>
-      <p className="font-poppins font-normal text-dimWhite text-[16px] leading-[30px] mb-1">
-        - {content1}
+      <p className="font-poppins font-normal text-dimWhite text-[16px] leading-[30px] mb-1">   
+      ● {content1}
       </p>
       {content2 && (
-        <p className="font-poppins font-normal text-dimWhite text-[16px] leading-[30px] mb-1">
-          - {content2}
+        <p className="font-poppins font-normal text-dimWhite text-[16px] leading-[30px] mb-1">     
+      ● {content2}
         </p>
       )}
     </div>

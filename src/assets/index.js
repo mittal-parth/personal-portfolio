@@ -15,9 +15,6 @@ import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
 import linkedin from "./linkedin.svg";
 import twitter from "./twitter.svg";
-import people01 from "./people01.png";
-import people02 from "./people02.png";
-import people03 from "./people03.png";
 import nitk from "./nitk.png";
 import cluboard from "./cluboard.png";
 import cash_flow from "./cash_flow.jpg";
@@ -67,9 +64,6 @@ export {
   instagram,
   linkedin,
   twitter,
-  people01,
-  people02,
-  people03,
   nitk,
   cluboard,
   cash_flow,
