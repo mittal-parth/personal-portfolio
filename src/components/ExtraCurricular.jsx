@@ -8,7 +8,7 @@ const Content = ({ text, link }) => {
   return (
     <div>
       <p className="font-poppins font-normal text-[14px] text-dimWhite my-4 leading-[32px]">
-        - {text}{" "}
+        ● {text}{" "}
         {link ? (
           <a href={link} target="_blank">
             <BsLink45Deg
