@@ -43,6 +43,13 @@ import greentrust from "./green_trust.png";
 import averlon from "./averlon.jpg";
 import devfolio from "./devfolio.png";
 import pba from "./pba_logo.jpeg";
+import ethglobal from "./ethglobal.png";
+import polkadot from "./polkadot.jpeg";
+import lightspeed from "./lightspeed.png";
+import dennisivy from "./dennisivy.png";
+import manipal from "./manipal.png";
+import icon from "./icon.jpg";
+import ethforall from "./ethforall.png";
 
 export {
   quotes,
@@ -89,5 +96,12 @@ export {
   greentrust,
   averlon,
   devfolio,
-  pba
+  pba,
+  ethglobal,
+  polkadot,
+  lightspeed,
+  dennisivy,
+  manipal,
+  icon,
+  ethforall
 };
