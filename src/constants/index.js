@@ -2,7 +2,6 @@ import {
   nitk,
   cluboard,
   cash_flow,
-  bank,
   gdsc,
   iris,
   ecell,
@@ -37,13 +36,11 @@ import {
   AiFillMail,
   AiOutlineTwitter,
   AiFillHtml5,
-  AiOutlineGoogle,
   AiOutlineGitlab,
 } from "react-icons/ai";
 
 import {
   SiDjango,
-  SiSqlite,
   SiJavascript,
   SiBootstrap,
   SiReact,
