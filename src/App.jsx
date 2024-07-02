@@ -12,7 +12,8 @@ import {
   OpenSource,
   Projects,
   BlogPosts,
-  Loading
+  Loading,
+  Achievements,
 } from "./components";
 
 const App = () => {
@@ -49,10 +50,11 @@ const App = () => {
           </div>
         </div>
 
-        <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX} `}>
+        <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
           <div className={`${styles.boxWidth}`}>
             <SkillsAndExperience />
             <Education />
+            <Achievements />
             <Projects />
             <BlogPosts enabled={false} />
             <OpenSource />

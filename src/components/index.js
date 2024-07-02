@@ -12,6 +12,7 @@ import Button from "./Button";
 import Stats from "./Stats";
 import Loading from "./Loading";
 import BlogPosts from "./BlogPosts";
+import Achievements from "./Achievements";
 
 
 export {
@@ -27,4 +28,5 @@ export {
     Stats,
     Loading,
     BlogPosts,
+    Achievements,
 };
