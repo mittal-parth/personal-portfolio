@@ -123,10 +123,10 @@ const AchievementCard = (props) => {
         )}
       </div>
 
-      <div className="flex flex-row mb-2">
+      <div className="flex flex-row mb-2 font-poppins font-normal text-dimWhite">
         {props.article && (
           <a
-            className="font-poppins font-normal text-dimWhite inline-flex items-center mr-2"
+            className="inline-flex items-center mr-2 hover:text-teal-200"
             href={props.article}
             target="_blank"
             rel="noopener noreferrer"
@@ -136,7 +136,7 @@ const AchievementCard = (props) => {
         )}
         {props.youtube && (
           <a
-            className="font-poppins font-normal text-dimWhite inline-flex items-center mr-2"
+            className="inline-flex items-center mr-2 hover:text-teal-200"
             href={props.youtube}
             target="_blank"
             rel="noopener noreferrer"
@@ -146,7 +146,7 @@ const AchievementCard = (props) => {
         )}
         {props.github && (
           <a
-            className="font-poppins font-normal text-dimWhite inline-flex items-center"
+            className="inline-flex items-center mr-2 hover:text-teal-200"
             href={props.github}
             target="_blank"
             rel="noopener noreferrer"
@@ -156,7 +156,7 @@ const AchievementCard = (props) => {
         )}
         {props.project && (
           <a
-            className="font-poppins font-normal text-dimWhite inline-flex items-center"
+            className=" inline-flex items-center hover:text-teal-200"
             href={props.project}
             target="_blank"
             rel="noopener noreferrer"
