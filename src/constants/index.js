@@ -388,6 +388,16 @@ export const experiences = [
     link: "https://www.oracle.com/in/",
     positions: [
       {
+        title: "Member of Technical Staff - 1",
+        duration: "Jul 2024 - Present",
+        content: [
+          {
+            text: "Working in the DBaaS Control Plane team in the Database Unit.",
+            link: "",
+          },
+        ],
+      },
+      {
         title: "Member of Technical Staff Intern",
         duration: "May 2023 - Jul 2023",
         content: [
@@ -1217,6 +1227,6 @@ export const socialMedia = [
 
 export const aboutMe = {
     name: "Parth Mittal",
-    tagLine: "Upcoming MTS @Oracle | ex-SDE Intern @Averlon | ex-Tech Lead @IRIS,NITK | ETHIndia'22 Winner | NITK'24",
+    tagLine: "MTS-1 @Oracle | ex-SDE Intern @Averlon | ex-Tech Lead @IRIS,NITK | ETHIndia'22 Winner | NITK'24",
     intro: "Software Developer from India who is either busy improving his craft or pondering over the next big idea."
 }
