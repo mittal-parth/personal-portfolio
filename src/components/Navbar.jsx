@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { close, parthmittal, menu } from "../assets";
 import { navLinks } from "../constants";
+import { scrollToSection } from "../../lib/helperFunctions";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -27,8 +28,9 @@ const Navbar = () => {
             text-[16px]
             ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}
             text-white hover:text-teal-200`}
+            onClick={() => scrollToSection(nav.id)}
           >
-            <a href={`#${nav.id}`}>{nav.title}</a>
+            {nav.title}
           </li>
         ))}
       </ul>
