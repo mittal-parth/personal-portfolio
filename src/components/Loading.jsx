@@ -8,10 +8,10 @@ const Loading = () => {
       id="loading"
       className={`w-[100vw] h-[100vh] flex "${styles.flexCenter}`}
       initial={{ scale: 1.0, opacity: 0.25 }}
-      animate={{ scale: 2.0, opacity: 0.75 }}
-      exit={{ opacity: 0, transition: { duration: 0.5 } }}
+      animate={{ scale: 2.2, opacity: 0.75 }}
+      exit={{ opacity: 0, transition: { duration: 0.25 } }}
       transition={{
-        duration: 1.0,
+        duration: 0.5,
         ease: "easeInOut",
       }}
     >
