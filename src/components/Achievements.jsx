@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react"; // Added useRef
 import { BsLink45Deg } from "react-icons/bs";
 import { achievements } from "../constants";
 import { AiFillGithub } from "react-icons/ai";
@@ -8,35 +8,44 @@ import styles from "../style";
 
 const Achievements = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMediumScreen, setIsMediumScreen] = useState(false);
+  const [cardTotalWidth, setCardTotalWidth] = useState(0); // Added state for card width
+  const containerRef = useRef(null); // Added ref
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
-    const handleMediaQueryChange = (e) => setIsMediumScreen(e.matches);
+    const updateCardWidth = () => {
+      if (containerRef.current) {
+        const card = containerRef.current.querySelector('.achievement-card');
+        if (card) {
+          const cardWidth = card.offsetWidth;
+          const cardMargin = parseInt(window.getComputedStyle(card).marginRight, 10); 
 
-    handleMediaQueryChange(mediaQuery);
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+          setCardTotalWidth(cardWidth + cardMargin); 
+        }
+      }
+    };
+
+    updateCardWidth(); 
+    window.addEventListener("resize", updateCardWidth); 
 
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+      window.removeEventListener("resize", updateCardWidth); 
     };
   }, []);
 
   const handleNext = () => {
     if (currentIndex < achievements.length - 1) {
-      setCurrentIndex(currentIndex + 1);
+      setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
 
   const handlePrev = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
+      setCurrentIndex((prevIndex) => prevIndex - 1);
     }
   };
 
-  const isNextDisabled = isMediumScreen
-    ? currentIndex === Math.floor((achievements.length - 1) / 3)
-    : currentIndex === achievements.length - 1;
+  const isNextDisabled = currentIndex >= achievements.length - 1;
+  const isPrevDisabled = currentIndex === 0;
 
   return (
     <section
@@ -55,12 +64,10 @@ const Achievements = () => {
         <div className={`${styles.boxWidth} overflow-hidden`}>
           <div className="my-20">
             <div
+              ref={containerRef}
               className="flex transition-transform duration-500 ease-in-out"
               style={{
-                transform: `translateX(-${
-                  (currentIndex / achievements.length) * 100
-                }%)`,
-                width: `${achievements.length * 100}%`,
+                transform: `translateX(-${currentIndex * cardTotalWidth}px)`, // Updated to use card width
               }}
             >
               {achievements.map((achievement, index) => (
@@ -70,7 +77,7 @@ const Achievements = () => {
             <div className="flex justify-end mb-4">
               <button
                 onClick={handlePrev}
-                disabled={currentIndex === 0}
+                disabled={isPrevDisabled}
                 className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2"
               >
                 &lt;
@@ -92,13 +99,12 @@ const Achievements = () => {
 
 const AchievementCard = (props) => {
   return (
-    <div className="flex-shrink-0 flex flex-col md:w-[400px] w-[320px] justify-around px-6 py-4 rounded-[20px] md:mr-10 mr-6 mr-0 my-5 transition-colors duration-300 transform border hover:border-transparent dark:border-gray-700 dark:hover:border-transparent">
+    <div className="achievement-card flex-shrink-0 flex flex-col md:w-[400px] w-[320px] justify-around px-6 py-4 rounded-[20px] md:mr-10 mr-6 my-5 transition-colors duration-300 transform border hover:border-transparent dark:border-gray-700 dark:hover:border-transparent">
       <img
         src={props.icon}
         alt={props.event}
         className="w-[45px] h-[45px] rounded-full mt-1 mb-1"
       />
-
       <div className="flex flex-col justify-end mt-4 mb-1">
         <p className="font-poppins font-normal text-xl text-white leading-[24px] mb-2">
           {props.event}
@@ -122,7 +128,6 @@ const AchievementCard = (props) => {
           </p>
         )}
       </div>
-
       <div className="flex flex-row mb-2 font-poppins font-normal text-dimWhite">
         {props.article && (
           <a
@@ -156,7 +161,7 @@ const AchievementCard = (props) => {
         )}
         {props.project && (
           <a
-            className=" inline-flex items-center hover:text-teal-200"
+            className="inline-flex items-center hover:text-teal-200"
             href={props.project}
             target="_blank"
             rel="noopener noreferrer"
