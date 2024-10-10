@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { openSourceContributions } from "../constants";
 import { DiGitMerge, DiGitPullRequest } from "react-icons/di";
 import { VscIssues } from "react-icons/vsc";
 import { motion } from "framer-motion";
+import { fetchContributions } from "../../lib/helperFunctions";
 
 const Contribution = (props) => {
   return (
@@ -41,8 +41,8 @@ const Contribution = (props) => {
           href={props.link}
           target="_blank"
         >
-          {props.type === "pull-request" ? (
-            props.status === "merged" ? (
+          {props.type === "Pull Requests" ? (
+            props.status === "closed" ? (
               <DiGitMerge size="1.5rem" className="text-violet-700 inline" />
             ) : (
               <DiGitPullRequest
@@ -76,8 +76,13 @@ const OpenSource = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
   useEffect(() => {
-    setContributions(openSourceContributions);
-    setFilterContribution(openSourceContributions);
+    const getContributions = async () => {
+      const contributions = await fetchContributions();
+      setContributions(contributions);
+      setFilterContribution(contributions);
+    };
+
+    getContributions();
   }, []);
 
   const handleContributionFilter = (item) => {
@@ -88,10 +93,9 @@ const OpenSource = () => {
         setFilterContribution(contributions);
       } else {
         setFilterContribution(
-          contributions.filter(
-            (contribution) => contribution.organisation == item
-          )
+          contributions.filter((contribution) => contribution.type == item)
         );
+        // console.log(filterContribution)
       }
     }, 500);
   };
@@ -105,7 +109,7 @@ const OpenSource = () => {
       <div className="container px-2 py-5 mx-auto mb-8">
         <div class="flex items-center justify-center">
           <div class="flex items-center p-1 border border-blue-gradient dark:border-teal-400 rounded-xl">
-            {["PublicLab", "Zulip", "All"].map((item, index) => (
+            {["Pull Requests", "Issues", "All"].map((item, index) => (
               <button
                 key={index}
                 onClick={() => handleContributionFilter(item)}
