@@ -458,7 +458,7 @@ export const experiences = [
         duration: "Apr 2022 - Present",
         content: [
           {
-            text: "Managing a team of 6 student developers while also overlooking multiple modules.",
+            text: "Managed a team of 6 student developers while also overlooking multiple modules.",
             link: "",
           },
         ],
