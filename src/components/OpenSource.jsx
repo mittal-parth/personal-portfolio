@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { DiGitMerge, DiGitPullRequest } from "react-icons/di";
+import { AiFillApi } from "react-icons/ai";
 import { VscIssues } from "react-icons/vsc";
 import { motion } from "framer-motion";
 import { fetchContributions } from "../../lib/helperFunctions";
@@ -95,7 +96,6 @@ const OpenSource = () => {
         setFilterContribution(
           contributions.filter((contribution) => contribution.type == item)
         );
-        // console.log(filterContribution)
       }
     }, 500);
   };
@@ -108,30 +108,50 @@ const OpenSource = () => {
 
       <div className="container px-2 py-5 mx-auto mb-8">
         <div class="flex items-center justify-center">
-          <div class="flex items-center p-1 border border-blue-gradient dark:border-teal-400 rounded-xl">
-            {["Pull Requests", "Issues", "All"].map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleContributionFilter(item)}
-                className={`px-2 py-2 text-sm font-medium text-white md:py-3 rounded-xl md:px-6 capitalize transition-colors duration-300 focus:outline-none hover:bg-teal-400 font-poppins ${
-                  activeFilter === item ? "bg-teal-400" : ""
-                }`}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
+          {!filterContribution.error && (
+            <div class="flex items-center p-1 border border-blue-gradient dark:border-teal-400 rounded-xl">
+              {["Pull Requests", "Issues", "All"].map((item, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleContributionFilter(item)}
+                  className={`px-2 py-2 text-sm font-medium text-white md:py-3 rounded-xl md:px-6 capitalize transition-colors duration-300 focus:outline-none hover:bg-teal-400 font-poppins ${
+                    activeFilter === item ? "bg-teal-400" : ""
+                  }`}
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
-        <div className="grid grid-cols-1 justify-center gap-8 mt-8 md:mt-16 md:grid-cols-3 sm:grid-cols-2">
-          {filterContribution.map((contribution, index) => (
-            <Contribution
-              key={contribution.id}
-              index={index}
-              {...contribution}
+        {filterContribution.error ? (
+          <div className="flex flex-col sm:-mx-4 sm:flex-row">
+            <AiFillApi
+              size="2rem"
+              className="text-white mr-1 hover:text-teal-200"
             />
-          ))}
-        </div>
+
+            <div className="mt-4 sm:mx-4 sm:mt-0">
+              <h1 className="text-xl font-semibold font-poppins text-gray-700 md:text-2xl group-hover:text-white text-gradient">
+                Something went wrong loading this section.
+              </h1>
+              <p className="font-poppins font-normal text-dimWhite mt-3">
+                Please wait a few minutes and try reloading the page.
+              </p>
+            </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 justify-center gap-8 mt-8 md:mt-16 md:grid-cols-3 sm:grid-cols-2">
+            {filterContribution.map((contribution, index) => (
+              <Contribution
+                key={contribution.id}
+                index={index}
+                {...contribution}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
