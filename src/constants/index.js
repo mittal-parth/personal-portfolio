@@ -1120,6 +1120,7 @@ export const stats = [
 
 export const extraCurricular = [
   {
+    id: 1,
     organisation: "Devfolio",
     title: "UniDAO Lead",
     duration: "December 2021 - Present",
@@ -1136,6 +1137,7 @@ export const extraCurricular = [
     logo: devfolio,
   },
   {
+    id: 2,
     organisation: "Google Developer Student Club, NITK",
     title: "Co-Chair",
     duration: "December 2021 - Present",
@@ -1152,6 +1154,7 @@ export const extraCurricular = [
     logo: gdsc,
   },
   {
+    id: 3,
     organisation: "Genesis, NITK",
     title: "Competitions Head",
     duration: "Sep 2021 - Present",
@@ -1168,6 +1171,7 @@ export const extraCurricular = [
     logo: genesis,
   },
   {
+    id: 4,
     organisation: "IRIS, NITK",
     title: "Tutor",
     duration: "Jan 2022 - Jan 2022",
@@ -1180,6 +1184,7 @@ export const extraCurricular = [
     logo: iris,
   },
   {
+    id: 5,
     organisation: "E-Cell, NITK",
     title: "Executive Member",
     duration: "Sep 2021 - Apr 2022",
