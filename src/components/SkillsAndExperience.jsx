@@ -75,6 +75,7 @@ const ExperienceCard = (props) => {
       <ol className="relative border-l border-gray-200 dark:border-gray-700 ml-6">
         {props.positions.map((position, index) => (
           <li
+            key={index}
             className={`${
               index === props.positions.length - 1 ? "mb-0" : "mb-4"
             } ml-4`}
@@ -87,7 +88,7 @@ const ExperienceCard = (props) => {
               {position.duration}
             </time>
             {position.content.map((info, index) => (
-              <Content index={index} {...info} />
+              <Content key={index} index={index} {...info} />
             ))}
             <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"></p>
           </li>
@@ -111,14 +112,14 @@ const SkillsAndExperience = () => {
         {/* Skills */}
         <motion.div className={`ml-2 mb-6 ${layout.sectionInfo}`}>
           {skills.map((skill, index) => (
-            <SkillCard index={index} {...skill} />
+            <SkillCard key={index} index={index} {...skill} />
           ))}
         </motion.div>
 
         {/* Experience */}
         <motion.div className="flex flex-1 items-center justify-start flex-col">
           {experiences.map((exp, index) => (
-            <ExperienceCard index={index} {...exp} />
+            <ExperienceCard key={index} index={index} {...exp} />
           ))}
         </motion.div>
       </div>
