@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { close, parthmittal, menu } from "../assets";
 import { navLinks } from "../constants";
-import { scrollToSection } from "../../lib/helperFunctions";
+import { scrollToSection } from "../lib/helperFunctions";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
