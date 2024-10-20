@@ -3,7 +3,7 @@ import { DiGitMerge, DiGitPullRequest } from "react-icons/di";
 import { AiFillApi } from "react-icons/ai";
 import { VscIssues } from "react-icons/vsc";
 import { motion } from "framer-motion";
-import { fetchContributions } from "../../lib/helperFunctions";
+import { fetchContributionsWithRetry } from "../../lib/helperFunctions";
 
 const Contribution = (props) => {
   return (
@@ -14,8 +14,8 @@ const Contribution = (props) => {
     >
       <div className="flex flex-row">
         <img
-          src={props.logo}
-          alt={props.organisation}
+          src={props.logoUrl}
+          alt={props.organization}
           className="w-[30px] h-[30px] rounded-full mt-2"
         />
         <div className="flex flex-col ml-4">
@@ -27,7 +27,7 @@ const Contribution = (props) => {
             {props.title}
           </a>
           <p className="font-poppins italic font-normal text-[14px] text-dimWhite my-1">
-            {props.organisation}/{props.repo}
+            {props.organization}/{props.repo}
           </p>
         </div>
       </div>
@@ -42,20 +42,11 @@ const Contribution = (props) => {
           href={props.link}
           target="_blank"
         >
-          {props.type === "Pull Requests" ? (
-            props.status === "closed" ? (
-              <DiGitMerge size="1.5rem" className="text-violet-700 inline" />
-            ) : (
-              <DiGitPullRequest
-                size="1.5rem"
-                className="text-green-600 inline"
-              />
-            )
-          ) : props.status === "open" ? (
-            <VscIssues size="1.5rem" className="text-green-600 inline" />
+          {props.status === "MERGED" ? (
+            <DiGitMerge size="1.5rem" className="text-violet-700 inline" />
           ) : (
-            <VscIssues size="1.5rem" className="text-violet-700 inline" />
-          )}{" "}
+            <DiGitPullRequest size="1.5rem" className="text-green-600 inline" />
+          )}
           {props.number}
         </a>
         {props.linesAdded ? (
@@ -73,32 +64,15 @@ const Contribution = (props) => {
 
 const OpenSource = () => {
   const [contributions, setContributions] = useState([]);
-  const [filterContribution, setFilterContribution] = useState([]);
-  const [activeFilter, setActiveFilter] = useState("All");
 
   useEffect(() => {
     const getContributions = async () => {
-      const contributions = await fetchContributions();
+      const contributions = await fetchContributionsWithRetry();
       setContributions(contributions);
-      setFilterContribution(contributions);
     };
 
     getContributions();
   }, []);
-
-  const handleContributionFilter = (item) => {
-    setActiveFilter(item);
-
-    setTimeout(() => {
-      if (item === "All") {
-        setFilterContribution(contributions);
-      } else {
-        setFilterContribution(
-          contributions.filter((contribution) => contribution.type == item)
-        );
-      }
-    }, 500);
-  };
 
   return (
     <section id="openSource">
@@ -107,25 +81,7 @@ const OpenSource = () => {
       </h1>
 
       <div className="container px-2 py-5 mx-auto mb-8">
-        <div class="flex items-center justify-center">
-          {!filterContribution.error && (
-            <div class="flex items-center p-1 border border-blue-gradient dark:border-teal-400 rounded-xl">
-              {["Pull Requests", "Issues", "All"].map((item, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleContributionFilter(item)}
-                  className={`px-2 py-2 text-sm font-medium text-white md:py-3 rounded-xl md:px-6 capitalize transition-colors duration-300 focus:outline-none hover:bg-teal-400 font-poppins ${
-                    activeFilter === item ? "bg-teal-400" : ""
-                  }`}
-                >
-                  {item}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {filterContribution.error ? (
+        {contributions.error ? (
           <div className="flex flex-col sm:-mx-4 sm:flex-row">
             <AiFillApi
               size="2rem"
@@ -143,7 +99,7 @@ const OpenSource = () => {
           </div>
         ) : (
           <div className="grid grid-cols-1 justify-center gap-8 mt-8 md:mt-16 md:grid-cols-3 sm:grid-cols-2">
-            {filterContribution.map((contribution, index) => (
+            {contributions.map((contribution, index) => (
               <Contribution
                 key={contribution.id}
                 index={index}
