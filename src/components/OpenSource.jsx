@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { DiGitMerge, DiGitPullRequest } from "react-icons/di";
 import { AiFillApi } from "react-icons/ai";
-import { VscIssues } from "react-icons/vsc";
 import { motion } from "framer-motion";
-import { fetchContributionsWithRetry } from "../../lib/helperFunctions";
+import { fetchContributionsWithRetry } from "../lib/helperFunctions";
 
 const Contribution = (props) => {
   return (
@@ -66,12 +65,19 @@ const OpenSource = () => {
   const [contributions, setContributions] = useState([]);
   const [filterContribution, setFilterContribution] = useState([]);
   const [activeFilter, setActiveFilter] = useState("All");
+  const [filters, setFilters] = useState(["All"]);
 
   useEffect(() => {
     const getContributions = async () => {
-      const contributions = await fetchContributionsWithRetry();
-      setContributions(contributions);
-      setFilterContribution(contributions);
+      const fetchedContributions = await fetchContributionsWithRetry();
+      setContributions(fetchedContributions);
+      setFilterContribution(fetchedContributions);
+
+      // Filters based on fetched contributions
+      if (!fetchedContributions.error) {
+        const uniqueRepos = [...new Set(fetchedContributions.map(c => c.repo))];
+        setFilters(["All", ...uniqueRepos]);
+      }
     };
 
     getContributions();
@@ -86,7 +92,7 @@ const OpenSource = () => {
       } else {
         setFilterContribution(
           contributions.filter(
-            (contribution) => contribution.organization == item.toLowerCase()
+            (contribution) => contribution.repo.toLowerCase() == item.toLowerCase()
           )
         );
       }
@@ -102,8 +108,8 @@ const OpenSource = () => {
       <div className="container px-2 py-5 mx-auto mb-8">
         <div className="flex items-center justify-center">
           {!contributions.error && (
-            <div className="flex items-center p-1 border border-blue-gradient dark:border-teal-400 rounded-xl">
-              {["PublicLab", "ParityTech", "Zulip", "All"].map(
+            <div className="flex flex-wrap items-center p-1 border border-blue-gradient dark:border-teal-400 rounded-xl">
+              {filters.map(
                 (item, index) => (
                   <button
                     key={index}
@@ -131,7 +137,7 @@ const OpenSource = () => {
                 Something went wrong loading this section.
               </h1>
               <p className="font-poppins font-normal text-dimWhite mt-3">
-                Please wait a few minutes and try reloading the page.
+                Please wait a few seconds and try reloading the page.
               </p>
             </div>
           </div>
