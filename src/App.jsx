@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { ThemeProvider } from "./context/ThemeContext";
 import styles from "./style";
 import {
   Navbar,
@@ -27,7 +27,8 @@ const App = () => {
 
   return (
     // A div to wrap the entire application
-    <div className="bg-primary w-full overflow-hidden">
+    <ThemeProvider>
+      <div className="bg-primary w-full overflow-hidden">
       <AnimatePresence>
         {isLoading ? (
           <Loading key="loading" />
@@ -74,6 +75,8 @@ const App = () => {
         )}
       </AnimatePresence>
     </div>
+    </ThemeProvider>
+    
   );
 };
 
