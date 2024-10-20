@@ -3,7 +3,7 @@ import LetsConnect from "./LetsConnect";
 import Lottie from "react-lottie-player";
 import animationData from "../lotties/person-coding.json";
 import { aboutMe } from "../constants";
-
+import { useTheme } from "../context/ThemeContext";
 
 // lottie config
 const defaultOptions = {
@@ -16,6 +16,7 @@ const defaultOptions = {
 };
 
 const Hero = () => {
+  const { isDarkMode } = useTheme();
   return (
     <section
       id="home"
@@ -37,9 +38,9 @@ const Hero = () => {
         </div>
 
         <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[80px] leading-[80px] w-full">
-          <span className="text-gradient">{aboutMe.name}</span>
+          <span className={`${isDarkMode ? 'text-gradient' : 'text-gradient-light'}`}>{aboutMe.name}</span>
         </h1>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+        <p className={`${styles.paragraph.base} ${isDarkMode ? styles.paragraph.dark : styles.paragraph.light} max-w-[470px] mt-5`}>
           {aboutMe.intro}
         </p>
       </div>

@@ -5,11 +5,13 @@ import { AiFillGithub } from "react-icons/ai";
 import { FaYoutube } from "react-icons/fa";
 import { TiNews } from "react-icons/ti";
 import styles from "../style";
+import { useTheme } from "../context/ThemeContext";
 
 const Achievements = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardTotalWidth, setCardTotalWidth] = useState(0); // Added state for card width
   const containerRef = useRef(null); // Added ref
+  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     const updateCardWidth = () => {
@@ -78,14 +80,22 @@ const Achievements = () => {
               <button
                 onClick={handlePrev}
                 disabled={isPrevDisabled}
-                className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2"
+                className={`p-2 rounded-full disabled:opacity-50 mx-2 transition-colors duration-300
+                  ${isDarkMode 
+                    ? 'bg-darkGray text-white hover:bg-mediumGray' 
+                    : 'bg-lightGray text-darkGray hover:bg-silverGray'
+                  }`}
               >
                 &lt;
               </button>
               <button
                 onClick={handleNext}
                 disabled={isNextDisabled}
-                className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2"
+                className={`p-2 rounded-full disabled:opacity-50 mx-2 transition-colors duration-300
+                  ${isDarkMode 
+                    ? 'bg-darkGray text-white hover:bg-mediumGray' 
+                    : 'bg-lightGray text-darkGray hover:bg-silverGray'
+                  }`}
               >
                 &gt;
               </button>
@@ -98,8 +108,9 @@ const Achievements = () => {
 };
 
 const AchievementCard = (props) => {
+  const { isDarkMode } = useTheme();
   return (
-    <div className="achievement-card flex-shrink-0 flex flex-col md:w-[400px] w-[320px] justify-around px-6 py-4 rounded-[20px] md:mr-10 mr-6 my-5 transition-colors duration-300 transform border hover:border-transparent dark:border-gray-700 dark:hover:border-transparent">
+    <div className="achievement-card flex-shrink-0 flex flex-col md:w-[400px] w-[320px] justify-around px-6 py-4 rounded-[20px] md:mr-10 mr-6 my-5 transition-colors duration-300 transform border hover:border-transparent dark:border-darkGray dark:hover:border-transparent">
       <img
         src={props.icon}
         alt={props.event}
@@ -109,7 +120,7 @@ const AchievementCard = (props) => {
         <p className="font-poppins font-normal text-xl text-white leading-[24px] mb-2">
           {props.event}
         </p>
-        <p className="font-poppins italic font-normal text-lg text-gradient mb-3">
+        <p className={`font-poppins italic font-normal text-lg  ${isDarkMode ? "text-gradient" : "text-gradient-light"} mb-3`}>
           {props.position}
         </p>
         {props.content1 && (
@@ -131,7 +142,7 @@ const AchievementCard = (props) => {
       <div className="flex flex-row mb-2 font-poppins font-normal text-dimWhite">
         {props.article && (
           <a
-            className="inline-flex items-center mr-2 hover:text-teal-200"
+            className="inline-flex items-center mr-2 hover:text-lightTeal"
             href={props.article}
             target="_blank"
             rel="noopener noreferrer"
@@ -141,7 +152,7 @@ const AchievementCard = (props) => {
         )}
         {props.youtube && (
           <a
-            className="inline-flex items-center mr-2 hover:text-teal-200"
+            className="inline-flex items-center mr-2 hover:text-lightTeal"
             href={props.youtube}
             target="_blank"
             rel="noopener noreferrer"
@@ -151,7 +162,7 @@ const AchievementCard = (props) => {
         )}
         {props.github && (
           <a
-            className="inline-flex items-center mr-2 hover:text-teal-200"
+            className="inline-flex items-center mr-2 hover:text-lightTeal"
             href={props.github}
             target="_blank"
             rel="noopener noreferrer"
@@ -161,7 +172,7 @@ const AchievementCard = (props) => {
         )}
         {props.project && (
           <a
-            className="inline-flex items-center hover:text-teal-200"
+            className="inline-flex items-center hover:text-lightTeal"
             href={props.project}
             target="_blank"
             rel="noopener noreferrer"

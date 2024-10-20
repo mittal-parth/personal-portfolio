@@ -1,8 +1,10 @@
+import React from "react";
 import styles, { layout } from "../style";
 import { educationList } from "../constants";
 import Lottie from "react-lottie-player";
 import animationData from "../lotties/quiz-mode-teal-dark.json";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 // lottie config
 const defaultOptions = {
@@ -22,42 +24,73 @@ const FeatureCard = ({
   content1,
   content2,
   index,
-}) => (
-  <div
-    className={`flex flex-row p-6 rounded-[20px]
-	${index === educationList.length - 1 ? "mb-0" : "mb-6"} feature-card`}
-  >
+}) => {
+  const { isDarkMode } = useTheme();
+  return (
     <div
-      className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}
+      className={`flex flex-row p-6 rounded-[20px] ${
+        index === educationList.length - 1 ? "mb-0" : "mb-6"
+      } ${isDarkMode ? "feature-card" : "bg-gray-100"}`}
     >
-      <img src={icon} alt="icon" className="w-[80%] h-[80%] object-contain" />
-    </div>
-    <div className="flex-1 flex flex-col ml-4">
-      <h4 className="font-poppins font-semibold text-white text-[20px] leading-[30px] mb-1 text-gradient">
-        {title}
-      </h4>
-      <p className="font-poppins font-normal text-white text-[16px] leading-[30px] mb-1 ">
-        {degree}
-      </p>
-      <p className="font-poppins font-normal text-dimWhite text-[14px] leading-[30px] mb-1">
-        {duration}
-      </p>
-      <p className="font-poppins font-normal text-dimWhite text-[16px] leading-[30px] mb-1">   
-      ● {content1}
-      </p>
-      {content2 && (
-        <p className="font-poppins font-normal text-dimWhite text-[16px] leading-[30px] mb-1">     
-      ● {content2}
+      <div
+        className={`w-[64px] h-[64px] rounded-full ${
+          styles.flexCenter
+        } ${isDarkMode ? "bg-dimBlue" : "bg-teal-100"}`}
+      >
+        <img src={icon} alt="icon" className="w-[80%] h-[80%] object-contain" />
+      </div>
+      <div className="flex-1 flex flex-col ml-4">
+        <h4
+          className={`font-poppins font-semibold text-[20px] leading-[30px] mb-1 ${
+            isDarkMode ? "text-gradient" : "text-gradient-light"
+          }`}
+        >
+          {title}
+        </h4>
+        <p
+          className={`font-poppins font-normal text-[16px] leading-[30px] mb-1 ${
+            isDarkMode ? "text-white" : "text-gray-800"
+          }`}
+        >
+          {degree}
         </p>
-      )}
+        <p
+          className={`font-poppins font-normal text-[14px] leading-[30px] mb-1 ${
+            isDarkMode ? "text-dimWhite" : "text-mediumGray"
+          }`}
+        >
+          {duration}
+        </p>
+        <p
+          className={`font-poppins font-normal text-[16px] leading-[30px] mb-1 ${
+            isDarkMode ? "text-dimWhite" : "text-darkGray"
+          }`}
+        >
+          ● {content1}
+        </p>
+        {content2 && (
+          <p
+            className={`font-poppins font-normal text-[16px] leading-[30px] mb-1 ${
+              isDarkMode ? "text-dimWhite" : "text-darkGray"
+            }`}
+          >
+            ● {content2}
+          </p>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Education = () => {
+  const { isDarkMode } = useTheme();
   return (
     <section id="education">
-      <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
+      <h1
+        className={`flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] ${
+          isDarkMode ? "text-white" : "text-gray-800"
+        } ss:leading-[80px] leading-[80px]`}
+      >
         Education
       </h1>
       <motion.div

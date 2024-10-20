@@ -1,17 +1,20 @@
 import { useState } from "react";
-import { close, parthmittal, menu } from "../assets";
+import { close, parthmittal,parthmittal_light, menu } from "../assets";
 import { navLinks } from "../constants";
 import { scrollToSection } from "../lib/helperFunctions";
+import { useTheme } from "../context/ThemeContext"
+import { BsSun, BsMoonFill } from "react-icons/bs";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const { isDarkMode, toggleTheme} = useTheme();
 
   return (
     <nav className="w-full  flex justify-between items-center navbar">
       {/* Logo */}
       <a href="#home">
         <img
-          src={parthmittal}
+          src={isDarkMode ? parthmittal:parthmittal_light}
           alt="Parth Mittal"
           className="w-[80px] h-[80px]"
         />
@@ -33,10 +36,26 @@ const Navbar = () => {
             {nav.title}
           </li>
         ))}
+        <li className="ml-10">
+          <button 
+            onClick={toggleTheme}
+            className={`p-2 rounded-full ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'} transition-colors duration-200`}
+            aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}>
+              {isDarkMode ? <BsSun size={20} /> : <BsMoonFill size={20} />}
+          </button>
+        </li>
       </ul>
 
       {/* only for mobile devices, created separately */}
       <div className="sm:hidden flex flex-1 justify-end items-center">
+      <button 
+          onClick={toggleTheme} 
+          className={`p-2 rounded-full mr-4 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'} transition-colors duration-200`}
+          aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+        >
+          {isDarkMode ? <BsSun size={20} /> : <BsMoonFill size={20} />}
+        </button>
+        
         {/* shows toggle icon based on its state */}
         <img
           src={toggle ? close : menu}

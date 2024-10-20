@@ -1,4 +1,5 @@
 import parthmittal from "./parth.svg";
+import parthmittal_light from "./parth-light.svg"
 import profilePic from "./profile-pic.jpg";
 import quotes from "./quotes.svg";
 import robot from "./robot.png";
@@ -10,6 +11,7 @@ import close from "./close.svg";
 import google from "./google.svg";
 import apple from "./apple.svg";
 import arrowUp from "./arrow-up.svg";
+import arrowUpLight from "./arrow-up-light.svg";
 import discount from "./Discount.svg";
 import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
@@ -59,6 +61,7 @@ export {
   google,
   apple,
   arrowUp,
+  arrowUpLight,
   discount,
   facebook,
   instagram,
@@ -80,6 +83,7 @@ export {
   zulip,
   cdc,
   parthmittal,
+  parthmittal_light,
   profilePic,
   chargeswap,
   placeicon,

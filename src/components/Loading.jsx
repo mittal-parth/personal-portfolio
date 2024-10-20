@@ -1,8 +1,10 @@
 import styles from "../style";
 import { motion } from "framer-motion";
-import { parthmittal } from "../assets";
+import { parthmittal,parthmittal_light } from "../assets";
+import { useTheme } from "../context/ThemeContext"
 
 const Loading = () => {
+  const { isDarkMode} = useTheme();
   return (
     <motion.div
       id="loading"
@@ -15,7 +17,7 @@ const Loading = () => {
         ease: "easeInOut",
       }}
     >
-      <img src={parthmittal} alt="Parth Mittal" className="w-[80px] h-[80px]" />
+      <img src={isDarkMode ? parthmittal : parthmittal_light} alt="Parth Mittal" className="w-[80px] h-[80px]" />
     </motion.div>
   );
 };
