@@ -1232,6 +1232,6 @@ export const aboutMe = {
     intro: "Software Developer from India who is either busy improving his craft or pondering over the next big idea."
 }
 
-export const itemsToFetch = 15;
+export const itemsToFetch = 20;
 
-export const includedRepos = ['publiclab/plots2', 'zulip/zulip'];
+export const includedRepos = ['publiclab/plots2', 'zulip/zulip', 'paritytech/polkadot-sdk'];
