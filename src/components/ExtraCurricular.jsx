@@ -51,8 +51,8 @@ const ExtraCurricularCard = (props) => {
       </div>
 
       <div>
-        {props.content.map((info) => {
-          return <Content {...info} />;
+        {props.content.map((info,index) => {
+          return <Content key={index} {...info} />;
         })}
       </div>
     </motion.div>
@@ -71,7 +71,7 @@ const ExtraCurricular = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8 md:mt-16 md:grid-cols-3">
           {extraCurricular.map((card) => (
-            <ExtraCurricularCard key={card.id} {...card} />
+            <ExtraCurricularCard key={card.id} index={card.id} {...card} />
           ))}
         </div>
       </div>
