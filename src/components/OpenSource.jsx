@@ -3,11 +3,18 @@ import { openSourceContributions } from "../constants";
 import { DiGitMerge, DiGitPullRequest } from "react-icons/di";
 import { VscIssues } from "react-icons/vsc";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 const Contribution = (props) => {
+  const { isDarkMode } = useTheme();
+
   return (
     <motion.div
-      className="flex flex-col justify-between px-6 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 transition-colors duration-300 transform border hover:border-transparent dark:border-gray-700 dark:hover:border-transparent"
+      className={`flex flex-col justify-between px-6 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 transition-colors duration-300 transform border ${
+        isDarkMode
+          ? "hover:border-transparent dark:border-gray-700 dark:hover:border-transparent"
+          : "border-gray-200 hover:border-teal-400"
+      }`}
       whileInView={{ x: [-40, 0], opacity: [0, 1] }}
       transition={{ duration: 1 }}
     >
@@ -19,13 +26,18 @@ const Contribution = (props) => {
         />
         <div className="flex flex-col ml-4">
           <a
-            className="font-poppins font-normal text-[16px] text-white my-1 leading-[24px] hover:text-teal-200"
+            className={`font-poppins font-normal text-[16px] ${
+              isDarkMode ? "text-white hover:text-teal-200" : "text-gray-800 hover:text-teal-600"
+            } my-1 leading-[24px]`}
             href={props.link}
             target="_blank"
+            rel="noopener noreferrer"
           >
             {props.title}
           </a>
-          <p className="font-poppins italic font-normal text-[14px] text-dimWhite my-1">
+          <p className={`font-poppins italic font-normal text-[14px] ${
+            isDarkMode ? "text-dimWhite" : "text-gray-600"
+          } my-1`}>
             {props.organisation}/{props.repo}
           </p>
         </div>
@@ -37,9 +49,12 @@ const Contribution = (props) => {
         } mt-4`}
       >
         <a
-          className="font-poppins font-normal text-[12px] text-dimWhite inline"
+          className={`font-poppins font-normal text-[12px] ${
+            isDarkMode ? "text-dimWhite" : "text-gray-600"
+          } inline`}
           href={props.link}
           target="_blank"
+          rel="noopener noreferrer"
         >
           {props.type === "pull-request" ? (
             props.status === "merged" ? (
@@ -57,13 +72,11 @@ const Contribution = (props) => {
           )}{" "}
           {props.number}
         </a>
-        {props.linesAdded ? (
+        {props.linesAdded && (
           <p className="font-poppins font-normal text-[14px]">
             <span className="text-green-600">+{props.linesAdded} </span>
             <span className="text-red-700">-{props.linesDeleted}</span>
           </p>
-        ) : (
-          ""
         )}
       </div>
     </motion.div>
@@ -74,6 +87,7 @@ const OpenSource = () => {
   const [contributions, setContributions] = useState([]);
   const [filterContribution, setFilterContribution] = useState([]);
   const [activeFilter, setActiveFilter] = useState("All");
+  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     setContributions(openSourceContributions);
@@ -89,7 +103,7 @@ const OpenSource = () => {
       } else {
         setFilterContribution(
           contributions.filter(
-            (contribution) => contribution.organisation == item
+            (contribution) => contribution.organisation === item
           )
         );
       }
@@ -98,18 +112,24 @@ const OpenSource = () => {
 
   return (
     <section id="openSource">
-      <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
+      <h1 className={`flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] ${
+        isDarkMode ? "text-white" : "text-gray-800"
+      } ss:leading-[80px] leading-[80px]`}>
         Open Source Contributions
       </h1>
 
       <div className="container px-2 py-5 mx-auto mb-8">
-        <div class="flex items-center justify-center">
-          <div class="flex items-center p-1 border border-blue-gradient dark:border-teal-400 rounded-xl">
+        <div className="flex items-center justify-center">
+          <div className={`flex items-center p-1 border ${
+            isDarkMode ? "border-blue-gradient dark:border-teal-400" : "border-teal-400"
+          } rounded-xl`}>
             {["PublicLab", "Zulip", "All"].map((item, index) => (
               <button
                 key={index}
                 onClick={() => handleContributionFilter(item)}
-                className={`px-2 py-2 text-sm font-medium text-white md:py-3 rounded-xl md:px-6 capitalize transition-colors duration-300 focus:outline-none hover:bg-teal-400 font-poppins ${
+                className={`px-2 py-2 text-sm font-medium ${
+                  isDarkMode ? "text-white" : "text-gray-800"
+                } md:py-3 rounded-xl md:px-6 capitalize transition-colors duration-300 focus:outline-none hover:bg-teal-400 font-poppins ${
                   activeFilter === item ? "bg-teal-400" : ""
                 }`}
               >
@@ -120,10 +140,9 @@ const OpenSource = () => {
         </div>
 
         <div className="grid grid-cols-1 justify-center gap-8 mt-8 md:mt-16 md:grid-cols-3 sm:grid-cols-2">
-          {filterContribution.map((contribution, index) => (
+          {filterContribution.map((contribution) => (
             <Contribution
               key={contribution.id}
-              index={index}
               {...contribution}
             />
           ))}

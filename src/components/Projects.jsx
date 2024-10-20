@@ -3,11 +3,17 @@ import { projects } from "../constants";
 import { AiFillGithub } from "react-icons/ai";
 import { BsLink45Deg } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext"
 
 const Project = (props) => {
+  const { isDarkMode } = useTheme();
   return (
     <motion.div
-      className="px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card"
+      className={`px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group ${
+        isDarkMode
+          ? "dark:border-gray-700 dark:hover:border-transparent feature-card"
+          : "border-gray-200 hover:bg-gray-50"
+      }`}
       initial={{ y: -30, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: false, amount: 0.5 }}
@@ -21,53 +27,62 @@ const Project = (props) => {
         />
 
         <div className="mt-4 sm:mx-4 sm:mt-0">
-          <h1 className="text-xl font-semibold font-poppins text-gray-700 capitalize md:text-2xl group-hover:text-white text-gradient">
+          <h1
+            className={`text-xl font-semibold font-poppins md:text-2xl ${
+              isDarkMode ? "text-gradient" : "text-teal-600"
+            }`}
+          >
             {props.title}
           </h1>
-          <p className="font-poppins font-normal text-dimWhite mt-3">
+          <p
+            className={`font-poppins font-normal mt-3 ${
+              isDarkMode ? "text-dimWhite" : "text-gray-600"
+            }`}
+          >
             Tech Stack
           </p>
-          <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
-            <div className="flex sm:flex-row">
-              {props.stack.map((tech, index) => (
-                <div
-                  key={tech.id}
-                  index={index}
-                  className="text-dimWhite mr-5 text-[20px] hover:text-teal-200 tooltip"
-                >
-                  {React.createElement(tech.icon)}
-                  <span class="tooltiptext">{tech.name}</span>
-                </div>
-              ))}
-            </div>
-          </p>
+          <div className="flex sm:flex-row mt-2">
+            {props.stack.map((tech) => (
+              <div
+                key={tech.id}
+                className={`mr-5 text-[20px] ${
+                  isDarkMode ? "text-dimWhite hover:text-teal-200" : "text-gray-600 hover:text-teal-600"
+                } tooltip`}
+              >
+                {React.createElement(tech.icon)}
+                <span className="tooltiptext">{tech.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      <p className="mt-8 text-gray-500 dark:text-gray-300 group-hover:text-gray-300 font-poppins">
+      <p
+        className={`mt-8 font-poppins ${
+          isDarkMode ? "text-gray-300" : "text-gray-600"
+        } group-hover:text-gray-300`}
+      >
         {props.content}
       </p>
 
       <div className="flex mt-4 -mx-2">
-        {props.github ? (
-          <a href={props.github} target="_blank">
+        {props.github && (
+          <a href={props.github} target="_blank" rel="noopener noreferrer">
             <AiFillGithub
               size="2rem"
-              className="text-white mr-1 hover:text-teal-200"
-            ></AiFillGithub>
+              className={`mr-1 ${
+                isDarkMode ? "text-white hover:text-teal-200" : "text-gray-700 hover:text-teal-600"
+              }`}
+            />
           </a>
-        ) : (
-          ""
         )}
-        {props.link ? (
-          <a href={props.link} target="_blank">
+        {props.link && (
+          <a href={props.link} target="_blank" rel="noopener noreferrer">
             <BsLink45Deg
               size="2rem"
-              className="text-white hover:text-teal-200"
-            ></BsLink45Deg>
+              className={isDarkMode ? "text-white hover:text-teal-200" : "text-gray-700 hover:text-teal-600"}
+            />
           </a>
-        ) : (
-          ""
         )}
       </div>
     </motion.div>
@@ -75,16 +90,21 @@ const Project = (props) => {
 };
 
 const Projects = () => {
+  const { isDarkMode } = useTheme();
   return (
     <section id="projects">
-      <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
+      <h1
+        className={`flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] ${
+          isDarkMode ? "text-white" : "text-gray-800"
+        } ss:leading-[80px] leading-[80px]`}
+      >
         Projects
       </h1>
 
       <div className="container px-2 py-10 mx-auto mb-8">
         <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-          {projects.map((project, index) => (
-            <Project key={project.id} index={index} {...project} />
+          {projects.map((project) => (
+            <Project key={project.id} {...project} />
           ))}
         </div>
       </div>

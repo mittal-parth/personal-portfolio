@@ -209,3 +209,87 @@
   -webkit-line-clamp: 2; /* number of lines to show */
   -webkit-box-orient: vertical;
 }
+
+/* Light mode styles */
+body.light-mode {
+  --primary-bg: white;
+  --text-color: black;
+  --hover-color: #0d9488;
+  --gradient-bg: linear-gradient(
+    144.39deg,
+    #f0f0f0 -278.56%,
+    #d1d1d1 -78.47%,
+    #ffffff 91.61%
+  );
+  --scrollbar-primary: #ffffff;
+  --scrollbar-secondary: #0d9488;
+}
+
+body.light-mode .bg-primary {
+  background-color: var(--primary-bg);
+}
+
+body.light-mode .text-white {
+  color: var(--text-color);
+}
+
+body.light-mode .hover\:text-teal-200:hover {
+  color: var(--hover-color);
+}
+
+body.light-mode .bg-black-gradient,
+body.light-mode .bg-black-gradient-2 {
+  background: var(--gradient-bg);
+}
+
+/* Transition for smooth theme switching */
+body, 
+.bg-primary, 
+.text-white, 
+.hover\:text-teal-200:hover, 
+.bg-black-gradient, 
+.bg-black-gradient-2 {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Update scrollbar colors */
+body.light-mode * {
+  scrollbar-color: var(--scrollbar-secondary) var(--scrollbar-primary);
+}
+
+body.light-mode *::-webkit-scrollbar-track {
+  background: var(--scrollbar-primary);
+}
+
+body.light-mode *::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-secondary);
+  border: 3px solid var(--scrollbar-primary);
+}
+
+/* Ensure text is visible in light mode for elements with white text */
+body.light-mode .text-white,
+body.light-mode .text-white * {
+  color: var(--text-color);
+}
+
+/* Adjust background colors for light mode */
+body.light-mode .bg-primary,
+body.light-mode .bg-black-gradient,
+body.light-mode .bg-black-gradient-2 {
+  background: var(--primary-bg);
+}
+
+/* Adjust box shadows for light mode */
+body.light-mode .box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+/* Adjust tooltip styles for light mode */
+body.light-mode .tooltip .tooltiptext {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+body.light-mode .tooltip .tooltiptext::after {
+  border-color: transparent transparent #f0f0f0 transparent;
+}
