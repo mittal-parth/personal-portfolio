@@ -101,19 +101,23 @@ const OpenSource = () => {
 
       <div className="container px-2 py-5 mx-auto mb-8">
         <div className="flex items-center justify-center">
-          <div className="flex items-center p-1 border border-blue-gradient dark:border-teal-400 rounded-xl">
-            {["PublicLab", "ParityTech", "Zulip", "All"].map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleContributionFilter(item)}
-                className={`px-2 py-2 text-sm font-medium text-white md:py-3 rounded-xl md:px-6 capitalize transition-colors duration-300 focus:outline-none hover:bg-teal-400 font-poppins ${
-                  activeFilter === item ? "bg-teal-400" : ""
-                }`}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
+          {!contributions.error && (
+            <div className="flex items-center p-1 border border-blue-gradient dark:border-teal-400 rounded-xl">
+              {["PublicLab", "ParityTech", "Zulip", "All"].map(
+                (item, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleContributionFilter(item)}
+                    className={`px-2 py-2 text-sm font-medium text-white md:py-3 rounded-xl md:px-6 capitalize transition-colors duration-300 focus:outline-none hover:bg-teal-400 font-poppins ${
+                      activeFilter === item ? "bg-teal-400" : ""
+                    }`}
+                  >
+                    {item}
+                  </button>
+                )
+              )}
+            </div>
+          )}
         </div>
         {contributions.error ? (
           <div className="flex flex-col sm:-mx-4 sm:flex-row">
