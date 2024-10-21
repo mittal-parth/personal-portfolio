@@ -1,13 +1,56 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { close, parthmittal, menu } from "../assets";
 import { navLinks } from "../constants";
 import { scrollToSection } from "../lib/helperFunctions";
+import { cn } from "../lib/utils";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  // state for navbar
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
 
+  // control navbar on scroll
+  const controlNavbar = useCallback(() => {
+    if (typeof window === "undefined") return;
+    const currentScrollY = window.scrollY;
+    const isScrollingUp = currentScrollY < lastScrollY;
+
+    setIsNavbarVisible(isScrollingUp);
+    setLastScrollY(currentScrollY);
+  }, [lastScrollY]);
+
+  // Add/remove scroll event listener
+  useEffect(() => {
+    // add scroll event listener
+    window.addEventListener("scroll", controlNavbar);
+    // cleanup function
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY, controlNavbar]);
   return (
-    <nav className="w-full  flex justify-between items-center navbar">
+    <motion.nav
+      className={cn(
+        `w-full xl:max-w-[1280px] xl:mx-auto sm:px-16 px-6 flex justify-between items-center navbar ${
+          isNavbarVisible && lastScrollY === 0
+            ? `translate-y-0`
+            : isNavbarVisible &&
+              "-translate-y-full bg-primary/50 backdrop-blur shadow-lg"
+        }`,
+        {
+          "fixed z-10": lastScrollY > 0,
+        }
+      )}
+      initial={{ y: 0, opacity: 0 }}
+      animate={{
+        y:
+          isNavbarVisible && lastScrollY === 0 ? 0 : isNavbarVisible ? 0 : -100,
+        opacity: isNavbarVisible ? 1 : 0,
+      }}
+      transition={{ duration: 0.3 }}
+    >
       {/* Logo */}
       <a href="#home">
         <img
@@ -69,7 +112,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
