@@ -113,6 +113,22 @@ our community aspires to be a respectful place both during online and in-person 
 - [Submit a Pull Request](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#making-a-pull-request) to the main branch.
 - After any questions or changes have been resolved, your contribution would be merged in!
 
+## Creating a .env file to use your own GitHub API token
+
+While modifying the template you might want sections like 'Open source contributions' to reflect your own contributions to open source repositories, this would require you allowing the web app to use your GitHub API token so that web app can access your activity on GitHub.
+
+1. Obtaining your own GitHub personal access token
+
+- You can create your own personal access token to use with the GitHub API in the web app, this can be done simply through your GitHub profile settings. Here is the official guide from GitHub on how to do this - [GitHUb Docs - Creating  personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
+
+2. Adding your token to the environment variables file
+
+- Create a file in your local dev environment to hold your environment variables called '.env' in the root project folder.
+- Add a new environment variable titled 'VITE_GH_TOKEN' in the '.env' file to store your GitHub access token.
+- Once done your .env file should contain 'VITE_GH_TOKEN=YOUR_GITHUB_TOKEN' where 'YOUR_GITHUB_TOKEN' is the personal access token you generated earlier.
+
+
+
 #### If you found this repo helpful in anyway, considering giving it a star - it would mean the world to me! 🌟
 
 ## References & Inspirations 👏
