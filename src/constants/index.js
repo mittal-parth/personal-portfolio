@@ -126,6 +126,7 @@ export const navLinks = [
   },
 ];
 
+// List out your past academic experiences here
 export const educationList = [
   {
     id: "education-1",
@@ -146,6 +147,7 @@ export const educationList = [
   },
 ];
 
+// List out your past achievments here for example - rankings in hackathons/events
 export const achievements = [
   {
     id: "a-1",
@@ -222,7 +224,7 @@ export const achievements = [
   },
 ];
 
-
+// Mention all your software developments skills here for example - programming languages, frameworks etc.
 export const skills = [
   {
     title: "Programming Languages",
@@ -381,6 +383,7 @@ export const skills = [
   },
 ];
 
+// List out your current/past professional work experience here
 export const experiences = [
   {
     organisation: "Oracle, India",
@@ -487,6 +490,7 @@ export const experiences = [
   }
 ];
 
+// Contains information about all the projects to be listed out in your portfolio
 export const projects = [
   {
     id: "project-1",
@@ -834,6 +838,7 @@ export const projects = [
   },
 ];
 
+// You can add informative blog posts that you might want to display on your portfolio here
 export const blogPosts = [
   {
     id: "post-1",
@@ -900,6 +905,7 @@ export const blogPosts = [
   },
 ];
 
+// Highlights your GitHub stats like - Organisation, Issues Opened, Pull Requests etc.
 export const stats = [
   {
     id: "stats-1",
@@ -918,6 +924,7 @@ export const stats = [
   },
 ];
 
+// List out the extra curricular activities you have induldged in like - student clubs, joining research groups etc.
 export const extraCurricular = [
   {
     id: 1,
@@ -1002,6 +1009,7 @@ export const extraCurricular = [
   },
 ];
 
+// Links to your social media profiles
 export const socialMedia = [
   {
     id: "social-media-1",
@@ -1030,6 +1038,7 @@ export const socialMedia = [
   },
 ];
 
+// Your professional summary
 export const aboutMe = {
     name: "Parth Mittal",
     githubUsername: 'mittal-parth',
@@ -1037,6 +1046,8 @@ export const aboutMe = {
     intro: "Software Developer from India who is either busy improving his craft or pondering over the next big idea."
 }
 
+// The maximum number of issues to be displayed in the "open source contributions" section per every open source repository that you have contributed to 
 export const itemsToFetch = 20;
 
+// Lists all the open-source repositories you have contributed to in the "repo owner/repo name" format
 export const includedRepos = ['publiclab/plots2', 'zulip/zulip', 'paritytech/polkadot-sdk'];
