@@ -490,7 +490,7 @@ export const experiences = [
   }
 ];
 
-// Contains information about all the projects to be listed out in your portfolio
+// Add information about all the projects to be listed out in your portfolio
 export const projects = [
   {
     id: "project-1",
