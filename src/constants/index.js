@@ -905,7 +905,7 @@ export const blogPosts = [
   },
 ];
 
-// Highlights your GitHub stats like - Organisation, Issues Opened, Pull Requests etc.
+// Highlight your GitHub stats like - Organisation, Issues Opened, Pull Requests etc.
 export const stats = [
   {
     id: "stats-1",
