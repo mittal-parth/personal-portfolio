@@ -1046,7 +1046,7 @@ export const aboutMe = {
     intro: "Software Developer from India who is either busy improving his craft or pondering over the next big idea."
 }
 
-// The maximum number of issues to be displayed in the "open source contributions" section per every open source repository that you have contributed to 
+// The maximum number of PRs to be displayed in the Open Source Contributions section.
 export const itemsToFetch = 20;
 
 // Add names of GitHub repos you'd like to display open source contributions from in the 'org/repo' format. 
