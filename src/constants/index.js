@@ -1049,5 +1049,5 @@ export const aboutMe = {
 // The maximum number of issues to be displayed in the "open source contributions" section per every open source repository that you have contributed to 
 export const itemsToFetch = 20;
 
-// Lists all the open-source repositories you have contributed to in the "repo owner/repo name" format
+// Add names of GitHub repos you'd like to display open source contributions from in the 'org/repo' format. 
 export const includedRepos = ['publiclab/plots2', 'zulip/zulip', 'paritytech/polkadot-sdk'];
