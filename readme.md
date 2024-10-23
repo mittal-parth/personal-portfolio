@@ -79,13 +79,15 @@ One such example is the GitHub personal access token to automatically fetch the 
 
 The environment variables are to be added onto the .env file
 
-- Create a file in your local dev environment to hold your environment variables called '.env' in the root project folder.
-- Copy over the contents of the '.env.example' example file into the .env file.
-- Replace the value of the environment variable value(s) with the values you want the environment variables to hold, for e.g. 'VITE_GH_TOKEN=YOUR_GITHUB_TOKEN' where 'YOUR_GITHUB_TOKEN' is the personal access token you generated earlier.
+- Create a file in your local dev environment to hold your environment variables called `.env` in the root project folder.
+- Copy over the contents of the `.env.example` example file into the `.env` file.
+- Replace the value of the environment variable value(s) with the values you want the environment variables to hold, for e.g. `VITE_GH_TOKEN=YOUR_GITHUB_TOKEN` where `YOUR_GITHUB_TOKEN` is the personal access token you generated earlier.
 
 ### Deployment
 
 You can use [Netlify](https://docs.netlify.com/) to deploy your site. Follow the instructions in their docs to do so.
+
+Since we have env variables, make sure to add them from the Netlify UI as well. [Link to Guide](https://docs.netlify.com/environment-variables/get-started/#site-environment-variables)
 
 ## Contributing 🏆
 
