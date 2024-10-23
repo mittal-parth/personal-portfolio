@@ -126,7 +126,7 @@ export const navLinks = [
   },
 ];
 
-// List out your past academic experiences here
+// Add your past academic experiences here
 export const educationList = [
   {
     id: "education-1",
@@ -147,7 +147,7 @@ export const educationList = [
   },
 ];
 
-// List out your past achievments here for example - rankings in hackathons/events
+// Add your past achievments here for example - rankings in hackathons/events
 export const achievements = [
   {
     id: "a-1",
@@ -224,7 +224,7 @@ export const achievements = [
   },
 ];
 
-// Mention all your software developments skills here for example - programming languages, frameworks etc.
+// Add your software developments skills here for example - programming languages, frameworks etc.
 export const skills = [
   {
     title: "Programming Languages",
@@ -383,7 +383,7 @@ export const skills = [
   },
 ];
 
-// List out your current/past professional work experience here
+// Add your current/past professional work experience here
 export const experiences = [
   {
     organisation: "Oracle, India",
