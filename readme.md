@@ -119,7 +119,7 @@ While modifying the template you might want sections like 'Open source contribut
 
 1. Obtaining your own GitHub personal access token
 
-- You can create your own personal access token to use with the GitHub API in the web app, this can be done simply through your GitHub profile settings. Here is the official guide from GitHub on how to do this - [GitHub Docs - Creating  personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
+- A personal access token can be created to use the GitHub API following the official guide from GitHub - [GitHub Docs - Creating  personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
 
 2. Adding your token to the environment variables file
 
