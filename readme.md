@@ -115,7 +115,9 @@ our community aspires to be a respectful place both during online and in-person 
 
 ## Creating a .env file to use your own GitHub API token
 
-While modifying the template you might want sections like 'Open source contributions' to reflect your own contributions to open source repositories, this would require you allowing the web app to use your GitHub API token so that web app can access your activity on GitHub.
+Environment variables store sensitive information that vary for the user and should not be checked into source control.
+
+One such example is the GitHub personal access token to automatically fetch the Open Source Contributions.
 
 1. Obtaining your own GitHub personal access token
 
