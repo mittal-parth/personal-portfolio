@@ -838,7 +838,7 @@ export const projects = [
   },
 ];
 
-// You can add informative blog posts that you might want to display on your portfolio here
+// Add links to blogs here
 export const blogPosts = [
   {
     id: "post-1",
