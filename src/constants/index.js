@@ -126,6 +126,7 @@ export const navLinks = [
   },
 ];
 
+// Add your past academic experiences here
 export const educationList = [
   {
     id: "education-1",
@@ -146,6 +147,7 @@ export const educationList = [
   },
 ];
 
+// Add your past achievments here for example - rankings in hackathons/events
 export const achievements = [
   {
     id: "a-1",
@@ -222,7 +224,7 @@ export const achievements = [
   },
 ];
 
-
+// Add your software developments skills here for example - programming languages, frameworks etc.
 export const skills = [
   {
     title: "Programming Languages",
@@ -381,6 +383,7 @@ export const skills = [
   },
 ];
 
+// Add your current/past professional work experience here
 export const experiences = [
   {
     organisation: "Oracle, India",
@@ -487,206 +490,7 @@ export const experiences = [
   }
 ];
 
-export const openSourceContributions = [
-  {
-    id: "os-1",
-    organisation: "PublicLab",
-    logo: publiclab,
-    repo: "plots2",
-    type: "pull-request",
-    status: "merged",
-    title:
-      "Move _wiki to old table look, common template for email and settings digest only",
-    link: "https://github.com/publiclab/plots2/pull/10731",
-    number: "#10731",
-    date: "Feb 24 2022",
-    linesAdded: "101",
-    linesDeleted: "48",
-  },
-  {
-    id: "os-2",
-    organisation: "PublicLab",
-    logo: publiclab,
-    repo: "plots2",
-    type: "pull-request",
-    status: "merged",
-    title: "Combine templates for email digest and settings digest",
-    link: "https://github.com/publiclab/plots2/pull/10681",
-    number: "#10681",
-    date: "Feb 9 2022",
-    linesAdded: "86",
-    linesDeleted: "106",
-  },
-  {
-    id: "os-3",
-    organisation: "PublicLab",
-    logo: publiclab,
-    repo: "plots2",
-    type: "pull-request",
-    status: "merged",
-    title: "Fix reverse chronological sorting on inline grids",
-    link: "https://github.com/publiclab/plots2/pull/11114",
-    number: "#11114",
-    date: "May 4 2022",
-    linesAdded: "1",
-    linesDeleted: "1",
-  },
-  {
-    id: "os-4",
-    organisation: "PublicLab",
-    logo: publiclab,
-    repo: "plots2",
-    type: "pull-request",
-    status: "merged",
-    title: "style: Make post page footer responsive",
-    link: "https://github.com/publiclab/plots2/pull/10634",
-    number: "#10634",
-    date: "Feb 24 2022",
-    linesAdded: "64",
-    linesDeleted: "8",
-  },
-  {
-    id: "os-5",
-    organisation: "PublicLab",
-    logo: publiclab,
-    repo: "plots2",
-    type: "issue",
-    status: "closed",
-    title: "Typos in Translation_System.md",
-    link: "https://github.com/publiclab/plots2/issues/11120",
-    number: "#11120",
-    date: "May 6 2022",
-    linesAdded: "",
-    linesDeleted: "",
-  },
-  {
-    id: "os-6",
-    organisation: "PublicLab",
-    logo: publiclab,
-    repo: "plots2",
-    type: "issue",
-    status: "closed",
-    title: "Missing translations on layouts/_header.html.erb",
-    link: "https://github.com/publiclab/plots2/issues/11115",
-    number: "#11115",
-    date: "May 4 2022",
-    linesAdded: "",
-    linesDeleted: "",
-  },
-  {
-    id: "os-7",
-    organisation: "PublicLab",
-    logo: publiclab,
-    repo: "plots2",
-    type: "issue",
-    status: "closed",
-    title: "Missing translation of 'This is part of' on _tagging.html.erb",
-    link: "https://github.com/publiclab/plots2/issues/10986",
-    number: "#10986",
-    date: "Apr 8 2022",
-    linesAdded: "",
-    linesDeleted: "",
-  },
-  {
-    id: "os-8",
-    organisation: "PublicLab",
-    logo: publiclab,
-    repo: "plots2",
-    type: "issue",
-    status: "closed",
-    title: "Wrong closing heading tag in _digest.html.erb",
-    link: "https://github.com/publiclab/plots2/issues/10985",
-    number: "#10985",
-    date: "Apr 8 2022",
-    linesAdded: "",
-    linesDeleted: "",
-  },
-  {
-    id: "os-9",
-    organisation: "PublicLab",
-    logo: publiclab,
-    repo: "plots2",
-    type: "issue",
-    status: "closed",
-    title: "Add class to center wiki.scraped_image in wikis template",
-    link: "https://github.com/publiclab/plots2/issues/10797",
-    number: "#10797",
-    date: "Mar 18 2022",
-    linesAdded: "",
-    linesDeleted: "",
-  },
-  {
-    id: "os-10",
-    organisation: "PublicLab",
-    logo: publiclab,
-    repo: "plots2",
-    type: "issue",
-    status: "closed",
-    title: "Images on /wiki are not center aligned",
-    link: "https://github.com/publiclab/plots2/issues/10755",
-    number: "#10755",
-    date: "Mar 4 2022",
-    linesAdded: "",
-    linesDeleted: "",
-  },
-  {
-    id: "os-11",
-    organisation: "Zulip",
-    logo: zulip,
-    repo: "zulip",
-    type: "pull-request",
-    status: "merged",
-    title: "invitations: Check invitation from a now-deactivated user.",
-    link: "https://github.com/zulip/zulip/pull/20206",
-    number: "#20206",
-    date: "Dec 30 2021",
-    linesAdded: "31",
-    linesDeleted: "1",
-  },
-  {
-    id: "os-12",
-    organisation: "Zulip",
-    logo: zulip,
-    repo: "zulip",
-    type: "pull-request",
-    status: "merged",
-    title: "invitations: Check invitation from a now-deactivated user.",
-    link: "https://github.com/zulip/zulip/pull/20206",
-    number: "#20206",
-    date: "Dec 30 2021",
-    linesAdded: "31",
-    linesDeleted: "1",
-  },
-  {
-    id: "os-13",
-    organisation: "Zulip",
-    logo: zulip,
-    repo: "zulip",
-    type: "pull-request",
-    status: "merged",
-    title: "authentication: Fix placeholder realms for redirects.",
-    link: "https://github.com/zulip/zulip/pull/19689",
-    number: "#19689",
-    date: "Sep 9 2021",
-    linesAdded: "1",
-    linesDeleted: "1",
-  },
-  {
-    id: "os-14",
-    organisation: "Zulip",
-    logo: zulip,
-    repo: "zulip",
-    type: "pull-request",
-    status: "merged",
-    title: "message_editing : Fix topic edit propagate option cut-off",
-    link: "https://github.com/zulip/zulip/pull/19760",
-    number: "#19760",
-    date: "Feb 10 2022",
-    linesAdded: "9",
-    linesDeleted: "8",
-  },
-];
-
+// Add information about all the projects to be listed out in your portfolio
 export const projects = [
   {
     id: "project-1",
@@ -1034,6 +838,7 @@ export const projects = [
   },
 ];
 
+// Add links to blogs here
 export const blogPosts = [
   {
     id: "post-1",
@@ -1100,6 +905,7 @@ export const blogPosts = [
   },
 ];
 
+// Highlight your GitHub stats like - Organisation, Issues Opened, Pull Requests etc.
 export const stats = [
   {
     id: "stats-1",
@@ -1118,6 +924,7 @@ export const stats = [
   },
 ];
 
+// List out the extra curricular activities you have induldged in like - student clubs, joining research groups etc.
 export const extraCurricular = [
   {
     id: 1,
@@ -1202,6 +1009,7 @@ export const extraCurricular = [
   },
 ];
 
+// Links to your social media profiles
 export const socialMedia = [
   {
     id: "social-media-1",
@@ -1230,6 +1038,7 @@ export const socialMedia = [
   },
 ];
 
+// Your professional summary
 export const aboutMe = {
     name: "Parth Mittal",
     githubUsername: 'mittal-parth',
@@ -1237,6 +1046,8 @@ export const aboutMe = {
     intro: "Software Developer from India who is either busy improving his craft or pondering over the next big idea."
 }
 
+// The maximum number of PRs to be displayed in the Open Source Contributions section.
 export const itemsToFetch = 20;
 
+// Add names of GitHub repos you'd like to display open source contributions from in the 'org/repo' format. 
 export const includedRepos = ['publiclab/plots2', 'zulip/zulip', 'paritytech/polkadot-sdk'];
