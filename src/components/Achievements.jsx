@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"; // Added useRef
+import React, { useState, useEffect, useRef } from "react";
 import { BsLink45Deg } from "react-icons/bs";
 import { achievements } from "../constants";
 import { AiFillGithub } from "react-icons/ai";
@@ -9,8 +9,8 @@ import { useTheme } from "../context/ThemeContext";
 
 const Achievements = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [cardTotalWidth, setCardTotalWidth] = useState(0); // Added state for card width
-  const containerRef = useRef(null); // Added ref
+  const [cardTotalWidth, setCardTotalWidth] = useState(0);
+  const containerRef = useRef(null);
   const { isDarkMode } = useTheme();
 
   useEffect(() => {
@@ -19,18 +19,17 @@ const Achievements = () => {
         const card = containerRef.current.querySelector('.achievement-card');
         if (card) {
           const cardWidth = card.offsetWidth;
-          const cardMargin = parseInt(window.getComputedStyle(card).marginRight, 10); 
-
-          setCardTotalWidth(cardWidth + cardMargin); 
+          const cardMargin = parseInt(window.getComputedStyle(card).marginRight, 10);
+          setCardTotalWidth(cardWidth + cardMargin);
         }
       }
     };
 
-    updateCardWidth(); 
-    window.addEventListener("resize", updateCardWidth); 
+    updateCardWidth();
+    window.addEventListener("resize", updateCardWidth);
 
     return () => {
-      window.removeEventListener("resize", updateCardWidth); 
+      window.removeEventListener("resize", updateCardWidth);
     };
   }, []);
 
@@ -69,7 +68,7 @@ const Achievements = () => {
               ref={containerRef}
               className="flex transition-transform duration-500 ease-in-out"
               style={{
-                transform: `translateX(-${currentIndex * cardTotalWidth}px)`, // Updated to use card width
+                transform: `translateX(-${currentIndex * cardTotalWidth}px)`,
               }}
             >
               {achievements.map((achievement, index) => (

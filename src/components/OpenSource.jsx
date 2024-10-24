@@ -50,7 +50,7 @@ const Contribution = (props) => {
       >
         <a
           className={`font-poppins font-normal text-[12px] ${
-            isDarkMode ? "text-dimWhite" : "text-gray-600"
+            isDarkMode ? "text-dimWhite" : "text-mediumGray"
           } inline`}
           href={props.link}
           target="_blank"
