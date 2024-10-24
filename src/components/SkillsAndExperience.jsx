@@ -9,10 +9,10 @@ export const SkillIcon = ({ icon, name }) => {
   const { isDarkMode } = useTheme();
   return (
     <div className="flex flex-col items-center">
-      <span className={`text-[30px] ${isDarkMode ? 'text-white hover:text-teal-200' : 'text-gray-700 hover:text-teal-600'}`}>
+      <span className={`text-[30px] ${isDarkMode ? 'text-white hover:text-lightTeal' : 'text-darkGray hover:text-teal-600'}`}>
         {React.createElement(icon)}
       </span>
-      <p className={`font-poppins text-[12px] mt-2 ${isDarkMode ? 'text-dimWhite' : 'text-gray-600'}`}>{name}</p>
+      <p className={`font-poppins text-[12px] mt-2 ${isDarkMode ? 'text-dimWhite' : 'text-mediumGray'}`}>{name}</p>
     </div>
   );
 };
@@ -23,11 +23,11 @@ const SkillCard = (props) => {
     <motion.div
       whileInView={{ y: [-20, 0], opacity: [0, 1] }}
       transition={{ duration: 1 }}
-      className={`mt-4 mb-6 border-l ${isDarkMode ? 'border-gray-700' : 'border-gray-300'} mx-4`}
+      className={`mt-4 mb-6 border-l ${isDarkMode ? 'border-darkGray' : 'border-silverGray'} mx-4`}
     >
-      <div className={`relative w-3 h-3 rounded-full top-5 right-[6.2px] border ${isDarkMode ? 'bg-gray-700 border-gray-900' : 'bg-gray-200 border-white'}`}></div>
+      <div className={`relative w-3 h-3 rounded-full top-5 right-[6.2px] border ${isDarkMode ? 'bg-darkGray border-gray-900' : 'bg-lightGray border-white'}`}></div>
       <div className="flex flex-row items-center mb-6 ml-6">
-        <h4 className={`font-poppins font-semibold text-[20px] leading-[32px] ${isDarkMode ? 'text-gradient' : 'text-teal-600'}`}>
+        <h4 className={`font-poppins font-semibold text-[20px] leading-[32px] ${isDarkMode ? 'text-gradient' : 'text-gradient-light'}`}>
           {props.title}
         </h4>
       </div>
@@ -44,13 +44,13 @@ const Content = ({ text, link }) => {
   const { isDarkMode } = useTheme();
   return (
     <div>
-      <p className={`font-poppins font-normal text-[14px] mt-4 ${isDarkMode ? 'text-dimWhite' : 'text-gray-600'}`}>
+      <p className={`font-poppins font-normal text-[14px] mt-4 ${isDarkMode ? 'text-dimWhite' : 'text-mediumGray'}`}>
         {text}{" "}
         {link && (
           <a href={link} target="_blank" rel="noopener noreferrer">
             <BsLink45Deg
               size="1rem"
-              className={`inline ${isDarkMode ? 'hover:text-teal-200' : 'hover:text-teal-600'}`}
+              className={`inline ${isDarkMode ? 'hover:text-lightTeal' : 'hover:text-teal-600'}`}
             />
           </a>
         )}
@@ -72,23 +72,23 @@ const ExperienceCard = (props) => {
           alt={props.organisation}
           className="w-[52px] h-[52px] rounded-full z-[2]"
         />
-        <h4 className={`font-poppins font-semibold text-[20px] leading-[32px] ml-2 ${isDarkMode ? 'text-gradient' : 'text-teal-600'}`}>
+        <h4 className={`font-poppins font-semibold text-[20px] leading-[32px] ml-2 ${isDarkMode ? 'text-gradient' : 'text-gradient-light'}`}>
           {props.organisation}
         </h4>
       </div>
-      <ol className={`relative border-l ${isDarkMode ? 'border-gray-700' : 'border-gray-300'} ml-6`}>
+      <ol className={`relative border-l ${isDarkMode ? 'border-darkGray' : 'border-silverGray'} ml-6`}>
         {props.positions.map((position, index) => (
           <li
             key={index}
             className={`${index === props.positions.length - 1 ? "mb-0" : "mb-4"} ml-4`}
           >
             <div className={`absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border ${
-              isDarkMode ? 'bg-gray-700 border-gray-900' : 'bg-gray-200 border-white'
+              isDarkMode ? 'bg-darkGray border-gray-900' : 'bg-lightGray border-white'
             }`}></div>
             <h3 className={`text-lg font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
               {position.title}
             </h3>
-            <time className={`mb-1 text-sm font-normal leading-none ${isDarkMode ? 'text-gray-500' : 'text-gray-600'}`}>
+            <time className={`mb-1 text-sm font-normal leading-none ${isDarkMode ? 'text-gray-500' : 'text-mediumGray'}`}>
               {position.duration}
             </time>
             {position.content.map((info, index) => (

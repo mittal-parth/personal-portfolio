@@ -42,7 +42,7 @@ const FeatureCard = ({
       <div className="flex-1 flex flex-col ml-4">
         <h4
           className={`font-poppins font-semibold text-[20px] leading-[30px] mb-1 ${
-            isDarkMode ? "text-gradient" : "text-teal-600"
+            isDarkMode ? "text-gradient" : "text-gradient-light"
           }`}
         >
           {title}
@@ -56,14 +56,14 @@ const FeatureCard = ({
         </p>
         <p
           className={`font-poppins font-normal text-[14px] leading-[30px] mb-1 ${
-            isDarkMode ? "text-dimWhite" : "text-gray-600"
+            isDarkMode ? "text-dimWhite" : "text-mediumGray"
           }`}
         >
           {duration}
         </p>
         <p
           className={`font-poppins font-normal text-[16px] leading-[30px] mb-1 ${
-            isDarkMode ? "text-dimWhite" : "text-gray-700"
+            isDarkMode ? "text-dimWhite" : "text-darkGray"
           }`}
         >
           ● {content1}
@@ -71,7 +71,7 @@ const FeatureCard = ({
         {content2 && (
           <p
             className={`font-poppins font-normal text-[16px] leading-[30px] mb-1 ${
-              isDarkMode ? "text-dimWhite" : "text-gray-700"
+              isDarkMode ? "text-dimWhite" : "text-darkGray"
             }`}
           >
             ● {content2}

@@ -58,6 +58,24 @@
   text-fill-color: transparent;
 }
 
+.text-gradient-light {
+  background: linear-gradient(
+    90deg,
+    #0891b2 0%,    /* Cyan-600 */
+    #06b6d4 16.67%,/* Cyan-500 */
+    #22d3ee 33.33%,/* Cyan-400 */
+    #67e8f9 50%,   /* Cyan-300 */
+    #a5f3fc 66.67%,/* Cyan-200 */
+    #cffafe 83.33%,/* Cyan-100 */
+    #ecfeff 100%   /* Cyan-50 */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shine 5s linear infinite;}
+
 .bg-blue-gradient {
   background: linear-gradient(
     157.81deg,
@@ -233,7 +251,7 @@ body.light-mode .text-white {
   color: var(--text-color);
 }
 
-body.light-mode .hover\:text-teal-200:hover {
+body.light-mode .hover\:text-lightTeal:hover {
   color: var(--hover-color);
 }
 
@@ -246,7 +264,7 @@ body.light-mode .bg-black-gradient-2 {
 body, 
 .bg-primary, 
 .text-white, 
-.hover\:text-teal-200:hover, 
+.hover\:text-lightTeal:hover, 
 .bg-black-gradient, 
 .bg-black-gradient-2 {
   transition: all 0.3s ease-in-out;

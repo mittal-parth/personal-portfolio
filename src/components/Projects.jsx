@@ -11,8 +11,8 @@ const Project = (props) => {
     <motion.div
       className={`px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group ${
         isDarkMode
-          ? "dark:border-gray-700 dark:hover:border-transparent feature-card"
-          : "border-gray-200 hover:bg-gray-50"
+          ? "dark:border-darkGray dark:hover:border-transparent feature-card"
+          : "dark:border-darkGray dark:hover:border-transparent feature-card hover:bg-darkGray"
       }`}
       initial={{ y: -30, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
@@ -21,7 +21,7 @@ const Project = (props) => {
     >
       <div className="flex flex-col sm:-mx-4 sm:flex-row">
         <img
-          className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
+          className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-silverGray"
           src={props.image}
           alt=""
         />
@@ -29,14 +29,14 @@ const Project = (props) => {
         <div className="mt-4 sm:mx-4 sm:mt-0">
           <h1
             className={`text-xl font-semibold font-poppins md:text-2xl ${
-              isDarkMode ? "text-gradient" : "text-teal-600"
+              isDarkMode ? "text-gradient" : "text-gradient-light"
             }`}
           >
             {props.title}
           </h1>
           <p
             className={`font-poppins font-normal mt-3 ${
-              isDarkMode ? "text-dimWhite" : "text-gray-600"
+              isDarkMode ? "text-dimWhite" : "text-mediumGray group-hover:text-silverGray"
             }`}
           >
             Tech Stack
@@ -46,7 +46,9 @@ const Project = (props) => {
               <div
                 key={tech.id}
                 className={`mr-5 text-[20px] ${
-                  isDarkMode ? "text-dimWhite hover:text-teal-200" : "text-gray-600 hover:text-teal-600"
+                  isDarkMode 
+                    ? "text-dimWhite hover:text-lightTeal" 
+                    : "text-mediumGray group-hover:text-silverGray hover:text-lightTeal"
                 } tooltip`}
               >
                 {React.createElement(tech.icon)}
@@ -59,8 +61,8 @@ const Project = (props) => {
 
       <p
         className={`mt-8 font-poppins ${
-          isDarkMode ? "text-gray-300" : "text-gray-600"
-        } group-hover:text-gray-300`}
+          isDarkMode ? "text-silverGray" : "text-mediumGray"
+        } group-hover:text-silverGray`}
       >
         {props.content}
       </p>
@@ -70,8 +72,10 @@ const Project = (props) => {
           <a href={props.github} target="_blank" rel="noopener noreferrer">
             <AiFillGithub
               size="2rem"
-              className={`mr-1 ${
-                isDarkMode ? "text-white hover:text-teal-200" : "text-gray-700 hover:text-teal-600"
+              className={`mr-1 transition-colors duration-300 ${
+                isDarkMode 
+                  ? "text-white hover:text-lightTeal" 
+                  : "text-darkGray group-hover:text-white hover:text-lightTeal"
               }`}
             />
           </a>
@@ -80,7 +84,11 @@ const Project = (props) => {
           <a href={props.link} target="_blank" rel="noopener noreferrer">
             <BsLink45Deg
               size="2rem"
-              className={isDarkMode ? "text-white hover:text-teal-200" : "text-gray-700 hover:text-teal-600"}
+              className={`transition-colors duration-300 ${
+                isDarkMode 
+                  ? "text-white hover:text-lightTeal" 
+                  : "text-darkGray group-hover:text-white hover:text-lightTeal"
+              }`}
             />
           </a>
         )}

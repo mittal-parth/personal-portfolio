@@ -12,8 +12,8 @@ const Contribution = (props) => {
     <motion.div
       className={`flex flex-col justify-between px-6 py-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 transition-colors duration-300 transform border ${
         isDarkMode
-          ? "hover:border-transparent dark:border-gray-700 dark:hover:border-transparent"
-          : "border-gray-200 hover:border-teal-400"
+          ? "hover:border-transparent dark:border-darkGray dark:hover:border-transparent"
+          : "hover:border-darkGray border-teal-400"
       }`}
       whileInView={{ x: [-40, 0], opacity: [0, 1] }}
       transition={{ duration: 1 }}
@@ -27,7 +27,7 @@ const Contribution = (props) => {
         <div className="flex flex-col ml-4">
           <a
             className={`font-poppins font-normal text-[16px] ${
-              isDarkMode ? "text-white hover:text-teal-200" : "text-gray-800 hover:text-teal-600"
+              isDarkMode ? "text-white hover:text-lightTeal" : "text-gray-800 hover:text-teal-600"
             } my-1 leading-[24px]`}
             href={props.link}
             target="_blank"
@@ -36,7 +36,7 @@ const Contribution = (props) => {
             {props.title}
           </a>
           <p className={`font-poppins italic font-normal text-[14px] ${
-            isDarkMode ? "text-dimWhite" : "text-gray-600"
+            isDarkMode ? "text-dimWhite" : "text-mediumGray"
           } my-1`}>
             {props.organisation}/{props.repo}
           </p>
@@ -50,7 +50,7 @@ const Contribution = (props) => {
       >
         <a
           className={`font-poppins font-normal text-[12px] ${
-            isDarkMode ? "text-dimWhite" : "text-gray-600"
+            isDarkMode ? "text-dimWhite" : "text-mediumGray"
           } inline`}
           href={props.link}
           target="_blank"

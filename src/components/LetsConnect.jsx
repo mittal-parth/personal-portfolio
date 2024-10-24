@@ -15,13 +15,13 @@ const LetsConnect = () => {
       >
         <div className={`${styles.flexStart} flex-row`}>
           <p className="font-poppins font-medium text-[18px] leading-[23px]">
-            <span className="text-gradient">Let's</span>
+            <span className={`${isDarkMode ? 'text-gradient' : 'text-gradient-light'}`}>Let's</span>
           </p>
           <img src={isDarkMode ? arrowUp: arrowUpLight} alt="arrowUp" className="w-[23px] h-[23px] " />
         </div>
         <div className={`${styles.flexStart} flex-row`}>
           <p className="font-poppins font-medium text-[18px] leading-[23px]">
-            <span className="text-gradient">Connect</span>
+            <span className={`${isDarkMode ? 'text-gradient' : 'text-gradient-light'}`}>Connect</span>
           </p>
         </div>
       </div>

@@ -9,13 +9,13 @@ const Content = ({ text, link }) => {
   const { isDarkMode} = useTheme();
   return (
     <div>
-      <p className="font-poppins font-normal text-[14px] ${isDarkMode ? 'text-dimWhite' : 'text-gray-600'} my-4 leading-[32px]">
+      <p className={`font-poppins font-normal text-[14px] ${isDarkMode ? 'text-dimWhite' : 'text-mediumGray'} my-4 leading-[32px]`}>
         ● {text}{" "}
         {link ? (
           <a href={link} target="_blank">
             <BsLink45Deg
               size="1rem"
-              className={`inline ${isDarkMode ? ' hover:text-teal-200' : 'hover:text-teal-600'}`}
+              className={`inline ${isDarkMode ? ' hover:text-lightTeal' : 'hover:text-teal-600'}`}
             ></BsLink45Deg>
           </a>
         ) : (
@@ -41,13 +41,13 @@ const ExtraCurricularCard = (props) => {
           className="w-[52px] h-[52px] rounded-full"
         />
         <div className="flex flex-col ml-4">
-          <h4 className={`font-poppins font-semibold text-[20px] ${isDarkMode ? 'text-gradient' : 'text-teal-600'} leading-[32px]`}>
+          <h4 className={`font-poppins font-semibold text-[20px] ${isDarkMode ? 'text-gradient' : 'text-gradient-light'} leading-[32px]`}>
             {props.organisation}
           </h4>
           <p className={`font-poppins font-normal text-[16px] ${isDarkMode ? 'text-white' : 'text-gray-800'} my-1 leading-[24px]`}>
             {props.title}
           </p>
-          <p className={`font-poppins italic font-normal text-[14px] ${isDarkMode ? 'text-dimWhite' : 'text-gray-600'} my-1`}>
+          <p className={`font-poppins italic font-normal text-[14px] ${isDarkMode ? 'text-dimWhite' : 'text-mediumGray'} my-1`}>
             {props.duration}
           </p>
         </div>
