@@ -39,7 +39,7 @@ const ExtraCurricularCard = (props) => {
       className={`flex flex-col px-10 py-12 max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 transition-colors duration-300 transform border rounded-xl hover:border-transparent group ${
         isDarkMode
           ? "dark:border-darkGray dark:hover:border-transparent feature-card"
-          : "dark:border-darkGray dark:hover:border-transparent feature-card-light hover:bg-darkGray"
+          : "dark:border-darkGray dark:hover:border-transparent feature-card-light"
       }`}
       whileInView={{ y: [-30, 0], opacity: [0, 1] }}
       transition={{ duration: 1 }}

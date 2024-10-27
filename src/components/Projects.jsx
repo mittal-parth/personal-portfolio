@@ -12,7 +12,7 @@ const Project = (props) => {
       className={`px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group ${
         isDarkMode
           ? "dark:border-darkGray dark:hover:border-transparent feature-card"
-          : "dark:border-darkGray dark:hover:border-transparent feature-card-light hover:bg-darkGray"
+          : "dark:border-darkGray dark:hover:border-transparent feature-card-light"
       }`}
       initial={{ y: -30, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
