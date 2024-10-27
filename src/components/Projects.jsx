@@ -12,7 +12,7 @@ const Project = (props) => {
       className={`px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group ${
         isDarkMode
           ? "dark:border-darkGray dark:hover:border-transparent feature-card"
-          : "dark:border-darkGray dark:hover:border-transparent feature-card hover:bg-darkGray"
+          : "dark:border-darkGray dark:hover:border-transparent feature-card-light hover:bg-darkGray"
       }`}
       initial={{ y: -30, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
@@ -36,7 +36,7 @@ const Project = (props) => {
           </h1>
           <p
             className={`font-poppins font-normal mt-3 ${
-              isDarkMode ? "text-dimWhite" : "text-mediumGray group-hover:text-silverGray"
+              isDarkMode ? "text-dimWhite" : "text-darkGray group-hover:text-white"
             }`}
           >
             Tech Stack
@@ -48,7 +48,7 @@ const Project = (props) => {
                 className={`mr-5 text-[20px] ${
                   isDarkMode 
                     ? "text-dimWhite hover:text-lightTeal" 
-                    : "text-mediumGray group-hover:text-silverGray hover:text-lightTeal"
+                    : "text-darkGray group-hover:text-white hover:text-lightTeal"
                 } tooltip`}
               >
                 {React.createElement(tech.icon)}
@@ -61,8 +61,10 @@ const Project = (props) => {
 
       <p
         className={`mt-8 font-poppins ${
-          isDarkMode ? "text-silverGray" : "text-mediumGray"
-        } group-hover:text-silverGray`}
+          isDarkMode 
+            ? "text-silverGray" 
+            : "text-mediumGray group-hover:text-white"
+        }`}
       >
         {props.content}
       </p>

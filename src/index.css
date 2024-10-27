@@ -11,7 +11,18 @@
     #6d6d6d -78.47%,
     #11101d 91.61%
   );
+  --light-gray-gradient: linear-gradient(
+  144.39deg,
+  #ffffff -278.56%,   /* White */
+  #e8e8e8 -150%,       /* Light Gray */
+  #cccccc -78.47%,     /* Medium Light Gray */
+  #b0b0b0 20%,         /* Medium Gray */
+  #8a8a8a 91.61%       /* Darker Gray */
+);
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+  --card-shadow-light: 0px 10px 30px rgba(66, 71, 91, 0.15), /* softer main shadow */
+               0px 4px 15px rgba(66, 71, 91, 0.1);   /* inner shadow for depth */
+
   --scrollbar-primary: #00040f;
   --scrollbar-secondary: lightblue;
 }
@@ -152,6 +163,11 @@
 .feature-card:hover {
   background: var(--black-gradient);
   box-shadow: var(--card-shadow);
+}
+
+.feature-card-light:hover {
+  background: var(--light-gray-gradient);
+  box-shadow: var(--card-shadow-light);
 }
 
 .feedback-container .feedback-card:last-child {
