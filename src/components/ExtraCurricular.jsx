@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useTheme } from "../context/ThemeContext"
 
 const Content = ({ text, link }) => {
-  const { isDarkMode} = useTheme();
+  const { isDarkMode } = useTheme();
   return (
     <div>
       <p className={`font-poppins font-normal text-[14px] my-4 leading-[32px] ${
@@ -15,8 +15,8 @@ const Content = ({ text, link }) => {
           : 'text-mediumGray group-hover:text-white'
       }`}>
         ● {text}{" "}
-        {link ? (
-          <a href={link} target="_blank">
+        {link && (
+          <a href={link} target="_blank" rel="noopener noreferrer">
             <BsLink45Deg
               size="1rem"
               className={`inline ${
@@ -26,8 +26,6 @@ const Content = ({ text, link }) => {
               }`}
             ></BsLink45Deg>
           </a>
-        ) : (
-          ""
         )}
       </p>
     </div>
