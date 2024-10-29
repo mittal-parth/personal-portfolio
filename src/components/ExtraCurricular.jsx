@@ -51,7 +51,7 @@ const ExtraCurricularCard = (props) => {
           className="w-[52px] h-[52px] rounded-full ring-4 ring-silverGray"
         />
         <div className="flex flex-col ml-4">
-        <h4 className={`font-poppins font-semibold text-[20px] ${
+          <h4 className={`font-poppins font-semibold text-[20px] ${
             isDarkMode ? 'text-gradient' : 'text-gradient-light'
           } leading-[32px]`}>
             {props.organisation}
