@@ -2,11 +2,13 @@ import React from "react";
 import { blogPosts } from "../constants";
 import { motion } from "framer-motion";
 import Button from "./Button";
+import { useTheme } from "../context/ThemeContext";
 
 const BlogPost = (props) => {
+  const { isDarkMode } = useTheme();
   return (
     <motion.div
-      className="overflow-hidden transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card"
+      className="overflow-hidden transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-darkGray dark:hover:border-transparent feature-card"
       whileInView={{ y: [-40, 0], opacity: [0, 1] }}
       transition={{ duration: 1 }}
     >
@@ -22,18 +24,18 @@ const BlogPost = (props) => {
               {props.date}
             </p>
             <h1
-              className="text-xl font-semibold font-poppins text-gray-700 capitalize md:text-2xl group-hover:text-white text-gradient blog-title"
+              className={`text-xl font-semibold font-poppins text-darkGray capitalize md:text-2xl group-hover:text-white  ${isDarkMode ? "text-gradient" : "text-gradient-light"} blog-title`}
               title={props.title}
             >
               {props.title}
             </h1>
-            <p className="mt-5 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+            <p className="mt-5 text-gray-500 capitalize dark:text-silverGray group-hover:text-silverGray">
               <div className="flex sm:flex-row">
                 {props.tags.map((tag, index) => (
                   <div
                     key={tag.id}
                     index={index}
-                    className="text-dimWhite mr-5 text-sm hover:text-teal-200 p-1.5 ring-1 ring-dimWhite hover:ring-teal-200 rounded text-ellipsis whitespace-nowrap overflow-hidden"
+                    className="text-dimWhite mr-5 text-sm hover:text-lightTeal p-1.5 ring-1 ring-dimWhite hover:ring-lightTeal rounded text-ellipsis whitespace-nowrap overflow-hidden"
                     title={tag.name}
                   >
                     <span className="cursor-default">{tag.name}</span>
