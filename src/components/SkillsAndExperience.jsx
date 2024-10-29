@@ -77,7 +77,6 @@ const ExperienceCard = (props) => {
         </h4>
       </div>
       <ol className={`relative border-l ${isDarkMode ? 'border-darkGray' : 'border-silverGray'} ml-6`}>
-      <ol className={`relative border-l ${isDarkMode ? 'border-darkGray' : 'border-silverGray'} ml-6`}>
         {props.positions.map((position, index) => (
           <li
           key={index}
