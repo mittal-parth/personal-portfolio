@@ -131,17 +131,17 @@ export const educationList = [
   {
     id: "education-1",
     icon: nitk,
-    title: "National Institute of Technology Karnataka, Surathkal",
+    title: "Jawaharlal Nehru Technological University, Kakinada",
     degree: "Bachelor of Technology",
-    duration: "December 2020 - May 2024",
-    content1: "Major: Electronics and Communication Engineering",
-    content2: "Minor: Information Technology",
+    duration: "September 2012 - May 2016",
+    content1: "Major: Electrical and Electronics Engineering",
+  
   },
   {
     id: "education-2",
     icon: pba,
-    title: "Polkadot Blockchain Academy",
-    degree: "",
+    title: "Adikavi Nannaya University",
+    degree: "MBA in Marketing and Finance",
     duration: "May 2024 - June 2024",
     content1: "Graduated with a distinction in the fifth cohort of the Polkadot Blockchain Academy at the National University of Singapore.",
   },
