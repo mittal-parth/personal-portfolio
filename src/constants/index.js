@@ -1019,7 +1019,7 @@ export const socialMedia = [
   {
     id: "social-media-2",
     icon: AiFillGithub,
-    link: "https://www.github.com/mittal-parth",
+    link: "https://github.com/Pavan-L09",
   },
   {
     id: "social-media-3",
