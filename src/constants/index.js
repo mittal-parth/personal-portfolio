@@ -91,9 +91,9 @@ import {
 import { DiCss3, DiJava, DiMsqlServer, DiRuby } from "react-icons/di";
 
 export const resumeLink = "https://drive.google.com/file/d/1vkxyMDB5_KpMwt4QXFgT2aqdRizr8Czh/view?usp=sharing";
-export const repoLink = "https://github.com/mittal-parth/personal-portfolio";
+export const repoLink = "https://github.com/Pavan-L09/personal-portfolio";
 
-export const callToAction = "https://www.linkedin.com/in/mittal-parth";
+export const callToAction = "https://www.linkedin.com/in/lpbs/";
 
 export const navLinks = [
   {
@@ -1040,8 +1040,8 @@ export const socialMedia = [
 
 // Your professional summary
 export const aboutMe = {
-    name: "Parth Mittal",
-    githubUsername: 'mittal-parth',
+    name: "Pavan L",
+    githubUsername: 'Pavan-L09',
     tagLine: "MTS-1 @Oracle | ex-SDE Intern @Averlon | ex-Tech Lead @IRIS,NITK | ETHIndia'22 Winner | NITK'24",
     intro: "Software Developer from India who is either busy improving his craft or pondering over the next big idea."
 }
