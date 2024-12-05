@@ -142,8 +142,8 @@ export const educationList = [
     icon: pba,
     title: "Adikavi Nannaya University",
     degree: "MBA in Marketing and Finance",
-    duration: "May 2024 - June 2024",
-    content1: "Graduated with a distinction in the fifth cohort of the Polkadot Blockchain Academy at the National University of Singapore.",
+    duration: "July 2018 - May 2020",
+    content1: "Graduated with distinction in MBA Marketing and Finance from Adikavi Nannaya University.",
   },
 ];
 
