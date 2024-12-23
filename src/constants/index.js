@@ -1040,7 +1040,7 @@ export const socialMedia = [
 
 // Your professional summary
 export const aboutMe = {
-    name: "Pavan L",
+    name: "Pavan Lakku",
     githubUsername: 'Pavan-L09',
     tagLine: "MTS-1 @Oracle | ex-SDE Intern @Averlon | ex-Tech Lead @IRIS,NITK | ETHIndia'22 Winner | NITK'24",
     intro: "Software Developer from India who is either busy improving his craft or pondering over the next big idea."
