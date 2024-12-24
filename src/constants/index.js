@@ -230,11 +230,6 @@ export const skills = [
     title: "Programming Languages",
     items: [
       {
-        id: "pl-1",
-        icon: DiRuby,
-        name: "Ruby",
-      },
-      {
         id: "pl-2",
         icon: SiPython,
         name: "Python",
@@ -242,7 +237,7 @@ export const skills = [
       {
         id: "pl-3",
         icon: SiCplusplus,
-        name: "C++",
+        name: "tableau",
       },
       {
         id: "pl-4",
