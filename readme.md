@@ -1,6 +1,5 @@
 <h1 align="center"> Personal Portfolio </h1>
 
-<img width="945" alt="image" src="">
 
 ### Deployed link: https://pavanlakku.netlify.app/
 
