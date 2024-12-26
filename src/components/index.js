@@ -22,7 +22,6 @@ export {
     SkillsAndExperience,
     Projects,
     OpenSource,
-    ExtraCurricular,
     Footer,
     Button,
     Stats,
