@@ -372,6 +372,25 @@ export const projects = [
   },
 ];
 
+// Highlight your GitHub stats like - Organisation, Issues Opened, Pull Requests etc.
+export const stats = [
+  {
+    id: "stats-1",
+    title: "Organisations",
+    value: "2+",
+  },
+  {
+    id: "stats-2",
+    title: "Issues Opened",
+    value: "6+",
+  },
+  {
+    id: "stats-3",
+    title: "Pull Requests",
+    value: "6+",
+  },
+];
+
 // Links to your social media profiles
 export const socialMedia = [
   {
