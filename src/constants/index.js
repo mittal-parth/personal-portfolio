@@ -586,53 +586,6 @@ export const extraCurricular = [
     logo: devfolio,
   },
   {
-    id: 2,
-    organisation: "Google Developer Student Club, NITK",
-    title: "Co-Chair",
-    duration: "December 2021 - Present",
-    content: [
-      {
-        text: "Started HackClub to promote and spread the culture of Hackathons in the college. 20+ hackathons particiaptions, 15+ wins over the year.",
-        link: "",
-      },
-      {
-        text: "Co-designed and developed the official website of Incident, NITK with 15K+ visitors",
-        link: "https://incident.nitk.ac.in/",
-      },
-    ],
-    logo: gdsc,
-  },
-  {
-    id: 3,
-    organisation: "Genesis, NITK",
-    title: "Competitions Head",
-    duration: "Sep 2021 - Present",
-    content: [
-      {
-        text: "Qualified for the nationals of Indian Hip Hop Dance Championship",
-        link: "",
-      },
-      {
-        text: "Won 7 inter-college solo dance competitions",
-        link: "",
-      },
-    ],
-    logo: genesis,
-  },
-  {
-    id: 4,
-    organisation: "IRIS, NITK",
-    title: "Tutor",
-    duration: "Jan 2022 - Jan 2022",
-    content: [
-      {
-        text: "Mentored 150+ students in a month-long Web Development and Ruby on Rails Bootcamp",
-        link: "https://github.com/IRIS-NITK/IRIS-RoR-Bootcamp-2021",
-      },
-    ],
-    logo: iris,
-  },
-  {
     id: 5,
     organisation: "E-Cell, NITK",
     title: "Executive Member",
