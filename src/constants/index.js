@@ -333,6 +333,9 @@ export const experiences = [
   }
 ];
 
+export const projects = [...];
+
+
 // Your professional summary
 export const aboutMe = {
     name: "Pavan Lakku",
