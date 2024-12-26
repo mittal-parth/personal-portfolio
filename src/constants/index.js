@@ -333,7 +333,12 @@ export const experiences = [
   }
 ];
 
-export const projects = [...];
+export const projects = [
+  { id: 1, name: 'Project A' },
+  { id: 2, name: 'Project B' },
+  // Add more project objects here
+];
+
 
 
 // Your professional summary
