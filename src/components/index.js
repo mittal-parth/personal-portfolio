@@ -26,6 +26,5 @@ export {
     Button,
     Stats,
     Loading,
-    BlogPosts,
     Achievements,
 };
