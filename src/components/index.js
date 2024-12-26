@@ -22,11 +22,9 @@ export {
     SkillsAndExperience,
     Projects,
     OpenSource,
-    ExtraCurricular,
     Footer,
     Button,
     Stats,
     Loading,
-    BlogPosts,
     Achievements,
 };
