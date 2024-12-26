@@ -334,9 +334,71 @@ export const experiences = [
 ];
 
 export const projects = [
-  { id: 1, name: 'Project A' },
-  { id: 2, name: 'Project B' },
-  // Add more project objects here
+  {
+    id: "project-1",
+    title: "Comicify.ai",
+    github: "https://github.com/ayush4345/Comicify.ai",
+    link: "https://comicify-ai.vercel.app/",
+    image: comicify_ai,
+    content:
+      "Convert any academic/news/boring text into cool comic strips using GPT-3.5 and Stable Diffusion!",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiReact,
+        name: "React"
+      },
+      {
+        id: "icon-2",
+        icon: SiTailwindcss,
+        name: "TailwindCSS"
+      },
+      {
+        id: "icon-3",
+        icon: SiOpenai,
+        name: "OpenAI"
+      },
+      {
+        id: "icon-4",
+        icon: SiGooglecloud,
+        name: "Google Cloud Platform"
+      },
+      {
+        id: "icon-5",
+        icon: SiFlask,
+        name: "Flask"
+      },
+    ],
+  },
+];
+
+// Links to your social media profiles
+export const socialMedia = [
+  {
+    id: "social-media-1",
+    icon: AiFillLinkedin,
+    link: "https://www.linkedin.com/in/lpbs/",
+  },
+  {
+    id: "social-media-2",
+    icon: AiFillGithub,
+    link: "https://github.com/Pavan-L09",
+  },
+  {
+    id: "social-media-3",
+    icon: AiFillMail,
+    link: "mailto:l.pavan9@outlook.com",
+  },
+  {
+    id: "social-media-4",
+    icon: AiOutlineTwitter,
+    link: "https://www.twitter.com/",
+  },
+  {
+    id: "social-media-5",
+    icon: AiFillInstagram,
+    link: "https://www.instagram.com/",
+  },
 ];
 
 
