@@ -2,6 +2,7 @@ import styles from "../style";
 import LetsConnect from "./LetsConnect";
 import Lottie from "react-lottie-player";
 import animationData from "../lotties/person-coding.json";
+import animation from "../lotties/Animation - 1735747660181.json"
 import { aboutMe } from "../constants";
 
 
@@ -10,6 +11,14 @@ const defaultOptions = {
   loop: true,
   play: true,
   animationData: animationData,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+const linkdinAnimation = {
+  loop: true,
+  play: true,
+  animationData: animation,
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice",
   },
@@ -32,7 +41,14 @@ const Hero = () => {
           </h1>
 
           <div className="ss:flex hidden md:mr-4 mr-0">
-            <LetsConnect />
+          <a
+              href="https://www.linkedin.com/in/mittal-parth/" // Replace with your LinkedIn URL
+              target="_blank" // Opens the link in a new tab
+              rel="noopener noreferrer" // Adds security when opening in a new tab
+            >
+              <Lottie {...linkdinAnimation} style={{ width: "300px", height: "300px" }} />
+            </a>
+
           </div>
         </div>
 
