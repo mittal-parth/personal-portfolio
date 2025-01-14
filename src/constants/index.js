@@ -7,8 +7,6 @@ import {
   ecell,
   genesis,
   portfolio,
-  publiclab,
-  zulip,
   cdc,
   chargeswap,
   placeicon,
