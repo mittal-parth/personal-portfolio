@@ -1053,7 +1053,7 @@ export const socialMedia = [
 export const aboutMe = {
     name: "Parth Mittal",
     githubUsername: 'mittal-parth',
-    tagLine: "MTS-1 @Oracle | ex-SDE Intern @Averlon | ex-Tech Lead @IRIS,NITK | ETHIndia'22 Winner | NITK'24",
+    tagLine: "MTS-1 @Oracle | ex-Tech Lead @IRIS,NITK | ETHIndia'22,24 Winner | 9x Hackathon Winner | NITK'24 | PBA-5",
     intro: "Software Developer from India who is either busy improving his craft or pondering over the next big idea."
 }
 
