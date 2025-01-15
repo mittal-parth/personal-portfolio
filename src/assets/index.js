@@ -29,6 +29,7 @@ import dennisivy from "./dennisivy.png";
 import manipal from "./manipal.png";
 import icon from "./icon.jpg";
 import ethforall from "./ethforall.png";
+import ethindia from "./ethindia.png";
 
 export {
   menu,
@@ -61,5 +62,6 @@ export {
   dennisivy,
   manipal,
   icon,
-  ethforall
+  ethforall,
+  ethindia
 };

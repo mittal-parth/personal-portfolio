@@ -24,7 +24,8 @@ import {
   dennisivy,
   manipal,
   icon,
-  ethforall
+  ethforall,
+  ethindia
 } from "../assets";
 
 import {
@@ -149,6 +150,18 @@ export const educationList = [
 export const achievements = [
   {
     id: "a-1",
+    icon: ethindia,
+    event: "ETHIndia'24 | India's Largest Ethereum Hackathon",
+    position: "Winner",
+    content1: "True Network's Winner, Polkadot's 1st Runner Up",
+    content2: "Lit Protocol's 2nd Runner Up",
+    content3: "Coinbase Pool Prize, Base Top 10",
+    article: "https://www.linkedin.com/posts/mittal-parth_super-stoked-to-announce-that-our-team-emerged-activity-7274735259621961729-tkq4?utm_source=share&utm_medium=member_desktop",
+    project: "https://devfolio.co/projects/khoj-3336",
+    youtube: "https://www.youtube.com/live/qJ4OCtnvjUY?si=VkcnHEdwJTEEDlMg&t=4718",
+  },
+  {
+    id: "a-2",
     icon: ethglobal,
     event: "ETHIndia'22 | World's Largest Ethereum Hackathon",
     position: "Winner",
@@ -160,7 +173,7 @@ export const achievements = [
     youtube: "https://youtu.be/9rieTya8Yds?t=3908",
   },
   {
-    id: "a-2",
+    id: "a-3",
     icon: polkadot,
     event: "Polkadot Hackathon: Europe Edition",
     position: "2nd Runner Up in the ink! Smart Contract Category",
@@ -170,7 +183,7 @@ export const achievements = [
     github: "https://github.com/pranav2305/GreenTrust",
   },
   {
-    id: "a-3",
+    id: "a-4",
     icon: lightspeed,
     event: "Warpspeed by Lightspeed",
     position: "1st Runner Up",
@@ -180,7 +193,7 @@ export const achievements = [
     article: "https://shorturl.at/fhjsT",
   },
   {
-    id: "a-4",
+    id: "a-5",
     icon: dennisivy,
     event: "September Hackathon by Dennis Ivy",
     position: "Winner",
@@ -191,7 +204,7 @@ export const achievements = [
     project: "https://parthmittal.netlify.app/",
   },
   {
-    id: "a-5",
+    id: "a-6",
     icon: manipal,
     event: "Manipal Hackathon'22",
     position: "Consolation Prize",
@@ -201,7 +214,7 @@ export const achievements = [
     article: "https://shorturl.at/exEIQ",
   },
   {
-    id: "a-6",
+    id: "a-7",
     icon: icon,
     event: "ICON Hyperbuild Hackathon",
     position: "Honorable Mention",
@@ -211,7 +224,7 @@ export const achievements = [
     project: "https://devpost.com/software/green-trust-xj2w6g",
   },
   {
-    id: "a-7",
+    id: "a-8",
     icon: ethforall,
     event: "ETHForAll 2023",
     position: "Top 3 Superfluid Projects",
@@ -393,7 +406,7 @@ export const experiences = [
         duration: "Jul 2024 - Present",
         content: [
           {
-            text: "Working in the DBaaS Control Plane team in the Database Unit.",
+            text: "Working in the Database as a Service Control Plane team for Oracle Cloud Infrastructure.",
             link: "",
           },
         ],
@@ -1040,7 +1053,7 @@ export const socialMedia = [
 export const aboutMe = {
     name: "Parth Mittal",
     githubUsername: 'mittal-parth',
-    tagLine: "MTS-1 @Oracle | ex-SDE Intern @Averlon | ex-Tech Lead @IRIS,NITK | ETHIndia'22 Winner | NITK'24",
+    tagLine: "MTS-1 @Oracle | ex-Tech Lead @IRIS,NITK | ETHIndia'22,24 Winner | 8x Hackathon Winner | NITK'24 | PBA-5",
     intro: "Software Developer from India who is either busy improving his craft or pondering over the next big idea."
 }
 
