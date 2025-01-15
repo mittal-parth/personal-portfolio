@@ -24,7 +24,8 @@ import {
   dennisivy,
   manipal,
   icon,
-  ethforall
+  ethforall,
+  ethindia
 } from "../assets";
 
 import {
@@ -149,7 +150,7 @@ export const educationList = [
 export const achievements = [
   {
     id: "a-1",
-    icon: ethglobal,
+    icon: ethindia,
     event: "ETHIndia'24 | India's Largest Ethereum Hackathon",
     position: "Winner",
     content1: "True Network's Winner, Polkadot's 1st Runner Up",
