@@ -1,13 +1,43 @@
 import { useState } from "react";
 import { close, parthmittal, menu } from "../assets";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { navLinks } from "../constants";
 import { scrollToSection } from "../lib/helperFunctions";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const { scrollY } = useScroll();
+  const [visible, setVisible] = useState(true);
+  const [prev, setPrev] = useState(0);
+
+
+  // This onupdate is called in scrollY.onChange callback
+  function updateNavbar(latest, prev) {
+    if (latest < prev) {
+      setVisible(true)
+    }
+    else if (latest > 100 && latest > prev) {
+      setVisible(false)
+    }
+  }
+
+  // Using useMotionValueEvent hook to listen to change events
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    updateNavbar(latest, prev)
+    setPrev(latest)
+  })
 
   return (
-    <nav className="w-full  flex justify-between items-center navbar">
+    <motion.nav className={`w-full sm:px-16 px-6 flex justify-between items-center navbar ${visible && prev == 0 ? "translate-y-0" : visible && "-translate-y-full bg-primary/50 backdrop-blur shadow-lg"} ${prev > 100 && "fixed z-10"}`}
+      animate={{
+        y: visible && prev === 0 ? 0 : visible ? 0 : -100,
+        opacity: visible ? 1 : 0,
+      }}
+      initial={{ y: 0, opacity: 0 }}
+      transition={{
+        ease: [0.1, 0.25, 0.3, 1],
+        duration: 0.3
+      }}>
       {/* Logo */}
       <a href="#home">
         <img
@@ -69,7 +99,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
