@@ -1,13 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { close, parthmittal, menu } from "../assets";
 import { navLinks } from "../constants";
 import { scrollToSection } from "../lib/helperFunctions";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < lastScrollY) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(false);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <nav className="w-full  flex justify-between items-center navbar">
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: showNavbar ? 0 : -100 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="nav-styles"
+    >
       {/* Logo */}
       <a href="#home">
         <img
@@ -18,7 +40,7 @@ const Navbar = () => {
       </a>
 
       {/* List of links */}
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+      <ul className="list-none sm:flex hidden justify-end items-center flex-1 p-4">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
@@ -69,7 +91,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

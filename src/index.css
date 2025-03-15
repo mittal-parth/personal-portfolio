@@ -209,3 +209,9 @@
   -webkit-line-clamp: 2; /* number of lines to show */
   -webkit-box-orient: vertical;
 }
+
+@layer utilities{
+  .nav-styles{
+    @apply w-full fixed top-0 left-0 flex justify-between items-center bg-opacity-80 shadow-lg z-50 px-4 md:px-[300px] backdrop-blur-md border-b border-white/10;
+  }
+}
