@@ -28,7 +28,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: showNavbar ? 0 : -100 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="nav-styles"
+      className="nav-styles sm:px-16 px-6"
     >
       {/* Logo */}
       <a href="#home">
