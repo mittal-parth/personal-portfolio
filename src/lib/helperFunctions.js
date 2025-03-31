@@ -36,20 +36,18 @@ export async function fetchContributionsWithRetry(maxRetries = 1) {
   while (attempts <= maxRetries) {
     try {
       const result = await fetchContributions();
-      return result; // If successful, return the result
+      return result;
     } catch (error) {
       attempts++;
       console.log(`Attempt ${attempts} failed: ${error.message}. Retrying...`);
 
       if (attempts > maxRetries) {
         console.log("Max retries reached. Returning last error.");
-        // Optionally, return a formatted error message or throw
         return { error: error.message };
       }
     }
   }
 }
-
 
 function generatePRQuery(repos, username) {
   const queries = repos
@@ -79,39 +77,17 @@ function generatePRQuery(repos, username) {
 }
 
 export async function fetchContributions() {
-  const query = generatePRQuery(includedRepos, aboutMe.githubUsername);
-
   try {
-    const response = await axios.post(
-      "https://api.github.com/graphql",
-      { query },
-      {
-        headers: {
-          Authorization: `Bearer ${import.meta.env.VITE_GH_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-      }
-    );
-
-    const pullRequests = response.data.data.search.nodes;
-    return pullRequests.map((item) => {
-      const { organization, repo, logoUrl } = parseOriginFromUrl(item.url);
-      return {
-        id: item.id,
-        organization,
-        logoUrl,
-        repo,
-        status: item.state,
-        title: item.title,
-        link: item.url,
-        number: item.number,
-        date: new Date(item.createdAt).toLocaleDateString(),
-        linesAdded: item.additions,
-        linesDeleted: item.deletions,
-      };
+    // Use the Netlify function to fetch contributions
+    // to avoid exposing the Github token into the client side build output
+    const response = await axios.post('/.netlify/functions/fetchContributions', {
+      repos: includedRepos,
+      username: aboutMe.githubUsername
     });
+
+    return response.data;
   } catch (error) {
-    console.error("Error Fetching data from Github's GraphQL API: ", error);
+    console.error("Error fetching contributions from Netlify function: ", error);
     throw error;
   }
 }
