@@ -6,7 +6,6 @@ import arrowUp from "./arrow-up.svg";
 import nitk from "./nitk.png";
 import cluboard from "./cluboard.png";
 import cash_flow from "./cash_flow.jpg";
-import ecell from "./ecell.png";
 import gdsc from "./gdsc.png";
 import iris from "./iris.png";
 import genesis from "./genesis.jpg";
@@ -30,8 +29,26 @@ import manipal from "./manipal.png";
 import icon from "./icon.jpg";
 import ethforall from "./ethforall.png";
 import ethindia from "./ethindia.png";
+import wix from "./wix.jpg";
+import nits from "./nits.png";
+import vvs from "./vvs.png";
+import logoSE from "./logoSE.png";
+import ces from "./ces.png";
+import ecell from "./ecell.jpg";
+import freelancer from "./freelancer.svg";
+import acm from "./acm.png";
+import priyanshu from "./priyanshu.png";
 
 export {
+  priyanshu,
+  acm,
+  freelancer,
+  ecell,
+  wix,
+  nits,
+  vvs,
+  logoSE,
+  ces,
   menu,
   close,
   arrowUp,
@@ -40,7 +57,6 @@ export {
   cash_flow,
   gdsc,
   iris,
-  ecell,
   genesis,
   portfolio,
   cdc,
@@ -63,5 +79,5 @@ export {
   manipal,
   icon,
   ethforall,
-  ethindia
+  ethindia,
 };

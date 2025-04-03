@@ -18,7 +18,7 @@ const Footer = () => (
         <p
           className={`font-poppins font-normal text-dimWhite text-[16px] leading-[30.8px] max-w-[470px] mt-5`}
         >
-        {aboutMe.tagLine}
+          {aboutMe.tagLine}
         </p>
         <div className="flex flex-row mt-4">
           {socialMedia.map((social, index) => (
@@ -37,7 +37,11 @@ const Footer = () => (
         <div className="grid grid-cols-2">
           {/* styles is a prop */}
           <a href={resumeLink} target="_blank">
-            <Button styles="mt-10 mr-3 inline-flex items-center justify-center" text="Resume" icon={AiFillGithub} />
+            <Button
+              styles="mt-10 mr-3 inline-flex items-center justify-center"
+              text="Resume"
+              icon={AiFillGithub}
+            />
           </a>
           <a href={repoLink} target="_blank">
             <Button
@@ -52,15 +56,13 @@ const Footer = () => (
       <div className="md:ml-auto mt-10 md:mt-0">
         <img
           src={profilePic}
-          alt="Parth Mittal"
+          alt="Priyanshu Pandey"
           className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full"
         />
       </div>
     </div>
     <div className="text-center font-poppins font-normal text-dimWhite text-xs sm:text-sm pb-4">
-      <p>
-        Made with 💙 by Parth Mittal & the Open Source Community
-      </p>
+      <p>Made with 💙 by Priyanshu Pandey & the Open Source Community</p>
     </div>
   </footer>
 );
