@@ -68,8 +68,6 @@ def convert_education_csv_to_js():
 
     js_code = "export const educationList = [\n" + ",\n".join(js_entries) + "\n];\n"
 
-    print(js_code)
-
     # Check if output file exists and contains relevant section
     try:
         content = ""
@@ -627,6 +625,235 @@ def convert_positions_csv_to_js():
         print(f"Error updating JS file: {e}")
         return False
 
+def convert_profile_csv_to_js():
+   # Define paths
+   script_dir = os.path.dirname(os.path.abspath(__file__))
+   input_file = os.path.join(script_dir, 'linkedin-export', 'Profile.csv')
+   output_file = os.path.join(script_dir, '..', 'src', 'constants', 'index-example.js')
+   
+   # Check if input file exists
+   if not os.path.exists(input_file):
+       print(f"Error: Input file {input_file} not found.")
+       return False
+   
+   # Default values
+   name = ""
+   githubUsername = ""
+   tagLine = ""
+   intro = "This is a placeholder intro"
+   
+   # Read profile data from CSV
+   try:
+       with open(input_file, 'r', encoding='utf-8') as csvfile:
+           reader = csv.DictReader(csvfile)
+           for row in reader:
+               # Only process the first row
+               first_name = row.get('First Name', '').strip()
+               last_name = row.get('Last Name', '').strip()
+               headline = row.get('Headline', '').strip()
+               
+               # Format full name
+               name = f"{first_name} {last_name}".strip()
+               
+               # Use headline as tagLine
+               tagLine = headline
+               
+               # Only process the first row
+               break
+               
+   except Exception as e:
+       print(f"Error reading CSV file: {e}")
+       return False
+   
+   # Generate JS code for aboutMe object
+   js_code = f"""export const aboutMe = {{
+   name: "{name}",
+   githubUsername: '{githubUsername}',
+   tagLine: "{tagLine}",
+   intro: "{intro}"
+}};"""
+   
+   # Check if output file exists and contains relevant section
+   try:
+       content = ""
+       if os.path.exists(output_file):
+           with open(output_file, 'r', encoding='utf-8') as f:
+               content = f.read()
+               
+           # Check if aboutMe is already defined
+           if "export const aboutMe" in content:
+               # Replace existing aboutMe
+               pattern = r"export const aboutMe = \{[\s\S]*?\};"
+               content = re.sub(pattern, js_code.strip(), content)
+           else:
+               # Append aboutMe to the end
+               content += "\n\n" + js_code
+       else:
+           # Create new file with aboutMe
+           content = js_code
+           
+           # Create directory if it doesn't exist
+           os.makedirs(os.path.dirname(output_file), exist_ok=True)
+           
+       # Write updated content to file
+       with open(output_file, 'w', encoding='utf-8') as f:
+           f.write(content)
+           
+       print(f"Successfully updated {output_file} with profile data.")
+       return True
+       
+   except Exception as e:
+       print(f"Error updating JS file: {e}")
+       return False
+   
+def convert_skills_csv_to_js():
+   # Define paths
+   script_dir = os.path.dirname(os.path.abspath(__file__))
+   input_file = os.path.join(script_dir, 'linkedin-export', 'Skills.csv')
+   output_file = os.path.join(script_dir, '..', 'src', 'constants', 'index-example.js')
+   common_frameworks = ["flask", "django", "react", "angular", "vue", "laravel", "spring", "bootstrap", "tailwind css", "tailwindcss", "express", "dotnet", "tensorflow", "pytorch", "rubyonrails", "rails", "bootstrap", "jquery", "nodejs", "nextjs", "nuxtjs", "angularjs", "vuejs"]
+   
+   # Check if input file exists
+   if not os.path.exists(input_file):
+       print(f"Error: Input file {input_file} not found.")
+       return False
+   
+   # Initialize categories
+   programming_languages = []
+   frameworks = []
+   tools = []
+   
+   # Read skills data from CSV
+   try:
+       with open(input_file, 'r', encoding='utf-8') as csvfile:
+           reader = csv.DictReader(csvfile)
+           pl_count = 1  # Counter for programming languages
+           f_count = 1   # Counter for frameworks
+           t_count = 1   # Counter for tools
+           
+           for row in reader:
+               skill_name = row.get('Name', '').strip()
+               
+               if not skill_name:
+                   continue
+               
+               # Check if it's a programming language
+               if "(Programming Language)" in skill_name:
+                   # Extract the language name without the "(Programming Language)" part
+                   language_name = skill_name.replace("(Programming Language)", "").strip()
+                   # Generate icon name based on language
+                   icon_name = f"Si{language_name.replace(' ', '')}"
+                   
+                   programming_languages.append({
+                       "id": f"pl-{pl_count}",
+                       "icon": icon_name,
+                       "name": language_name
+                   })
+                   pl_count += 1
+                   
+               # Check for common frameworks keywords
+               elif any(keyword in skill_name.lower() for keyword in common_frameworks):
+                   # Use FaRegImage as a placeholder for framework icons
+                   frameworks.append({
+                       "id": f"f-{f_count}",
+                       "icon": f"Si{skill_name.replace(' ', '').capitalize()}",
+                       "name": skill_name
+                   })
+                   f_count += 1
+                   
+               # Everything else goes to tools
+               else:
+                   tools.append({
+                       "id": f"t-{t_count}",
+                       "icon": "FaRegImage",
+                       "name": skill_name
+                   })
+                   t_count += 1
+               
+   except Exception as e:
+       print(f"Error reading CSV file: {e}")
+       return False
+   
+   # Generate skills categories
+   categories = []
+   
+   # Add programming languages category if not empty
+   if programming_languages:
+       categories.append({
+           "title": "Programming Languages",
+           "items": programming_languages
+       })
+   
+   # Add frameworks category if not empty
+   if frameworks:
+       categories.append({
+           "title": "Frameworks/Libraries",
+           "items": frameworks
+       })
+   
+   # Add tools category if not empty
+   if tools:
+       categories.append({
+           "title": "Tools",
+           "items": tools
+       })
+   
+   # Generate JS code for skills list
+   js_entries = []
+   for category in categories:
+       # Format items
+       items_entries = []
+       for item in category['items']:
+           item_entry = f"""      {{
+       id: "{item['id']}",
+       icon: {item['icon']},
+       name: "{item['name']}",
+     }}"""
+           items_entries.append(item_entry)
+           
+       js_entry = f"""  {{
+   title: "{category['title']}",
+   items: [
+{',\n'.join(items_entries)}
+   ],
+ }}"""
+       js_entries.append(js_entry)
+   
+   js_code = "export const skills = [\n" + ",\n".join(js_entries) + "\n];\n"
+   
+   # Check if output file exists and contains relevant section
+   try:
+       content = ""
+       if os.path.exists(output_file):
+           with open(output_file, 'r', encoding='utf-8') as f:
+               content = f.read()
+               
+           # Check if skills is already defined
+           if "export const skills" in content:
+               # Replace existing skills
+               pattern = r"export const skills = \[[\s\S]*?\];"
+               content = re.sub(pattern, js_code.strip(), content)
+           else:
+               # Append skills to the end
+               content += "\n\n" + js_code
+       else:
+           # Create new file with skills
+           content = js_code
+           
+           # Create directory if it doesn't exist
+           os.makedirs(os.path.dirname(output_file), exist_ok=True)
+           
+       # Write updated content to file
+       with open(output_file, 'w', encoding='utf-8') as f:
+           f.write(content)
+           
+       print(f"Successfully updated {output_file} with skills data.")
+       return True
+       
+   except Exception as e:
+       print(f"Error updating JS file: {e}")
+       return False
+
 
 if __name__ == "__main__":
     convert_education_csv_to_js()
@@ -634,3 +861,5 @@ if __name__ == "__main__":
     convert_volunteering_csv_to_js()
     convert_honors_csv_to_js()
     convert_positions_csv_to_js()
+    convert_profile_csv_to_js()
+    convert_skills_csv_to_js()
