@@ -180,6 +180,7 @@ export const achievements = [
     content1: "Built GreenTrust offering a novel solution for obtaining certification in organic farming.",
     content2: "",
     content3: "",
+    article: "https://www.linkedin.com/posts/mittal-parth_hackathon-winners-web3-activity-7048340759116214272-eJvo?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOa76QB7zljgX8NK4xVSZXi0Z49ETMeC-g",
     github: "https://github.com/pranav2305/GreenTrust",
   },
   {
