@@ -30,6 +30,7 @@ import manipal from "./manipal.png";
 import icon from "./icon.jpg";
 import ethforall from "./ethforall.png";
 import ethindia from "./ethindia.png";
+import globalAi from "./global-ai.jpeg";
 
 export {
   menu,
@@ -63,5 +64,6 @@ export {
   manipal,
   icon,
   ethforall,
-  ethindia
+  ethindia,
+  globalAi
 };
