@@ -25,7 +25,8 @@ import {
   manipal,
   icon,
   ethforall,
-  ethindia
+  ethindia,
+  globalAi,
 } from "../assets";
 
 import {
@@ -153,8 +154,8 @@ export const achievements = [
     icon: ethindia,
     event: "ETHIndia'24 | India's Largest Ethereum Hackathon",
     position: "Winner",
-    content1: "True Network's Winner, Polkadot's 1st Runner Up",
-    content2: "Lit Protocol's 2nd Runner Up",
+    content1: "Top 10 Overall Finalists/Winners, True Network's Winner",
+    content2: "Polkadot's 1st Runner Up, Lit Protocol's 2nd Runner Up",
     content3: "Coinbase Pool Prize, Base Top 10",
     article: "https://www.linkedin.com/posts/mittal-parth_super-stoked-to-announce-that-our-team-emerged-activity-7274735259621961729-tkq4?utm_source=share&utm_medium=member_desktop",
     project: "https://devfolio.co/projects/khoj-3336",
@@ -165,7 +166,7 @@ export const achievements = [
     icon: ethglobal,
     event: "ETHIndia'22 | World's Largest Ethereum Hackathon",
     position: "Winner",
-    content1: "Top 12 winners among 20k+ registrations",
+    content1: "Top 12 Winners among 20k+ registrations",
     content2: "One of Polygon's Best Public Goods",
     content3: "Best Module on Biconomy SDK",
     article: "https://www.thehindu.com/news/cities/Mangalore/nitk-iiit-delhi-team-makes-it-to-top-12-winners-in-ethindia-22/article66238923.ece",
@@ -195,6 +196,16 @@ export const achievements = [
   },
   {
     id: "a-5",
+    icon: globalAi,
+    event: "Global AI HackFest 2023",
+    position: "Winner",
+    content1: "1st Position in the Education, Finance & Tech track by AI Planet",
+    content2: "",
+    content3: "",
+    article: "https://www.linkedin.com/posts/mittal-parth_happy-to-share-that-comicifyai-emerged-as-activity-7078790186435833856-88fh",
+  },
+  {
+    id: "a-6",
     icon: dennisivy,
     event: "September Hackathon by Dennis Ivy",
     position: "Winner",
@@ -205,7 +216,7 @@ export const achievements = [
     project: "https://parthmittal.netlify.app/",
   },
   {
-    id: "a-6",
+    id: "a-7",
     icon: manipal,
     event: "Manipal Hackathon'22",
     position: "Consolation Prize",
@@ -215,7 +226,7 @@ export const achievements = [
     article: "https://shorturl.at/exEIQ",
   },
   {
-    id: "a-7",
+    id: "a-8",
     icon: icon,
     event: "ICON Hyperbuild Hackathon",
     position: "Honorable Mention",
@@ -225,7 +236,7 @@ export const achievements = [
     project: "https://devpost.com/software/green-trust-xj2w6g",
   },
   {
-    id: "a-8",
+    id: "a-9",
     icon: ethforall,
     event: "ETHForAll 2023",
     position: "Top 3 Superfluid Projects",
