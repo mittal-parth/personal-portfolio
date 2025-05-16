@@ -31,6 +31,9 @@ import icon from "./icon.jpg";
 import ethforall from "./ethforall.png";
 import ethindia from "./ethindia.png";
 import globalAi from "./global-ai.jpeg";
+import khoj from "./khoj.jpg";
+import kosh from "./kosh.png";
+import polkadot_dev_cli from "./polkadot-dev-cli.png";
 
 export {
   menu,
@@ -65,5 +68,8 @@ export {
   icon,
   ethforall,
   ethindia,
-  globalAi
+  globalAi,
+  khoj,
+  kosh,
+  polkadot_dev_cli
 };

@@ -27,6 +27,9 @@ import {
   ethforall,
   ethindia,
   globalAi,
+  khoj,
+  kosh,
+  polkadot_dev_cli,
 } from "../assets";
 
 import {
@@ -51,7 +54,6 @@ import {
   SiC,
   SiRubyonrails,
   SiJquery,
-  SiVisualstudiocode,
   SiPostman,
   SiGit,
   SiMysql,
@@ -72,25 +74,23 @@ import {
   SiOpenai,
   SiGooglecloud,
   SiNextdotjs,
-  SiMicrosoftazure
+  SiTypescript,
+  SiClaude,
+  SiOracle,
 } from "react-icons/si";
 
-import {
-  FaHardHat,
-  FaRust
-} from "react-icons/fa";
+import { FaHardHat, FaRust } from "react-icons/fa";
 
-import {
-  IoIosNotificationsOutline
-} from "react-icons/io";
+import { IoIosNotificationsOutline } from "react-icons/io";
 
-import {
-  FaGolang
-} from "react-icons/fa6";
+import { FaGolang } from "react-icons/fa6";
 
 import { DiCss3, DiJava, DiMsqlServer, DiRuby } from "react-icons/di";
+import { VscAzure } from "react-icons/vsc";
+import { BiLogoVisualStudio } from "react-icons/bi";
 
-export const resumeLink = "https://drive.google.com/file/d/1vkxyMDB5_KpMwt4QXFgT2aqdRizr8Czh/view?usp=sharing";
+export const resumeLink =
+  "https://drive.google.com/file/d/1vkxyMDB5_KpMwt4QXFgT2aqdRizr8Czh/view?usp=sharing";
 export const repoLink = "https://github.com/mittal-parth/personal-portfolio";
 
 export const callToAction = "https://www.linkedin.com/in/mittal-parth";
@@ -143,7 +143,8 @@ export const educationList = [
     title: "Polkadot Blockchain Academy",
     degree: "",
     duration: "May 2024 - June 2024",
-    content1: "Graduated with a distinction in the fifth cohort of the Polkadot Blockchain Academy at the National University of Singapore.",
+    content1:
+      "Graduated with a distinction in the fifth cohort of the Polkadot Blockchain Academy at the National University of Singapore.",
   },
 ];
 
@@ -157,9 +158,11 @@ export const achievements = [
     content1: "Top 10 Overall Finalists/Winners, True Network's Winner",
     content2: "Polkadot's 1st Runner Up, Lit Protocol's 2nd Runner Up",
     content3: "Coinbase Pool Prize, Base Top 10",
-    article: "https://www.linkedin.com/posts/mittal-parth_super-stoked-to-announce-that-our-team-emerged-activity-7274735259621961729-tkq4?utm_source=share&utm_medium=member_desktop",
+    article:
+      "https://www.linkedin.com/posts/mittal-parth_super-stoked-to-announce-that-our-team-emerged-activity-7274735259621961729-tkq4?utm_source=share&utm_medium=member_desktop",
     project: "https://devfolio.co/projects/khoj-3336",
-    youtube: "https://www.youtube.com/live/qJ4OCtnvjUY?si=VkcnHEdwJTEEDlMg&t=4718",
+    youtube:
+      "https://www.youtube.com/live/qJ4OCtnvjUY?si=VkcnHEdwJTEEDlMg&t=4718",
   },
   {
     id: "a-2",
@@ -169,7 +172,8 @@ export const achievements = [
     content1: "Top 12 Winners among 20k+ registrations",
     content2: "One of Polygon's Best Public Goods",
     content3: "Best Module on Biconomy SDK",
-    article: "https://www.thehindu.com/news/cities/Mangalore/nitk-iiit-delhi-team-makes-it-to-top-12-winners-in-ethindia-22/article66238923.ece",
+    article:
+      "https://www.thehindu.com/news/cities/Mangalore/nitk-iiit-delhi-team-makes-it-to-top-12-winners-in-ethindia-22/article66238923.ece",
     project: "https://devfolio.co/projects/chargeswap-3527",
     youtube: "https://youtu.be/9rieTya8Yds?t=3908",
   },
@@ -178,10 +182,12 @@ export const achievements = [
     icon: polkadot,
     event: "Polkadot Hackathon: Europe Edition",
     position: "2nd Runner Up in the ink! Smart Contract Category",
-    content1: "Built GreenTrust offering a novel solution for obtaining certification in organic farming.",
+    content1:
+      "Built GreenTrust offering a novel solution for obtaining certification in organic farming.",
     content2: "",
     content3: "",
-    article: "https://www.linkedin.com/posts/mittal-parth_hackathon-winners-web3-activity-7048340759116214272-eJvo?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOa76QB7zljgX8NK4xVSZXi0Z49ETMeC-g",
+    article:
+      "https://www.linkedin.com/posts/mittal-parth_hackathon-winners-web3-activity-7048340759116214272-eJvo?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOa76QB7zljgX8NK4xVSZXi0Z49ETMeC-g",
     github: "https://github.com/pranav2305/GreenTrust",
   },
   {
@@ -199,17 +205,20 @@ export const achievements = [
     icon: globalAi,
     event: "Global AI HackFest 2023",
     position: "Winner",
-    content1: "1st Position in the Education, Finance & Tech track by AI Planet",
+    content1:
+      "1st Position in the Education, Finance & Tech track by AI Planet",
     content2: "",
     content3: "",
-    article: "https://www.linkedin.com/posts/mittal-parth_happy-to-share-that-comicifyai-emerged-as-activity-7078790186435833856-88fh",
+    article:
+      "https://www.linkedin.com/posts/mittal-parth_happy-to-share-that-comicifyai-emerged-as-activity-7078790186435833856-88fh",
   },
   {
     id: "a-6",
     icon: dennisivy,
     event: "September Hackathon by Dennis Ivy",
     position: "Winner",
-    content1: "Rated the best portfolio website among 450+ participants across the globe.",
+    content1:
+      "Rated the best portfolio website among 450+ participants across the globe.",
     content2: "",
     content3: "",
     youtube: "https://www.youtube.com/watch?v=X2473En3h_o&t=5278s",
@@ -221,7 +230,8 @@ export const achievements = [
     event: "Manipal Hackathon'22",
     position: "Consolation Prize",
     content1: "Top 10 among 500+ teams across India",
-    content2: "Developed a cross-platform mobile application to address the problem of social cohesion.",
+    content2:
+      "Developed a cross-platform mobile application to address the problem of social cohesion.",
     content3: "",
     article: "https://shorturl.at/exEIQ",
   },
@@ -230,7 +240,8 @@ export const achievements = [
     icon: icon,
     event: "ICON Hyperbuild Hackathon",
     position: "Honorable Mention",
-    content1: "Honorable Mention among 655 participants across the globe in a 3 month-long online hackathon.",
+    content1:
+      "Honorable Mention among 655 participants across the globe in a 3 month-long online hackathon.",
     content2: "",
     content3: "",
     project: "https://devpost.com/software/green-trust-xj2w6g",
@@ -240,7 +251,8 @@ export const achievements = [
     icon: ethforall,
     event: "ETHForAll 2023",
     position: "Top 3 Superfluid Projects",
-    content1: "Bounty winners among 430 projects in ETHGlobal's largest online hackathon.",
+    content1:
+      "Bounty winners among 430 projects in ETHGlobal's largest online hackathon.",
     content2: "",
     content3: "",
     project: "https://devfolio.co/projects/green-trust-ed14",
@@ -306,7 +318,7 @@ export const skills = [
         id: "pl-11",
         icon: SiSolidity,
         name: "Solidity",
-      }
+      },
     ],
   },
   {
@@ -359,7 +371,12 @@ export const skills = [
     items: [
       {
         id: "t-1",
-        icon: SiMicrosoftazure,
+        icon: SiOracle,
+        name: "Oracle Cloud",
+      },
+      {
+        id: "t-1",
+        icon: VscAzure,
         name: "Azure",
       },
       {
@@ -374,7 +391,7 @@ export const skills = [
       },
       {
         id: "t-4",
-        icon: SiVisualstudiocode,
+        icon: BiLogoVisualStudio,
         name: "VS Code",
       },
       {
@@ -433,8 +450,8 @@ export const experiences = [
           },
           {
             text: "Wrote APIs in Java to help gracefully migrate a running ExaC@C infrastructure to a new region in the case of a region failure",
-            link: ""
-          }
+            link: "",
+          },
         ],
       },
     ],
@@ -450,12 +467,12 @@ export const experiences = [
         content: [
           {
             text: "Added support for the discoverability of Microsoft Azure assets utilising Go and Gremlin.",
-            link: ""
+            link: "",
           },
           {
             text: "Extended support for Azure for reachability analysis of assets for cloud security posture management.",
-            link: ""
-          }
+            link: "",
+          },
         ],
       },
     ],
@@ -510,16 +527,94 @@ export const experiences = [
         ],
       },
     ],
-  }
+  },
 ];
 
 // Add information about all the projects to be listed out in your portfolio
 export const projects = [
   {
     id: "project-1",
+    title: "Khoj",
+    github: "https://github.com/marcdhi/Khoj",
+    link: "https://devfolio.co/projects/khoj-3336",
+    image: khoj,
+    content:
+      "Participate in AI-personalised treasure hunts where each clue is a physical location. Earn on-chain rewards and onboard a million users. Overall winning project at ETHIndia'24.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiSolidity,
+        name: "Solidity",
+      },
+      {
+        id: "icon-2",
+        icon: SiTypescript,
+        name: "Typescript",
+      },
+      {
+        id: "icon-3",
+        icon: SiReact,
+        name: "React.js",
+      },
+      {
+        id: "icon-4",
+        icon: SiTailwindcss,
+        name: "TailwindCSS",
+      },
+      {
+        id: "icon-5",
+        icon: SiClaude,
+        name: "Claude Sonnet",
+      },
+    ],
+  },
+  {
+    id: "project-2",
+    title: "Kosh SDK",
+    github: "https://github.com/mittal-parth/kosh-sdk",
+    link: "https://ethglobal.com/showcase/kosh-hk3mp",
+    image: kosh,
+    content:
+      "Simple and secure way to interact with remote MCP Servers in Trusted Execution Environments (TEEs). Built at ETHGlobal Trifecta Hackathon.",
+    stack: [
+      {
+        id: "icon-2",
+        icon: SiTypescript,
+        name: "Typescript",
+      },
+      {
+        id: "icon-2",
+        icon: SiTailwindcss,
+        name: "TailwindCSS",
+      },
+      {
+        id: "pl-2",
+        icon: SiPython,
+        name: "Python",
+      },
+    ],
+  },
+  {
+    id: "project-3",
+    title: "Polkadot Dev CLI",
+    github: "https://github.com/mittal-parth/polkadot-dev-cli",
+    link: "https://crates.io/crates/polkadot-dev-cli",
+    image: polkadot_dev_cli,
+    content:
+      "CLI tool for Polkadot developers bundling linting, formatting, and version management. cargo install polkadot-dev-cli.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: FaRust,
+        name: "Rust",
+      },
+    ],
+  },
+  {
+    id: "project-4",
     title: "Comicify.ai",
     github: "https://github.com/ayush4345/Comicify.ai",
-    link: "https://comicify-ai.vercel.app/",
+    link: "https://devfolio.co/projects/comicifyai-97a6",
     image: comicify_ai,
     content:
       "Convert any academic/news/boring text into cool comic strips using GPT-3.5 and Stable Diffusion!",
@@ -527,150 +622,27 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiReact,
-        name: "React"
+        name: "React",
       },
       {
         id: "icon-2",
         icon: SiTailwindcss,
-        name: "TailwindCSS"
+        name: "TailwindCSS",
       },
       {
         id: "icon-3",
         icon: SiOpenai,
-        name: "OpenAI"
+        name: "OpenAI",
       },
       {
         id: "icon-4",
         icon: SiGooglecloud,
-        name: "Google Cloud Platform"
+        name: "Google Cloud Platform",
       },
       {
         id: "icon-5",
         icon: SiFlask,
-        name: "Flask"
-      },
-    ],
-  },
-  {
-    id: "project-2",
-    title: "GreenTrust",
-    github: "https://github.com/mittal-parth/GreenTrust",
-    link: "https://green-trust-fantom.netlify.app/",
-    image: greentrust,
-    content:
-      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiReact,
-        name: "React"
-      },
-      {
-        id: "icon-2",
-        icon: SiTailwindcss,
-        name: "TailwindCSS"
-      },
-      {
-        id: "icon-3",
-        icon: SiNextdotjs,
-        name: "Next.js"
-      },
-      {
-        id: "icon-4",
-        icon: SiIpfs,
-        name: "IPFS"
-      },
-      {
-        id: "icon-5",
-        icon: SiSolidity,
-        name: "Solidity"
-      },
-      {
-        id: "icon-6",
-        icon: IoIosNotificationsOutline,
-        name: "Push Protocol"
-      },
-    ],
-  },
-  {
-    id: "project-3",
-    title: "ChargeSwap",
-    github: "https://github.com/CommanderAstern/ChargeSwap",
-    link: "https://devfolio.co/projects/chargeswap-3527",
-    image: chargeswap,
-    content:
-      "A Blockchain-based EV-Battery swapping solution - winning project at ETHIndia'22, the world's largest Ethereum Hackathon",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiReact,
-        name: "React"
-      },
-      {
-        id: "icon-3",
-        icon: SiWeb3Dotjs,
-        name: "Web3.js"
-      },
-      {
-        id: "icon-4",
-        icon: SiSolidity,
-        name: "Solidity"
-      },
-      {
-        id: "icon-5",
-        icon: FaHardHat,
-        name: "HardHat"
-      },
-      {
-        id: "icon-6",
-        icon: SiIpfs,
-        name: "IPFS"
-      },
-      {
-        id: "icon-7",
-        icon: SiArduino,
-        name: "Arduino"
-      },
-      {
-        id: "icon-8",
-        icon: IoIosNotificationsOutline,
-        name: "Push Protocol"
-      },
-    ],
-  },
-  {
-    id: "project-4",
-    title: "Samsotech Table Management System",
-    github: "",
-    link: "https://www.linkedin.com/posts/mittal-parth_technologysolutions-softwaredevelopment-technology-activity-6994915645066809344-WnMY?utm_source=share&utm_medium=member_desktop",
-    image: placeicon,
-    content:
-      "Restaurant, Place, Table and realtime Reservation Management with Multi-Tenant Architecture, RBAC, SMS and Email integration for Samsotech International",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiDotnet,
-        name: "Dot Net Core MVC 6"
-      },
-      {
-        id: "icon-2",
-        icon: SiBootstrap,
-        name: "Bootstrap"
-      },
-      {
-        id: "icon-3",
-        icon: DiMsqlServer,
-        name: "MS Sql Server"
-      },
-      {
-        id: "icon-4",
-        icon: SiJquery,
-        name: "jQuery"
-      },
-      {
-        id: "icon-5",
-        icon: SiTwilio,
-        name: "Twillio"
+        name: "Flask",
       },
     ],
   },
@@ -686,152 +658,166 @@ export const projects = [
       {
         id: "icon-1",
         icon: SiRubyonrails,
-        name: "Ruby on Rails"
+        name: "Ruby on Rails",
       },
       {
         id: "icon-2",
         icon: SiTailwindcss,
-        name: "TailwindCSS"
+        name: "TailwindCSS",
       },
       {
         id: "icon-3",
         icon: SiJquery,
-        name: "jQuery"
+        name: "jQuery",
       },
     ],
   },
   {
     id: "project-6",
-    title: "Career Development Centre, NITK Website",
-    github: "",
-    link: "http://cdc.nitk.ac.in/",
-    image: cdc,
+    title: "GreenTrust",
+    github: "https://github.com/mittal-parth/GreenTrust",
+    link: "https://green-trust-fantom.netlify.app/",
+    image: greentrust,
     content:
-      "The official website of CDC, NITK with a custom built CMS.",
+      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
     stack: [
       {
         id: "icon-1",
-        icon: SiRubyonrails,
-        name: "Ruby on Rails"
+        icon: SiReact,
+        name: "React",
       },
       {
         id: "icon-2",
-        icon: SiBootstrap,
-        name: "Bootstrap"
+        icon: SiTailwindcss,
+        name: "TailwindCSS",
       },
       {
         id: "icon-3",
-        icon: SiJavascript,
-        name: "JavaScript"
+        icon: SiNextdotjs,
+        name: "Next.js",
+      },
+      {
+        id: "icon-4",
+        icon: SiIpfs,
+        name: "IPFS",
+      },
+      {
+        id: "icon-5",
+        icon: SiSolidity,
+        name: "Solidity",
+      },
+      {
+        id: "icon-6",
+        icon: IoIosNotificationsOutline,
+        name: "Push Protocol",
       },
     ],
   },
   {
     id: "project-7",
-    title: "Huntly",
-    github: "",
-    link: "https://devfolio.co/projects/huntly-b5a9",
-    image: huntly,
+    title: "ChargeSwap",
+    github: "https://github.com/CommanderAstern/ChargeSwap",
+    link: "https://devfolio.co/projects/chargeswap-3527",
+    image: chargeswap,
     content:
-      "A cross-platform mobile application that brings people closer to the physical environment and forms meaningful connections by organising real-world Treasure Hunts for free and winning rewards. The app uses machine learning to match users and form teams of like-minded people.",
+      "A Blockchain-based EV-Battery swapping solution - winning project at ETHIndia'22, the world's largest Ethereum Hackathon.",
     stack: [
       {
         id: "icon-1",
-        icon: SiDjango,
-        name: "Django Rest Framework"
-      },
-      {
-        id: "icon-2",
-        icon: SiFlutter,
-        name: "Flutter"
+        icon: SiReact,
+        name: "React",
       },
       {
         id: "icon-3",
-        icon: SiReplit,
-        name: "Replit"
+        icon: SiWeb3Dotjs,
+        name: "Web3.js",
       },
       {
         id: "icon-4",
-        icon: SiFlask,
-        name: "Flask"
+        icon: SiSolidity,
+        name: "Solidity",
       },
       {
         id: "icon-5",
-        icon: SiFigma,
-        name: "Figma"
+        icon: FaHardHat,
+        name: "HardHat",
       },
       {
         id: "icon-6",
-        icon: SiGooglemaps,
-        name: "Google Maps API"
+        icon: SiIpfs,
+        name: "IPFS",
+      },
+      {
+        id: "icon-7",
+        icon: SiArduino,
+        name: "Arduino",
+      },
+      {
+        id: "icon-8",
+        icon: IoIosNotificationsOutline,
+        name: "Push Protocol",
       },
     ],
   },
   {
     id: "project-8",
-    title: "Cluboard",
-    github: "https://github.com/mittal-parth/Cluboard",
-    link: "",
-    image: cluboard,
+    title: "Samsotech Table Management System",
+    github: "",
+    link: "https://www.linkedin.com/posts/mittal-parth_technologysolutions-softwaredevelopment-technology-activity-6994915645066809344-WnMY?utm_source=share&utm_medium=member_desktop",
+    image: placeicon,
     content:
-      "A full-stack web application to facilitate sharing resources in college clubs with email notifications, requests and ticketing system, and analytical dashboards.",
+      "Restaurant, Place, Table and realtime Reservation Management with Multi-Tenant Architecture, RBAC, SMS and Email integration for Samsotech International",
     stack: [
       {
         id: "icon-1",
-        icon: SiDjango,
-        name: "Django"
+        icon: SiDotnet,
+        name: "Dot Net Core MVC 6",
       },
       {
         id: "icon-2",
-        icon: AiFillHtml5,
-        name: "HTML"
+        icon: SiBootstrap,
+        name: "Bootstrap",
       },
       {
         id: "icon-3",
-        icon: DiCss3,
-        name: "CSS"
+        icon: DiMsqlServer,
+        name: "MS Sql Server",
       },
       {
         id: "icon-4",
-        icon: SiJavascript,
-        name: "JavaScript"
+        icon: SiJquery,
+        name: "jQuery",
       },
       {
         id: "icon-5",
-        icon: SiBootstrap,
-        name: "Bootstrap"
-      },
-      {
-        id: "icon-6",
-        icon: SiChartdotjs,
-        name: "Chart.js"
+        icon: SiTwilio,
+        name: "Twillio",
       },
     ],
   },
   {
     id: "project-9",
-    title: "Cash Flow Minimiser",
-    github: "https://github.com/mittal-parth/Cash-Flow-Minmiser",
-    link: "https://minimise-cash-flow.netlify.app/",
-    image: cash_flow,
-    content:
-      "A React application to help users visualise and minimise cash flow among multiple transactions.",
+    title: "Career Development Centre, NITK Website",
+    github: "",
+    link: "http://cdc.nitk.ac.in/",
+    image: cdc,
+    content: "The official website of CDC, NITK with a custom built CMS.",
     stack: [
       {
         id: "icon-1",
-        icon: SiReact,
-        name: "React"
+        icon: SiRubyonrails,
+        name: "Ruby on Rails",
       },
       {
         id: "icon-2",
-        icon: AiFillHtml5,
-        name: "HTML"
+        icon: SiBootstrap,
+        name: "Bootstrap",
       },
       {
         id: "icon-3",
-        icon: DiCss3,
-        name: "CSS"
-      }
+        icon: SiJavascript,
+        name: "JavaScript",
+      },
     ],
   },
   {
@@ -840,22 +826,22 @@ export const projects = [
     github: "https://github.com/mittal-parth/personal-portfolio",
     link: "https://parthmittal.netlify.app/",
     image: portfolio,
-    content: "Personal portfolio website with React and Tailwind CSS.",
+    content: "Open source developer portfolio template with modern UI/UX. 125+ stars on GitHub.",
     stack: [
       {
         id: "icon-1",
         icon: SiReact,
-        name: "React"
+        name: "React",
       },
       {
         id: "icon-2",
         icon: SiTailwindcss,
-        name: "Tailwind CSS"
+        name: "Tailwind CSS",
       },
       {
         id: "icon-3",
         icon: AiFillHtml5,
-        name: "HTML"
+        name: "HTML",
       },
     ],
   },
@@ -872,15 +858,15 @@ export const blogPosts = [
     tags: [
       {
         id: "tag-1",
-        name: "tag 01"
+        name: "tag 01",
       },
       {
         id: "tag-2",
-        name: "tag 03"
+        name: "tag 03",
       },
       {
         id: "tag-3",
-        name: "tag 03"
+        name: "tag 03",
       },
     ],
   },
@@ -893,15 +879,15 @@ export const blogPosts = [
     tags: [
       {
         id: "tag-1",
-        name: "tag 01"
+        name: "tag 01",
       },
       {
         id: "tag-2",
-        name: "tag 03"
+        name: "tag 03",
       },
       {
         id: "tag-3",
-        name: "tag 03"
+        name: "tag 03",
       },
     ],
   },
@@ -914,15 +900,15 @@ export const blogPosts = [
     tags: [
       {
         id: "tag-1",
-        name: "tag 01"
+        name: "tag 01",
       },
       {
         id: "tag-2",
-        name: "tag 03"
+        name: "tag 03",
       },
       {
         id: "tag-3",
-        name: "tag 03"
+        name: "tag 03",
       },
     ],
   },
@@ -1063,14 +1049,20 @@ export const socialMedia = [
 
 // Your professional summary
 export const aboutMe = {
-    name: "Parth Mittal",
-    githubUsername: 'mittal-parth',
-    tagLine: "MTS-1 @Oracle | ex-Tech Lead @IRIS,NITK | ETHIndia'22,24 Winner | 9x Hackathon Winner | NITK'24 | PBA-5",
-    intro: "Software Developer from India who is either busy improving his craft or pondering over the next big idea."
-}
+  name: "Parth Mittal",
+  githubUsername: "mittal-parth",
+  tagLine:
+    "MTS-1 @Oracle | ex-Tech Lead @IRIS,NITK | ETHIndia'22,24 Winner | 9x Hackathon Winner | NITK'24 | PBA-5",
+  intro:
+    "Software Developer from India who is either busy improving his craft or pondering over the next big idea.",
+};
 
 // The maximum number of PRs to be displayed in the Open Source Contributions section.
 export const itemsToFetch = 20;
 
-// Add names of GitHub repos you'd like to display open source contributions from in the 'org/repo' format. 
-export const includedRepos = ['publiclab/plots2', 'zulip/zulip', 'paritytech/polkadot-sdk'];
+// Add names of GitHub repos you'd like to display open source contributions from in the 'org/repo' format.
+export const includedRepos = [
+  "publiclab/plots2",
+  "zulip/zulip",
+  "paritytech/polkadot-sdk",
+];
