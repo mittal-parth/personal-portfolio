@@ -28,3 +28,4 @@ dist-ssr
 
 # LinkedIn Import related
 */linkedin-export/*
+__pycache__/
