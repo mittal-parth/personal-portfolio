@@ -30,6 +30,7 @@ import manipal from "./manipal.png";
 import icon from "./icon.jpg";
 import ethforall from "./ethforall.png";
 import ethindia from "./ethindia.png";
+import placeholder from "./placeholder.svg";
 import globalAi from "./global-ai.jpeg";
 import khoj from "./khoj.jpg";
 import kosh from "./kosh.png";
@@ -71,5 +72,6 @@ export {
   globalAi,
   khoj,
   kosh,
-  polkadot_dev_cli
+  polkadot_dev_cli,
+  placeholder
 };

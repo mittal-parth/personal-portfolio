@@ -25,3 +25,7 @@ dist-ssr
 .env
 # Local Netlify folder
 .netlify
+
+# LinkedIn Import related
+*/linkedin-export/*
+__pycache__/

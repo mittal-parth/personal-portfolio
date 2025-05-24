@@ -148,7 +148,7 @@ export const educationList = [
   },
 ];
 
-// Add your past achievments here for example - rankings in hackathons/events
+// Add your past achievements here for example - rankings in hackathons/events
 export const achievements = [
   {
     id: "a-1",
@@ -933,7 +933,7 @@ export const stats = [
   },
 ];
 
-// List out the extra curricular activities you have induldged in like - student clubs, joining research groups etc.
+// List out the extra curricular activities you have indulged in, like - student clubs, research groups etc.
 export const extraCurricular = [
   {
     id: 1,

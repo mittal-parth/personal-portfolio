@@ -48,37 +48,76 @@
 
 ### Code changes
 
-Three main things have to be changed to customize it your way (please open an issue if you find more such instances):
 
-1. Personal Information
+#### 1. Import all your data from LinkedIn (Beta) 🔄
 
-- [/src/constants/index.js](https://github.com/mittal-parth/personal-portfolio/blob/main/src/constants/index.js) contains all the personal information one needs to change. Each website section is written as a JavaScript object and is pretty intuitive to change.
+This feature allows you to import your LinkedIn data to quickly populate your portfolio. Here's how to use it:
+
+1. **Export Your LinkedIn Data**:
+   - Follow LinkedIn's guide to [download your account data](https://www.linkedin.com/help/linkedin/answer/a1339364/downloading-your-account-data)
+   - The export process may take up to 48 hours
+   - Once ready, download and extract the ZIP file
+
+2. **Prepare the Data**:
+   - Move the extracted directory inside the `snippets` folder
+   - Rename the directory to `linkedin-export`
+
+3. **Run the Import Script**:
+   ```bash
+   python3 snippets/bulk_import_from_linkedin.py
+   ```
+   This will:
+   - Read your LinkedIn data
+   - Convert it to the portfolio format
+   - Create/update `src/constants/index-example.js`
+
+4. **Finalize the Import**:
+   - Review the generated `index-example.js` file
+   - Replace `src/constants/index.js` with the contents of `index-example.js`
+   - Customize the imported data as needed
+
+**Important Notes**:
+- This is a beta feature and may require manual adjustments
+- You'll need to manually add:
+  - Icons for skills and frameworks
+  - Project images
+  - Company logos
+  - Any additional customizations following instructions in **[Enter your data manually](#2-enter-your-data-manually)**
+- Some fields may need manual adjustment to match your preferred presentation style
+
+#### 2. Enter your data manually
+
+The LinkedIn import is optional and will still require adding images and icons. Those can be done by following the instructions below.
+
+1. **Personal Information**
+
+- _If you're using the LinkedIn import, most of the data is already there._ [/src/constants/index.js](https://github.com/mittal-parth/personal-portfolio/blob/main/src/constants/index.js) contains all the personal information one needs to change. Each website section is written as a JavaScript object and is pretty intuitive to change. 
 
 - Icons
-  - Whenever you want to use an icon, you'll have to make sure that the icon is imported.
-  - Head to [https://react-icons.github.io/react-icons/search](https://react-icons.github.io/react-icons/search) and search for the desired icon. (Eg: SiReact for ReactJS)
-  - Note the package it belongs to (Eg: 'Si' here)
-  - Import the icon into [`/src/constants/index.js`](https://github.com/mittal-parth/personal-portfolio/blob/main/src/constants/index.js) (Eg: `import { ... SiReact, } from "react-icons/si";` here)
+      - Whenever you want to use an icon, you'll have to make sure that the icon is imported.
+      - Head to [https://react-icons.github.io/react-icons/search](https://react-icons.github.io/react-icons/search) and search for the desired icon. (Eg: SiReact for ReactJS)
+      - Note the package it belongs to (Eg: 'Si' here)
+      - Import the icon into [`/src/constants/index.js`](https://github.com/mittal-parth/personal-portfolio/blob/main/src/constants/index.js) (Eg: `import { ... SiReact, } from "react-icons/si";` here)
 
-2. Website title and icon
+2. **Website title and icon**
 
-- Go to [`index.html`](https://github.com/mittal-parth/personal-portfolio/blob/main/index.html) and change the [`title`](https://github.com/mittal-parth/personal-portfolio/blob/main/index.html#L7") to your name.
-- Also, change the link to the title [icon](https://github.com/mittal-parth/personal-portfolio/blob/main/index.html#L5)
+    - Go to [`index.html`](https://github.com/mittal-parth/personal-portfolio/blob/main/index.html) and change the [`title`](https://github.com/mittal-parth/personal-portfolio/blob/main/index.html#L7") to your name.
+    - Also, change the link to the title [icon](https://github.com/mittal-parth/personal-portfolio/blob/main/index.html#L5)
 
-3. Assets
+3. **Assets**
 
-- Add any assets (images) to the [`assets`](https://github.com/mittal-parth/personal-portfolio/tree/main/src/assets) folder.
-- Import the asset and export it using the[`/src/assets/index.js`](https://github.com/mittal-parth/personal-portfolio/blob/main/src/assets/index.js) file.
+    - Add any assets (images) to the [`assets`](https://github.com/mittal-parth/personal-portfolio/tree/main/src/assets) folder.
+    - Import the asset and export it using the[`/src/assets/index.js`](https://github.com/mittal-parth/personal-portfolio/blob/main/src/assets/index.js) file.
 
-4. Creating a .env file
+4. **Creating a .env file**
 
-    > Environment variables store sensitive information that vary for the user and should not be checked into source control.
-    > One such example is the GitHub personal access token to automatically fetch the Open Source Contributions.
+        > Environment variables store sensitive information that vary for the user and should not be checked into source control.
+        > One such example is the GitHub personal access token to automatically fetch the Open Source Contributions.
 
-- A personal access token (classic) can be created to use the GitHub API following the official guide from GitHub - [GitHub Docs - Creating  personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic). Giving it repo:status, public_repo, read:project, read:org scopes is sufficient.
-- Create a file called `.env` in the root project folder
-- Copy over the contents of the `.env.example` example file into the `.env` file.
-- Replace the value of the environment variable value(s) with the values you want the environment variables to hold, for e.g. `VITE_GH_TOKEN=YOUR_GITHUB_TOKEN` where `YOUR_GITHUB_TOKEN` is the personal access token you generated earlier.
+    - A personal access token (classic) can be created to use the GitHub API following the official guide from GitHub - [GitHub Docs - Creating  personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic). Giving it repo:status, public_repo, read:project, read:org scopes is sufficient.
+    - Create a file called `.env` in the root project folder
+    - Copy over the contents of the `.env.example` example file into the `.env` file.
+    - Replace the value of the environment variable value(s) with the values you want the environment variables to hold, for e.g. `VITE_GH_TOKEN=YOUR_GITHUB_TOKEN` where `YOUR_GITHUB_TOKEN` is the personal access token you generated earlier.
 
 
 
@@ -118,6 +157,16 @@ our community aspires to be a respectful place both during online and in-person 
 ### Run server
 
 - `npx netlify dev`
+
+### Testing the LinkedIn Import
+
+If you're making changes to the LinkedIn import functionality, you can run the test suite to ensure everything works as expected:
+
+ **Run all test cases**:
+   ```bash
+   python3 -m unittest snippets/test_bulk_import.py
+   ```
+
 
 <br/>
 
