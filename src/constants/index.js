@@ -603,7 +603,7 @@ export const projects = [
     github: "https://github.com/mittal-parth/hackathon-curation-agent",
     image: hackathon_curation_agent,
     content:
-      "Participate in AI-personalised treasure hunts where each clue is a physical location. Earn on-chain rewards and onboard a million users. Overall winning project at ETHIndia'24.",
+      "An intelligent agent that automatically curates hackathons from your email newsletters, evaluates them using AI, and posts the best ones to Twitter.",
     stack: [
       {
         id: "icon-1",
@@ -869,7 +869,7 @@ export const projects = [
     github: "https://github.com/mittal-parth/personal-portfolio",
     link: "https://parthmittal.netlify.app/",
     image: portfolio,
-    content: "Open source developer portfolio template with modern UI/UX. 125+ stars on GitHub.",
+    content: "Open source developer portfolio template with modern UI/UX. 140+ stars on GitHub.",
     stack: [
       {
         id: "icon-1",
