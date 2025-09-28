@@ -30,6 +30,8 @@ import {
   khoj,
   kosh,
   polkadot_dev_cli,
+  hackathon_curation_agent,
+  kudos,
 } from "../assets";
 
 import {
@@ -59,35 +61,34 @@ import {
   SiMysql,
   SiSolidity,
   SiNetlify,
-  SiChartdotjs,
   SiVite,
   SiArduino,
   SiWeb3Dotjs,
   SiIpfs,
   SiDotnet,
   SiTwilio,
-  SiFlutter,
-  SiReplit,
   SiFlask,
-  SiFigma,
-  SiGooglemaps,
   SiOpenai,
   SiGooglecloud,
   SiNextdotjs,
   SiTypescript,
-  SiClaude,
   SiOracle,
+  SiGmail,
+  SiGooglesheets,
+  SiThirdweb  
 } from "react-icons/si";
 
 import { FaHardHat, FaRust } from "react-icons/fa";
 
 import { IoIosNotificationsOutline } from "react-icons/io";
 
-import { FaGolang } from "react-icons/fa6";
+import { FaGolang, FaXTwitter } from "react-icons/fa6";
 
 import { DiCss3, DiJava, DiMsqlServer, DiRuby } from "react-icons/di";
 import { VscAzure } from "react-icons/vsc";
 import { BiLogoVisualStudio } from "react-icons/bi";
+
+import { RiGeminiFill } from "react-icons/ri";
 
 export const resumeLink =
   "https://drive.google.com/file/d/1vkxyMDB5_KpMwt4QXFgT2aqdRizr8Czh/view?usp=sharing";
@@ -193,7 +194,7 @@ export const achievements = [
   {
     id: "a-4",
     icon: lightspeed,
-    event: "Warpspeed by Lightspeed",
+    event: "Warpspeed by Lightspeed 2023",
     position: "1st Runner Up",
     content1: "1st Runner Up Overall by Lightspeed among 107 hackers",
     content2: "Top 3 projects using Replit",
@@ -202,6 +203,24 @@ export const achievements = [
   },
   {
     id: "a-5",
+    icon: lightspeed,
+    event: "Warpspeed: Agentic AI Hackathon | Lightspeed India",
+    position: "Runners Up in the Base Track",
+    content1: "Built an ambient virtual assistant before ChatGPT Pulse",
+    content2: "Runners up in the Base Track with the Agentic AI theme for 2025",
+    project: "https://devfolio.co/projects/aeva-58d2",
+  },
+  {
+    id: "a-6",
+    icon: kudos,
+    event: "Kudos Carnival | Polkadot Blockchain Academy",
+    position: "Runner Up",
+    content1: "Finished 2nd globally among PBA Alumni in a 6-week event",
+    content2: "Contributed to several repositories in the Polkadot ecosystem in a Hacktoberfest-style event",
+    article: "https://www.morekudos.com/carnival",
+  },
+  {
+    id: "a-7",
     icon: globalAi,
     event: "Global AI HackFest 2023",
     position: "Winner",
@@ -213,7 +232,7 @@ export const achievements = [
       "https://www.linkedin.com/posts/mittal-parth_happy-to-share-that-comicifyai-emerged-as-activity-7078790186435833856-88fh",
   },
   {
-    id: "a-6",
+    id: "a-8",
     icon: dennisivy,
     event: "September Hackathon by Dennis Ivy",
     position: "Winner",
@@ -225,7 +244,7 @@ export const achievements = [
     project: "https://parthmittal.netlify.app/",
   },
   {
-    id: "a-7",
+    id: "a-9",
     icon: manipal,
     event: "Manipal Hackathon'22",
     position: "Consolation Prize",
@@ -236,7 +255,7 @@ export const achievements = [
     article: "https://shorturl.at/exEIQ",
   },
   {
-    id: "a-8",
+    id: "a-10",
     icon: icon,
     event: "ICON Hyperbuild Hackathon",
     position: "Honorable Mention",
@@ -247,7 +266,7 @@ export const achievements = [
     project: "https://devpost.com/software/green-trust-xj2w6g",
   },
   {
-    id: "a-9",
+    id: "a-11",
     icon: ethforall,
     event: "ETHForAll 2023",
     position: "Top 3 Superfluid Projects",
@@ -535,8 +554,8 @@ export const projects = [
   {
     id: "project-1",
     title: "Khoj",
-    github: "https://github.com/marcdhi/Khoj",
-    link: "https://devfolio.co/projects/khoj-3336",
+    github: "https://github.com/ayush4345/Khoj",
+    link: "https://khoj-alpha.netlify.app/",
     image: khoj,
     content:
       "Participate in AI-personalised treasure hunts where each clue is a physical location. Earn on-chain rewards and onboard a million users. Overall winning project at ETHIndia'24.",
@@ -563,55 +582,63 @@ export const projects = [
       },
       {
         id: "icon-5",
-        icon: SiClaude,
-        name: "Claude Sonnet",
+        icon: RiGeminiFill,
+        name: "Gemini",
+      },
+      {
+        id: "icon-6",
+        icon: SiThirdweb,
+        name: "Thirdweb",
+      },
+      {
+        id: "icon-7",
+        icon: SiIpfs,
+        name: "IPFS",
       },
     ],
   },
   {
     id: "project-2",
-    title: "Kosh SDK",
-    github: "https://github.com/mittal-parth/kosh-sdk",
-    link: "https://ethglobal.com/showcase/kosh-hk3mp",
-    image: kosh,
+    title: "Hackathon Curation AI Agent",
+    github: "https://github.com/mittal-parth/hackathon-curation-agent",
+    image: hackathon_curation_agent,
     content:
-      "Simple and secure way to interact with remote MCP Servers in Trusted Execution Environments (TEEs). Built at ETHGlobal Trifecta Hackathon.",
+      "An intelligent agent that automatically curates hackathons from your email newsletters, evaluates them using AI, and posts the best ones to Twitter.",
     stack: [
       {
-        id: "icon-2",
-        icon: SiTypescript,
-        name: "Typescript",
-      },
-      {
-        id: "icon-2",
-        icon: SiTailwindcss,
-        name: "TailwindCSS",
-      },
-      {
-        id: "pl-2",
+        id: "icon-1",
         icon: SiPython,
         name: "Python",
+      },
+      {
+        id: "icon-2",
+        icon: RiGeminiFill,
+        name: "Gemini",
+      },
+      {
+        id: "icon-3",
+        icon: SiGmail,
+        name: "Gmail API",
+      },
+      {
+        id: "icon-4",
+        icon: SiGooglesheets,
+        name: "Google Sheets API",
+      },
+      {
+        id: "icon-5",
+        icon: FaXTwitter,
+        name: "Twitter API",
+      },
+      {
+        id: "icon-6",
+        icon: SiGooglecloud,
+        name: "Google Cloud Platform",
       },
     ],
   },
   {
     id: "project-3",
-    title: "Polkadot Dev CLI",
-    github: "https://github.com/mittal-parth/polkadot-dev-cli",
-    link: "https://crates.io/crates/polkadot-dev-cli",
-    image: polkadot_dev_cli,
-    content:
-      "CLI tool for Polkadot developers bundling linting, formatting, and version management. cargo install polkadot-dev-cli.",
-    stack: [
-      {
-        id: "icon-1",
-        icon: FaRust,
-        name: "Rust",
-      },
-    ],
-  },
-  {
-    id: "project-4",
     title: "Comicify.ai",
     github: "https://github.com/ayush4345/Comicify.ai",
     link: "https://devfolio.co/projects/comicifyai-97a6",
@@ -643,6 +670,22 @@ export const projects = [
         id: "icon-5",
         icon: SiFlask,
         name: "Flask",
+      },
+    ],
+  },
+  {
+    id: "project-4",
+    title: "Polkadot Dev CLI",
+    github: "https://github.com/mittal-parth/polkadot-dev-cli",
+    link: "https://crates.io/crates/polkadot-dev-cli",
+    image: polkadot_dev_cli,
+    content:
+      "CLI tool for Polkadot developers bundling linting, formatting, and version management. cargo install polkadot-dev-cli.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: FaRust,
+        name: "Rust",
       },
     ],
   },
@@ -826,7 +869,7 @@ export const projects = [
     github: "https://github.com/mittal-parth/personal-portfolio",
     link: "https://parthmittal.netlify.app/",
     image: portfolio,
-    content: "Open source developer portfolio template with modern UI/UX. 125+ stars on GitHub.",
+    content: "Open source developer portfolio template with modern UI/UX. 140+ stars on GitHub.",
     stack: [
       {
         id: "icon-1",
@@ -842,6 +885,32 @@ export const projects = [
         id: "icon-3",
         icon: AiFillHtml5,
         name: "HTML",
+      },
+    ],
+  },
+  {
+    id: "project-11",
+    title: "Kosh SDK",
+    github: "https://github.com/mittal-parth/kosh-sdk",
+    link: "https://ethglobal.com/showcase/kosh-hk3mp",
+    image: kosh,
+    content:
+      "Simple and secure way to interact with remote MCP Servers in Trusted Execution Environments (TEEs). Built at ETHGlobal Trifecta Hackathon.",
+    stack: [
+      {
+        id: "icon-2",
+        icon: SiTypescript,
+        name: "Typescript",
+      },
+      {
+        id: "icon-2",
+        icon: SiTailwindcss,
+        name: "TailwindCSS",
+      },
+      {
+        id: "pl-2",
+        icon: SiPython,
+        name: "Python",
       },
     ],
   },
@@ -1033,7 +1102,7 @@ export const socialMedia = [
   {
     id: "social-media-3",
     icon: AiFillMail,
-    link: "mailto:mittalparth22@gmail.com",
+    link: "mailto:work.parthmittal@gmail.com",
   },
   {
     id: "social-media-4",
@@ -1052,7 +1121,7 @@ export const aboutMe = {
   name: "Parth Mittal",
   githubUsername: "mittal-parth",
   tagLine:
-    "MTS-1 @Oracle | ex-Tech Lead @IRIS,NITK | ETHIndia'22,24 Winner | 9x Hackathon Winner | NITK'24 | PBA-5",
+    "MTS-1 @ Oracle | 10x Hackathon Winner 🏆 | ETHIndia'22,24 Winner | NITK'24 | PBA-5",
   intro:
     "Software Developer from India who is either busy improving his craft or pondering over the next big idea.",
 };
