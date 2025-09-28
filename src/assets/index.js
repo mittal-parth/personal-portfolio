@@ -35,6 +35,8 @@ import globalAi from "./global-ai.jpeg";
 import khoj from "./khoj.jpg";
 import kosh from "./kosh.png";
 import polkadot_dev_cli from "./polkadot-dev-cli.png";
+import hackathon_curation_agent from "./hackathon_curation_agent.png";
+import kudos from "./kudos.svg";
 
 export {
   menu,
@@ -73,5 +75,7 @@ export {
   khoj,
   kosh,
   polkadot_dev_cli,
-  placeholder
+  placeholder,
+  hackathon_curation_agent,
+  kudos
 };
