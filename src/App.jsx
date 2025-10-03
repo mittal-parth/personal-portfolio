@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
 import styles from "./style";
+
 import {
   Navbar,
   Hero,
