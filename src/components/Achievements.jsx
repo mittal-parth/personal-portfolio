@@ -4,7 +4,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { FaYoutube } from "react-icons/fa";
 import { TiNews } from "react-icons/ti";
 import { LinkPreview } from "./link-preview";
-import { achievements } from "../constants";
+import { achievements } from "../constants"; //bhai yaha see picture sab lekar aana...bhai ye preset milta hai ise animation ka..
 import styles from "../style";
 
 const Achievements = () => {
@@ -71,6 +71,7 @@ const Achievements = () => {
         <div className={`${styles.boxWidth}`}>
           <div className="my-20 overflow-hidden">
             <div ref={containerRef} className="flex transition-transform duration-500 ease-in-out" style={{transform: `translateX(-${currentIndex * cardTotalWidth}px)`,}}>
+              {/* bhai yaha ham log map karte hai..sab card ko */}
               {achievements.map((achievement, index) => (
                 <AchievementCard key={index} {...achievement} />
               ))}
@@ -95,6 +96,7 @@ const AchievementCard = (props) => {
   return (
     <div className="achievement-card flex-shrink-0 flex flex-col md:w-[400px] w-[320px] justify-around px-6 py-4 rounded-[20px] md:mr-10 mr-6 my-5 transition-all duration-300 transform border hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 dark:border-gray-700 dark:hover:border-transparent">
       <img src={props.icon}
+      //yaha icons aate hain..from props which is in constants
        alt={props.event} className="w-[45px] h-[45px] rounded-full mt-1 mb-1"
       />
       <div className="flex flex-col justify-end mt-4 mb-1">
@@ -130,7 +132,8 @@ const AchievementCard = (props) => {
       </div>
       <div className="flex flex-row mb-2 font-poppins font-normal text-dimWhite gap-3">
 
-
+        {/* baaki sab jaisa ka vaisa from the link you shared */}
+        
         {props.article && (
           <LinkPreview url={props.article}>
             <a href={props.article} target="_blank" rel="noopener noreferrer"

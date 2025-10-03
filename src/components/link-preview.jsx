@@ -7,7 +7,7 @@ export const LinkPreview = ({ children, url, className }) => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const ref = useRef(null);
 
-    const updatePosition = () => {
+    const updatePosition = () => { //yeh sab calculates where your card should appear play with this for adjusting..got it from the link u send..thanks btw
         if (ref.current) {
             const rect = ref.current.getBoundingClientRect();
             const previewWidth = 300;
@@ -15,17 +15,19 @@ export const LinkPreview = ({ children, url, className }) => {
 
             let xPos = rect.left + rect.width / 2;
 
-            if (xPos - previewWidth / 2 < 10) {
+            if (xPos - previewWidth / 2 < 10) 
+            {
                 xPos = previewWidth / 2 + 10;
             }
-
-            if (xPos + previewWidth / 2 > windowWidth - 10) {
+            //this is to prevent getting off screen on right side
+            if (xPos + previewWidth / 2 > windowWidth - 10) 
+            {
                 xPos = windowWidth - previewWidth / 2 - 10;
             }
 
             setPosition({
-                x: xPos + 50,
-                y: rect.bottom - 100,
+                x: xPos + 50,//and bhai isse se x axis pe move kar sakte ho
+                y: rect.bottom - 100,//play with this to move up down bhai
             });
         }
     };
@@ -43,7 +45,7 @@ export const LinkPreview = ({ children, url, className }) => {
         }
     }, [isOpen, url]);
 
-    const handleMouseEnter = () => {
+    const handleMouseEnter = () => {//mouseenter just a usual thing as yk
         setIsOpen(true);
     };
 
@@ -64,13 +66,21 @@ export const LinkPreview = ({ children, url, className }) => {
         const domain = getDomain(url);
 
         if (domain.includes("github")) {
+
             return "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=400&h=250&fit=crop";
+
         } else if (domain.includes("youtube") || domain.includes("youtu.be")) {
+
             return "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=400&h=250&fit=crop";
+
         } else if (domain.includes("medium") || domain.includes("dev.to") || domain.includes("blog")) {
+
             return "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=250&fit=crop";
+
         } else if (domain.includes("linkedin")) {
+
             return "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=250&fit=crop";
+            
         } else {
             return "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop";
         }
@@ -111,9 +121,9 @@ export const LinkPreview = ({ children, url, className }) => {
                                 pointerEvents: "none",
                             }}
                         >
+                            {/* bhai change the design as per your need  below for the card things also box width*/}
                             <div className="bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-purple-500 rounded-xl shadow-2xl shadow-purple-500/50 overflow-hidden w-[300px] backdrop-blur-sm">
-                                <motion.div
-                                    className="relative h-[160px] overflow-hidden"
+                                <motion.div className="relative h-[160px] overflow-hidden"//change image height here bhai
                                     initial={{ scale: 1.1 }}
                                     animate={{ scale: 1 }}
                                     transition={{ duration: 0.3 }}
@@ -123,10 +133,10 @@ export const LinkPreview = ({ children, url, className }) => {
                                         alt="Preview"
                                         className="w-full h-full object-cover"
                                     />
+                                    {/* image gradient here bhai for better text visibility */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
                                 </motion.div>
-                                <motion.div
-                                    className="p-4"
+                                <motion.div className="p-4"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.1 }}
@@ -141,14 +151,12 @@ export const LinkPreview = ({ children, url, className }) => {
                                         Click to visit link
                                     </p>
                                 </motion.div>
-                                <div
-                                    className="absolute top-0 left-1/2"
-                                    style={{
-                                        transform: "translate(-50%, -50%) rotate(45deg)",
-                                    }}
+                                {/* <div className="absolute top-0 left-1/2"
+                                    style={{transform: "translate(-50%, -50%) rotate(45deg)",}}
                                 >
                                     <div className="w-3 h-3 bg-slate-900 border-l border-t border-purple-500"></div>
-                                </div>
+                                </div> //bhai if u want u can uncomment this for arrow but i dont think it looks good    */}
+
                             </div>
                         </motion.div>
                     )}
