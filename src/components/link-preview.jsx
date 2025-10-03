@@ -122,7 +122,7 @@ export const LinkPreview = ({ children, url, className }) => {
                             }}
                         >
                             {/* bhai change the design as per your need  below for the card things also box width*/}
-                            <div className="bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-purple-500 rounded-xl shadow-2xl shadow-purple-500/50 overflow-hidden w-[300px] backdrop-blur-sm">
+                            <div className="bg-gradient-to-br from-slate-800 to-slate-900 border-2  rounded-xl shadow-2xl overflow-hidden w-[300px] backdrop-blur-sm">
                                 <motion.div className="relative h-[160px] overflow-hidden"//change image height here bhai
                                     initial={{ scale: 1.1 }}
                                     animate={{ scale: 1 }}
@@ -142,7 +142,7 @@ export const LinkPreview = ({ children, url, className }) => {
                                     transition={{ delay: 0.1 }}
                                 >
                                     <div className="flex items-center gap-2 mb-2">
-                                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 animate-pulse"></div>
+                                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-white animate-pulse"></div>
                                         <p className="text-xs text-gray-300 font-medium">
                                             {getDomain(url)}
                                         </p>
