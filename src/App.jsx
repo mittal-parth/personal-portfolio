@@ -1,8 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import TestLinkPreview from './components/TestLinkPreview'; // bro u can remove this it was for debugging to understand the workflow
-
 import styles from "./style";
+
 import {
   Navbar,
   Hero,
@@ -29,7 +28,6 @@ const App = () => {
   return (
     // A div to wrap the entire application
     <div className="bg-primary w-full overflow-hidden">
-{/* <TestLinkPreview /> */}
       <AnimatePresence>
         {isLoading ? (
           <Loading key="loading" />
