@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import TestLinkPreview from './components/TestLinkPreview'; // bro u can remove this it was for debigging
+// import TestLinkPreview from './components/TestLinkPreview'; // bro u can remove this it was for debugging to understand the workflow
 
 import styles from "./style";
 import {
