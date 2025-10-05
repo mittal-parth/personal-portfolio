@@ -8,10 +8,11 @@ import { achievements } from "../constants";
 import styles from "../style";
 
 const Achievements = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [cardTotalWidth, setCardTotalWidth] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);// State to track current carousel position
+  const [cardTotalWidth, setCardTotalWidth] = useState(0);// State to store total width of each card (width + margin) for scroll calculations
   const containerRef = useRef(null);
 
+  // Calculate card width on mount and window resize for responsive carousel
   useEffect(() => {
     const updateCardWidth = () => {
       if (containerRef.current) {
@@ -29,13 +30,13 @@ const Achievements = () => {
       window.removeEventListener("resize", updateCardWidth);
     };
   }, []);
-
+  // Navigation handlers
   const handleNext = () => {
     if (currentIndex < achievements.length - 1) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
-
+  //Navigate to previous achievement card
   const handlePrev = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prevIndex) => prevIndex - 1);
@@ -68,11 +69,13 @@ const Achievements = () => {
                 transform: `translateX(-${currentIndex * cardTotalWidth}px)`,
               }}
             >
+              {/* Render all achievement cards */}
               {achievements.map((achievement, index) => (
                 <AchievementCard key={index} {...achievement} />
               ))}
             </div>
             <div className="flex justify-end mb-4">
+              {/* Navigation buttons */}
               <button
                 onClick={handlePrev}
                 disabled={isPrevDisabled}
@@ -97,35 +100,40 @@ const Achievements = () => {
 
 const AchievementCard = (props) => {
   return (
-    <div className="achievement-card flex-shrink-0 flex flex-col md:w-[400px] w-[320px] justify-around px-6 py-4 rounded-[20px] md:mr-10 mr-6 my-5 transition-all duration-300 transform border hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 dark:border-gray-700 dark:hover:border-transparent">
+    <div className="achievement-card flex-shrink-0 flex flex-col md:w-[400px] w-[320px] justify-around px-6 py-4 rounded-[20px] md:mr-10 mr-6 my-5 transition-all duration-300 transform border hover:border-teal-200 hover:shadow-lg hover:shadow-teal-200/20 dark:border-gray-700 dark:hover:border-transparent">
+      {/* Achievement icon/logo */}
       <img
         src={props.icon}
         alt={props.event}
         className="w-[45px] h-[45px] rounded-full mt-1 mb-1"
       />
       <div className="flex flex-col justify-end mt-4 mb-1">
+        {/* Event name */}
         <p className="font-poppins font-normal text-xl text-white leading-[24px] mb-2">
           {props.event}
         </p>
+        {/* Position/Award */}
         <p className="font-poppins italic font-normal text-lg text-gradient mb-3">
           {props.position}
         </p>
+         {/* Achievement descriptions - only render if content exists */}
         {props.content1 && (
           <p className="font-poppins font-normal text-dimWhite text-sm mb-1">
-            {props.content1}
+            🚀 {props.content1}
           </p>
         )}
         {props.content2 && (
           <p className="font-poppins font-normal text-dimWhite text-sm mb-1">
-            {props.content2}
+            ⚡ {props.content2}
           </p>
         )}
         {props.content3 && (
           <p className="font-poppins font-normal text-dimWhite text-sm mb-4">
-            {props.content3}
+            🔥 {props.content3}
           </p>
         )}
       </div>
+      {/* Social/Project links with hover preview - only render if link exists */}
       <div className="flex flex-row mb-2 font-poppins font-normal text-dimWhite gap-3">
         {props.article && (
           <LinkPreview url={props.article}>
@@ -133,7 +141,7 @@ const AchievementCard = (props) => {
               href={props.article}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center hover:text-purple-400 hover:scale-110 transition-all"
+              className="inline-flex items-center hover:text-teal-200 hover:scale-110 transition-all"
             >
               <TiNews size="1.5rem" className="inline" />
             </a>
@@ -142,7 +150,7 @@ const AchievementCard = (props) => {
         {props.youtube && (
           <LinkPreview
             url={props.youtube}
-            className="inline-flex items-center hover:text-purple-400 hover:scale-110 transition-all"
+            className="inline-flex items-center hover:text-teal-200 hover:scale-110 transition-all"
           >
             <a
               href={props.youtube}
@@ -157,7 +165,7 @@ const AchievementCard = (props) => {
         {props.github && (
           <LinkPreview
             url={props.github}
-            className="inline-flex items-center hover:text-purple-400 hover:scale-110 transition-all"
+            className="inline-flex items-center hover:text-teal-200 hover:scale-110 transition-all"
           >
             <a
               href={props.github}
@@ -172,7 +180,7 @@ const AchievementCard = (props) => {
         {props.project && (
           <LinkPreview
             url={props.project}
-            className="inline-flex items-center hover:text-purple-400 hover:scale-110 transition-all"
+            className="inline-flex items-center hover:text-teal-200 hover:scale-110 transition-all"
           >
             <a
               href={props.project}
