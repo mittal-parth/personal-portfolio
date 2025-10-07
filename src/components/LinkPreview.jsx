@@ -3,20 +3,24 @@ import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const LinkPreview = ({ children, url, className }) => {
-    const [isOpen, setIsOpen] = useState(false); //tooltip hidden or not
-    const [position, setPosition] = useState({ x: 0, y: 0 }); //tracks position of tooltip
-    const [metadata, setMetadata] = useState(null);//shows fetched metadata
-    const [loading, setLoading] = useState(false);//tracks api status
+    const [isOpen, setIsOpen] = useState(false); // tooltip hidden or not
+    const [position, setPosition] = useState({ x: 0, y: 0 }); // tracks position of tooltip
+    const [metadata, setMetadata] = useState(null); // shows fetched metadata
+    const [loading, setLoading] = useState(false); // tracks api status
     const ref = useRef(null);
+
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
     const updatePosition = () => {
         if (ref.current) {
             const rect = ref.current.getBoundingClientRect();
             const previewWidth = 250; // Adjust this value to change preview card width
             const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
             let xPos = rect.left + rect.width / 2;
+            let yPos = rect.bottom + 10;
 
-            if (xPos - previewWidth / 2 < 10) { //Line 19: Preview width configuration (adjust this value to change preview width)
+            if (xPos - previewWidth / 2 < 10) { // Preview width configuration (adjust this value to change preview width)
                 xPos = previewWidth / 2 + 10;
             }
 
@@ -24,9 +28,13 @@ export const LinkPreview = ({ children, url, className }) => {
                 xPos = windowWidth - previewWidth / 2 - 10;
             }
 
+            if (yPos + 180 > windowHeight) {
+                yPos = rect.top - 190;
+            }
+
             setPosition({
-                x: xPos + 50, // Adjust x axis for the box
-                y: rect.bottom - 5, // Adjust y axis for the box
+                x: xPos,
+                y: yPos,
             });
         }
     };
@@ -86,7 +94,9 @@ export const LinkPreview = ({ children, url, className }) => {
     };
 
     const handleMouseEnter = () => {
-        setIsOpen(true);
+        if (!isMobile) {
+            setIsOpen(true);
+        }
     };
     const handleMouseLeave = () => {
         setIsOpen(false);
@@ -101,13 +111,15 @@ export const LinkPreview = ({ children, url, className }) => {
         }
     };
 
-    const getFallbackImage = (url) => { //until it loads from API or if API fails it shows default images based on domain
+    const getFallbackImage = (url) => { // until it loads from API or if API fails it shows default images based on domain
         const domain = getDomain(url);
 
         if (domain.includes("github")) {
             return "https://avatars.githubusercontent.com/u/76661350?v=4";
         } else if (domain.includes("youtube") || domain.includes("youtu.be")) {
             return "https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png";
+        } else if (domain.includes("twitter") || domain.includes("x.com")) {
+            return "https://abs.twimg.com/icons/apple-touch-icon-192x192.png";
         } else if (domain.includes("medium") || domain.includes("dev.to") || domain.includes("blog")) {
             return "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=250&fit=crop";
         } else if (domain.includes("linkedin")) {

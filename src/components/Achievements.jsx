@@ -8,8 +8,8 @@ import { achievements } from "../constants";
 import styles from "../style";
 
 const Achievements = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);// State to track current carousel position
-  const [cardTotalWidth, setCardTotalWidth] = useState(0);// State to store total width of each card (width + margin) for scroll calculations
+  const [currentIndex, setCurrentIndex] = useState(0); // State to track current carousel position
+  const [cardTotalWidth, setCardTotalWidth] = useState(0); // State to store total width of each card (width + margin) for scroll calculations
   const containerRef = useRef(null);
 
   // Calculate card width on mount and window resize for responsive carousel
@@ -36,7 +36,7 @@ const Achievements = () => {
       setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
-  //Navigate to previous achievement card
+  // Navigate to previous achievement card
   const handlePrev = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prevIndex) => prevIndex - 1);
