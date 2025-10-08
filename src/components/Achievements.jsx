@@ -16,10 +16,13 @@ const Achievements = () => {
   useEffect(() => {
     const updateCardWidth = () => {
       if (containerRef.current) {
-        const card = containerRef.current.querySelector('.achievement-card');
+        const card = containerRef.current.querySelector(".achievement-card");
         if (card) {
           const cardWidth = card.offsetWidth;
-          const cardMargin = parseInt(window.getComputedStyle(card).marginRight, 10);
+          const cardMargin = parseInt(
+            window.getComputedStyle(card).marginRight,
+            10
+          );
           setCardTotalWidth(cardWidth + cardMargin);
         }
       }
@@ -116,7 +119,7 @@ const AchievementCard = (props) => {
         <p className="font-poppins italic font-normal text-lg text-gradient mb-3">
           {props.position}
         </p>
-         {/* Achievement descriptions - only render if content exists */}
+        {/* Achievement descriptions - only render if content exists */}
         {props.content1 && (
           <p className="font-poppins font-normal text-dimWhite text-sm mb-1">
             🚀 {props.content1}
