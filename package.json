@@ -9,22 +9,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.7.7",
-    "framer-motion": "^7.10.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "axios": "^1.12.2",
+    "framer-motion": "^12.23.22",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",
-    "react-lottie-player": "1.5.4",
+    "react-lottie-player": "2.1.0",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.1.0",
-    "autoprefixer": "^10.4.8",
-    "netlify-cli": "^19.1.4",
-    "postcss": "^8.4.16",
-    "tailwindcss": "^3.1.8",
-    "vite": "^3.1.0"
+    
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.1",
+    "@vitejs/plugin-react": "^5.0.4",
+    "autoprefixer": "^10.4.21",
+    "netlify-cli": "^23.9.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.13",
+    "vite": "^7.1.9"
   }
 }
