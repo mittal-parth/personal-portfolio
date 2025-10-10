@@ -1,7 +1,5 @@
 import {
   nitk,
-  cluboard,
-  cash_flow,
   gdsc,
   iris,
   ecell,
@@ -11,7 +9,6 @@ import {
   chargeswap,
   placeicon,
   recruitment,
-  huntly,
   oracle,
   comicify_ai,
   greentrust,
@@ -75,7 +72,8 @@ import {
   SiOracle,
   SiGmail,
   SiGooglesheets,
-  SiThirdweb  
+  SiThirdweb,
+  SiIntellijidea
 } from "react-icons/si";
 
 import { FaHardHat, FaRust } from "react-icons/fa";
@@ -285,58 +283,63 @@ export const skills = [
     items: [
       {
         id: "pl-1",
-        icon: DiRuby,
-        name: "Ruby",
-      },
-      {
-        id: "pl-2",
         icon: SiPython,
         name: "Python",
       },
       {
-        id: "pl-3",
-        icon: SiCplusplus,
-        name: "C++",
-      },
-      {
-        id: "pl-4",
-        icon: FaGolang,
-        name: "Go",
-      },
-      {
-        id: "pl-5",
-        icon: FaRust,
-        name: "Rust",
-      },
-      {
-        id: "pl-6",
+        id: "pl-2",
         icon: DiJava,
         name: "Java",
       },
       {
-        id: "pl-7",
-        icon: SiC,
-        name: "C",
+        id: "pl-3",
+        icon: SiSolidity,
+        name: "Solidity",
       },
       {
-        id: "pl-8",
-        icon: AiFillHtml5,
-        name: "HTML",
+        id: "pl-4",
+        icon: DiRuby,
+        name: "Ruby",
       },
       {
-        id: "pl-9",
-        icon: DiCss3,
-        name: "CSS",
-      },
-      {
-        id: "pl-10",
+        id: "pl-5",
         icon: SiJavascript,
         name: "JavaScript",
       },
       {
+        id: "pl-6",
+        icon: SiTypescript,
+        name: "TypeScript",
+      },
+      {
+        id: "pl-7",
+        icon: SiCplusplus,
+        name: "C++",
+      },
+      {
+        id: "pl-8",
+        icon: FaGolang,
+        name: "Go",
+      },
+      {
+        id: "pl-9",
+        icon: FaRust,
+        name: "Rust",
+      },
+      {
+        id: "pl-10",
+        icon: SiC,
+        name: "C",
+      },
+      {
         id: "pl-11",
-        icon: SiSolidity,
-        name: "Solidity",
+        icon: AiFillHtml5,
+        name: "HTML",
+      },
+      {
+        id: "pl-12",
+        icon: DiCss3,
+        name: "CSS",
       },
     ],
   },
@@ -345,18 +348,18 @@ export const skills = [
     items: [
       {
         id: "f-1",
+        icon: SiReact,
+        name: "ReactJS",
+      },
+      {
+        id: "f-2",
         icon: SiDjango,
         name: "Django",
       },
       {
-        id: "f-2",
+        id: "f-3",
         icon: SiRubyonrails,
         name: "Ruby on Rails",
-      },
-      {
-        id: "f-3",
-        icon: SiReact,
-        name: "ReactJS",
       },
       {
         id: "f-4",
@@ -394,47 +397,52 @@ export const skills = [
         name: "Oracle Cloud",
       },
       {
-        id: "t-1",
+        id: "t-2",
         icon: VscAzure,
         name: "Azure",
       },
       {
-        id: "t-2",
+        id: "t-3",
         icon: SiMysql,
         name: "MySQL",
       },
       {
-        id: "t-3",
+        id: "t-4",
         icon: SiPostman,
         name: "Postman",
       },
       {
-        id: "t-4",
+        id: "t-5",
         icon: BiLogoVisualStudio,
         name: "VS Code",
       },
       {
-        id: "t-5",
+        id: "t-6",
+        icon: SiIntellijidea,
+        name: "IntelliJ IDEA",
+      },
+      {
+        id: "t-7",
         icon: SiGit,
         name: "Git",
       },
       {
-        id: "t-6",
+        id: "t-8",
         icon: AiFillGithub,
         name: "GitHub",
       },
       {
-        id: "t-7",
+        id: "t-9",
         icon: AiOutlineGitlab,
         name: "Gitlab",
       },
       {
-        id: "t-8",
+        id: "t-10",
         icon: SiNetlify,
         name: "Netlify",
       },
       {
-        id: "t-9",
+        id: "t-11",
         icon: SiVite,
         name: "ViteJS",
       },
@@ -450,11 +458,29 @@ export const experiences = [
     link: "https://www.oracle.com/in/",
     positions: [
       {
-        title: "Member of Technical Staff - 1",
-        duration: "Jul 2024 - Present",
+        title: "Member of Technical Staff",
+        duration: "Oct 2025 - Present",
         content: [
           {
             text: "Working in the Database as a Service Control Plane team for Oracle Cloud Infrastructure.",
+            link: "",
+          },
+        ],
+      },
+      {
+        title: "Member of Technical Staff - 1",
+        duration: "Jul 2024 - Sep 2025",
+        content: [
+          {
+            text: "Made several fixes to reduce the time taken for backup deletion from OCI Object Storage for large customers resulting in decreased costs.",
+            link: "",
+          },
+          {
+            text: "Worked towards building an AI On-Call Agent using an internal agentic framework.",
+            link: "",
+          },
+          {
+            text: "Developed a common integration test framework for ExaCS, ExaDB-XS and ExaCC, reducing code maintenance by ~67% and increased coverage by ~50%",
             link: "",
           },
         ],
@@ -554,44 +580,44 @@ export const projects = [
   {
     id: "project-1",
     title: "Khoj",
-    github: "https://github.com/ayush4345/Khoj",
-    link: "https://khoj-alpha.netlify.app/",
+    github: "https://github.com/mittal-parth/Khoj",
+    link: "https://playkhoj.com/",
     image: khoj,
     content:
       "Participate in AI-personalised treasure hunts where each clue is a physical location. Earn on-chain rewards and onboard a million users. Overall winning project at ETHIndia'24.",
     stack: [
       {
-        id: "icon-1",
+        id: "proj1-icon-1",
         icon: SiSolidity,
         name: "Solidity",
       },
       {
-        id: "icon-2",
+        id: "proj1-icon-2",
         icon: SiTypescript,
         name: "Typescript",
       },
       {
-        id: "icon-3",
+        id: "proj1-icon-3",
         icon: SiReact,
         name: "React.js",
       },
       {
-        id: "icon-4",
+        id: "proj1-icon-4",
         icon: SiTailwindcss,
         name: "TailwindCSS",
       },
       {
-        id: "icon-5",
+        id: "proj1-icon-5",
         icon: RiGeminiFill,
         name: "Gemini",
       },
       {
-        id: "icon-6",
+        id: "proj1-icon-6",
         icon: SiThirdweb,
         name: "Thirdweb",
       },
       {
-        id: "icon-7",
+        id: "proj1-icon-7",
         icon: SiIpfs,
         name: "IPFS",
       },
@@ -606,32 +632,32 @@ export const projects = [
       "An intelligent agent that automatically curates hackathons from your email newsletters, evaluates them using AI, and posts the best ones to Twitter.",
     stack: [
       {
-        id: "icon-1",
+        id: "proj2-icon-1",
         icon: SiPython,
         name: "Python",
       },
       {
-        id: "icon-2",
+        id: "proj2-icon-2",
         icon: RiGeminiFill,
         name: "Gemini",
       },
       {
-        id: "icon-3",
+        id: "proj2-icon-3",
         icon: SiGmail,
         name: "Gmail API",
       },
       {
-        id: "icon-4",
+        id: "proj2-icon-4",
         icon: SiGooglesheets,
         name: "Google Sheets API",
       },
       {
-        id: "icon-5",
+        id: "proj2-icon-5",
         icon: FaXTwitter,
         name: "Twitter API",
       },
       {
-        id: "icon-6",
+        id: "proj2-icon-6",
         icon: SiGooglecloud,
         name: "Google Cloud Platform",
       },
@@ -647,27 +673,27 @@ export const projects = [
       "Convert any academic/news/boring text into cool comic strips using GPT-3.5 and Stable Diffusion!",
     stack: [
       {
-        id: "icon-1",
+        id: "proj3-icon-1",
         icon: SiReact,
         name: "React",
       },
       {
-        id: "icon-2",
+        id: "proj3-icon-2",
         icon: SiTailwindcss,
         name: "TailwindCSS",
       },
       {
-        id: "icon-3",
+        id: "proj3-icon-3",
         icon: SiOpenai,
         name: "OpenAI",
       },
       {
-        id: "icon-4",
+        id: "proj3-icon-4",
         icon: SiGooglecloud,
         name: "Google Cloud Platform",
       },
       {
-        id: "icon-5",
+        id: "proj3-icon-5",
         icon: SiFlask,
         name: "Flask",
       },
@@ -683,7 +709,7 @@ export const projects = [
       "CLI tool for Polkadot developers bundling linting, formatting, and version management. cargo install polkadot-dev-cli.",
     stack: [
       {
-        id: "icon-1",
+        id: "proj4-icon-1",
         icon: FaRust,
         name: "Rust",
       },
@@ -699,17 +725,17 @@ export const projects = [
       "The official recruitment portal for non-teaching staff with an admin panel, email notifications and payment integration.",
     stack: [
       {
-        id: "icon-1",
+        id: "proj5-icon-1",
         icon: SiRubyonrails,
         name: "Ruby on Rails",
       },
       {
-        id: "icon-2",
+        id: "proj5-icon-2",
         icon: SiTailwindcss,
         name: "TailwindCSS",
       },
       {
-        id: "icon-3",
+        id: "proj5-icon-3",
         icon: SiJquery,
         name: "jQuery",
       },
@@ -725,32 +751,32 @@ export const projects = [
       "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
     stack: [
       {
-        id: "icon-1",
+        id: "proj6-icon-1",
         icon: SiReact,
         name: "React",
       },
       {
-        id: "icon-2",
+        id: "proj6-icon-2",
         icon: SiTailwindcss,
         name: "TailwindCSS",
       },
       {
-        id: "icon-3",
+        id: "proj6-icon-3",
         icon: SiNextdotjs,
         name: "Next.js",
       },
       {
-        id: "icon-4",
+        id: "proj6-icon-4",
         icon: SiIpfs,
         name: "IPFS",
       },
       {
-        id: "icon-5",
+        id: "proj6-icon-5",
         icon: SiSolidity,
         name: "Solidity",
       },
       {
-        id: "icon-6",
+        id: "proj6-icon-6",
         icon: IoIosNotificationsOutline,
         name: "Push Protocol",
       },
@@ -766,37 +792,37 @@ export const projects = [
       "A Blockchain-based EV-Battery swapping solution - winning project at ETHIndia'22, the world's largest Ethereum Hackathon.",
     stack: [
       {
-        id: "icon-1",
+        id: "proj7-icon-1",
         icon: SiReact,
         name: "React",
       },
       {
-        id: "icon-3",
+        id: "proj7-icon-2",
         icon: SiWeb3Dotjs,
         name: "Web3.js",
       },
       {
-        id: "icon-4",
+        id: "proj7-icon-3",
         icon: SiSolidity,
         name: "Solidity",
       },
       {
-        id: "icon-5",
+        id: "proj7-icon-4",
         icon: FaHardHat,
         name: "HardHat",
       },
       {
-        id: "icon-6",
+        id: "proj7-icon-5",
         icon: SiIpfs,
         name: "IPFS",
       },
       {
-        id: "icon-7",
+        id: "proj7-icon-6",
         icon: SiArduino,
         name: "Arduino",
       },
       {
-        id: "icon-8",
+        id: "proj7-icon-7",
         icon: IoIosNotificationsOutline,
         name: "Push Protocol",
       },
@@ -812,27 +838,27 @@ export const projects = [
       "Restaurant, Place, Table and realtime Reservation Management with Multi-Tenant Architecture, RBAC, SMS and Email integration for Samsotech International",
     stack: [
       {
-        id: "icon-1",
+        id: "proj8-icon-1",
         icon: SiDotnet,
         name: "Dot Net Core MVC 6",
       },
       {
-        id: "icon-2",
+        id: "proj8-icon-2",
         icon: SiBootstrap,
         name: "Bootstrap",
       },
       {
-        id: "icon-3",
+        id: "proj8-icon-3",
         icon: DiMsqlServer,
         name: "MS Sql Server",
       },
       {
-        id: "icon-4",
+        id: "proj8-icon-4",
         icon: SiJquery,
         name: "jQuery",
       },
       {
-        id: "icon-5",
+        id: "proj8-icon-5",
         icon: SiTwilio,
         name: "Twillio",
       },
@@ -847,17 +873,17 @@ export const projects = [
     content: "The official website of CDC, NITK with a custom built CMS.",
     stack: [
       {
-        id: "icon-1",
+        id: "proj9-icon-1",
         icon: SiRubyonrails,
         name: "Ruby on Rails",
       },
       {
-        id: "icon-2",
+        id: "proj9-icon-2",
         icon: SiBootstrap,
         name: "Bootstrap",
       },
       {
-        id: "icon-3",
+        id: "proj9-icon-3",
         icon: SiJavascript,
         name: "JavaScript",
       },
@@ -872,17 +898,17 @@ export const projects = [
     content: "Open source developer portfolio template with modern UI/UX. 140+ stars on GitHub.",
     stack: [
       {
-        id: "icon-1",
+        id: "proj10-icon-1",
         icon: SiReact,
         name: "React",
       },
       {
-        id: "icon-2",
+        id: "proj10-icon-2",
         icon: SiTailwindcss,
         name: "Tailwind CSS",
       },
       {
-        id: "icon-3",
+        id: "proj10-icon-3",
         icon: AiFillHtml5,
         name: "HTML",
       },
@@ -898,17 +924,17 @@ export const projects = [
       "Simple and secure way to interact with remote MCP Servers in Trusted Execution Environments (TEEs). Built at ETHGlobal Trifecta Hackathon.",
     stack: [
       {
-        id: "icon-2",
+        id: "proj11-icon-1",
         icon: SiTypescript,
         name: "Typescript",
       },
       {
-        id: "icon-2",
+        id: "proj11-icon-2",
         icon: SiTailwindcss,
         name: "TailwindCSS",
       },
       {
-        id: "pl-2",
+        id: "proj11-icon-3",
         icon: SiPython,
         name: "Python",
       },
@@ -1121,7 +1147,7 @@ export const aboutMe = {
   name: "Parth Mittal",
   githubUsername: "mittal-parth",
   tagLine:
-    "MTS-1 @ Oracle | 10x Hackathon Winner 🏆 | ETHIndia'22,24 Winner | NITK'24 | PBA-5",
+    "MTS @ Oracle | 10x Hackathon Winner 🏆 | ETHIndia'22,24 Winner | NITK'24 | PBA-5",
   intro:
     "Software Developer from India who is either busy improving his craft or pondering over the next big idea.",
 };
