@@ -120,6 +120,10 @@ export const navLinks = [
     title: "Extra Curricular",
   },
   {
+    id: "analytics",
+    title: "Analytics",
+  },
+  {
     id: "contactMe",
     title: "Contact Me",
   },

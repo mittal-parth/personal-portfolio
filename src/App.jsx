@@ -16,6 +16,8 @@ import {
   Achievements,
 } from "./components";
 
+import AnalyticsDashboard from "./analytics/AnalyticsDashboard";
+
 const App = () => {
   const [isLoading, setIsLoading] = React.useState(true);
 
@@ -69,6 +71,7 @@ const App = () => {
                 <ExtraCurricular />
               </div>
             </div>
+            <AnalyticsDashboard />
             <Footer />
           </motion.section>
         )}
