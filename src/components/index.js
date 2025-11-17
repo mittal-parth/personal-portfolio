@@ -28,5 +28,4 @@ export {
     Stats,
     Loading,
     BlogPosts,
-    Achievements,
 };
