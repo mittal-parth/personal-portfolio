@@ -287,7 +287,7 @@ export const skills = [
       },
       {
         id: "pl-2",
-        icon: SQL,
+        icon: DiMsqlServer,
         name: "SQL",
       },
     ],
@@ -352,7 +352,7 @@ export const skills = [
       },
       {
         id: "t-3",
-        icon: MSSQL,
+        icon: DiMsqlServer,
         name: "MSSQL",
       },
       {
