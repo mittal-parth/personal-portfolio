@@ -288,58 +288,8 @@ export const skills = [
       },
       {
         id: "pl-2",
-        icon: DiJava,
-        name: "Java",
-      },
-      {
-        id: "pl-3",
-        icon: SiSolidity,
-        name: "Solidity",
-      },
-      {
-        id: "pl-4",
-        icon: DiRuby,
-        name: "Ruby",
-      },
-      {
-        id: "pl-5",
-        icon: SiJavascript,
-        name: "JavaScript",
-      },
-      {
-        id: "pl-6",
-        icon: SiTypescript,
-        name: "TypeScript",
-      },
-      {
-        id: "pl-7",
-        icon: SiCplusplus,
-        name: "C++",
-      },
-      {
-        id: "pl-8",
-        icon: FaGolang,
-        name: "Go",
-      },
-      {
-        id: "pl-9",
-        icon: FaRust,
-        name: "Rust",
-      },
-      {
-        id: "pl-10",
-        icon: SiC,
-        name: "C",
-      },
-      {
-        id: "pl-11",
-        icon: AiFillHtml5,
-        name: "HTML",
-      },
-      {
-        id: "pl-12",
-        icon: DiCss3,
-        name: "CSS",
+        icon: SQL,
+        name: "SQL",
       },
     ],
   },
@@ -403,8 +353,8 @@ export const skills = [
       },
       {
         id: "t-3",
-        icon: SiMysql,
-        name: "MySQL",
+        icon: MSSQL,
+        name: "MSSQL",
       },
       {
         id: "t-4",
@@ -431,17 +381,7 @@ export const skills = [
         icon: AiFillGithub,
         name: "GitHub",
       },
-      {
-        id: "t-9",
-        icon: AiOutlineGitlab,
-        name: "Gitlab",
-      },
-      {
-        id: "t-10",
-        icon: SiNetlify,
-        name: "Netlify",
-      },
-      {
+     {
         id: "t-11",
         icon: SiVite,
         name: "ViteJS",
@@ -453,13 +393,13 @@ export const skills = [
 // Add your current/past professional work experience here
 export const experiences = [
   {
-    organisation: "Oracle, India",
+    organisation: "Anadolu Efes, Istanbul",
     logo: oracle,
-    link: "https://www.oracle.com/in/",
+    link: "http://anadoluefes.com.tr",
     positions: [
       {
-        title: "Member of Technical Staff",
-        duration: "Oct 2025 - Present",
+        title: "BI Data Analyst",
+        duration: "Jan 2025 - Aug 2025",
         content: [
           {
             text: "Working in the Database as a Service Control Plane team for Oracle Cloud Infrastructure.",
@@ -502,9 +442,9 @@ export const experiences = [
     ],
   },
   {
-    organisation: "Averlon",
+    organisation: "Kigili, Istanbul",
     logo: averlon,
-    link: "https://averlon.ai/",
+    link: "https://corporate.kigili.com",
     positions: [
       {
         title: "Software Developer Intern",
@@ -523,9 +463,9 @@ export const experiences = [
     ],
   },
   {
-    organisation: "IRIS, NITK",
+    organisation: "LC Waikiki, Istanbul",
     logo: iris,
-    link: "https://iris.nitk.ac.in/about_us",
+    link: "https://corporate.lcwaikiki.com",
     positions: [
       {
         title: "Tech Lead",
