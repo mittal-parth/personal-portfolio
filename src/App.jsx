@@ -13,7 +13,6 @@ import {
   Projects,
   BlogPosts,
   Loading,
-  Achievements,
 } from "./components";
 
 const App = () => {
