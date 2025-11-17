@@ -146,10 +146,10 @@ export const educationList = [
   },
 ];
 
-// Add your past achievements here for example - rankings in hackathons/events
-export const achievements = [
-  {
-    id: "a-1",
+/* Add your past achievements here for example - rankings in hackathons/events
+//export const achievements = [
+//  {
+//    id: "a-1",
     icon: ethindia,
     event: "ETHIndia'24 | India's Largest Ethereum Hackathon",
     position: "Winner",
@@ -273,7 +273,7 @@ export const achievements = [
     content3: "",
     project: "https://devfolio.co/projects/green-trust-ed14",
   },
-];
+];*/
 
 // Add your software developments skills here for example - programming languages, frameworks etc.
 export const skills = [
@@ -295,11 +295,6 @@ export const skills = [
   {
     title: "Frameworks/Libraries",
     items: [
-      {
-        id: "f-1",
-        icon: SiReact,
-        name: "ReactJS",
-      },
       {
         id: "f-2",
         icon: SiDjango,
@@ -398,42 +393,10 @@ export const experiences = [
     positions: [
       {
         title: "BI Data Analyst",
-        duration: "Jan 2025 - Aug 2025",
+        duration: "Jan 2025 - Present",
         content: [
           {
             text: "Working in the Database as a Service Control Plane team for Oracle Cloud Infrastructure.",
-            link: "",
-          },
-        ],
-      },
-      {
-        title: "Member of Technical Staff - 1",
-        duration: "Jul 2024 - Sep 2025",
-        content: [
-          {
-            text: "Made several fixes to reduce the time taken for backup deletion from OCI Object Storage for large customers resulting in decreased costs.",
-            link: "",
-          },
-          {
-            text: "Worked towards building an AI On-Call Agent using an internal agentic framework.",
-            link: "",
-          },
-          {
-            text: "Developed a common integration test framework for ExaCS, ExaDB-XS and ExaCC, reducing code maintenance by ~67% and increased coverage by ~50%",
-            link: "",
-          },
-        ],
-      },
-      {
-        title: "Member of Technical Staff Intern",
-        duration: "May 2023 - Jul 2023",
-        content: [
-          {
-            text: "Worked with the Exadata Cloud@Customer team in the Database Unit.",
-            link: "",
-          },
-          {
-            text: "Wrote APIs in Java to help gracefully migrate a running ExaC@C infrastructure to a new region in the case of a region failure",
             link: "",
           },
         ],
@@ -453,10 +416,6 @@ export const experiences = [
             text: "Added support for the discoverability of Microsoft Azure assets utilising Go and Gremlin.",
             link: "",
           },
-          {
-            text: "Extended support for Azure for reachability analysis of assets for cloud security posture management.",
-            link: "",
-          },
         ],
       },
     ],
@@ -472,40 +431,6 @@ export const experiences = [
         content: [
           {
             text: "Led a team of 40+ students in digitizing administrative, academic and alumni-related work.",
-            link: "",
-          },
-          {
-            text: "Managed all phases of Software Development Life Cycle (SDLC) for 15+ modules.",
-            link: "",
-          },
-        ],
-      },
-      {
-        title: "Web Lead",
-        duration: "Apr 2022 - Present",
-        content: [
-          {
-            text: "Managed a team of 6 student developers while also overlooking multiple modules.",
-            link: "",
-          },
-        ],
-      },
-      {
-        title: "Web Developer",
-        duration: "Nov 2021 - Apr 2022",
-        content: [
-          {
-            text: "Added Conditional Fields support to the Forms Module.",
-            link: "",
-          },
-        ],
-      },
-      {
-        title: "Web Developer Intern",
-        duration: "Jun 2021 - Oct 2021",
-        content: [
-          {
-            text: "Developed a multi-role approval flow system to facilitate data collection and display on the Institute's Department Websites.",
             link: "",
           },
         ],
