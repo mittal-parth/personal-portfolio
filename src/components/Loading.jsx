@@ -15,7 +15,7 @@ const Loading = () => {
         ease: "easeInOut",
       }}
     >
-      <img src={parthmittal} alt="Parth Mittal" className="w-[80px] h-[80px]" />
+      <img src={parthmittal} alt="Bugra Alp Nas" className="w-[80px] h-[80px]" />
     </motion.div>
   );
 };
