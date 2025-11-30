@@ -1,12 +1,19 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { projects } from "../constants";
 import { AiFillGithub } from "react-icons/ai";
 import { BsLink45Deg } from "react-icons/bs";
 import styles from "../style";
+import { motion } from "framer-motion";
 
 const Project = (props) => {
   return (
-    <div className="project-card flex-shrink-0 md:w-[400px] w-[320px] px-12 py-8 md:mr-10 mr-6 my-5 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card">
+    <motion.div
+      className="px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card"
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <div className="flex flex-col sm:-mx-4 sm:flex-row">
         <img
           className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
@@ -64,104 +71,29 @@ const Project = (props) => {
           ""
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const Projects = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [cardTotalWidth, setCardTotalWidth] = useState(0);
-  const containerRef = useRef(null);
-
-  // Calculate card width on mount and window resize for responsive carousel
-  useEffect(() => {
-    const updateCardWidth = () => {
-      if (containerRef.current) {
-        const card = containerRef.current.querySelector(".project-card");
-        if (card) {
-          const cardWidth = card.offsetWidth;
-          const cardMargin = parseInt(
-            window.getComputedStyle(card).marginRight,
-            10
-          );
-          setCardTotalWidth(cardWidth + cardMargin);
-        }
-      }
-    };
-    updateCardWidth();
-    window.addEventListener("resize", updateCardWidth);
-    return () => {
-      window.removeEventListener("resize", updateCardWidth);
-    };
-  }, []);
-
-  // Navigation handlers
-  const handleNext = () => {
-    if (currentIndex < projects.length - 1) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
-    }
-  };
-
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prevIndex) => prevIndex - 1);
-    }
-  };
-
-  const isNextDisabled = currentIndex >= projects.length - 1;
-  const isPrevDisabled = currentIndex === 0;
-
   return (
-    <section
-      className="bg-primary overflow-hidden text-white mt-5 md:mt-10 relative"
-      id="projects"
-    >
-      <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
-        <div className={`${styles.boxWidth}`}>
+    <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
+      <div className={`${styles.boxWidth}`}>
+        <section id="projects">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
             Projects
           </h1>
-        </div>
-      </div>
-      <div className="absolute z-[0] w-[60%] h-[60%] -left-[50%] rounded-full blue__gradient bottom-40" />
-      <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
-        <div className={`${styles.boxWidth}`}>
-          <div className="my-20 overflow-hidden">
-            <div
-              ref={containerRef}
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{
-                transform: cardTotalWidth ? `translateX(-${currentIndex * cardTotalWidth}px)` : 'translateX(0)',
-              }}
-            >
-              {/* Render all project cards */}
+
+          <div className="container px-2 py-10 mx-auto mb-8">
+            <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
               {projects.map((project, index) => (
                 <Project key={project.id} index={index} {...project} />
               ))}
             </div>
-            <div className="flex justify-end mb-4">
-              {/* Navigation buttons */}
-              <button
-                onClick={handlePrev}
-                disabled={isPrevDisabled}
-                className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2 hover:bg-gray-600 transition-colors"
-                aria-label="Previous project"
-              >
-                ‹
-              </button>
-              <button
-                onClick={handleNext}
-                disabled={isNextDisabled}
-                className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2 hover:bg-gray-600 transition-colors"
-                aria-label="Next project"
-              >
-                ›
-              </button>
-            </div>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -18,7 +18,7 @@ const Achievements = () => {
           </h1>
 
           <div className="container px-2 py-10 mx-auto mb-8">
-            <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 md:gap-8 mt-8 md:mt-16 sm:grid-cols-2 lg:grid-cols-3">
               {achievements.map((achievement, index) => (
                 <AchievementCard key={achievement.id} index={index} {...achievement} />
               ))}
@@ -33,7 +33,7 @@ const Achievements = () => {
 const AchievementCard = (props) => {
   return (
     <motion.div
-      className="achievement-card flex flex-col justify-around px-6 py-4 rounded-[20px] my-5 transition-all duration-300 transform border hover:border-teal-200 hover:shadow-lg hover:shadow-teal-200/20 dark:border-gray-700 dark:hover:border-transparent"
+      className="achievement-card flex flex-col justify-around px-6 py-4 rounded-[20px] my-2 md:my-5 transition-all duration-300 transform border hover:border-teal-200 hover:shadow-lg hover:shadow-teal-200/20 dark:border-gray-700 dark:hover:border-transparent"
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
