@@ -33,33 +33,27 @@ const Achievements = () => {
 const AchievementCard = (props) => {
   return (
     <motion.div
-      className="px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card"
+      className="achievement-card flex flex-col justify-around px-6 py-4 rounded-[20px] my-5 transition-all duration-300 transform border hover:border-teal-200 hover:shadow-lg hover:shadow-teal-200/20 dark:border-gray-700 dark:hover:border-transparent"
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <div className="flex flex-col sm:-mx-4 sm:flex-row">
-        {/* Achievement icon/logo */}
-        <img
-          src={props.icon}
-          alt={props.event}
-          className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
-        />
-
-        <div className="mt-4 sm:mx-4 sm:mt-0">
-          {/* Event name */}
-          <h1 className="text-xl font-semibold font-poppins text-gray-700 capitalize md:text-2xl group-hover:text-white text-gradient">
-            {props.event}
-          </h1>
-          {/* Position/Award */}
-          <p className="font-poppins font-normal text-dimWhite mt-3">
-            {props.position}
-          </p>
-        </div>
-      </div>
-
-      <div className="mt-8 text-gray-500 dark:text-gray-300 group-hover:text-gray-300 font-poppins">
+      {/* Achievement icon/logo */}
+      <img
+        src={props.icon}
+        alt={props.event}
+        className="w-[45px] h-[45px] rounded-full mt-1 mb-1"
+      />
+      <div className="flex flex-col justify-end mt-4 mb-1">
+        {/* Event name */}
+        <p className="font-poppins font-normal text-xl text-white leading-[24px] mb-2">
+          {props.event}
+        </p>
+        {/* Position/Award */}
+        <p className="font-poppins italic font-normal text-lg text-gradient mb-3">
+          {props.position}
+        </p>
         {/* Achievement descriptions - only render if content exists */}
         {props.content1 && (
           <p className="font-poppins font-normal text-dimWhite text-sm mb-1">
@@ -77,9 +71,8 @@ const AchievementCard = (props) => {
           </p>
         )}
       </div>
-
       {/* Social/Project links with hover preview - only render if link exists */}
-      <div className="flex mt-4 -mx-2 font-poppins font-normal text-dimWhite gap-3">
+      <div className="flex flex-row mb-2 font-poppins font-normal text-dimWhite gap-3">
         {props.article && (
           <LinkPreview url={props.article}>
             <a

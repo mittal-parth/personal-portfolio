@@ -6,52 +6,62 @@ import styles from "../style";
 
 const Project = (props) => {
   return (
-    <div className="project-card flex-shrink-0 flex flex-col md:w-[400px] w-[320px] justify-around px-6 py-4 rounded-[20px] md:mr-10 mr-6 my-5 transition-all duration-300 transform border hover:border-teal-200 hover:shadow-lg hover:shadow-teal-200/20 dark:border-gray-700 dark:hover:border-transparent">
-      {/* Project image/logo */}
-      <img
-        src={props.image}
-        alt={props.title}
-        className="w-[45px] h-[45px] rounded-full mt-1 mb-1"
-      />
-      <div className="flex flex-col justify-end mt-4 mb-1">
-        {/* Project title */}
-        <p className="font-poppins font-normal text-xl text-white leading-[24px] mb-2">
-          {props.title}
-        </p>
-        {/* Tech Stack */}
-        <div className="flex flex-row mb-3">
-          {props.stack.map((tech) => (
-            <div
-              key={tech.id}
-              className="text-dimWhite mr-3 text-[18px] hover:text-teal-200 tooltip"
-            >
-              {React.createElement(tech.icon)}
-              <span className="tooltiptext">{tech.name}</span>
+    <div className="project-card flex-shrink-0 md:w-[400px] w-[320px] px-12 py-8 md:mr-10 mr-6 my-5 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card">
+      <div className="flex flex-col sm:-mx-4 sm:flex-row">
+        <img
+          className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
+          src={props.image}
+          alt=""
+        />
+
+        <div className="mt-4 sm:mx-4 sm:mt-0">
+          <h1 className="text-xl font-semibold font-poppins text-gray-700 capitalize md:text-2xl group-hover:text-white text-gradient">
+            {props.title}
+          </h1>
+          <p className="font-poppins font-normal text-dimWhite mt-3">
+            Tech Stack
+          </p>
+          <div className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+            <div className="flex sm:flex-row flex-wrap">
+              {props.stack.map((tech, index) => (
+                <div
+                  key={tech.id}
+                  index={index}
+                  className="text-dimWhite mr-5 text-[20px] hover:text-teal-200 tooltip"
+                >
+                  {React.createElement(tech.icon)}
+                  <span className="tooltiptext">{tech.name}</span>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-        {/* Project description */}
-        <p className="font-poppins font-normal text-dimWhite text-sm mb-4">
-          {props.content}
-        </p>
       </div>
-      {/* Project links */}
-      <div className="flex flex-row mb-2 font-poppins font-normal text-dimWhite gap-3">
-        {props.github && (
+
+      <p className="mt-8 text-gray-500 dark:text-gray-300 group-hover:text-gray-300 font-poppins">
+        {props.content}
+      </p>
+
+      <div className="flex mt-4 -mx-2">
+        {props.github ? (
           <a href={props.github} target="_blank" rel="noopener noreferrer">
             <AiFillGithub
-              size="1.5rem"
-              className="text-white hover:text-teal-200 hover:scale-110 transition-all"
+              size="2rem"
+              className="text-white mr-1 hover:text-teal-200"
             />
           </a>
+        ) : (
+          ""
         )}
-        {props.link && (
+        {props.link ? (
           <a href={props.link} target="_blank" rel="noopener noreferrer">
             <BsLink45Deg
-              size="1.5rem"
-              className="text-white hover:text-teal-200 hover:scale-110 transition-all"
-            />
+              size="2rem"
+              className="text-white hover:text-teal-200"
+            ></BsLink45Deg>
           </a>
+        ) : (
+          ""
         )}
       </div>
     </div>
