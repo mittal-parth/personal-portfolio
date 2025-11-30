@@ -17,8 +17,10 @@ export const SkillIcon = ({ icon, name }) => {
 const SkillCard = (props) => {
   return (
     <motion.div
-      whileInView={{ y: [-20, 0], opacity: [0, 1] }}
-      transition={{ duration: 1 }}
+      initial={{ y: -20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       className="mt-4 mb-6 border-l border-gray-200 dark:border-gray-700 mx-4"
     >
       <div className="relative w-3 h-3 bg-gray-200 rounded-full top-5 right-[6.2px] border dark:border-gray-900 dark:bg-gray-700"></div>
@@ -59,8 +61,10 @@ const Content = ({ text, link }) => {
 const ExperienceCard = (props) => {
   return (
     <motion.div
-    whileInView={{ y: [-20, 0], opacity: [0, 1] }}
-    transition={{ duration: 1 }}
+      initial={{ y: -20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div className="flex flex-row items-center mb-6">
         <img
@@ -106,8 +110,6 @@ const SkillsAndExperience = () => {
       </h1>
       <div
         className={layout.section}
-        // whileInView={{ y: [-20, 0], opacity: [0, 1] }}
-        // transition={{ duration: 0.5 }}
       >
         {/* Skills */}
         <motion.div className={`ml-2 mb-6 ${layout.sectionInfo}`}>
