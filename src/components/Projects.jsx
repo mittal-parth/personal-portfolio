@@ -6,7 +6,7 @@ import styles from "../style";
 
 const Project = (props) => {
   return (
-    <div className="project-card flex-shrink-0 w-[calc(100%-24px)] md:w-[calc(50%-20px)] px-12 py-8 mr-6 md:mr-10 my-5 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card">
+    <div className="project-card flex-shrink-0 w-[calc(100%-48px)] md:w-[calc(50%-20px)] px-12 py-8 mx-6 md:mx-0 md:mr-10 my-5 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card">
       <div className="flex flex-col sm:-mx-4 sm:flex-row">
         <img
           className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
@@ -22,7 +22,7 @@ const Project = (props) => {
             Tech Stack
           </p>
           <div className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
-            <div className="flex sm:flex-row flex-wrap">
+            <div className="flex sm:flex-row">
               {props.stack.map((tech, index) => (
                 <div
                   key={tech.id}
