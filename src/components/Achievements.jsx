@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { BsLink45Deg } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import { FaYoutube } from "react-icons/fa";
@@ -6,119 +6,60 @@ import { TiNews } from "react-icons/ti";
 import { LinkPreview } from "./LinkPreview";
 import { achievements } from "../constants";
 import styles from "../style";
+import { motion } from "framer-motion";
 
 const Achievements = () => {
-  const [currentIndex, setCurrentIndex] = useState(0); // State to track current carousel position
-  const [cardTotalWidth, setCardTotalWidth] = useState(0); // State to store total width of each card (width + margin) for scroll calculations
-  const containerRef = useRef(null);
-
-  // Calculate card width on mount and window resize for responsive carousel
-  useEffect(() => {
-    const updateCardWidth = () => {
-      if (containerRef.current) {
-        const card = containerRef.current.querySelector(".achievement-card");
-        if (card) {
-          const cardWidth = card.offsetWidth;
-          const cardMargin = parseInt(
-            window.getComputedStyle(card).marginRight,
-            10
-          );
-          setCardTotalWidth(cardWidth + cardMargin);
-        }
-      }
-    };
-    updateCardWidth();
-    window.addEventListener("resize", updateCardWidth);
-    return () => {
-      window.removeEventListener("resize", updateCardWidth);
-    };
-  }, []);
-  // Navigation handlers
-  const handleNext = () => {
-    if (currentIndex < achievements.length - 1) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
-    }
-  };
-  // Navigate to previous achievement card
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prevIndex) => prevIndex - 1);
-    }
-  };
-
-  const isNextDisabled = currentIndex >= achievements.length - 1;
-  const isPrevDisabled = currentIndex === 0;
-
   return (
-    <section
-      className="bg-primary overflow-hidden text-white mt-5 md:mt-10 relative"
-      id="achievements"
-    >
-      <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
-        <div className={`${styles.boxWidth}`}>
+    <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
+      <div className={`${styles.boxWidth}`}>
+        <section id="achievements">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
             Achievements
           </h1>
-        </div>
-      </div>
-      <div className="absolute z-[0] w-[60%] h-[60%] -left-[50%] rounded-full blue__gradient bottom-40" />
-      <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
-        <div className={`${styles.boxWidth}`}>
-          <div className="my-20 overflow-hidden">
-            <div
-              ref={containerRef}
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{
-                transform: `translateX(-${currentIndex * cardTotalWidth}px)`,
-              }}
-            >
-              {/* Render all achievement cards */}
+
+          <div className="container px-2 py-10 mx-auto mb-8">
+            <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
               {achievements.map((achievement, index) => (
-                <AchievementCard key={index} {...achievement} />
+                <AchievementCard key={achievement.id} index={index} {...achievement} />
               ))}
             </div>
-            <div className="flex justify-end mb-4">
-              {/* Navigation buttons */}
-              <button
-                onClick={handlePrev}
-                disabled={isPrevDisabled}
-                className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2 hover:bg-gray-600 transition-colors"
-              >
-                &lt;
-              </button>
-              <button
-                onClick={handleNext}
-                disabled={isNextDisabled}
-                className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2 hover:bg-gray-600 transition-colors"
-              >
-                &gt;
-              </button>
-            </div>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
+    </div>
   );
 };
 
 const AchievementCard = (props) => {
   return (
-    <div className="achievement-card flex-shrink-0 flex flex-col md:w-[400px] w-[320px] justify-around px-6 py-4 rounded-[20px] md:mr-10 mr-6 my-5 transition-all duration-300 transform border hover:border-teal-200 hover:shadow-lg hover:shadow-teal-200/20 dark:border-gray-700 dark:hover:border-transparent">
-      {/* Achievement icon/logo */}
-      <img
-        src={props.icon}
-        alt={props.event}
-        className="w-[45px] h-[45px] rounded-full mt-1 mb-1"
-      />
-      <div className="flex flex-col justify-end mt-4 mb-1">
-        {/* Event name */}
-        <p className="font-poppins font-normal text-xl text-white leading-[24px] mb-2">
-          {props.event}
-        </p>
-        {/* Position/Award */}
-        <p className="font-poppins italic font-normal text-lg text-gradient mb-3">
-          {props.position}
-        </p>
+    <motion.div
+      className="px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card"
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
+      <div className="flex flex-col sm:-mx-4 sm:flex-row">
+        {/* Achievement icon/logo */}
+        <img
+          src={props.icon}
+          alt={props.event}
+          className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
+        />
+
+        <div className="mt-4 sm:mx-4 sm:mt-0">
+          {/* Event name */}
+          <h1 className="text-xl font-semibold font-poppins text-gray-700 capitalize md:text-2xl group-hover:text-white text-gradient">
+            {props.event}
+          </h1>
+          {/* Position/Award */}
+          <p className="font-poppins font-normal text-dimWhite mt-3">
+            {props.position}
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-8 text-gray-500 dark:text-gray-300 group-hover:text-gray-300 font-poppins">
         {/* Achievement descriptions - only render if content exists */}
         {props.content1 && (
           <p className="font-poppins font-normal text-dimWhite text-sm mb-1">
@@ -136,8 +77,9 @@ const AchievementCard = (props) => {
           </p>
         )}
       </div>
+
       {/* Social/Project links with hover preview - only render if link exists */}
-      <div className="flex flex-row mb-2 font-poppins font-normal text-dimWhite gap-3">
+      <div className="flex mt-4 -mx-2 font-poppins font-normal text-dimWhite gap-3">
         {props.article && (
           <LinkPreview url={props.article}>
             <a
@@ -196,7 +138,7 @@ const AchievementCard = (props) => {
           </LinkPreview>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
