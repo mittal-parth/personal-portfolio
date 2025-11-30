@@ -6,7 +6,7 @@ import styles from "../style";
 
 const Project = (props) => {
   return (
-    <div className="project-card flex-shrink-0 w-[calc(100%-48px)] md:w-[calc(50%-20px)] px-12 py-8 mx-6 md:mx-0 md:mr-10 my-5 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card">
+    <div className="project-card flex-shrink-0 w-[calc(100vw-48px)] md:w-[calc(50%-20px)] px-12 py-8 mr-6 md:mr-10 my-5 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card">
       <div className="flex flex-col sm:-mx-4 sm:flex-row">
         <img
           className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
@@ -130,7 +130,7 @@ const Projects = () => {
       <div className="absolute z-[0] w-[60%] h-[60%] -left-[50%] rounded-full blue__gradient bottom-40" />
       <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
         <div className={`${styles.boxWidth}`}>
-          <div className="my-20 overflow-hidden">
+          <div className="my-20 overflow-hidden pl-6 md:pl-0">
             <div
               ref={containerRef}
               className="flex transition-transform duration-500 ease-in-out"
