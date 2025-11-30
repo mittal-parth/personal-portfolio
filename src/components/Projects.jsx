@@ -1,19 +1,12 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { projects } from "../constants";
 import { AiFillGithub } from "react-icons/ai";
 import { BsLink45Deg } from "react-icons/bs";
 import styles from "../style";
-import { motion } from "framer-motion";
 
 const Project = (props) => {
   return (
-    <motion.div
-      className="px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card"
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-    >
+    <div className="project-card flex-shrink-0 w-[calc(100%-24px)] md:w-[calc(50%-20px)] px-12 py-8 mr-6 md:mr-10 my-5 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card">
       <div className="flex flex-col sm:-mx-4 sm:flex-row">
         <img
           className="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300"
@@ -71,29 +64,108 @@ const Project = (props) => {
           ""
         )}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const Projects = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardTotalWidth, setCardTotalWidth] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(2);
+  const containerRef = useRef(null);
+
+  // Calculate card width on mount and window resize for responsive carousel
+  useEffect(() => {
+    const updateCardWidth = () => {
+      if (containerRef.current) {
+        const card = containerRef.current.querySelector(".project-card");
+        if (card) {
+          const cardWidth = card.offsetWidth;
+          const cardMargin = parseInt(
+            window.getComputedStyle(card).marginRight,
+            10
+          );
+          setCardTotalWidth(cardWidth + cardMargin);
+          // Set visible cards based on screen size
+          setVisibleCards(window.innerWidth >= 768 ? 2 : 1);
+        }
+      }
+    };
+    updateCardWidth();
+    window.addEventListener("resize", updateCardWidth);
+    return () => {
+      window.removeEventListener("resize", updateCardWidth);
+    };
+  }, []);
+
+  // Navigation handlers - scroll by visible cards count
+  const handleNext = () => {
+    const maxIndex = projects.length - visibleCards;
+    if (currentIndex < maxIndex) {
+      setCurrentIndex((prevIndex) => Math.min(prevIndex + visibleCards, maxIndex));
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prevIndex) => Math.max(prevIndex - visibleCards, 0));
+    }
+  };
+
+  const isNextDisabled = currentIndex >= projects.length - visibleCards;
+  const isPrevDisabled = currentIndex === 0;
+
   return (
-    <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
-      <div className={`${styles.boxWidth}`}>
-        <section id="projects">
+    <section
+      className="bg-primary overflow-hidden text-white mt-5 md:mt-10 relative"
+      id="projects"
+    >
+      <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
+        <div className={`${styles.boxWidth}`}>
           <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
             Projects
           </h1>
-
-          <div className="container px-2 py-10 mx-auto mb-8">
-            <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+        </div>
+      </div>
+      <div className="absolute z-[0] w-[60%] h-[60%] -left-[50%] rounded-full blue__gradient bottom-40" />
+      <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
+        <div className={`${styles.boxWidth}`}>
+          <div className="my-20 overflow-hidden">
+            <div
+              ref={containerRef}
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{
+                transform: cardTotalWidth ? `translateX(-${currentIndex * cardTotalWidth}px)` : 'translateX(0)',
+              }}
+            >
+              {/* Render all project cards */}
               {projects.map((project, index) => (
                 <Project key={project.id} index={index} {...project} />
               ))}
             </div>
+            <div className="flex justify-end mb-4">
+              {/* Navigation buttons */}
+              <button
+                onClick={handlePrev}
+                disabled={isPrevDisabled}
+                className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2 hover:bg-gray-600 transition-colors"
+                aria-label="Previous project"
+              >
+                ‹
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={isNextDisabled}
+                className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2 hover:bg-gray-600 transition-colors"
+                aria-label="Next project"
+              >
+                ›
+              </button>
+            </div>
           </div>
-        </section>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
