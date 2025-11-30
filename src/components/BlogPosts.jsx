@@ -7,8 +7,10 @@ const BlogPost = (props) => {
   return (
     <motion.div
       className="overflow-hidden transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card"
-      whileInView={{ y: [-40, 0], opacity: [0, 1] }}
-      transition={{ duration: 1 }}
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <img
         className="flex-shrink-0 object-cover w-full h-40"

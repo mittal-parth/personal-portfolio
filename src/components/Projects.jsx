@@ -8,10 +8,10 @@ const Project = (props) => {
   return (
     <motion.div
       className="px-12 py-8 transition-colors duration-300 transform border rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent feature-card"
-      initial={{ y: -30, opacity: 0 }}
+      initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      viewport={{ once: false, amount: 0.5 }}
-      transition={{ duration: 0.75, delay: 0.1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div className="flex flex-col sm:-mx-4 sm:flex-row">
         <img
