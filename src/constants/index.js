@@ -29,6 +29,7 @@ import {
   polkadot_dev_cli,
   hackathon_curation_agent,
   kudos,
+  web3_marketing_hackathon
 } from "../assets";
 
 import {
@@ -219,6 +220,18 @@ export const achievements = [
   },
   {
     id: "a-7",
+    icon: web3_marketing_hackathon,
+    event: "Web3 Marketing Hackathon",
+    position: "Runner Up",
+    content1:
+      "2nd position in the Polkadot Challenge I - Creative Marketing Strategies to Boost Polkadot Awareness & Adoption",
+    content2: "",
+    content3: "",
+    article: "https://x.com/polkadotsub0/status/1998425721916551355?s=46",
+    project: "https://taikai.network/OutofOrdinary/hackathons/web3mkthack/projects/cmi0skdbk0257vu09q3n8m44u/idea",
+  },
+  {
+    id: "a-8",
     icon: globalAi,
     event: "Global AI HackFest 2023",
     position: "Winner",
@@ -230,7 +243,7 @@ export const achievements = [
       "https://www.linkedin.com/posts/mittal-parth_happy-to-share-that-comicifyai-emerged-as-activity-7078790186435833856-88fh",
   },
   {
-    id: "a-8",
+    id: "a-9",
     icon: dennisivy,
     event: "September Hackathon by Dennis Ivy",
     position: "Winner",
@@ -242,7 +255,7 @@ export const achievements = [
     project: "https://parthmittal.netlify.app/",
   },
   {
-    id: "a-9",
+    id: "a-10",
     icon: manipal,
     event: "Manipal Hackathon'22",
     position: "Consolation Prize",
@@ -253,7 +266,7 @@ export const achievements = [
     article: "https://shorturl.at/exEIQ",
   },
   {
-    id: "a-10",
+    id: "a-11",
     icon: icon,
     event: "ICON Hyperbuild Hackathon",
     position: "Honorable Mention",
@@ -264,7 +277,7 @@ export const achievements = [
     project: "https://devpost.com/software/green-trust-xj2w6g",
   },
   {
-    id: "a-11",
+    id: "a-12",
     icon: ethforall,
     event: "ETHForAll 2023",
     position: "Top 3 Superfluid Projects",
@@ -1147,7 +1160,7 @@ export const aboutMe = {
   name: "Parth Mittal",
   githubUsername: "mittal-parth",
   tagLine:
-    "MTS @ Oracle | 10x Hackathon Winner 🏆 | ETHIndia'22,24 Winner | NITK'24 | PBA-5",
+    "MTS @ Oracle | 12x Hackathon Winner 🏆 | ETHIndia'22,24 Winner | NITK'24 | PBA-5",
   intro:
     "Software Developer from India who is either busy improving his craft or pondering over the next big idea.",
 };

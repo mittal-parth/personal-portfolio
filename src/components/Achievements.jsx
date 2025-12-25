@@ -1,57 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { BsLink45Deg } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import { FaYoutube } from "react-icons/fa";
 import { TiNews } from "react-icons/ti";
+import { motion } from "framer-motion";
 import { LinkPreview } from "./LinkPreview";
 import { achievements } from "../constants";
 import styles from "../style";
 
 const Achievements = () => {
-  const [currentIndex, setCurrentIndex] = useState(0); // State to track current carousel position
-  const [cardTotalWidth, setCardTotalWidth] = useState(0); // State to store total width of each card (width + margin) for scroll calculations
-  const containerRef = useRef(null);
-
-  // Calculate card width on mount and window resize for responsive carousel
-  useEffect(() => {
-    const updateCardWidth = () => {
-      if (containerRef.current) {
-        const card = containerRef.current.querySelector(".achievement-card");
-        if (card) {
-          const cardWidth = card.offsetWidth;
-          const cardMargin = parseInt(
-            window.getComputedStyle(card).marginRight,
-            10
-          );
-          setCardTotalWidth(cardWidth + cardMargin);
-        }
-      }
-    };
-    updateCardWidth();
-    window.addEventListener("resize", updateCardWidth);
-    return () => {
-      window.removeEventListener("resize", updateCardWidth);
-    };
-  }, []);
-  // Navigation handlers
-  const handleNext = () => {
-    if (currentIndex < achievements.length - 1) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
-    }
-  };
-  // Navigate to previous achievement card
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prevIndex) => prevIndex - 1);
-    }
-  };
-
-  const isNextDisabled = currentIndex >= achievements.length - 1;
-  const isPrevDisabled = currentIndex === 0;
-
   return (
     <section
-      className="bg-primary overflow-hidden text-white mt-5 md:mt-10 relative"
+      className="bg-primary text-white mt-5 md:mt-10 relative"
       id="achievements"
     >
       <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
@@ -64,35 +24,12 @@ const Achievements = () => {
       <div className="absolute z-[0] w-[60%] h-[60%] -left-[50%] rounded-full blue__gradient bottom-40" />
       <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
         <div className={`${styles.boxWidth}`}>
-          <div className="my-20 overflow-hidden">
-            <div
-              ref={containerRef}
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{
-                transform: `translateX(-${currentIndex * cardTotalWidth}px)`,
-              }}
-            >
-              {/* Render all achievement cards */}
+          <div className="container px-2 py-10 mx-auto mb-8">
+            <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 lg:grid-cols-3">
+              {/* Render all achievement cards in scrollable grid */}
               {achievements.map((achievement, index) => (
-                <AchievementCard key={index} {...achievement} />
+                <AchievementCard key={index} index={index} {...achievement} />
               ))}
-            </div>
-            <div className="flex justify-end mb-4">
-              {/* Navigation buttons */}
-              <button
-                onClick={handlePrev}
-                disabled={isPrevDisabled}
-                className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2 hover:bg-gray-600 transition-colors"
-              >
-                &lt;
-              </button>
-              <button
-                onClick={handleNext}
-                disabled={isNextDisabled}
-                className="p-2 bg-gray-700 rounded-full disabled:opacity-50 mx-2 hover:bg-gray-600 transition-colors"
-              >
-                &gt;
-              </button>
             </div>
           </div>
         </div>
@@ -103,7 +40,13 @@ const Achievements = () => {
 
 const AchievementCard = (props) => {
   return (
-    <div className="achievement-card flex-shrink-0 flex flex-col md:w-[400px] w-[320px] justify-around px-6 py-4 rounded-[20px] md:mr-10 mr-6 my-5 transition-all duration-300 transform border hover:border-teal-200 hover:shadow-lg hover:shadow-teal-200/20 dark:border-gray-700 dark:hover:border-transparent">
+    <motion.div
+      className="flex flex-col justify-around px-6 py-4 rounded-[20px] transition-all duration-300 transform border hover:border-teal-200 hover:shadow-lg hover:shadow-teal-200/20 dark:border-gray-700 dark:hover:border-transparent"
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       {/* Achievement icon/logo */}
       <img
         src={props.icon}
@@ -196,7 +139,7 @@ const AchievementCard = (props) => {
           </LinkPreview>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
