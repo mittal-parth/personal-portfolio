@@ -37,6 +37,7 @@ import kosh from "./kosh.png";
 import polkadot_dev_cli from "./polkadot-dev-cli.png";
 import hackathon_curation_agent from "./hackathon_curation_agent.png";
 import kudos from "./kudos.svg";
+import web3_marketing_hackathon from "./web3_marketing_hackathon.jpg";
 
 export {
   menu,
@@ -77,5 +78,6 @@ export {
   polkadot_dev_cli,
   placeholder,
   hackathon_curation_agent,
-  kudos
+  kudos,
+  web3_marketing_hackathon
 };
