@@ -78,16 +78,16 @@ function generatePRQuery(repos, username) {
 
 export async function fetchContributions() {
   try {
-    // Use the Netlify function to fetch contributions
+    // Use the server API endpoint to fetch contributions
     // to avoid exposing the Github token into the client side build output
-    const response = await axios.post('/.netlify/functions/fetchContributions', {
+    const response = await axios.post('/api/fetchContributions', {
       repos: includedRepos,
       username: aboutMe.githubUsername
     });
 
     return response.data;
   } catch (error) {
-    console.error("Error fetching contributions from Netlify function: ", error);
+    console.error("Error fetching contributions from API: ", error);
     throw error;
   }
 }

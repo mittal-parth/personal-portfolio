@@ -1,0 +1,44 @@
+# Dependencies
+node_modules
+
+# Build output (will be generated in Docker)
+dist
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Environment files (secrets should be set via Cloud Run)
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation
+*.md
+!readme.md
+
+# Netlify (not needed for Cloud Run)
+netlify
+netlify.toml
+
+# Test files
+*.test.js
+*.spec.js
+__tests__
+
+# Snippets (development scripts)
+snippets
