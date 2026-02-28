@@ -31,12 +31,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci --omit=optional
-          else
-            npm install --omit=optional
-          fi
+        run: npm install
 
       - name: Build app
         run: npm run build
