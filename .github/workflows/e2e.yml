@@ -33,9 +33,9 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f package-lock.json ]; then
-            npm ci
+            npm ci --omit=optional
           else
-            npm install
+            npm install --omit=optional
           fi
 
       - name: Build app
