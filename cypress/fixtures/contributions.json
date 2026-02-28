@@ -1,0 +1,41 @@
+[
+  {
+    "id": "PR_kwDO1",
+    "organization": "publiclab",
+    "repo": "plots2",
+    "logoUrl": "https://github.com/publiclab.png",
+    "status": "MERGED",
+    "title": "Add dark mode support",
+    "link": "https://github.com/publiclab/plots2/pull/123",
+    "number": 123,
+    "date": "1/15/2024",
+    "linesAdded": 45,
+    "linesDeleted": 12
+  },
+  {
+    "id": "PR_kwDO2",
+    "organization": "zulip",
+    "repo": "zulip",
+    "logoUrl": "https://github.com/zulip.png",
+    "status": "OPEN",
+    "title": "Fix notification badge",
+    "link": "https://github.com/zulip/zulip/pull/456",
+    "number": 456,
+    "date": "2/20/2024",
+    "linesAdded": 8,
+    "linesDeleted": 3
+  },
+  {
+    "id": "PR_kwDO3",
+    "organization": "paritytech",
+    "repo": "polkadot-sdk",
+    "logoUrl": "https://github.com/paritytech.png",
+    "status": "MERGED",
+    "title": "Improve runtime docs",
+    "link": "https://github.com/paritytech/polkadot-sdk/pull/789",
+    "number": 789,
+    "date": "3/1/2024",
+    "linesAdded": 120,
+    "linesDeleted": 0
+  }
+]
