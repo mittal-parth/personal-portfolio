@@ -36,23 +36,21 @@ describe('Projects section', () => {
     });
 
     it('at last project next is disabled', () => {
-      for (let i = 0; i < projects.length - 1; i++) {
-        cy.get('#projects').within(() => {
-          cy.get('button').contains('>').click();
-        });
-      }
       cy.get('#projects').within(() => {
+        for (let i = 0; i < projects.length - 1; i++) {
+          cy.get('button').contains('>').click();
+        }
         cy.get('button').contains('>').should('be.disabled');
         cy.get('button').contains('<').should('not.be.disabled');
       });
     });
 
     it('clicking prev from last re-enables next', () => {
-      for (let i = 0; i < projects.length - 1; i++) {
-        cy.get('#projects').within(() => cy.get('button').contains('>').click());
-      }
-      cy.get('#projects').within(() => cy.get('button').contains('<').click());
       cy.get('#projects').within(() => {
+        for (let i = 0; i < projects.length - 1; i++) {
+          cy.get('button').contains('>').click();
+        }
+        cy.get('button').contains('<').click();
         cy.get('button').contains('>').should('not.be.disabled');
       });
     });

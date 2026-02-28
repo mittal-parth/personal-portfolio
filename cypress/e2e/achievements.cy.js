@@ -15,9 +15,10 @@ describe('Achievements section', () => {
   });
 
   it('each card shows event name and position', () => {
-    achievements.forEach((a) => {
-      cy.get('#achievements').contains(a.event).should('exist');
-      cy.get('#achievements').contains(a.position).should('exist');
+    cy.get('#achievements .grid > div').each(($card, index) => {
+      const achievement = achievements[index];
+      cy.wrap($card).contains(achievement.event).should('exist');
+      cy.wrap($card).contains(achievement.position).should('exist');
     });
   });
 

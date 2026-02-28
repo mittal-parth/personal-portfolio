@@ -11,10 +11,11 @@ describe('Extra Curricular section', () => {
   });
 
   it('renders cards with organisation, title, duration from constants', () => {
-    extraCurricular.forEach((card) => {
-      cy.get('#extraCurricular').contains(card.organisation).should('exist');
-      cy.get('#extraCurricular').contains(card.title).should('exist');
-      cy.get('#extraCurricular').contains(card.duration).should('exist');
+    cy.get('#extraCurricular .feedback-card').each(($card, index) => {
+      const card = extraCurricular[index];
+      cy.wrap($card).contains(card.organisation).should('exist');
+      cy.wrap($card).contains(card.title).should('exist');
+      cy.wrap($card).contains(card.duration).should('exist');
     });
   });
 

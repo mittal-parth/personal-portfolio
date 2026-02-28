@@ -23,7 +23,6 @@ describe('Navigation', () => {
         cy.get('nav').contains(nav.title).click({ force: true });
         cy.get(`#${nav.id}`, { timeout: 5000 }).should('be.visible');
         cy.get(`#${nav.id}`).find('h1, h2').first().scrollIntoView();
-        cy.wait(600);
         cy.get(`#${nav.id}`).find('h1, h2').first().isInViewport();
       });
     });

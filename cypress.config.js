@@ -12,7 +12,7 @@ export default defineConfig({
       on(
         'file:preprocessor',
         vitePreprocessor({
-          configFile: path.resolve(__dirname, './vite.config.js'),
+          configFile: path.resolve('./vite.config.js'),
           mode: 'development',
         })
       );

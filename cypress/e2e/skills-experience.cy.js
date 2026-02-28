@@ -20,8 +20,14 @@ describe('Skills & Experience section', () => {
 
   it('shows at least one skill name per category', () => {
     skills.forEach((skill) => {
-      const firstSkillName = skill.items[0].name;
-      cy.get('#skills').contains(firstSkillName).should('exist');
+      cy.get('#skills')
+        .contains('h4', skill.title)
+        .parent()
+        .parent()
+        .within(() => {
+          const firstSkillName = skill.items[0].name;
+          cy.contains(firstSkillName).should('exist');
+        });
     });
   });
 

@@ -11,12 +11,13 @@ describe('Education section', () => {
   });
 
   it('renders all education cards with title, degree, duration', () => {
-    educationList.forEach((edu) => {
-      cy.get('#education').contains(edu.title).should('be.visible');
+    cy.get('#education .feature-card').each(($card, index) => {
+      const edu = educationList[index];
+      cy.wrap($card).contains(edu.title).should('be.visible');
       if (edu.degree) {
-        cy.get('#education').contains(edu.degree).should('be.visible');
+        cy.wrap($card).contains(edu.degree).should('be.visible');
       }
-      cy.get('#education').contains(edu.duration).should('be.visible');
+      cy.wrap($card).contains(edu.duration).should('be.visible');
     });
   });
 
