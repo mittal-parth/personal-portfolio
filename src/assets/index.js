@@ -33,6 +33,7 @@ import ethindia from "./ethindia.png";
 import placeholder from "./placeholder.svg";
 import globalAi from "./global-ai.jpeg";
 import khoj from "./khoj.jpg";
+import echo from "./echo.png";
 import kosh from "./kosh.png";
 import polkadot_dev_cli from "./polkadot-dev-cli.png";
 import hackathon_curation_agent from "./hackathon_curation_agent.png";
@@ -74,6 +75,7 @@ export {
   ethindia,
   globalAi,
   khoj,
+  echo,
   kosh,
   polkadot_dev_cli,
   placeholder,

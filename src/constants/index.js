@@ -25,6 +25,7 @@ import {
   ethindia,
   globalAi,
   khoj,
+  echo,
   kosh,
   polkadot_dev_cli,
   hackathon_curation_agent,
@@ -70,10 +71,13 @@ import {
   SiGooglecloud,
   SiNextdotjs,
   SiTypescript,
+  SiNodedotjs,
   SiOracle,
+  SiSupabase,
   SiGmail,
   SiGooglesheets,
   SiThirdweb,
+  SiVercel,
   SiIntellijidea
 } from "react-icons/si";
 
@@ -638,6 +642,42 @@ export const projects = [
   },
   {
     id: "project-2",
+    title: "Echo",
+    github: "https://github.com/imApoorva36/Echo",
+    link: "https://testflight.apple.com/join/TpYrhKRy",
+    image: echo,
+    content:
+      "A proactive AI assistant that's always listening and executes without you having to ask. Available on iOS TestFlight.",
+    stack: [
+      {
+        id: "projEcho-icon-1",
+        icon: SiTypescript,
+        name: "TypeScript",
+      },
+      {
+        id: "projEcho-icon-2",
+        icon: SiReact,
+        name: "React Native",
+      },
+      {
+        id: "projEcho-icon-3",
+        icon: SiNodedotjs,
+        name: "Node.js",
+      },
+      {
+        id: "projEcho-icon-4",
+        icon: SiSupabase,
+        name: "Supabase",
+      },
+      {
+        id: "projEcho-icon-5",
+        icon: SiVercel,
+        name: "Vercel AI SDK",
+      },
+    ],
+  },
+  {
+    id: "project-3",
     title: "Hackathon Curation AI Agent",
     github: "https://github.com/mittal-parth/hackathon-curation-agent",
     image: hackathon_curation_agent,
@@ -677,7 +717,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-3",
+    id: "project-4",
     title: "Comicify.ai",
     github: "https://github.com/ayush4345/Comicify.ai",
     link: "https://devfolio.co/projects/comicifyai-97a6",
@@ -713,7 +753,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-4",
+    id: "project-5",
     title: "Polkadot Dev CLI",
     github: "https://github.com/mittal-parth/polkadot-dev-cli",
     link: "https://crates.io/crates/polkadot-dev-cli",
@@ -729,7 +769,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-5",
+    id: "project-6",
     title: "Non-Teaching Recruitment Portal, NITK",
     github: "",
     link: "http://recruitment.nitk.ac.in/",
@@ -755,7 +795,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-6",
+    id: "project-7",
     title: "GreenTrust",
     github: "https://github.com/mittal-parth/GreenTrust",
     link: "https://green-trust-fantom.netlify.app/",
@@ -796,7 +836,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-7",
+    id: "project-8",
     title: "ChargeSwap",
     github: "https://github.com/CommanderAstern/ChargeSwap",
     link: "https://devfolio.co/projects/chargeswap-3527",
@@ -842,7 +882,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-8",
+    id: "project-9",
     title: "Samsotech Table Management System",
     github: "",
     link: "https://www.linkedin.com/posts/mittal-parth_technologysolutions-softwaredevelopment-technology-activity-6994915645066809344-WnMY?utm_source=share&utm_medium=member_desktop",
@@ -878,7 +918,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-9",
+    id: "project-10",
     title: "Career Development Centre, NITK Website",
     github: "",
     link: "http://cdc.nitk.ac.in/",
@@ -903,7 +943,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-10",
+    id: "project-11",
     title: "Portfolio",
     github: "https://github.com/mittal-parth/personal-portfolio",
     link: "https://parthmittal.netlify.app/",
@@ -928,7 +968,7 @@ export const projects = [
     ],
   },
   {
-    id: "project-11",
+    id: "project-12",
     title: "Kosh SDK",
     github: "https://github.com/mittal-parth/kosh-sdk",
     link: "https://ethglobal.com/showcase/kosh-hk3mp",
@@ -1155,7 +1195,7 @@ export const aboutMe = {
   name: "Parth Mittal",
   githubUsername: "mittal-parth",
   tagLine:
-    "MTS @ Oracle | 12x Hackathon Winner 🏆 | ETHIndia'22,24 Winner | NITK'24 | PBA-5",
+    "MTS @ Oracle | 12x Hackathon Winner | ETHIndia'22,24 Winner | NITK'24 | PBA-5",
   intro:
     "Software Developer from India who is either busy improving his craft or pondering over the next big idea.",
 };

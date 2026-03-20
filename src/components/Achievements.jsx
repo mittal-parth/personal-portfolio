@@ -41,7 +41,7 @@ const Achievements = () => {
 const AchievementCard = (props) => {
   return (
     <motion.div
-      className="flex flex-col justify-around px-6 py-4 rounded-[20px] transition-all duration-300 transform border hover:border-teal-200 hover:shadow-lg hover:shadow-teal-200/20 dark:border-gray-700 dark:hover:border-transparent"
+      className="flex flex-col justify-around px-6 py-4 rounded-[20px] transition-colors transition-shadow duration-300 border hover:border-teal-200 hover:shadow-lg hover:shadow-teal-200/20 dark:border-gray-700 dark:hover:border-transparent"
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
