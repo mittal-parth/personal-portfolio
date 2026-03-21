@@ -207,8 +207,8 @@ If you're making changes to the LinkedIn import functionality, you can run the t
 
 
 ## Contributors
-Made by [@mittal-parth](https://github.com/mittal-parth) and [community](https://github.com/mittal-parth/persona-portfolio/graphs/contributors) 🩵
+Made by [@mittal-parth](https://github.com/mittal-parth) and [community](https://github.com/mittal-parth/personal-portfolio/graphs/contributors) 🩵
 <br><br>
-<a href="https://github.com/mittal-parth/persona-portfolio/graphs/contributors">
+<a href="https://github.com/mittal-parth/personal-portfolio/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=mittal-parth/personal-portfolio" />
 </a>
