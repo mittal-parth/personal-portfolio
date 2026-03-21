@@ -204,3 +204,11 @@ If you're making changes to the LinkedIn import functionality, you can run the t
 
 - [Coding Lottie](https://lottiefiles.com/90189-coding) by Yamesh Sai Balaji
 - [Quiz Mode Lottie](https://lottiefiles.com/92377-quiz-mode) by SenecaDan
+
+
+## Contributors
+Made by [@mittal-parth](https://github.com/mittal-parth) and [community](https://github.com/mittal-parth/persona-portfolio/graphs/contributors) 🩵
+<br><br>
+<a href="https://github.com/mittal-parth/persona-portfolio/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=mittal-parth/personal-portfolio" />
+</a>
