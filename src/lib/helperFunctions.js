@@ -1,33 +1,31 @@
 import axios from "axios";
 import { aboutMe, itemsToFetch, includedRepos } from "../constants";
 
+/**
+ * Normalizes `includedRepos` entries into objects the GitHub fetch flow expects.
+ *
+ * Each entry in `repos` may be:
+ * - a string `"owner/repo"` — uses the repo slug (part after `/`) as the display name
+ * - a tuple `["owner/repo", "Display Name"]` — uses the second value as the display name
+ *
+ * @param {Array<string | [string, string?]>} repos - Values from `includedRepos` in constants
+ * @returns {Array<{ fullName: string, displayName: string }>}
+ */
+export const normalizeIncludedRepos = (repos) =>
+  repos.map((entry) => {
+    const fullName = typeof entry === "string" ? entry : entry[0];
+    const displayName =
+      typeof entry === "string" ? fullName.split("/")[1] : entry[1] ?? fullName.split("/")[1];
+
+    return { fullName, displayName };
+  });
+
 export const scrollToSection = (id) => {
   const element = document.getElementById(id);
   const yOffset = -70;
   const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
 
   window.scrollTo({ top: y, behavior: "smooth" });
-};
-
-const parseOriginFromUrl = (url) => {
-  /**
-   * splits https://github.com/repos/org-name/repo-name/issues/25
-   * into [ "github.com", "repos", "org-name", "repo-name", "issues", "25"]
-   */
-  const [, ...parts] = url.split(/https:\/\/|\//gm);
-  const organization = parts[1];
-  const repo = parts[2];
-  /**
-   * accessing a github profile or organization and adding a .png
-   * at the end of the URL will return their logo/profile picture
-   */
-  const logoUrl = `https://github.com/${organization}.png`;
-
-  return {
-    organization,
-    repo,
-    logoUrl,
-  };
 };
 
 export async function fetchContributionsWithRetry(maxRetries = 1) {
@@ -49,40 +47,16 @@ export async function fetchContributionsWithRetry(maxRetries = 1) {
   }
 }
 
-function generatePRQuery(repos, username) {
-  const queries = repos
-    .map((repo) => {
-      return `repo:${repo} is:pr author:${username}`;
-    })
-    .join(" ");
-
-  return `
-    query {
-      search(query: "${queries}", type: ISSUE, first: ${itemsToFetch}) {
-        nodes {
-          ... on PullRequest {
-            id
-            title
-            state
-            number
-            createdAt
-            url
-            additions
-            deletions
-          }
-        }
-      }
-    }
-  `;
-}
-
 export async function fetchContributions() {
   try {
+    const repoConfigs = normalizeIncludedRepos(includedRepos);
+
     // Use the Netlify function to fetch contributions
     // to avoid exposing the Github token into the client side build output
     const response = await axios.post('/.netlify/functions/fetchContributions', {
-      repos: includedRepos,
-      username: aboutMe.githubUsername
+      repoConfigs,
+      username: aboutMe.githubUsername,
+      itemsToFetch,
     });
 
     return response.data;

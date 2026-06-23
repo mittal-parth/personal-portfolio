@@ -77,24 +77,31 @@ const OpenSource = () => {
 
       // Filters based on fetched contributions
       if (!fetchedContributions.error) {
-        const uniqueRepos = [...new Set(fetchedContributions.map(c => c.repo))];
-        setFilters(["All", ...uniqueRepos]);
+        const uniqueRepos = [
+          ...new Map(
+            fetchedContributions.map((c) => [
+              c.fullName,
+              { key: c.fullName, label: c.displayName },
+            ])
+          ).values(),
+        ];
+        setFilters([{ key: "All", label: "All" }, ...uniqueRepos]);
       }
     };
 
     getContributions();
   }, []);
 
-  const handleContributionFilter = (item) => {
-    setActiveFilter(item);
+  const handleContributionFilter = (filterKey) => {
+    setActiveFilter(filterKey);
 
     setTimeout(() => {
-      if (item === "All") {
+      if (filterKey === "All") {
         setFilterContribution(contributions);
       } else {
         setFilterContribution(
           contributions.filter(
-            (contribution) => contribution.repo.toLowerCase() == item.toLowerCase()
+            (contribution) => contribution.fullName === filterKey
           )
         );
       }
@@ -111,19 +118,17 @@ const OpenSource = () => {
         <div className="flex items-center justify-center">
           {!contributions.error && (
             <div className="flex flex-wrap items-center p-1 border border-blue-gradient dark:border-teal-400 rounded-xl">
-              {filters.map(
-                (item, index) => (
+              {filters.map((item) => (
                   <button
-                    key={index}
-                    onClick={() => handleContributionFilter(item)}
-                    className={`px-2 py-2 text-sm font-medium text-white md:py-3 rounded-xl md:px-6 capitalize transition-colors duration-300 focus:outline-none hover:bg-teal-400 font-poppins ${
-                      activeFilter === item ? "bg-teal-400" : ""
+                    key={item.key}
+                    onClick={() => handleContributionFilter(item.key)}
+                    className={`px-2 py-2 text-sm font-medium text-white md:py-3 rounded-xl md:px-6 transition-colors duration-300 focus:outline-none hover:bg-teal-400 font-poppins ${
+                      activeFilter === item.key ? "bg-teal-400" : ""
                     }`}
                   >
-                    {item}
+                    {item.label}
                   </button>
-                )
-              )}
+                ))}
             </div>
           )}
         </div>
