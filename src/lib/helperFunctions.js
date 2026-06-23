@@ -14,8 +14,14 @@ import { aboutMe, itemsToFetch, includedRepos } from "../constants";
 export const normalizeIncludedRepos = (repos) =>
   repos.map((entry) => {
     const fullName = typeof entry === "string" ? entry : entry[0];
+
+    if (!fullName?.includes("/")) {
+      throw new Error(`Invalid includedRepos entry: "${fullName}" (expected "owner/repo")`);
+    }
+
+    const repoSlug = fullName.split("/")[1];
     const displayName =
-      typeof entry === "string" ? fullName.split("/")[1] : entry[1] ?? fullName.split("/")[1];
+      typeof entry === "string" ? repoSlug : entry[1] ?? repoSlug;
 
     return { fullName, displayName };
   });
